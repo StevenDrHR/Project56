@@ -66,6 +66,7 @@ public class JDBCExample {
     }
 
 
+
     private String renderContent(String htmlFile) {
         try {
             // If you are using maven then your files
