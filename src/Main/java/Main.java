@@ -1,15 +1,12 @@
-/**
- * Created by nilmor on 10/25/2016.
- */
-import com.sun.org.apache.xerces.internal.parsers.BasicParserConfiguration;
+import org.apache.log4j.BasicConfigurator;
 
 import static spark.Spark.*;
 
 public class Main {
-    BasicConfigurator.configure()
-    public static void main(String[] args) {
-    get("/hello", (req, res) -> "Hello World");
-}
-}
 
+    public static void main(String[] args) {
+        BasicConfigurator.configure();
+        get("/hello", (req, res) -> "Hello World");
+    }
+}
 
