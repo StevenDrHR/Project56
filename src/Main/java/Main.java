@@ -1,4 +1,5 @@
 import org.apache.log4j.BasicConfigurator;
+import spark.Spark;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -11,7 +12,7 @@ public class Main {
     //Credentials. Might differ for each database.
     static final String DB_URL = "jdbc:postgresql://localhost/postgres";
     static final String USER = "postgres";
-    static final String PASS = "0906986";
+    static final String PASS = "123lol123";
     //Public variable to establish SQL connection
     public Connection conn;
     //Classes initialization.
@@ -22,6 +23,7 @@ public class Main {
     public static void main(String[] args) {
         BasicConfigurator.configure();
         JD.DataCon();
+        Spark.staticFileLocation("/Css");
         ViewController VC = new ViewController();
         get("/hello", (req, res) -> VC.renderContentLoginPage("RegisterScreen.html"));
 

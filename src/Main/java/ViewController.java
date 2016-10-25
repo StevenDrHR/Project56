@@ -16,6 +16,7 @@ public class ViewController {
             // will be in a folder called resources.
             // getResource() gets that folder
             // and any files you specify.
+
             URL url = getClass().getResource(htmlFile);
 
             // Return a String which has all
