@@ -1,8 +1,10 @@
 import org.apache.log4j.BasicConfigurator;
+import spark.ModelAndView;
 import spark.Spark;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.util.HashMap;
 
 import static spark.Spark.*;
 
@@ -24,11 +26,14 @@ public class Main {
         BasicConfigurator.configure();
         JD.DataCon();
         Spark.staticFileLocation("/Css");
-        ViewController VC = new ViewController();
-        get("/hello", (req, res) -> VC.renderContentLoginPage("RegisterScreen.html"));
+        String layout = "Css/RegisterScreen.css";
 
+        ViewController VC = new ViewController();
+        get("/hello", (req, res) -> VC.renderContentLoginPage("HTML/RegisterScreen.html"));
 
     }
+        
+
     public void DataCon() {
         //Connection
         try {

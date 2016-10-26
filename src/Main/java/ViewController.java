@@ -22,6 +22,7 @@ public class ViewController {
             // Return a String which has all
             // the contents of the file.
             Path path = Paths.get(url.toURI());
+            
             return new String(Files.readAllBytes(path), Charset.defaultCharset());
         } catch (IOException | URISyntaxException e) {
             // Add your own exception handlers here.
