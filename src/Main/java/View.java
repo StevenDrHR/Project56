@@ -53,8 +53,9 @@ public class View {
         post("/user/create", (request, response) -> {
             String username = request.queryParams("username");
             String password = request.queryParams("password");
-            Modal user = new Modal(username, password, View.users.size() + 1);
-           View.users.addFirst(user);
+            Modal user = new Modal();
+            user.UserModal(username, password, View.users.size() + 1);
+            View.users.addFirst(user);
 
             response.status(201);
             response.redirect("/");
