@@ -1,5 +1,4 @@
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -14,10 +13,12 @@ public class Modal {
     private Date createdAt;
     private Integer id;
     private Boolean deleted;
-
+    private String email;
+    private String Fname;
+    private String Lname;
     //initialiaze database connection
     static final String JDBC_DRIVER = "org.postgresql.Driver";
-    static final String DB_URL = "jdbc:postgresql://localhost/postgres";
+    static final String DB_URL = "jdbc:postgresql://localhost:5432/postgres";
     static final String USER = "postgres";
     static final String PASS = "123lol123";
     public Connection conn;
@@ -27,10 +28,10 @@ public class Modal {
         //Connection
         try {
             //Driver name + credentials + ip address check.
-            Class.forName("org.postgresql.Driver");
-            System.out.println("Connecting to a selected database...");
-            conn = DriverManager.getConnection(DB_URL, USER, PASS);
-            System.out.println("Connected database successfully...");
+           // Class.forName("org.postgresql.Driver");
+            //System.out.println("Connecting to a selected database...");
+            //conn = DriverManager.getConnection(DB_URL, USER, PASS);
+            //System.out.println("Connected database successfully...");
         }
         //When something goes horribly wrong
         catch (Exception e) {
@@ -38,12 +39,14 @@ public class Modal {
         }
     }
 
-    public void UserModal(String username, String password, Integer size) {
+    public void UserModal(String username, String password, String Email,String FName,String LName) {
         this.username = username;
         this.password = password;
         this.createdAt = new Date();
-        this.id = size;
         this.deleted = false;
+        this.email = Email;
+        this.Fname = FName;
+        this.Lname = LName;
     }
     public String getUsername() {
         return username;
@@ -52,23 +55,20 @@ public class Modal {
     public String getpassword() {
         return password;
     }
+    public String getEmail(){return email;}
+    public String getFname(){return Fname;}
+    public String getLname(){return Lname;}
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
+    public void setUsername(String username) {this.username = username;}
     public void setPassword(String password) {
         this.password = password;
     }
-
     public Integer getId() {
         return id;
     }
-
     public void delete() {
         this.deleted = true;
     }
-
     public Boolean readable() {
         return !this.deleted;
     }

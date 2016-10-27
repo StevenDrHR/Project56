@@ -55,19 +55,39 @@ public class View {
             String username = request.queryParams("username");
             String password = request.queryParams("password");
             Modal user = new Modal();
-            user.UserModal(username, password, users.size() + 1);
+            user.UserModal(username, password, "","","");
             users.addFirst(user);
             response.status(201);
             response.redirect("/");
-            Controller p = new Controller();
-            if(users.isEmpty()){
-                System.out.println("ik ben nog steeds leeg!");
-            }
-            p.DataInsert(users);
+            Controller SaveUser = new Controller();
+            SaveUser.DataInsert(users);
 
-            return users;
+            return "";
         });
+    }
+    public  void RenderRegisterView(){
+        Controller renderView = new Controller();
+        get("/Home", (req, res) -> renderView.htmlToString("HTML/Index.html"));
+    }
+    public  void RenderHomeView(){
+        Controller renderView = new Controller();
+        get("/Register", (req, res) -> renderView.htmlToString("HTML/register.html"));
+        post("/Register", (request, response) -> {
+            String RegUsername = request.queryParams("RegUsername");
+            String RegPassword = request.queryParams("RegPassword");
+            String RegEmail = request.queryParams("RegEmail");
+            String RegFName = request.queryParams("RegFName");
+            String RegLName = request.queryParams("RegLName");
+            Modal user = new Modal();
+            user.UserModal(RegUsername, RegPassword, RegEmail,RegFName,RegLName);
+            users.addFirst(user);
+            response.status(201);
+            response.redirect("/Home");
+            Controller SaveUser = new Controller();
+            SaveUser.DataInsert(users);
+            request.session().id();
 
-
+            return "";
+        });
     }
 }

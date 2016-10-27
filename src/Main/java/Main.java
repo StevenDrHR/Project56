@@ -21,11 +21,11 @@ public class Main {
         JD.DataCon();
         Spark.staticFileLocation("/Css");
         String layout = "Css/RegisterScreen.css";
-        View createLoginPage= new View();
-        createLoginPage.ViewUsers();
+        View createPage= new View();
         Controller RenderNewView = new Controller();
-        RenderNewView.RenderLoginView();
-
+        createPage.ViewUsers();
+        createPage.RenderHomeView();
+        createPage.RenderRegisterView();
     }
 
 

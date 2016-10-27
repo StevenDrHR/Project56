@@ -1,0 +1,191 @@
+/*!
+ * Start Bootstrap - Shop Homepage (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+.slide-image {
+    width: 100%;
+}
+
+.carousel-holder {
+    margin-bottom: 30px;
+}
+
+.carousel-control,
+.item {
+    border-radius: 4px;
+}
+
+.caption {
+    height: 130px;
+    overflow: hidden;
+}
+
+.caption h4 {
+    white-space: nowrap;
+}
+
+.thumbnail img {
+    width: 100%;
+}
+
+.ratings {
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #d17581;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+    color: #333;
+}
+
+footer {
+    margin: 50px 0;
+}
+
+.acontainer
+{
+	max-width: 600px;
+	margin: 0 auto;
+	padding:80px 0;
+	height:400px;
+	text-align:center;
+	margin-top:5%;
+	position:relative;
+	bottom:100px;
+}
+
+form
+{
+	padding:20px 0px;
+	position:relative;
+}
+form input
+{
+	outline: 0;
+	border:1px solid rgba(0,0,0,0.4);
+	background-color: rgba(255,255,255,0.2);
+	width: 250px;
+	border-radius: 3px;
+	padding:10px 15px;
+	margin: 10px auto 20px;
+	display: block;
+	text-align: center;
+	font-size: 18px;
+	color: white;
+	-webit-transition-duration: 0.25s;
+			transition-duration: 0.25s;
+	font-weight:300;
+
+}
+form input:hover
+{
+	background-color: lightgray;
+}
+form input:focus
+{
+	background-color: lightgray;
+	width: 270px;
+	color: #53e3a6;
+
+}
+form button
+{
+	background-color:white;
+	outline:0;
+	border: 0;
+	padding: 10px 15px;
+	color: black;
+	border-radius:3px;
+	width: 250px;
+	cursor: pointer;
+	font-size: 18px;
+
+}
+ form button:hover
+ {
+	 background-color: lightgray;
+ }
+
+ form2
+ {
+ 	padding:20px 0px;
+ 	position:relative;
+ }
+ form2 input
+ {
+ 	outline: 0;
+ 	border:1px solid rgba(0,0,0,0.4);
+ 	background-color: rgba(255,255,255,0.2);
+ 	width: 250px;
+ 	border-radius: 3px;
+ 	padding:10px 15px;
+ 	margin: 10px auto 20px;
+ 	display: block;
+ 	text-align: center;
+ 	font-size: 18px;
+ 	color: white;
+ 	-webit-transition-duration: 0.25s;
+ 			transition-duration: 0.25s;
+ 	font-weight:300;
+
+ }
+ form2 input:hover
+ {
+ 	background-color: lightgray;
+ }
+ form2 input:focus
+ {
+ 	background-color: lightgray;
+ 	width: 270px;
+ 	color: #53e3a6;
+
+ }
+ form2 button
+ {
+ 	background-color:white;
+ 	outline:0;
+ 	border: 0;
+ 	padding: 10px 15px;
+ 	color: black;
+ 	border-radius:3px;
+ 	width: 250px;
+ 	cursor: pointer;
+ 	font-size: 18px;
+
+ }
+  form2 button:hover
+  {
+ 	 background-color: lightgray;
+  }
+
+ form3
+ {
+ 	padding:20px 0px;
+ 	position:relative;
+ }
+
+  form3 input
+  {
+
+     position:relative;
+     left:590px;
+     top: 10px;
+  }
+
+  form3 button
+  {
+     position:relative;
+     left:590px;
+     top: 10px;
+  }

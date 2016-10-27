@@ -5,15 +5,16 @@ import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.Deque;
-
-import static spark.Spark.get;
 
 /**
  * Created by nilmor on 10/27/2016.
  */
 public class Controller {
-
+    static Connection connection;
     public String htmlToString(String htmlFile) {
         try {
             // If you are using maven then your files
@@ -34,16 +35,12 @@ public class Controller {
         return null;
     }
 
-    public  void RenderLoginView(){
-        Controller renderView = new Controller();
-        get("/hello", (req, res) -> renderView.htmlToString("HTML/RegisterScreen.html"));
-    }
-    public void DataInsert( Deque<Modal> list) {{
-            if (list.isEmpty()) {
-                System.out.println("hallo");
-            }
-         System.out.println(list.getFirst().getUsername().toString());
 
+    public void DataInsert( Deque<Modal> list) throws SQLException {{
+        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres", "123lol123");
+        String Querry = "INSERT INTO users (firstname,lastname,email,username,user_password,userlevel) VALUES ('" + list.getFirst().getFname() + "','"+list.getFirst().getLname() +"','"+list.getFirst().getEmail() +"','"+ list.getFirst().getUsername()+"','"+   list.getFirst().getpassword() +"',0 );";
+        connection.prepareStatement(Querry).executeUpdate();
+        connection.close();
     }
 }
 }
