@@ -17,16 +17,14 @@ public class Main {
     //Classes initialization.
     static final Main JD = new Main();
 
-
-
     public static void main(String[] args) {
         BasicConfigurator.configure();
         JD.DataCon();
         Spark.staticFileLocation("/Css");
         String layout = "Css/RegisterScreen.css";
-        registerView createUser= new registerView();
-        createUser.controlUsers();
-        RenderHTML RenderNewView = new RenderHTML();
+        View createLoginPage= new View();
+        createLoginPage.ViewUsers();
+        Controller RenderNewView = new Controller();
         RenderNewView.RenderLoginView();
 
     }

@@ -3,24 +3,22 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * Created by nilmor on 10/26/2016.
+ * Created by nilmor on 10/27/2016.
  */
-public class usersModal {
-
+public class Modal {
     private String username;
     private String password;
     private Date createdAt;
     private Integer id;
     private Boolean deleted;
 
-    public usersModal(String username, String password, Integer size) {
+    public Modal(String username, String password, Integer size) {
         this.username = username;
         this.password = password;
         this.createdAt = new Date();
         this.id = size;
         this.deleted = false;
     }
-
     public String getUsername() {
         return username;
     }
@@ -66,6 +64,4 @@ public class usersModal {
         return "<a href='/users/read/" + this.id + "'>" + this.username + "</a>";
     }
 }
-
-
 

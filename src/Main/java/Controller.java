@@ -9,9 +9,9 @@ import java.nio.file.Paths;
 import static spark.Spark.get;
 
 /**
- * Created by Steven on 25-10-2016.
+ * Created by nilmor on 10/27/2016.
  */
-public class RenderHTML {
+public class Controller {
     public String htmlToString(String htmlFile) {
         try {
             // If you are using maven then your files
@@ -24,15 +24,18 @@ public class RenderHTML {
             // Return a String which has all
             // the contents of the file.
             Path path = Paths.get(url.toURI());
-            
+
             return new String(Files.readAllBytes(path), Charset.defaultCharset());
         } catch (IOException | URISyntaxException e) {
             // Add your own exception handlers here.
         }
         return null;
     }
+
     public  void RenderLoginView(){
-        RenderHTML renderLoginView = new RenderHTML();
-        get("/hello", (req, res) -> renderLoginView.htmlToString("HTML/RegisterScreen.html"));
+        Controller renderView = new Controller();
+        get("/hello", (req, res) -> renderView.htmlToString("HTML/RegisterScreen.html"));
     }
 }
+
+
