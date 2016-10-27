@@ -4,12 +4,17 @@
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src/Main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/Main/java/test" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/Main/java" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/Main/Views" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/Main/Modals" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/Main/main" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="postgresql-9.4.1211.jre6" level="project" />
     <orderEntry type="library" name="Maven: com.sparkjava:spark-core:2.5" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-server:9.3.6.v20151106" level="project" />
     <orderEntry type="library" name="Maven: javax.servlet:javax.servlet-api:3.1.0" level="project" />
@@ -28,6 +33,5 @@
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.5" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-log4j12:1.7.5" level="project" />
     <orderEntry type="library" name="Maven: log4j:log4j:1.2.17" level="project" />
-    <orderEntry type="library" name="postgresql-9.4.1211.jre6" level="project" />
   </component>
 </module>

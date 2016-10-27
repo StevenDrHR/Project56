@@ -1,12 +1,9 @@
+
 import org.apache.log4j.BasicConfigurator;
-import spark.ModelAndView;
 import spark.Spark;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.util.HashMap;
-
-import static spark.Spark.*;
 
 public class Main {
     //Driver name. Included with this Assignment submission.
@@ -27,12 +24,14 @@ public class Main {
         JD.DataCon();
         Spark.staticFileLocation("/Css");
         String layout = "Css/RegisterScreen.css";
-
-        ViewController VC = new ViewController();
-        get("/hello", (req, res) -> VC.renderContentLoginPage("HTML/RegisterScreen.html"));
+        registerView createUser= new registerView();
+        createUser.controlUsers();
+        RenderHTML RenderNewView = new RenderHTML();
+        RenderNewView.RenderLoginView();
 
     }
-        
+
+
 
     public void DataCon() {
         //Connection
