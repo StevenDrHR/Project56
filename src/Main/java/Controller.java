@@ -5,6 +5,8 @@ import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.sql.Connection;
+import java.sql.DriverManager;
 
 import static spark.Spark.get;
 
@@ -12,6 +14,7 @@ import static spark.Spark.get;
  * Created by nilmor on 10/27/2016.
  */
 public class Controller {
+
     public String htmlToString(String htmlFile) {
         try {
             // If you are using maven then your files

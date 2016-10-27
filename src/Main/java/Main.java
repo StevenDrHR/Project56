@@ -3,7 +3,6 @@ import org.apache.log4j.BasicConfigurator;
 import spark.Spark;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 
 public class Main {
     //Driver name. Included with this Assignment submission.
@@ -15,7 +14,7 @@ public class Main {
     //Public variable to establish SQL connection
     public Connection conn;
     //Classes initialization.
-    static final Main JD = new Main();
+    static final Modal JD = new Modal();
 
     public static void main(String[] args) {
         BasicConfigurator.configure();
@@ -31,20 +30,7 @@ public class Main {
 
 
 
-    public void DataCon() {
-        //Connection
-        try {
-            //Driver name + credentials + ip address check.
-            Class.forName("org.postgresql.Driver");
-            System.out.println("Connecting to a selected database...");
-            conn = DriverManager.getConnection(DB_URL, USER, PASS);
-            System.out.println("Connected database successfully...");
-        }
-        //When something goes horribly wrong
-        catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+
 
 }
 

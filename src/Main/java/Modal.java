@@ -1,3 +1,5 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -6,13 +8,37 @@ import java.util.Date;
  * Created by nilmor on 10/27/2016.
  */
 public class Modal {
+    //Initialize users for datatbase
     private String username;
     private String password;
     private Date createdAt;
     private Integer id;
     private Boolean deleted;
 
-    public Modal(String username, String password, Integer size) {
+    //initialiaze database connection
+    static final String JDBC_DRIVER = "org.postgresql.Driver";
+    static final String DB_URL = "jdbc:postgresql://localhost/postgres";
+    static final String USER = "postgres";
+    static final String PASS = "123lol123";
+    public Connection conn;
+
+
+    public void DataCon() {
+        //Connection
+        try {
+            //Driver name + credentials + ip address check.
+            Class.forName("org.postgresql.Driver");
+            System.out.println("Connecting to a selected database...");
+            conn = DriverManager.getConnection(DB_URL, USER, PASS);
+            System.out.println("Connected database successfully...");
+        }
+        //When something goes horribly wrong
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void UserModal(String username, String password, Integer size) {
         this.username = username;
         this.password = password;
         this.createdAt = new Date();
