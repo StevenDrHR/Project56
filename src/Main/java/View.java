@@ -8,7 +8,8 @@ import static spark.Spark.post;
  * Created by nilmor on 10/27/2016.
  */
 public class View {
-    public static Deque<Modal> users = new ArrayDeque<Modal>();
+
+    Deque<Modal> users = new ArrayDeque<Modal>();
 
     public void ViewUsers() {
         get("/", (request, response) -> {
@@ -19,17 +20,17 @@ public class View {
             html.append("<h1>").append(title).append("</h1>").append(createUserLink);
             html.append("<hr>");
 
-            if (View.users.isEmpty()) {
+            if (users.isEmpty()) {
                 html.append("<b>No articles have been posted</b>");
             } else {
-                for (Modal users : View.users) {
-                    html.append("Title: ").append(users.getUsername())
+                for (Modal user : users) {
+                    html.append("Title: ").append(user.getUsername())
                             .append("<br/>")
-                            .append(users.getCreatedAt())
+                            .append(user.getCreatedAt())
                             .append("<br/>")
-                            .append("Summary: ").append(users.getpassword())
+                            .append("Summary: ").append(user.getpassword())
                             .append("<br/>")
-                            .append(users.getEditLink()).append(" | ").append(users.getDeleteLink())
+                            .append(user.getEditLink()).append(" | ").append(user.getDeleteLink())
                             .append("</p>");
                 }
             }
@@ -54,29 +55,19 @@ public class View {
             String username = request.queryParams("username");
             String password = request.queryParams("password");
             Modal user = new Modal();
-            user.UserModal(username, password, View.users.size() + 1);
-            View.users.addFirst(user);
-
+            user.UserModal(username, password, users.size() + 1);
+            users.addFirst(user);
             response.status(201);
             response.redirect("/");
-            return "";
+            Controller p = new Controller();
+            if(users.isEmpty()){
+                System.out.println("ik ben nog steeds leeg!");
+            }
+            p.DataInsert(users);
 
+            return users;
         });
 
-   /*     get("/users/read/:id",(request, response) -> {
-                Integer id = Integer.parseInt(request.params(":id"));
-                StringBuilder html = new StringBuilder();
-                for(usersModal user : registerView.users) {
-                    if(id.equals(user.getId())) {
-                        html.append("<a href='/'>Home</a>").append("<p />")
-                                .append("Title: ").append(user.getUsername()).append("<br />")
-                                .append(user.getCreatedAt())
-                                .append("<p>").append(user.getpassword()).append("</p>");
 
-                        break;
-                    }
-                }
-                return html.toString();
-       });
-    */}
+    }
 }

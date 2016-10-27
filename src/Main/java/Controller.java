@@ -5,8 +5,6 @@ import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.util.Deque;
 
 import static spark.Spark.get;
@@ -40,10 +38,14 @@ public class Controller {
         Controller renderView = new Controller();
         get("/hello", (req, res) -> renderView.htmlToString("HTML/RegisterScreen.html"));
     }
-    public void DataInsert( Deque<Modal> list) {
-        if (list.contains("username"))
-            System.out.println("banana");
+    public void DataInsert( Deque<Modal> list) {{
+            if (list.isEmpty()) {
+                System.out.println("hallo");
+            }
+         System.out.println(list.getFirst().getUsername().toString());
+
     }
+}
 }
 
 
