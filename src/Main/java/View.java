@@ -83,10 +83,19 @@ public class View {
             users.addFirst(user);
             response.status(201);
             response.redirect("/Home");
-            Controller SaveUser = new Controller();
-            SaveUser.DataInsert(users);
-            request.session().id();
-
+            String SaveUser = new Controller().DataInsert(users);
+            if (SaveUser.contains("Detail: Key (username)")){
+                System.out.println("Account not registered account name is already taken");
+            }
+            else if(SaveUser.contains("Detail: Key (email)")){
+                System.out.println("Account not registered account email is already taken");
+            }
+            else if (SaveUser.contains("Done")){
+                System.out.println("Account succesfully registered");
+            }
+            else {
+                System.out.println("Something went horribly wrong please contact us");
+            }
             return "";
         });
     }

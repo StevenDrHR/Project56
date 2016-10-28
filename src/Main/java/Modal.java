@@ -24,21 +24,6 @@ public class Modal {
     public Connection conn;
 
 
-    public void DataCon() {
-        //Connection
-        try {
-            //Driver name + credentials + ip address check.
-           // Class.forName("org.postgresql.Driver");
-            //System.out.println("Connecting to a selected database...");
-            //conn = DriverManager.getConnection(DB_URL, USER, PASS);
-            //System.out.println("Connected database successfully...");
-        }
-        //When something goes horribly wrong
-        catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
     public void UserModal(String username, String password, String Email,String FName,String LName) {
         this.username = username;
         this.password = password;

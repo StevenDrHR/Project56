@@ -36,13 +36,25 @@ public class Controller {
     }
 
 
-    public void DataInsert( Deque<Modal> list) throws SQLException {{
-        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres", "123lol123");
+    public String DataInsert( Deque<Modal> list) throws SQLException {
+        try {
+            connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres", "123lol123");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         String Querry = "INSERT INTO users (firstname,lastname,email,username,user_password,userlevel) VALUES ('" + list.getFirst().getFname() + "','"+list.getFirst().getLname() +"','"+list.getFirst().getEmail() +"','"+ list.getFirst().getUsername()+"','"+   list.getFirst().getpassword() +"',0 );";
-        connection.prepareStatement(Querry).executeUpdate();
+        try {
+            connection.prepareStatement(Querry).executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return e.getMessage();
+        }
         connection.close();
+
+
+        return "Done";
     }
 }
-}
+
 
 
