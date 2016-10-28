@@ -1,3 +1,7 @@
+import jdk.nashorn.internal.ir.debug.JSONWriter;
+import jdk.nashorn.internal.parser.JSONParser;
+import org.json.JSONObject;
+
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.net.URL;
@@ -9,6 +13,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Deque;
+
+
+import static org.postgresql.core.Oid.JSON;
 
 /**
  * Created by nilmor on 10/27/2016.
@@ -36,9 +43,9 @@ public class Controller {
     }
 
 
-    public String DataInsert( Deque<Modal> list) throws SQLException {
+    public JSONObject DataInsert( Deque<Modal> list) throws SQLException {
         try {
-            connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres", "123lol123");
+            connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres", "0906986");
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -47,12 +54,18 @@ public class Controller {
             connection.prepareStatement(Querry).executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
-            return e.getMessage();
+            JSONObject p = new JSONObject();
+            p.putOpt("name","shit");
+            System.out.println(p);
+            return p;
         }
         connection.close();
+        JSONObject p = new JSONObject();
+        p.putOpt("name","shit");
+        System.out.println(p);
 
 
-        return "Done";
+        return p;
     }
 }
 

@@ -1,3 +1,5 @@
+import org.json.JSONObject;
+
 import java.util.ArrayDeque;
 import java.util.Deque;
 
@@ -82,9 +84,8 @@ public class View {
             user.UserModal(RegUsername, RegPassword, RegEmail,RegFName,RegLName);
             users.addFirst(user);
             response.status(201);
-            response.redirect("/Home");
-            String SaveUser = new Controller().DataInsert(users);
-            if (SaveUser.contains("Detail: Key (username)")){
+            JSONObject SaveUser = new Controller().DataInsert(users);
+            /*if (SaveUser.contains("Detail: Key (username)")){
                 System.out.println("Account not registered account name is already taken");
             }
             else if(SaveUser.contains("Detail: Key (email)")){
@@ -95,8 +96,8 @@ public class View {
             }
             else {
                 System.out.println("Something went horribly wrong please contact us");
-            }
-            return "";
+            }*/
+            return SaveUser;
         });
     }
 }
