@@ -58,7 +58,7 @@ footer {
 	max-width: 600px;
 	margin: 0 auto;
 	padding:80px 0;
-	height:400px;
+	height:350px;
 	text-align:center;
 	margin-top:5%;
 	position:relative;
@@ -82,7 +82,7 @@ form input
 	display: block;
 	text-align: center;
 	font-size: 18px;
-	color: white;
+	color: black;
 	-webit-transition-duration: 0.25s;
 			transition-duration: 0.25s;
 	font-weight:300;
@@ -96,7 +96,7 @@ form input:focus
 {
 	background-color: lightgray;
 	width: 270px;
-	color: #53e3a6;
+	color: black;
 
 }
 form button
@@ -138,6 +138,8 @@ form button
  	-webit-transition-duration: 0.25s;
  			transition-duration: 0.25s;
  	font-weight:300;
+ 	position:relative;
+      right:150px;
 
  }
  form2 input:hover
@@ -177,7 +179,6 @@ form button
 
   form3 input
   {
-
      position:relative;
      left:590px;
      top: 10px;
@@ -188,4 +189,58 @@ form button
      position:relative;
      left:590px;
      top: 10px;
+  }
+
+  form4
+  {
+   	padding:20px 0px;
+   	position:relative;
+  }
+  form4 input
+  {
+   	outline: 0;
+   	border:1px solid rgba(0,0,0,0.4);
+   	background-color: rgba(255,255,255,0.2);
+   	width: 250px;
+   	border-radius: 3px;
+   	padding:10px 15px;
+   	margin: 10px auto 20px;
+   	display: block;
+   	text-align: center;
+   	font-size: 18px;
+   	color: white;
+   	-webit-transition-duration: 0.25s;
+   			transition-duration: 0.25s;
+   	font-weight:300;
+   	position:relative;
+      left:150px;
+      bottom:391px;
+  }
+  form4 input:hover
+  {
+   	background-color: lightgray;
+  }
+  form4 input:focus
+  {
+   	background-color: lightgray;
+   	width: 270px;
+   	color: #53e3a6;
+
+  }
+  form4 button
+  {
+   	background-color:white;
+   	outline:0;
+   	border: 0;
+   	padding: 10px 15px;
+   	color: black;
+   	border-radius:3px;
+   	width: 250px;
+   	cursor: pointer;
+   	font-size: 18px;
+
+  }
+  form4 button:hover
+  {
+   	 background-color: lightgray;
   }

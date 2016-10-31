@@ -39,22 +39,22 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Start Bootstrap</a>
+                <a class="navbar-brand" href="http://localhost:4567/Home">Homepage</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="RegisterScreen.html">About</a>
+                        <a href="http://localhost:4567/Register">About</a>
                     </li>
                     <li>
-                        <a href="http://localhost:4567/Register">Services</a>
+                        <a href="http://localhost:4567/Register">Register</a>
                     </li>
                     <li>
-                        <a href="http://localhost:4567/Home">Contact</a>
+                        <a href="http://localhost:4567/Register">Contact</a>
                     </li>
                     <form3>
-                         <input type="text" placeholder="search" align="right">
+                        <input type="text" placeholder="search" align="right">
                         <button type="submit" id="search_button" align="right">Search</button>
                     </form3>
                 </ul>
@@ -70,7 +70,7 @@
         <div class="row">
 
             <div class="col-md-3">
-                <h1 align="center">Login Below</h1>
+                <h1 align="center">Existing user</h1>
                 <br>
 
                 <div class="acontainer">
@@ -89,14 +89,22 @@
                     <div class="col-md-12">
                         <h1 align="center">Register Below</h1>
                         <div class="acontainer">
-                        <form class="form2" method='POST' action='/Register'>
-                            <input type="text" placeholder="username" align="center" name="RegUsername">
-                            <input type="password" placeholder="password" align="center" name="RegPassword">
-                            <input type="email" placeholder="email-address" align="center"name=RegEmail>
-                            <input type="text" placeholder="first name" align="center"name=RegFName>
-                            <input type="text" placeholder="last name" align="center"name=RegLName>
+                        <form2 class="form">
+                            <input type="text" placeholder="username" align="center">
+                            <input type="password" placeholder="password" align="center">
+                            <input type="email" placeholder="email address" align="center">
+                            <input type="text" placeholder="first name" align="center">
+                            <input type="text" placeholder="last name" align="center">
                             <button type="submit" id="register_button">Register</button>
-                        </form>
+                        </form2>
+                        <form4>
+                            <input type="text" placeholder="age" align="center">
+                            <input type="text" placeholder="street" align="center">
+                            <input type="text" placeholder="street number" align="center">
+                            <input type="text" placeholder="city" align="center">
+                            <input type="text" placeholder="postal code" align="center">
+                        </form4>
+
                         </div>
                     </div>
 
@@ -158,6 +166,9 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- shoppingCart -->
+    <script src="js/simpleCart.min.js"> </script>
 
 </body>
 
