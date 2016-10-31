@@ -134,7 +134,7 @@ form button
  	display: block;
  	text-align: center;
  	font-size: 18px;
- 	color: white;
+ 	color: black;
  	-webit-transition-duration: 0.25s;
  			transition-duration: 0.25s;
  	font-weight:300;
@@ -150,7 +150,7 @@ form button
  {
  	background-color: lightgray;
  	width: 270px;
- 	color: #53e3a6;
+ 	color: black;
 
  }
  form2 button
@@ -208,7 +208,7 @@ form button
    	display: block;
    	text-align: center;
    	font-size: 18px;
-   	color: white;
+   	color: black;
    	-webit-transition-duration: 0.25s;
    			transition-duration: 0.25s;
    	font-weight:300;
@@ -224,7 +224,7 @@ form button
   {
    	background-color: lightgray;
    	width: 270px;
-   	color: #53e3a6;
+   	color: black;
 
   }
   form4 button
