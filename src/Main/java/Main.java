@@ -3,8 +3,6 @@ import org.apache.log4j.BasicConfigurator;
 import spark.Spark;
 
 public class Main {
-
-
     public static void main(String[] args) {
         BasicConfigurator.configure();
         Spark.staticFileLocation("/Css");
@@ -15,10 +13,6 @@ public class Main {
         createPage.RenderHomeView();
         createPage.RenderRegisterView();
     }
-
-
-
-
 
 }
 

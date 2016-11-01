@@ -89,21 +89,22 @@
                     <div class="col-md-12">
                         <h1 align="center">Register Below</h1>
                         <div class="acontainer">
-                        <form2 class="form">
-                            <input type="text" placeholder="username" align="center">
-                            <input type="password" placeholder="password" align="center">
-                            <input type="email" placeholder="email address" align="center">
-                            <input type="text" placeholder="first name" align="center">
-                            <input type="text" placeholder="last name" align="center">
+                        <form class="form2" method='POST' action='/Register'>
+                            <input type="text" placeholder="username" align="center" name="RegUsername">
+                            <input type="password" placeholder="password" align="center" name="RegPassword">
+                            <input type="email" placeholder="email address" align="center" name="RegEmail">
+                            <input type="text" placeholder="first name" align="center" name="RegFName">
+                            <input type="text" placeholder="last name" align="center" name="RegLName">
                             <button type="submit" id="register_button">Register</button>
-                        </form2>
-                        <form4>
+                        </form>
+
+                        <form class="form4">
                             <input type="text" placeholder="age" align="center">
                             <input type="text" placeholder="street" align="center">
                             <input type="text" placeholder="street number" align="center">
                             <input type="text" placeholder="city" align="center">
                             <input type="text" placeholder="postal code" align="center">
-                        </form4>
+                        </form>
 
                         </div>
                     </div>

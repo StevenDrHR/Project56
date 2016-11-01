@@ -1,5 +1,3 @@
-import org.json.JSONObject;
-
 import java.util.ArrayDeque;
 import java.util.Deque;
 
@@ -49,7 +47,6 @@ public class View {
                     .append("<br/>")
                     .append("</form>")
                     .append("<input type='submit' value='Publish' form='user-create-form' />");
-
             return form.toString();
         });
 
@@ -61,30 +58,36 @@ public class View {
             users.addFirst(user);
             response.status(201);
             response.redirect("/");
+            StringBuilder form = new StringBuilder();
             Controller SaveUser = new Controller();
             SaveUser.DataInsert(users);
 
             return "";
         });
     }
-    public  void RenderRegisterView(){
-        Controller renderView = new Controller();
-        get("/Home", (req, res) -> renderView.htmlToString("HTML/Index.html"));
-    }
     public  void RenderHomeView(){
+        Controller renderView = new Controller();
+        get("/Home", (req, res) -> renderView.htmlToString("HTML/Index.html") );
+    }
+    public  void RenderRegisterView(){
         Controller renderView = new Controller();
         get("/Register", (req, res) -> renderView.htmlToString("HTML/register.html"));
         post("/Register", (request, response) -> {
+            if (request.cookie("Message")== null){
             String RegUsername = request.queryParams("RegUsername");
             String RegPassword = request.queryParams("RegPassword");
             String RegEmail = request.queryParams("RegEmail");
             String RegFName = request.queryParams("RegFName");
             String RegLName = request.queryParams("RegLName");
+
             Modal user = new Modal();
             user.UserModal(RegUsername, RegPassword, RegEmail,RegFName,RegLName);
             users.addFirst(user);
-            response.status(201);
-            JSONObject SaveUser = new Controller().DataInsert(users);
+            response.redirect("/Home");
+            String SaveUser = new Controller().DataInsert(users);
+            response.cookie("Message",SaveUser);}
+
+
             /*if (SaveUser.contains("Detail: Key (username)")){
                 System.out.println("Account not registered account name is already taken");
             }
@@ -97,7 +100,9 @@ public class View {
             else {
                 System.out.println("Something went horribly wrong please contact us");
             }*/
-            return SaveUser;
+            response.status(201);
+
+            return "";
         });
     }
 }
