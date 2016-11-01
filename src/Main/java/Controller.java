@@ -7,6 +7,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Deque;
 
@@ -36,13 +37,10 @@ public class Controller {
     }
 
 
-    public String DataInsert( Deque<Modal> list) throws SQLException {
-        try {
-            connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres", "123lol123");
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        String Querry = "INSERT INTO users (firstname,lastname,email,username,user_password,userlevel) VALUES ('" + list.getFirst().getFname() + "','"+list.getFirst().getLname() +"','"+list.getFirst().getEmail() +"','"+ list.getFirst().getUsername()+"','"+   list.getFirst().getpassword() +"',0 );";
+    public String RegisterUser( Deque<Modal> list) throws SQLException {
+        int userid = 0;
+        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres", "123lol123");
+        String Querry = "INSERT INTO users (firstname,lastname,email,username,user_password,userlevel,age) VALUES ('" + list.getFirst().getFname() + "','"+list.getFirst().getLname() +"','"+list.getFirst().getEmail() +"','"+ list.getFirst().getUsername()+"','"+   list.getFirst().getpassword() +"',0,'"+list.getFirst().getAge()+"' );";
         try {
             connection.prepareStatement(Querry).executeUpdate();
         } catch (SQLException e) {
@@ -50,12 +48,37 @@ public class Controller {
             String m = e.getMessage();
             return m;
         }
+        Querry ="Select userid from users where email='"+ list.getFirst().getEmail()+"'";
+        ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+        if(rs.next()) {
+          userid = rs.getInt("userid") ;
+        }
+
+        Querry = "INSERT INTO adress (userid,country,streetname,streetnumber,postalcode) VALUES ('" + userid + "','"+list.getFirst().getCounrty() +"','"+list.getFirst().getStreet() +"','"+ list.getFirst().getStreetNumber()+"','"+   list.getFirst().getPostalCode() +"' );";
         connection.close();
-
-
         return "Done";
     }
-}
+
+    public String LoginUser( Deque<Modal> list) throws SQLException {
+        try {
+            connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres", "123lol123");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        String Querry = "Select userid from users where username='"+ list.getFirst().getUsername()+"' and user_password='"+ list.getFirst().getpassword()+"'";
+        ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+        if(rs.next()){
+            return "Done";
+        }
+        Querry = "Select userid from users where username='"+ list.getFirst().getUsername()+"'";
+        rs = connection.prepareStatement(Querry).executeQuery();
+        if(rs.next()){
+            return "Wrong Password";
+        }
+        else{return "Wrong Username";
+
+    }
+}}
 
 
 
