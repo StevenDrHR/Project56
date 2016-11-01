@@ -21,7 +21,7 @@ public class Modal {
     private String Country;
     private String PostalCode;
 
-    public void RegisterModal(String username, String password, String Email,String FName,String LName ,String Age,String Street,String StreetNumber,String City,String PostalCode) {
+    public void RegisterModal(String username, String password, String Email,String FName,String LName ,String Age,String Street,String StreetNumber,String Country,String PostalCode) {
         this.username = username;
         this.password = password;
         this.createdAt = new Date();

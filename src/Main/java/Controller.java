@@ -38,7 +38,7 @@ public class Controller {
 
 
     public String RegisterUser( Deque<Modal> list) throws SQLException {
-        int userid = 0;
+        int userid = 34;
         connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres", "123lol123");
         String Querry = "INSERT INTO users (firstname,lastname,email,username,user_password,userlevel,age) VALUES ('" + list.getFirst().getFname() + "','"+list.getFirst().getLname() +"','"+list.getFirst().getEmail() +"','"+ list.getFirst().getUsername()+"','"+   list.getFirst().getpassword() +"',0,'"+list.getFirst().getAge()+"' );";
         try {
@@ -48,16 +48,31 @@ public class Controller {
             String m = e.getMessage();
             return m;
         }
+
         Querry ="Select userid from users where email='"+ list.getFirst().getEmail()+"'";
         ResultSet rs = connection.prepareStatement(Querry).executeQuery();
         if(rs.next()) {
           userid = rs.getInt("userid") ;
+            System.out.println("jeFackingMoeder " +rs.getInt("userid"));
         }
-
-        Querry = "INSERT INTO adress (userid,country,streetname,streetnumber,postalcode) VALUES ('" + userid + "','"+list.getFirst().getCounrty() +"','"+list.getFirst().getStreet() +"','"+ list.getFirst().getStreetNumber()+"','"+   list.getFirst().getPostalCode() +"' );";
+        Querry = "INSERT INTO adress (userid,country,streetname,streetnumber,postalcode) VALUES (" + userid + ",'"+list.getFirst().getCounrty() +"','"+list.getFirst().getStreet() +"','"+ list.getFirst().getStreetNumber()+"','"+   list.getFirst().getPostalCode() +"' );";
+        try {
+            connection.prepareStatement(Querry).executeUpdate();
+        } catch (SQLException e) {
+            Querry = "Delete From users Where userid='"+userid+"';";;
+            connection.prepareStatement(Querry).executeUpdate();
+            e.printStackTrace();
+            String m = e.getMessage();
+            return m;
+        }
         connection.close();
         return "Done";
     }
+
+
+
+
+
 
     public String LoginUser( Deque<Modal> list) throws SQLException {
         try {

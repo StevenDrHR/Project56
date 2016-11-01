@@ -87,7 +87,6 @@ public class View {
         Controller renderView = new Controller();
         get("/Register", (req, res) -> renderView.htmlToString("HTML/register.html"));
         post("/Register", (request, response) -> {
-            if (request.cookie("Message")== null){
             String RegUsername = request.queryParams("RegUsername");
             String RegPassword = request.queryParams("RegPassword");
             String RegEmail = request.queryParams("RegEmail");
@@ -96,14 +95,15 @@ public class View {
             String RegAge = request.queryParams("RegAge");
             String RegStreet = request.queryParams("RegStreet");
             String RegStreetNumber = request.queryParams("RegStreetNumber");
-            String RegCity = request.queryParams("RegCountry");
+            String RegCountry = request.queryParams("RegCountry");
             String RegPostalCode = request.queryParams("RegPostalCode");
             Modal user = new Modal();
-            user.RegisterModal(RegUsername, RegPassword, RegEmail,RegFName,RegLName,RegAge,RegStreet,RegStreetNumber,RegCity,RegPostalCode);
+            user.RegisterModal(RegUsername, RegPassword, RegEmail,RegFName,RegLName,RegAge,RegStreet,RegStreetNumber,RegCountry,RegPostalCode);
             users.addFirst(user);
             String SaveUser = new Controller().RegisterUser(users);
-            response.cookie("Message",SaveUser);}
+            response.cookie("Message",SaveUser);
             response.redirect("/Home");
+
 
 
 
