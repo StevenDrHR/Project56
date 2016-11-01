@@ -58,19 +58,35 @@ footer {
 	max-width: 600px;
 	margin: 0 auto;
 	padding:80px 0;
-	height:350px;
+	max-height:350px;
 	text-align:center;
 	margin-top:5%;
 	position:relative;
 	bottom:100px;
 }
 
-form
+.bcontainer
+{
+	max-width: 600px;
+	height: 400px;
+	position:relative;
+	left:130px;
+}
+
+.regbutton
+{
+    max-width: 100px;
+	height: 100px;
+	position:relative;
+	left:150px;
+}
+
+.form
 {
 	padding:20px 0px;
 	position:relative;
 }
-form input
+.form input
 {
 	outline: 0;
 	border:1px solid rgba(0,0,0,0.4);
@@ -88,18 +104,18 @@ form input
 	font-weight:300;
 
 }
-form input:hover
+.form input:hover
 {
 	background-color: lightgray;
 }
-form input:focus
+.form input:focus
 {
 	background-color: lightgray;
 	width: 270px;
 	color: black;
 
 }
-form button
+.form button
 {
 	background-color:white;
 	outline:0;
@@ -112,17 +128,17 @@ form button
 	font-size: 18px;
 
 }
- form button:hover
+ .form button:hover
  {
 	 background-color: lightgray;
  }
 
- form2
+ .form2
  {
  	padding:20px 0px;
  	position:relative;
  }
- form2 input
+ .form2 input
  {
  	outline: 0;
  	border:1px solid rgba(0,0,0,0.4);
@@ -142,18 +158,18 @@ form button
       right:150px;
 
  }
- form2 input:hover
+ .form2 input:hover
  {
  	background-color: lightgray;
  }
- form2 input:focus
+ .form2 input:focus
  {
  	background-color: lightgray;
  	width: 270px;
  	color: black;
 
  }
- form2 button
+ .form2 button
  {
  	background-color:white;
  	outline:0;
@@ -164,9 +180,11 @@ form button
  	width: 250px;
  	cursor: pointer;
  	font-size: 18px;
+ 	position:relative;
+ 	left:175px;
 
  }
-  form2 button:hover
+ .form2 button:hover
   {
  	 background-color: lightgray;
   }
@@ -177,26 +195,26 @@ form button
  	position:relative;
  }
 
-  form3 input
-  {
-     position:relative;
-     left:590px;
-     top: 10px;
-  }
+ form3 input
+ {
+    position:relative;
+    left:590px;
+    top: 10px;
+ }
 
-  form3 button
-  {
-     position:relative;
-     left:590px;
-     top: 10px;
-  }
+ form3 button
+ {
+    position:relative;
+    left:590px;
+    top: 10px;
+ }
 
-  form4
+  .form4
   {
    	padding:20px 0px;
    	position:relative;
   }
-  form4 input
+  .form4 input
   {
    	outline: 0;
    	border:1px solid rgba(0,0,0,0.4);
@@ -214,20 +232,20 @@ form button
    	font-weight:300;
    	position:relative;
       left:150px;
-      bottom:391px;
+      bottom:431px;
   }
-  form4 input:hover
+  .form4 input:hover
   {
    	background-color: lightgray;
   }
-  form4 input:focus
+  .form4 input:focus
   {
    	background-color: lightgray;
    	width: 270px;
    	color: black;
 
   }
-  form4 button
+  .form4 button
   {
    	background-color:white;
    	outline:0;
@@ -240,7 +258,8 @@ form button
    	font-size: 18px;
 
   }
-  form4 button:hover
+  .form4 button:hover
   {
    	 background-color: lightgray;
   }
+
