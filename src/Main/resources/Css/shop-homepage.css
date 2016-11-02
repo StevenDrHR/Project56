@@ -73,14 +73,6 @@ footer {
 	left:130px;
 }
 
-.regbutton
-{
-    max-width: 100px;
-	height: 100px;
-	position:relative;
-	left:150px;
-}
-
 .form
 {
 	padding:20px 0px;
@@ -137,6 +129,7 @@ footer {
  {
  	padding:20px 0px;
  	position:relative;
+
  }
  .form2 input
  {
@@ -262,4 +255,19 @@ footer {
   {
    	 background-color: lightgray;
   }
+
+  .sidecol
+  {
+    position:relative;
+    left:350px;
+    bottom:335.5px;
+  }
+
+  .regbutton
+  {
+  	position:relative;
+  	left:150px;
+  	bottom:335.5px;
+  }
+
 

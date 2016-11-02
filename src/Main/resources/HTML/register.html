@@ -57,8 +57,8 @@
                         <a href="http://localhost:4567/Register">Contact</a>
                     </li>
                     <form3>
-                        <input type="text" placeholder="search" align="right">
-                        <button type="submit" id="search_button" align="right">Search</button>
+                        <input type="text" placeholder="search">
+                        <button type="submit" id="search_button">Search</button>
                     </form3>
                 </ul>
             </div>
@@ -77,7 +77,7 @@
                 <br>
 
                 <div class="acontainer">
-                    <form class="form">
+                    <form class="form" method="POST" action="/Register">
                         <input type="text" placeholder="username" name="LoginUsername">
                         <input type="password" placeholder="password" name="LoginPassword">
                         <button type="submit" id="login_button">Login</button>
@@ -91,27 +91,33 @@
 
                     <div class="col-md-12">
                         <h1 align="center">Register Below</h1>
-                        <div class="acontainer">
+
                         <form class="form2" method='POST' action='/Register'>
+
                             <input type="text" placeholder="username" align="center" name="RegUsername">
                             <input type="password" placeholder="password" align="center" name="RegPassword">
                             <input type="email" placeholder="email address" align="center" name="RegEmail">
                             <input type="text" placeholder="first name" align="center" name="RegFName">
                             <input type="text" placeholder="last name" align="center" name="RegLName">
-                            <input type="text" placeholder="age" align="center" name="RegAge">
-                            <input type="text" placeholder="street" align="center" name="RegStreet">
-                            <input type="text" placeholder="street number" align="center" name="RegStreetNumber">
-                            <input type="text" placeholder="Country" align="center"name="RegCountry">
-                            <input type="text" placeholder="postal code" align="center" name="RegPostalCode">
-                            <button type="submit" id="register_button">Register</button>
+
+                            <div class="sidecol">
+
+                                <input type="text" placeholder="age" align="center" name="RegAge">
+                                <input type="text" placeholder="street" align="center" name="RegStreet">
+                                <input type="text" placeholder="street number" align="center" name="RegStreetNumber">
+                                <input type="text" placeholder="country" align="center" name="RegCountry">
+                                <input type="text" placeholder="postal code" align="center" name="RegPostalCode">
+
+                            </div>
+
+                            <div class="regbutton">
+
+                                <button type="submit" id="register_button">Register</button>
+
+                            </div>
+
                         </form>
 
-                        <form class="form4" method="POST" action="/Register">
-
-
-                        </form>
-
-                        </div>
                     </div>
 
                 </div>
