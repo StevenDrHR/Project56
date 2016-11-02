@@ -1,7 +1,10 @@
 import java.util.ArrayDeque;
 import java.util.Deque;
+import java.util.HashMap;
+import java.util.Map;
 
 import static spark.Spark.get;
+import static spark.Spark.modelAndView;
 import static spark.Spark.post;
 
 /**
@@ -9,8 +12,8 @@ import static spark.Spark.post;
  */
 public class View {
 
-    Deque<Modal> users = new ArrayDeque<Modal>();
-
+    Deque<Modal> registerUsers = new ArrayDeque<Modal>();
+    Deque<Modal> loginUsers = new ArrayDeque<Modal>();
     public void ViewUsers() {
         get("/", (request, response) -> {
             String title = "Registered Users";
@@ -20,10 +23,10 @@ public class View {
             html.append("<h1>").append(title).append("</h1>").append(createUserLink);
             html.append("<hr>");
 
-            if (users.isEmpty()) {
+            if (registerUsers.isEmpty()) {
                 html.append("<b>No articles have been posted</b>");
             } else {
-                for (Modal user : users) {
+                for (Modal user : registerUsers) {
                     html.append("Title: ").append(user.getUsername())
                             .append("<br/>")
                             .append(user.getCreatedAt())
@@ -35,7 +38,6 @@ public class View {
                 }
             }
             return html.toString();
-
         });
 
         get("/user/create", (request, response) -> {
@@ -49,18 +51,17 @@ public class View {
                     .append("<input type='submit' value='Publish' form='user-create-form' />");
             return form.toString();
         });
-
         post("/user/create", (request, response) -> {
             String username = request.queryParams("username");
             String password = request.queryParams("password");
             Modal user = new Modal();
             user.RegisterModal(username, password, "","","","","","","","");
-            users.addFirst(user);
+            registerUsers.addFirst(user);
             response.status(201);
             response.redirect("/");
             StringBuilder form = new StringBuilder();
             Controller SaveUser = new Controller();
-            SaveUser.RegisterUser(users);
+            SaveUser.RegisterUser(registerUsers);
 
             return "";
         });
@@ -72,10 +73,10 @@ public class View {
         if(req.cookie("Login")== null){
         String LoginUsername = req.queryParams("LoginUsername");
         String LoginPassword = req.queryParams("LoginPassword");
-        Modal user = new Modal();
-        user.LoginModal(LoginUsername,LoginPassword);
-        users.addFirst(user);
-        String LoginUser = new Controller().LoginUser(users);
+        Modal loginUser = new Modal();
+        loginUser.LoginModal(LoginUsername,LoginPassword);
+        loginUsers.addFirst(loginUser);
+        String LoginUser = new Controller().LoginUser(loginUsers);
         req.session().attribute("User",LoginUser);
             System.out.println(req.session().attribute("User")+ " Shamala");
         res.redirect("/Home");
@@ -97,15 +98,23 @@ public class View {
             String RegStreetNumber = request.queryParams("RegStreetNumber");
             String RegCountry = request.queryParams("RegCountry");
             String RegPostalCode = request.queryParams("RegPostalCode");
-            Modal user = new Modal();
-            user.RegisterModal(RegUsername, RegPassword, RegEmail,RegFName,RegLName,RegAge,RegStreet,RegStreetNumber,RegCountry,RegPostalCode);
-            users.addFirst(user);
-            String SaveUser = new Controller().RegisterUser(users);
-            response.cookie("Message",SaveUser);
-            response.redirect("/Home");
+            String LoginUsername = request.queryParams("LoginUsername");
+            String LoginPassword = request.queryParams("LoginPassword");
+            Modal loginUser = new Modal();
+            loginUser.LoginModal(LoginUsername,LoginPassword);
+            loginUsers.addFirst(loginUser);
+            String LoginUser = new Controller().LoginUser(loginUsers);
+            request.session().attribute("User",LoginUser);
+            System.out.println(request.session().attribute("User")+ " Shamala");
 
 
+            Modal registerUser = new Modal();
+            registerUser.RegisterModal(RegUsername, RegPassword, RegEmail,RegFName,RegLName,RegAge,RegStreet,RegStreetNumber,RegCountry,RegPostalCode);
+            registerUsers.addFirst(registerUser);
+            String SaveUser = new Controller().RegisterUser(registerUsers);
 
+            Map<String, Object> attributes = new HashMap<String, Object>();
+            attributes.put("Message", SaveUser);
 
             /*if (SaveUser.contains("Detail: Key (username)")){
                 System.out.println("Account not registered account name is already taken");
@@ -119,9 +128,9 @@ public class View {
             else {
                 System.out.println("Something went horribly wrong please contact us");
             }*/
-            response.status(201);
 
-            return "/Home";
+
+            return modelAndView(attributes, "register.ftl");
         });
     }
 }

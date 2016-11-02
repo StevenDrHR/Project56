@@ -53,7 +53,6 @@ public class Controller {
         ResultSet rs = connection.prepareStatement(Querry).executeQuery();
         if(rs.next()) {
           userid = rs.getInt("userid") ;
-            System.out.println("jeFackingMoeder " +rs.getInt("userid"));
         }
         Querry = "INSERT INTO adress (userid,country,streetname,streetnumber,postalcode) VALUES (" + userid + ",'"+list.getFirst().getCounrty() +"','"+list.getFirst().getStreet() +"','"+ list.getFirst().getStreetNumber()+"','"+   list.getFirst().getPostalCode() +"' );";
         try {
