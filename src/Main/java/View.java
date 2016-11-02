@@ -68,7 +68,7 @@ public class View {
     }
     public  void RenderHomeView(){
         Controller renderView = new Controller();
-        get("/Home", (req, res) -> renderView.htmlToString("HTML/Index.html") );
+        get("/Home", (req, res) -> renderView.htmlToString("Webshop/HTML/Index.html") );
         post("/Home", (req,res)-> {
         if(req.cookie("Login")== null){
         String LoginUsername = req.queryParams("LoginUsername");
@@ -86,7 +86,7 @@ public class View {
     }
     public  void RenderRegisterView(){
         Controller renderView = new Controller();
-        get("/Register", (req, res) -> renderView.htmlToString("HTML/register.html"));
+        get("/Register", (req, res) -> renderView.htmlToString("Webshop/HTML/register.html"));
         post("/Register", (request, response) -> {
             String RegUsername = request.queryParams("RegUsername");
             String RegPassword = request.queryParams("RegPassword");
@@ -106,6 +106,8 @@ public class View {
             String LoginUser = new Controller().LoginUser(loginUsers);
             request.session().attribute("User",LoginUser);
             System.out.println(request.session().attribute("User")+ " Shamala");
+            response.redirect("/Home");
+
 
 
             Modal registerUser = new Modal();
@@ -115,6 +117,8 @@ public class View {
 
             Map<String, Object> attributes = new HashMap<String, Object>();
             attributes.put("Message", SaveUser);
+
+
 
             /*if (SaveUser.contains("Detail: Key (username)")){
                 System.out.println("Account not registered account name is already taken");
