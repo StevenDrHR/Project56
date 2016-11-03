@@ -119,6 +119,8 @@
 
                             </div>
 
+                            <div id="main"></div>
+
                         </form>
                         </div>
 
@@ -186,6 +188,18 @@
     <!-- shoppingCart -->
     <script src="js/simpleCart.min.js"> </script>
     <script> function myFunction() {alert("I am an alert box!");}</script>
+    <script>
+        if(${message}!= null){
+            var div = document.createElement("div");
+            div.style.width = "100px";
+            div.style.height = "100px";
+            div.style.background = "red";
+            div.style.color = "white";
+            div.innerHTML = "Hello";
+
+            document.getElementById("main").appendChild(div);
+        }
+    </script>
 
 </body>
 
