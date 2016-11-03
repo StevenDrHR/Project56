@@ -90,6 +90,7 @@ public class View {
         Controller renderView = new Controller();
         get("/Register", (req, res) -> renderView.htmlToString("Webshop/HTML/register.html"));
         post("/Register", (request, response) -> {
+            Map<String, Object> attributes = new HashMap<String, Object>();
             String RegUsername = request.queryParams("RegUsername");
             String RegPassword = request.queryParams("RegPassword");
             String RegEmail = request.queryParams("RegEmail");
@@ -102,6 +103,8 @@ public class View {
             String RegPostalCode = request.queryParams("RegPostalCode");
             String LoginUsername = request.queryParams("LoginUsername");
             String LoginPassword = request.queryParams("LoginPassword");
+
+
             Modal loginUser = new Modal();
             loginUser.LoginModal(LoginUsername,LoginPassword);
             loginUsers.addFirst(loginUser);
@@ -110,14 +113,53 @@ public class View {
             System.out.println(request.session().attribute("User")+ " Shamala");
             //response.redirect("/Home");
 
-
+            if(RegUsername.isEmpty()){
+                attributes.put("message", "Username is empty");
+                return modelAndView(attributes, "Webshop/register.vm");
+            }
+            if(RegPassword.isEmpty()){
+                attributes.put("message", "Password is empty");
+                return modelAndView(attributes, "Webshop/register.vm");
+            }
+            if(RegEmail.isEmpty()){
+                attributes.put("message", "Email is empty");
+                return modelAndView(attributes, "Webshop/register.vm");
+            }
+            if(RegFName.isEmpty()){
+                attributes.put("message", "First name is empty");
+                return modelAndView(attributes, "Webshop/register.vm");
+            }
+            if(RegLName.isEmpty()){
+                attributes.put("message", "Last name is empty");
+                return modelAndView(attributes, "Webshop/register.vm");
+            }
+            if(RegAge.isEmpty()){
+                attributes.put("message", "Age is empty");
+                return modelAndView(attributes, "Webshop/register.vm");
+            }
+            if(RegStreet.isEmpty()){
+                attributes.put("message", "Street is empty");
+                return modelAndView(attributes, "Webshop/register.vm");
+            }
+            if(RegStreetNumber.isEmpty()){
+                attributes.put("message", "Street number is empty");
+                return modelAndView(attributes, "Webshop/register.vm");
+            }
+            if(RegCountry.isEmpty()){
+                attributes.put("message", "Country is empty");
+                return modelAndView(attributes, "Webshop/register.vm");
+            }
+            if(RegPostalCode.isEmpty()){
+                attributes.put("message", "Postal code is empty");
+                return modelAndView(attributes, "Webshop/register.vm");
+            }
 
             Modal registerUser = new Modal();
             registerUser.RegisterModal(RegUsername, RegPassword, RegEmail,RegFName,RegLName,RegAge,RegStreet,RegStreetNumber,RegCountry,RegPostalCode);
             registerUsers.addFirst(registerUser);
             String SaveUser = new Controller().RegisterUser(registerUsers);
 
-            Map<String, Object> attributes = new HashMap<String, Object>();
+
             attributes.put("message", SaveUser);
 
 

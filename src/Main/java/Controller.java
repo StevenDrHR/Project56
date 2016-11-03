@@ -39,8 +39,18 @@ public class Controller {
 
     public String RegisterUser( Deque<Modal> list) throws SQLException {
         int userid = 34;
-        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres", "sql");
-        String Querry = "INSERT INTO users (firstname,lastname,email,username,user_password,userlevel,age) VALUES ('" + list.getFirst().getFname() + "','"+list.getFirst().getLname() +"','"+list.getFirst().getEmail() +"','"+ list.getFirst().getUsername()+"','"+   list.getFirst().getpassword() +"',0,'"+list.getFirst().getAge()+"' );";
+        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres", "123lol123");
+        String Querry = "Select username from users where username ='"+list.getFirst().getUsername()+"';";
+        ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+        if(rs.next()) {
+            return "Username already exists";
+        }
+        Querry = "Select email from users where email ='"+list.getFirst().getEmail()+"';";
+        rs = connection.prepareStatement(Querry).executeQuery();
+        if(rs.next()) {
+            return "This Email adress is already used";
+        }
+        Querry = "INSERT INTO users (firstname,lastname,email,username,user_password,userlevel,age) VALUES ('" + list.getFirst().getFname() + "','"+list.getFirst().getLname() +"','"+list.getFirst().getEmail() +"','"+ list.getFirst().getUsername()+"','"+   list.getFirst().getpassword() +"',0,'"+list.getFirst().getAge()+"' );";
         try {
             connection.prepareStatement(Querry).executeUpdate();
         } catch (SQLException e) {
@@ -50,7 +60,7 @@ public class Controller {
         }
 
         Querry ="Select userid from users where email='"+ list.getFirst().getEmail()+"'";
-        ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+        rs = connection.prepareStatement(Querry).executeQuery();
         if(rs.next()) {
           userid = rs.getInt("userid") ;
         }
@@ -75,7 +85,7 @@ public class Controller {
 
     public String LoginUser( Deque<Modal> list) throws SQLException {
         try {
-            connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres", "sql");
+            connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres", "123lol123");
         } catch (SQLException e) {
             e.printStackTrace();
         }
