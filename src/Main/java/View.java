@@ -16,58 +16,6 @@ public class View {
 
     Deque<Modal> registerUsers = new ArrayDeque<Modal>();
     Deque<Modal> loginUsers = new ArrayDeque<Modal>();
-    public void ViewUsers() {
-        get("/", (request, response) -> {
-            String title = "Registered Users";
-            String createUserLink = "<a href='/user/create'>Create users</a>";
-            StringBuilder html = new StringBuilder();
-
-            html.append("<h1>").append(title).append("</h1>").append(createUserLink);
-            html.append("<hr>");
-
-            if (registerUsers.isEmpty()) {
-                html.append("<b>No articles have been posted</b>");
-            } else {
-                for (Modal user : registerUsers) {
-                    html.append("Title: ").append(user.getUsername())
-                            .append("<br/>")
-                            .append(user.getCreatedAt())
-                            .append("<br/>")
-                            .append("Summary: ").append(user.getpassword())
-                            .append("<br/>")
-                            .append(user.getEditLink()).append(" | ").append(user.getDeleteLink())
-                            .append("</p>");
-                }
-            }
-            return html.toString();
-        });
-
-        get("/user/create", (request, response) -> {
-            StringBuilder form = new StringBuilder();
-            form.append("<form id='user-create-form' method='POST' action='/user/create'>")
-                    .append("Title: <input type='text' name='username' />")
-                    .append("<br/>")
-                    .append("Summary: <input type='text' name='password' />")
-                    .append("<br/>")
-                    .append("</form>")
-                    .append("<input type='submit' value='Publish' form='user-create-form' />");
-            return form.toString();
-        });
-        post("/user/create", (request, response) -> {
-            String username = request.queryParams("username");
-            String password = request.queryParams("password");
-            Modal user = new Modal();
-            user.RegisterModal(username, password, "","","","","","","","");
-            registerUsers.addFirst(user);
-            response.status(201);
-            response.redirect("/");
-            StringBuilder form = new StringBuilder();
-            Controller SaveUser = new Controller();
-            SaveUser.RegisterUser(registerUsers);
-
-            return "";
-        });
-    }
     public  void RenderHomeView(){
         Controller renderView = new Controller();
         get("/Home", (req, res) -> {renderView.htmlToString("Webshop/HTML/Index.html");
@@ -174,9 +122,6 @@ public class View {
 
 
             attributes.put("message", SaveUser);
-
-
-
             /*if (SaveUser.contains("Detail: Key (username)")){
                 System.out.println("Account not registered account name is already taken");
             }

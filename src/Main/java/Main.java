@@ -9,7 +9,6 @@ public class Main {
         String layout = "Css/RegisterScreen.css";
         View createPage= new View();
         Controller RenderNewView = new Controller();
-        createPage.ViewUsers();
         createPage.RenderHomeView();
         createPage.RenderRegisterView();
     }
