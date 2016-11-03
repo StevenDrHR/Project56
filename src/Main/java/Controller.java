@@ -36,9 +36,20 @@ public class Controller {
         return null;
     }
 
+    public String checkUserLevel(String UserLevel) throws SQLException{
+        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres", "0906986");
+        String Querry = "Select username from users where username ='"+UserLevel+"' and userlevel = 1";
+        ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+        if(rs.next()) {
+            return "admin";
+        }
+        connection.close();
+        return "user";
+    }
+
     public String RegisterUser( Deque<Modal> list) throws SQLException {
         int userid = 34;
-        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres", "123lol123");
+        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres", "0906986");
         String Querry = "Select username from users where username ='"+list.getFirst().getUsername()+"';";
         ResultSet rs = connection.prepareStatement(Querry).executeQuery();
         if(rs.next()) {
@@ -79,7 +90,7 @@ public class Controller {
 
     public String LoginUser( Deque<Modal> list) throws SQLException {
         try {
-            connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres", "123lol123");
+            connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres", "0906986");
         } catch (SQLException e) {
             e.printStackTrace();
         }

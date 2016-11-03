@@ -70,9 +70,17 @@ public class View {
     }
     public  void RenderHomeView(){
         Controller renderView = new Controller();
-        get("/Home", (req, res) -> renderView.htmlToString("Webshop/HTML/Index.html") );
+        get("/Home", (req, res) -> {renderView.htmlToString("Webshop/HTML/Index.html");
+            Map<String, Object> attributes = new HashMap<String, Object>();
+            String currentUser = req.session().attribute("User");
+            Controller checkUserLevel = new Controller();
+            String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
+            attributes.put("userlevel", currentUserLevel);
+            System.out.println(currentUserLevel);
+        return modelAndView(attributes, "Webshop/HTML/Index.html");
+        },new VelocityTemplateEngine());
+
         post("/Home", (req,res)-> {
-        if(req.cookie("Login")== null){
         String LoginUsername = req.queryParams("LoginUsername");
         String LoginPassword = req.queryParams("LoginPassword");
         Modal loginUser = new Modal();
@@ -80,11 +88,16 @@ public class View {
         loginUsers.addFirst(loginUser);
         String LoginUser = new Controller().LoginUser(loginUsers);
         req.session().attribute("User",LoginUser);
-            System.out.println(req.session().attribute("User")+ " Shamala");
-        res.redirect("/Home");
-            }
-            return "";
-        });
+        System.out.println(req.session().attribute("User")+ " Shamala");
+
+        Map<String, Object> attributes = new HashMap<String, Object>();
+        String currentUser = req.session().attribute("User");
+        Controller checkUserLevel = new Controller();
+        String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
+        attributes.put("userlevel", currentUserLevel);
+        System.out.println(currentUserLevel+ "Shamala123");
+            return modelAndView(attributes, "Webshop/HTML/Index.html");
+        },new VelocityTemplateEngine());
     }
     public  void RenderRegisterView(){
         Controller renderView = new Controller();
