@@ -88,7 +88,7 @@ public class View {
     }
     public  void RenderRegisterView(){
         Controller renderView = new Controller();
-        get("/Register", (req, res) -> renderView.htmlToString("Webshop/HTML/register.html"));
+        get("/Register", (req, res) -> renderView.htmlToString("Webshop/register.vm"));
         post("/Register", (request, response) -> {
             Map<String, Object> attributes = new HashMap<String, Object>();
             String RegUsername = request.queryParams("RegUsername");

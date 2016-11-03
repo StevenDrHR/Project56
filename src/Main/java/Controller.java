@@ -36,7 +36,6 @@ public class Controller {
         return null;
     }
 
-
     public String RegisterUser( Deque<Modal> list) throws SQLException {
         int userid = 34;
         connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres", "123lol123");
@@ -77,11 +76,6 @@ public class Controller {
         connection.close();
         return "Done";
     }
-
-
-
-
-
 
     public String LoginUser( Deque<Modal> list) throws SQLException {
         try {
