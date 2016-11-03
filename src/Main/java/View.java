@@ -1,3 +1,5 @@
+import spark.template.velocity.VelocityTemplateEngine;
+
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.HashMap;
@@ -116,7 +118,7 @@ public class View {
             String SaveUser = new Controller().RegisterUser(registerUsers);
 
             Map<String, Object> attributes = new HashMap<String, Object>();
-            attributes.put("Message", SaveUser);
+            attributes.put("message", SaveUser);
 
 
 
@@ -134,7 +136,7 @@ public class View {
             }*/
 
 
-            return modelAndView(attributes, "register.ftl");
-        });
+            return modelAndView(attributes, "register.vm");
+        },new VelocityTemplateEngine());
     }
 }
