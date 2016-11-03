@@ -12,10 +12,10 @@
     <title>Shop Homepage - Start Bootstrap Template</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="shop-homepage.css" rel="stylesheet">
+    <link href="css/shop-homepage.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -120,6 +120,8 @@
 
                             </div>
 
+                            <div id="main"></div>
+
                         </form>
 
                     </div>
@@ -185,6 +187,20 @@
 
     <!-- shoppingCart -->
     <script src="js/simpleCart.min.js"> </script>
+
+    <script>
+            if(${message}!= null){
+                var div = document.createElement("div");
+                div.style.width = "100px";
+                div.style.height = "100px";
+                div.style.background = "red";
+                div.style.color = "white";
+                div.innerHTML = "Hello";
+
+                document.getElementById("main").appendChild(div);
+            }
+    </script>
+
 
 </body>
 

@@ -108,7 +108,7 @@ public class View {
             String LoginUser = new Controller().LoginUser(loginUsers);
             request.session().attribute("User",LoginUser);
             System.out.println(request.session().attribute("User")+ " Shamala");
-            response.redirect("/Home");
+            //response.redirect("/Home");
 
 
 
@@ -136,7 +136,7 @@ public class View {
             }*/
 
 
-            return modelAndView(attributes, "register.vm");
+            return modelAndView(attributes, "Webshop/register.vm");
         },new VelocityTemplateEngine());
     }
 }
