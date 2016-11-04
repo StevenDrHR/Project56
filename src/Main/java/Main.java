@@ -11,6 +11,7 @@ public class Main {
         Controller RenderNewView = new Controller();
         createPage.RenderHomeView();
         createPage.RenderRegisterView();
+        createPage.RenderAdminpageView();
     }
 
 }

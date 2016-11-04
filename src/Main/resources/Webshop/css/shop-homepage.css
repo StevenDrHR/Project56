@@ -279,4 +279,10 @@ footer {
     left:200px;
 
   }
+  
+#adminvisibility{
+	display: none;
+}
+  
+
 

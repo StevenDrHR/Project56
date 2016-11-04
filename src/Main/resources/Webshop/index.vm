@@ -53,6 +53,9 @@
                     <li>
                         <a href="http://localhost:4567/Register ">About</a>
                     </li>
+                    <li id="adminvisibility">
+                        <a href="http://localhost:4567/Adminpage">Adminpage</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -279,6 +282,15 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <script>
+        if("${userlevel}" == "admin"){
+            var a = document.querySelector("#adminvisibility");
+//            a.href = "http://localhost:4567/Adminpage";
+//            a.innerHTML = "Adminpage"
+            a.style.display = "initial";
+        }
+    </script>
 
 </body>
 

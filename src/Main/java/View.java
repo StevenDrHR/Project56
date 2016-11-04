@@ -44,7 +44,7 @@ public class View {
         String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
         attributes.put("userlevel", currentUserLevel);
         System.out.println(currentUserLevel+ "Shamala123");
-            return modelAndView(attributes, "Webshop/HTML/Index.html");
+            return modelAndView(attributes, "Webshop/Index.vm");
         },new VelocityTemplateEngine());
     }
     public  void RenderRegisterView(){
@@ -147,6 +147,18 @@ public class View {
 
 
             return modelAndView(attributes, "Webshop/register.vm");
+        },new VelocityTemplateEngine());
+    }
+    public void RenderAdminpageView(){
+        get("/Adminpage", (req, res) -> {
+            Map<String, Object> attributes = new HashMap<String, Object>();
+
+            return modelAndView(attributes, "Webshop/admin.vm");
+        },new VelocityTemplateEngine());
+        post("/Adminpage", (request, response) -> {
+            Map<String, Object> attributes = new HashMap<String, Object>();
+
+            return modelAndView(attributes, "Webshop/admin.vm");
         },new VelocityTemplateEngine());
     }
 }
