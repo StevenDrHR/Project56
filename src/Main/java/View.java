@@ -18,14 +18,14 @@ public class View {
     Deque<Modal> loginUsers = new ArrayDeque<Modal>();
     public  void RenderHomeView(){
         Controller renderView = new Controller();
-        get("/Home", (req, res) -> {renderView.htmlToString("Webshop/HTML/Index.html");
+        get("/Home", (req, res) -> {
             Map<String, Object> attributes = new HashMap<String, Object>();
             String currentUser = req.session().attribute("User");
             Controller checkUserLevel = new Controller();
             String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
             attributes.put("userlevel", currentUserLevel);
             System.out.println(currentUserLevel);
-        return modelAndView(attributes, "Webshop/HTML/Index.html");
+        return modelAndView(attributes, "Webshop/Index.vm");
         },new VelocityTemplateEngine());
 
         post("/Home", (req,res)-> {
@@ -49,7 +49,17 @@ public class View {
     }
     public  void RenderRegisterView(){
         Controller renderView = new Controller();
-        get("/Register", (req, res) -> renderView.htmlToString("Webshop/register.vm"));
+        get("/Register", (req, res) ->  {
+        Map<String, Object> attributes = new HashMap<String, Object>();
+        attributes.put("message","null");
+        String currentUser = req.session().attribute("User");
+        Controller checkUserLevel = new Controller();
+        String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
+        attributes.put("userlevel", currentUserLevel);
+        System.out.println(currentUserLevel);
+        return modelAndView(attributes, "Webshop/register.vm");
+    },new VelocityTemplateEngine());
+
         post("/Register", (request, response) -> {
             Map<String, Object> attributes = new HashMap<String, Object>();
             String RegUsername = request.queryParams("RegUsername");
