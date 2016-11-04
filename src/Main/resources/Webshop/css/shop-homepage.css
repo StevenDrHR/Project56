@@ -63,7 +63,6 @@ footer {
 	margin-top:5%;
 	position:relative;
 	bottom:100px;
-
 }
 
 .bcontainer
@@ -78,6 +77,7 @@ footer {
 {
 	padding:20px 0px;
 	position:relative;
+	bottom:19px;
 }
 .form input
 {
@@ -129,8 +129,8 @@ footer {
  .form2
  {
  	padding:20px 0px;
- 	position:relative;
-
+ 	max-height:400px;
+ 	max-width:800px;
  }
  .form2 input
  {
@@ -215,8 +215,7 @@ footer {
    	background-color: rgba(255,255,255,0.2);
    	width: 250px;
    	border-radius: 3px;
-   	padding:10px 15px;
-   	margin: 10px auto 20px;
+
    	display: block;
    	text-align: center;
    	font-size: 18px;
@@ -267,7 +266,7 @@ footer {
   .regbutton
   {
   	position:relative;
-    left:-75px;
+    left:120px;
   	bottom:335.5px;
   }
 
@@ -279,10 +278,45 @@ footer {
     left:200px;
 
   }
-  
-#adminvisibility{
-	display: none;
-}
-  
 
+  .messagehandlerpopup
+  {
+    width: 200px;
+    height: 100px;
+    background: silver;
+    color: black;
+    position: relative;
+    left: 140px;
+    border: outset;
+    display:none;
+  }
+
+  .messageinput
+  {
+    background:transparent;
+    color: black;
+    border: none;
+  }
+
+  .messagehandlerbtn1
+  {
+    position: relative;
+    bottom:25px;
+    left: 140px;
+    border: outset;
+    display:none;
+  }
+
+  .messagehandlerbtn2
+    {
+      position: relative;
+      bottom:65px;
+      left: 230px;
+      border: outset;
+      display:none;
+    }
+
+    #adminvisibility{
+    	display: none;
+    }
 

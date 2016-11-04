@@ -27,6 +27,8 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+
+
 </head>
 
 <body>
@@ -56,8 +58,8 @@
                     <li>
                         <a href="http://localhost:4567/Register">Contact</a>
                     </li>
-                    <li>
-                    <a href="http://localhost:4567/Register">Contact</a>
+                    <li id="adminvisibility">
+                         <a href="http://localhost:4567/Adminpage">Adminpage</a>
                     </li>
 
                     <form3>
@@ -79,14 +81,19 @@
             <div class="col-md-3">
                 <h1 align="center">Existing user</h1>
                 <br>
-
                 <div class="acontainer">
-                    <form class="form" method="POST" action="/Register">
+                    <form class="form" method="POST" action='/Register'>
                         <input type="text" placeholder="username" name="LoginUsername">
                         <input type="password" placeholder="password" name="LoginPassword">
                         <button type="submit" id="login_button">Login</button>
                     </form>
                 </div>
+                <h4 align="center">Error Message:</h4>
+
+                    <form class="form">
+                        <input type="text" value="${message}">
+                    </form>
+
             </div>
 
             <div class="col-md-9">
@@ -98,11 +105,12 @@
 
                         <form class="form2" method='POST' action='/Register'>
 
-                            <input type="text" placeholder="username" align="center" name="RegUsername">
-                            <input type="password" placeholder="password" align="center" name="RegPassword">
+                            <input type="text" placeholder="username" align="center" name="RegUsername" required>
+                            <input type="password" placeholder="password" align="center" name="RegPassword" required>
                             <input type="email" placeholder="email address" align="center" name="RegEmail">
-                            <input type="text" placeholder="first name" align="center" name="RegFName">
-                            <input type="text" placeholder="last name" align="center" name="RegLName">
+                            <input type="text" placeholder="first name" align="center" name="RegFName" required>
+                            <input type="text" placeholder="last name" align="center" name="RegLName" required>
+
 
                             <div class="sidecol">
 
@@ -111,18 +119,27 @@
                                 <input type="text" placeholder="street number" align="center" name="RegStreetNumber">
                                 <input type="text" placeholder="country" align="center" name="RegCountry">
                                 <input type="text" placeholder="postal code" align="center" name="RegPostalCode">
-                                <input type="test" value="${message}">
+
+
+
                             </div>
 
                             <div class="regbutton">
 
-                                <button type="submit" id="register_button">Register</button>
+                                <button type="submit" id="register_button" onclick="myFunction()"> Register</button>
 
                             </div>
 
-                            <div id="main"></div>
 
                         </form>
+
+                        <div class="messagehandlerpopup" > <p>"${message}"</p></div>
+
+                        <button class="messagehandlerbtn1" onclick="window.location.href='/Register '">Ok</button>
+
+                        <button class="messagehandlerbtn2" onclick="window.location.href='/Home '">Ok</button>
+
+
 
                     </div>
 
@@ -171,7 +188,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
+                    <p>Copyright &copy; Shamala Webshop 2016</p>
                 </div>
             </div>
         </footer>
@@ -185,22 +202,34 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
-    <!-- shoppingCart -->
-    <script src="js/simpleCart.min.js"> </script>
-
     <script>
-            if(${message}!= null){
-                var div = document.createElement("div");
-                div.style.width = "100px";
-                div.style.height = "100px";
-                div.style.background = "red";
-                div.style.color = "white";
-                div.innerHTML = "Hello";
+        if("${message}" != "null")
+            {
+                var popup = document.querySelector(".messagehandlerpopup");
+                popup.style.display = 'block'
 
-                document.getElementById("main").appendChild(div);
+                var regbtn = document.querySelector(".messagehandlerbtn1");
+
+                var homebtn = document.querySelector(".messagehandlerbtn2");
+
+                if("${message}" == "Done")
+                {
+                    homebtn.style.display = 'block'
+                }
+                else
+                {
+                    regbtn.style.display = 'block'
+                }
+
             }
     </script>
 
+    <script>
+            if("${userlevel}" == "admin"){
+                var a = document.querySelector("#adminvisibility");
+                a.style.display = "initial";
+            }
+    </script>
 
 </body>
 

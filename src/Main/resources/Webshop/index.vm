@@ -286,8 +286,6 @@
     <script>
         if("${userlevel}" == "admin"){
             var a = document.querySelector("#adminvisibility");
-//            a.href = "http://localhost:4567/Adminpage";
-//            a.innerHTML = "Adminpage"
             a.style.display = "initial";
         }
     </script>

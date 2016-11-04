@@ -47,16 +47,16 @@ public class View {
             return modelAndView(attributes, "Webshop/Index.vm");
         },new VelocityTemplateEngine());
     }
-    public  void RenderRegisterView(){
+    public void RenderRegisterView(){
         Controller renderView = new Controller();
         get("/Register", (req, res) ->  {
         Map<String, Object> attributes = new HashMap<String, Object>();
         attributes.put("message","null");
-        String currentUser = req.session().attribute("User");
-        Controller checkUserLevel = new Controller();
-        String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
-        attributes.put("userlevel", currentUserLevel);
-        System.out.println(currentUserLevel);
+            String currentUser = req.session().attribute("User");
+            Controller checkUserLevel = new Controller();
+            String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
+            attributes.put("userlevel", currentUserLevel);
+            System.out.println(currentUserLevel);
         return modelAndView(attributes, "Webshop/register.vm");
     },new VelocityTemplateEngine());
 
@@ -83,68 +83,18 @@ public class View {
             request.session().attribute("User",LoginUser);
             System.out.println(request.session().attribute("User")+ " Shamala");
             //response.redirect("/Home");
-
-            if(RegUsername.isEmpty()){
-                attributes.put("message", "Username is empty");
-                return modelAndView(attributes, "Webshop/register.vm");
-            }
-            if(RegPassword.isEmpty()){
-                attributes.put("message", "Password is empty");
-                return modelAndView(attributes, "Webshop/register.vm");
-            }
-            if(RegEmail.isEmpty()){
-                attributes.put("message", "Email is empty");
-                return modelAndView(attributes, "Webshop/register.vm");
-            }
-            if(RegFName.isEmpty()){
-                attributes.put("message", "First name is empty");
-                return modelAndView(attributes, "Webshop/register.vm");
-            }
-            if(RegLName.isEmpty()){
-                attributes.put("message", "Last name is empty");
-                return modelAndView(attributes, "Webshop/register.vm");
-            }
-            if(RegAge.isEmpty()){
-                attributes.put("message", "Age is empty");
-                return modelAndView(attributes, "Webshop/register.vm");
-            }
-            if(RegStreet.isEmpty()){
-                attributes.put("message", "Street is empty");
-                return modelAndView(attributes, "Webshop/register.vm");
-            }
-            if(RegStreetNumber.isEmpty()){
-                attributes.put("message", "Street number is empty");
-                return modelAndView(attributes, "Webshop/register.vm");
-            }
-            if(RegCountry.isEmpty()){
-                attributes.put("message", "Country is empty");
-                return modelAndView(attributes, "Webshop/register.vm");
-            }
-            if(RegPostalCode.isEmpty()){
-                attributes.put("message", "Postal code is empty");
-                return modelAndView(attributes, "Webshop/register.vm");
-            }
+            String currentUser = request.session().attribute("User");
+            Controller checkUserLevel = new Controller();
+            String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
+            attributes.put("userlevel", currentUserLevel);
+            System.out.println(currentUserLevel);
 
             Modal registerUser = new Modal();
             registerUser.RegisterModal(RegUsername, RegPassword, RegEmail,RegFName,RegLName,RegAge,RegStreet,RegStreetNumber,RegCountry,RegPostalCode);
             registerUsers.addFirst(registerUser);
             String SaveUser = new Controller().RegisterUser(registerUsers);
 
-
             attributes.put("message", SaveUser);
-            /*if (SaveUser.contains("Detail: Key (username)")){
-                System.out.println("Account not registered account name is already taken");
-            }
-            else if(SaveUser.contains("Detail: Key (email)")){
-                System.out.println("Account not registered account email is already taken");
-            }
-            else if (SaveUser.contains("Done")){
-                System.out.println("Account succesfully registered");
-            }
-            else {
-                System.out.println("Something went horribly wrong please contact us");
-            }*/
-
 
             return modelAndView(attributes, "Webshop/register.vm");
         },new VelocityTemplateEngine());
