@@ -58,52 +58,14 @@
     </div>
     <!-- /.container -->
 </nav>
-<form class="form2" method='POST' action='/Adminpage'>
-
-<table style="width:100%" id="admintable" >
-    <tbody>
-
-    </tbody>
-</table>
+<form method='POST' action='/Modify'>
+Modify ${ModifyUser}</br>
+<button type="submit" name="resetpassword_button"> Reset Password</button></br>
+<button type="submit" name="blockuser_button"> Block User</button>
+<button type="submit" name="unblockuser_button"> unblock User</button></br>
+<button type="submit" name="return_button"> return</button></br>
 </form>
-   <script>
-        if("${userlevel}" == "admin"){
-              var a = document.querySelector("#adminvisibility");
-              a.style.display = "initial";
-          }
-   </script>
-
-   <script>
-        var dirtystring = "${users}";
-        var cleanstring = dirtystring.substr(1, dirtystring.length - 2)
-        var parts = cleanstring.split(", ");
 
 
-       for (var i = 0; i < parts.length; i++){
-
-           table = document.getElementById("admintable");
-           Deletebutton =  document.createElement("button");
-           Modifybutton =  document.createElement("button");
-
-           //making the buttons
-           Deletebutton.setAttribute("name", "Delete "+ parts[i]);
-           Deletebutton.setAttribute("type", "submit");
-           Modifybutton.setAttribute("name", "Modify "+ parts[i]);
-           Modifybutton.setAttribute("type", "submit");
-           //adding the row
-           row = table.insertRow(i);
-           row.setAttribute("name", ""+parts[i]);
-
-           //making the amount of values in a row
-           cell1 = row.insertCell(0);
-           cell2 = row.insertCell(1);
-           cell3 = row.insertCell(2);
-
-           //adding values
-           cell1.innerHTML = parts[i];
-           cell2.appendChild(Deletebutton);
-           cell3.appendChild(Modifybutton);
-       }
-   </script>
 </body>
 </html>

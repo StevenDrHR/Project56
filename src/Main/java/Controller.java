@@ -42,13 +42,12 @@ public class Controller {
         if(rs.next()) {
             return "This Email adress is already used";
         }
-        Querry = "INSERT INTO users (firstname,lastname,email,username,user_password,userlevel,age) VALUES ('" + list.getFirst().getFname() + "','"+list.getFirst().getLname() +"','"+list.getFirst().getEmail() +"','"+ list.getFirst().getUsername()+"','"+   list.getFirst().getpassword() +"',0,'"+list.getFirst().getAge()+"' );";
+        Querry = "INSERT INTO users (firstname,lastname,email,username,user_password,userlevel,age,userstatus) VALUES ('" + list.getFirst().getFname() + "','"+list.getFirst().getLname() +"','"+list.getFirst().getEmail() +"','"+ list.getFirst().getUsername()+"','"+   list.getFirst().getpassword() +"',0,'"+list.getFirst().getAge()+"','Available' );";
         try {
             connection.prepareStatement(Querry).executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
-            String m = e.getMessage();
-            return m;
+            return "Something went wrong with the regestration";
         }
 
         Querry ="Select userid from users where email='"+ list.getFirst().getEmail()+"'";
@@ -104,14 +103,31 @@ public List<String> GetUsers() throws SQLException {
     return list;
 }
     public String DeleteUser(String username) throws SQLException {
-        ArrayList<String> list = new ArrayList<String>();
         connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres", "123lol123");
         String Querry = "Delete from users where username ='"+username+"';";
         connection.prepareStatement(Querry).executeUpdate();
         return "Done";
         }
 
+    public String ResetPassword(String username) throws SQLException{
+        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres", "123lol123");
+        String Querry = "Update users set user_password = '12345' where username ='"+username+"';";
+        connection.prepareStatement(Querry).executeUpdate();
+        return "Done";
     }
+    public String BlockUser(String username) throws SQLException{
+        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres", "123lol123");
+        String Querry = "Update users set userstatus = 'Blocked' where username ='"+username+"';";
+        connection.prepareStatement(Querry).executeUpdate();
+        return "Done";
+    }
+    public String UnblockUser(String username) throws SQLException{
+        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres", "123lol123");
+        String Querry = "Update users set userstatus = 'Available' where username ='"+username+"';";
+        connection.prepareStatement(Querry).executeUpdate();
+        return "Done";
+    }
+}
 
 
 

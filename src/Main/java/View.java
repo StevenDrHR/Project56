@@ -2,9 +2,7 @@ import spark.template.velocity.VelocityTemplateEngine;
 
 import java.util.*;
 
-import static spark.Spark.get;
-import static spark.Spark.modelAndView;
-import static spark.Spark.post;
+import static spark.Spark.*;
 
 /**
  * Created by nilmor on 10/27/2016.
@@ -106,9 +104,20 @@ public class View {
 
         post("/Adminpage", (request, response) -> {
             Map<String, Object> attributes = new HashMap<String, Object>();
-            String deleteUser =request.queryParams().iterator().next();
+            String deleteUser = request.queryParams().iterator().next();
+            String checkFunction = deleteUser.substring(0, 6);
+            System.out.println(checkFunction);
+            if(checkFunction.equals("Delete") ){
+            deleteUser= deleteUser.substring(7);
             Controller databaseDeleteUser = new Controller();
             databaseDeleteUser.DeleteUser(deleteUser);
+            }
+            else {
+                deleteUser =deleteUser.substring(7);
+                request.session().attribute("ModifyUser",deleteUser);
+                response.redirect("/Modify");
+                return modelAndView(attributes, "Webshop/modify.vm");
+            }
             Controller getUsers = new Controller();
             List list = getUsers.GetUsers();
             attributes.put("users",list);
@@ -116,4 +125,47 @@ public class View {
             return modelAndView(attributes, "Webshop/admin.vm");
         },new VelocityTemplateEngine());
     }
-}
+
+    public void RenderModifyView(){
+        get("/Modify", (req, res) -> {
+            Map<String, Object> attributes = new HashMap<String, Object>();
+            String modifyUser = req.session().attribute("ModifyUser");
+            if (modifyUser == null){
+                res.redirect("/Adminpage");
+            }
+            attributes.put("ModifyUser",modifyUser);
+            return modelAndView(attributes, "Webshop/modify.vm");
+        },new VelocityTemplateEngine());
+
+        post("/Modify", (request, response) -> {
+            Map<String, Object> attributes = new HashMap<String, Object>();
+            String modifyUser = request.session().attribute("ModifyUser");
+            if (modifyUser == null){
+                response.redirect("/Adminpage");
+            }
+            String button = request.queryParams().iterator().next();
+            String test = button;
+            System.out.println(button + " Shamala");
+
+            if (button.equals("resetpassword_button") ) {
+                Controller resetPassword = new Controller();
+                resetPassword.ResetPassword(modifyUser);
+            }
+            else if(button.equals("blockuser_button")  ){
+                System.out.println(request.session().attribute("ModifyUser") + " Shamala2");
+                Controller blockUser = new Controller();
+                blockUser.BlockUser(modifyUser);
+            }
+            else if(button.equals("unblockuser_button") ){
+                Controller unblockUser = new Controller();
+                unblockUser.UnblockUser(modifyUser);
+            }
+            else if(button.equals("return_button") ){
+                response.redirect("/Adminpage");
+            }
+            attributes.put("ModifyUser",modifyUser);
+            return modelAndView(attributes, "Webshop/modify.vm");
+        },new VelocityTemplateEngine());
+        }
+    }
+

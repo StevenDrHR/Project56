@@ -12,6 +12,7 @@ public class Main {
         createPage.RenderHomeView();
         createPage.RenderRegisterView();
         createPage.RenderAdminpageView();
+        createPage.RenderModifyView();
     }
 
 }
