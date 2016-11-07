@@ -56,12 +56,21 @@
     </div>
     <!-- /.container -->
 </nav>
+${users}
+<table style="width:100%">
+<tr>
+<th>Username</th>
+</tr>
+<tr>
+<td> ${users}</td>
+</table>
     <script>
-        if("${userlevel}" == "admin"){
-            var a = document.getElementById("adminvisibility");
-            a.href = "http://localhost:4567/Adminpage";
-        }
-    </script>
+             if("${userlevel}" == "admin"){
+                   var a = document.querySelector("#adminvisibility");
+                   a.style.display = "initial";
+               }
+
+   </script>
 
 </body>
 </html>

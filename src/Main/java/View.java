@@ -1,9 +1,6 @@
 import spark.template.velocity.VelocityTemplateEngine;
 
-import java.util.ArrayDeque;
-import java.util.Deque;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 import static spark.Spark.get;
 import static spark.Spark.modelAndView;
@@ -102,11 +99,18 @@ public class View {
     public void RenderAdminpageView(){
         get("/Adminpage", (req, res) -> {
             Map<String, Object> attributes = new HashMap<String, Object>();
+            Controller getUsers = new Controller();
+            List list = getUsers.GetUsers();
+            attributes.put("users",list);
 
             return modelAndView(attributes, "Webshop/admin.vm");
         },new VelocityTemplateEngine());
+
         post("/Adminpage", (request, response) -> {
             Map<String, Object> attributes = new HashMap<String, Object>();
+            Controller getUsers = new Controller();
+            List list = getUsers.GetUsers();
+            attributes.put("users",list);
 
             return modelAndView(attributes, "Webshop/admin.vm");
         },new VelocityTemplateEngine());

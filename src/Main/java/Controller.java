@@ -1,43 +1,19 @@
-import java.io.IOException;
-import java.net.URISyntaxException;
-import java.net.URL;
-import java.nio.charset.Charset;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Deque;
+import java.util.List;
 
 /**
  * Created by nilmor on 10/27/2016.
  */
 public class Controller {
     static Connection connection;
-    public String htmlToString(String htmlFile) {
-        try {
-            // If you are using maven then your files
-            // will be in a folder called resources.
-            // getResource() gets that folder
-            // and any files you specify.
-
-            URL url = getClass().getResource(htmlFile);
-
-            // Return a String which has all
-            // the contents of the file.
-            Path path = Paths.get(url.toURI());
-
-            return new String(Files.readAllBytes(path), Charset.defaultCharset());
-        } catch (IOException | URISyntaxException e) {
-            // Add your own exception handlers here.
-        }
-        return null;
-    }
 
     public String checkUserLevel(String UserName) throws SQLException{
-        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres", "0906986");
+        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres", "123lol123");
         String Querry = "Select username from users where username ='"+UserName+"' and userlevel = 1";
         ResultSet rs = connection.prepareStatement(Querry).executeQuery();
             if(rs.next()) {
@@ -55,7 +31,7 @@ public class Controller {
 
     public String RegisterUser( Deque<Modal> list) throws SQLException {
         int userid = 34;
-        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres", "0906986");
+        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres", "123lol123");
         String Querry = "Select username from users where username ='"+list.getFirst().getUsername()+"';";
         ResultSet rs = connection.prepareStatement(Querry).executeQuery();
         if(rs.next()) {
@@ -95,11 +71,7 @@ public class Controller {
     }
 
     public String LoginUser( Deque<Modal> list) throws SQLException {
-        try {
-            connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres", "0906986");
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres", "123lol123");
         String Querry = "Select userid from users where username='"+ list.getFirst().getUsername()+"' and user_password='"+ list.getFirst().getpassword()+"'";
         ResultSet rs = connection.prepareStatement(Querry).executeQuery();
         if(rs.next()){
@@ -113,7 +85,19 @@ public class Controller {
         else{return "Wrong Username";
 
     }
-}}
+}
+public List<String> GetUsers() throws SQLException {
+    ArrayList<String> list = new ArrayList<String>();
+    connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres", "123lol123");
+    String Querry = "Select username from users where userlevel = 0";
+    ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+    while(rs.next()){
+        list.add(rs.getString("username"));
+        System.out.println(rs.getString("username"));
+    }
+    return list;
+}
+}
 
 
 
