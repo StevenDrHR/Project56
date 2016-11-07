@@ -10,7 +10,6 @@ import static spark.Spark.post;
  * Created by nilmor on 10/27/2016.
  */
 public class View {
-
     Deque<Modal> registerUsers = new ArrayDeque<Modal>();
     Deque<Modal> loginUsers = new ArrayDeque<Modal>();
     public  void RenderHomeView(){
