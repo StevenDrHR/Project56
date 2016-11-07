@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <style> table, tr, tbody {border: 1px solid black; }</style>
-    <style> td button {width: 50 px ; height: 50 px;}  </style>
+    <style> td button {padding: 6px 10px; text-decoration: "delete"}  </style>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -59,7 +59,7 @@
     <!-- /.container -->
 </nav>
 
-${users}
+
 <table style="width:100%" id="admintable">
     <tbody>
 
@@ -80,7 +80,7 @@ ${users}
 
 
        for (var i = 0; i < parts.length; i++){
-
+           var buttonname = document.createElement("button")
            table = document.getElementById("admintable");
 
            row = table.insertRow(0);
@@ -89,7 +89,9 @@ ${users}
            cell1 = row.insertCell(0);
            cell2 = row.insertCell(1);
            cell1.innerHTML = parts[i];
-           cell2.appendChild(document.createElement("button"))
+           buttonname.innerHTML = "delete";
+           buttonname.setAttribute("method", "POST")
+           cell2.appendChild(buttonname);
        }
    </script>
 </body>
