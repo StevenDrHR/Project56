@@ -58,14 +58,14 @@
     </div>
     <!-- /.container -->
 </nav>
-
+<form class="form2" method='POST' action='/Adminpage'>
 ${users}
-<table style="width:100%" id="admintable">
+<table style="width:100%" id="admintable" >
     <tbody>
 
     </tbody>
 </table>
-
+</form>
    <script>
         if("${userlevel}" == "admin"){
               var a = document.querySelector("#adminvisibility");
@@ -82,14 +82,17 @@ ${users}
        for (var i = 0; i < parts.length; i++){
 
            table = document.getElementById("admintable");
+           button =  document.createElement("button");
+           button.setAttribute("name", ""+ parts[i]);
+           button.setAttribute("type", "submit");
 
            row = table.insertRow(0);
-           row.setAttribute("name", ""+i);
+           row.setAttribute("name", ""+parts[i]);
 
            cell1 = row.insertCell(0);
            cell2 = row.insertCell(1);
            cell1.innerHTML = parts[i];
-           cell2.appendChild(document.createElement("button"))
+           cell2.appendChild(button)
        }
    </script>
 </body>

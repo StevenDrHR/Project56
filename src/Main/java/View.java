@@ -79,7 +79,6 @@ public class View {
             String LoginUser = new Controller().LoginUser(loginUsers);
             request.session().attribute("User",LoginUser);
             System.out.println(request.session().attribute("User")+ " Shamala");
-            //response.redirect("/Home");
             String currentUser = request.session().attribute("User");
             Controller checkUserLevel = new Controller();
             String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
@@ -108,6 +107,9 @@ public class View {
 
         post("/Adminpage", (request, response) -> {
             Map<String, Object> attributes = new HashMap<String, Object>();
+            String deleteUser =request.queryParams().iterator().next();
+            Controller databaseDeleteUser = new Controller();
+            databaseDeleteUser.DeleteUser(deleteUser);
             Controller getUsers = new Controller();
             List list = getUsers.GetUsers();
             attributes.put("users",list);
