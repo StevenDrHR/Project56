@@ -50,13 +50,13 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="http://localhost:4567/Register">About</a>
+                        <a href="http://localhost:4567/Register">Profile</a>
                     </li>
                     <li>
                         <a href="http://localhost:4567/Register">Register</a>
                     </li>
                     <li>
-                        <a href="http://localhost:4567/Register">Contact</a>
+                        <a href="http://localhost:4567/Register">About</a>
                     </li>
                     <li id="adminvisibility">
                          <a href="http://localhost:4567/Adminpage">Adminpage</a>
@@ -88,11 +88,6 @@
                         <button type="submit" id="login_button">Login</button>
                     </form>
                 </div>
-                <h4 align="center">Error Message:</h4>
-
-                    <form class="form">
-                        <input type="text" value="${message}">
-                    </form>
 
             </div>
 
@@ -107,18 +102,18 @@
 
                             <input type="text" placeholder="username" align="center" name="RegUsername" required>
                             <input type="password" placeholder="password" align="center" name="RegPassword" required>
-                            <input type="email" placeholder="email address" align="center" name="RegEmail">
+                            <input type="email" placeholder="email address" align="center" name="RegEmail" required>
                             <input type="text" placeholder="first name" align="center" name="RegFName" required>
                             <input type="text" placeholder="last name" align="center" name="RegLName" required>
 
 
                             <div class="sidecol">
 
-                                <input type="text" placeholder="age" align="center" name="RegAge">
-                                <input type="text" placeholder="street" align="center" name="RegStreet">
-                                <input type="text" placeholder="street number" align="center" name="RegStreetNumber">
-                                <input type="text" placeholder="country" align="center" name="RegCountry">
-                                <input type="text" placeholder="postal code" align="center" name="RegPostalCode">
+                                <input type="text" placeholder="age" align="center" name="RegAge" required>
+                                <input type="text" placeholder="street" align="center" name="RegStreet" required>
+                                <input type="text" placeholder="street number" align="center" name="RegStreetNumber" required>
+                                <input type="text" placeholder="country" align="center" name="RegCountry" required>
+                                <input type="text" placeholder="postal code" align="center" name="RegPostalCode" required>
 
 
 
