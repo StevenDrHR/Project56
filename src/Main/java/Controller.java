@@ -13,7 +13,7 @@ public class Controller {
     static Connection connection;
 
     public String checkUserLevel(String UserName) throws SQLException{
-        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres", "123lol123");
+        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres", "0906986");
         String Querry = "Select username from users where username ='"+UserName+"' and userlevel = 1";
         ResultSet rs = connection.prepareStatement(Querry).executeQuery();
             if(rs.next()) {
@@ -31,7 +31,7 @@ public class Controller {
 
     public String RegisterUser( Deque<Modal> list) throws SQLException {
         int userid = 34;
-        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres", "123lol123");
+        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres", "0906986");
         String Querry = "Select username from users where username ='"+list.getFirst().getUsername()+"';";
         ResultSet rs = connection.prepareStatement(Querry).executeQuery();
         if(rs.next()) {
@@ -71,7 +71,7 @@ public class Controller {
     }
 
     public String LoginUser( Deque<Modal> list) throws SQLException {
-        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres", "123lol123");
+        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres", "0906986");
         String Querry = "Select userid from users where username='"+ list.getFirst().getUsername()+"' and user_password='"+ list.getFirst().getpassword()+"'";
         ResultSet rs = connection.prepareStatement(Querry).executeQuery();
         if(rs.next()){
@@ -88,12 +88,18 @@ public class Controller {
 }
 public List<String> GetUsers() throws SQLException {
     ArrayList<String> list = new ArrayList<String>();
-    connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres", "123lol123");
+    connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres", "0906986");
     String Querry = "Select username from users where userlevel = 0";
     ResultSet rs = connection.prepareStatement(Querry).executeQuery();
     while(rs.next()){
         list.add(rs.getString("username"));
         System.out.println(rs.getString("username"));
+        String zin = "hallo,shithoofd";
+        String[] parts = zin.split(",");
+
+        for (int i = 0; i < parts.length; i++){
+            System.out.println(parts[i]);
+        }
     }
     return list;
 }

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style> table, tr, tbody {border: 1px solid black; }</style>
+    <style> td button {width: 50 px ; height: 50 px;}  </style>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -56,21 +58,39 @@
     </div>
     <!-- /.container -->
 </nav>
-${users}
-<table style="width:100%">
-<tr>
-<th>Username</th>
-</tr>
-<tr>
-<td> ${users} shamala</td>
-</table>
-    <script>
-             if("${userlevel}" == "admin"){
-                   var a = document.querySelector("#adminvisibility");
-                   a.style.display = "initial";
-               }
 
+${users}
+<table style="width:100%" id="admintable">
+    <tbody>
+
+    </tbody>
+</table>
+
+   <script>
+        if("${userlevel}" == "admin"){
+              var a = document.querySelector("#adminvisibility");
+              a.style.display = "initial";
+          }
    </script>
 
+   <script>
+        var dirtystring = "${users}";
+        var cleanstring = dirtystring.substr(1, dirtystring.length - 2)
+        var parts = cleanstring.split(", ");
+
+
+       for (var i = 0; i < parts.length; i++){
+
+           table = document.getElementById("admintable");
+
+           row = table.insertRow(0);
+           row.setAttribute("name", ""+i);
+
+           cell1 = row.insertCell(0);
+           cell2 = row.insertCell(1);
+           cell1.innerHTML = parts[i];
+           cell2.appendChild(document.createElement("button"))
+       }
+   </script>
 </body>
 </html>
