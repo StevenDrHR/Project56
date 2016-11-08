@@ -48,7 +48,9 @@ public class View {
             Controller checkUserLevel = new Controller();
             String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
             attributes.put("userlevel", currentUserLevel);
-
+            if(currentUserLevel.equals("admin")||currentUserLevel.equals("user")){
+                res.redirect("/Home");
+            }
         return modelAndView(attributes, "Webshop/register.vm");
     },new VelocityTemplateEngine());
 
