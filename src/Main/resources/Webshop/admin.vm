@@ -85,7 +85,7 @@
            Deletebutton =  document.createElement("button");
            Modifybutton =  document.createElement("button");
 
-           //making the buttons
+           //adjusting the buttons
            Deletebutton.setAttribute("name", "Delete "+ parts[i]);
            Deletebutton.setAttribute("type", "submit");
            Deletebutton.innerHTML = "Delete";
