@@ -47,7 +47,7 @@
                     <li>
                         <a href="http://localhost:4567/Register">Profile</a>
                     </li>
-                    <li>
+                    <li id="registervisibility">
                         <a href="http://localhost:4567/Register">Register</a>
                     </li>
                     <li>
@@ -77,7 +77,7 @@
                 </div>
 
                 <div class="acontainer">
-                    <form class="form" method="POST" action="/Home">
+                    <form class="form" method="POST" action="/Home" id="loginvisibility">
                         <input type="text" placeholder="username" name="LoginUsername">
                         <input type="password" placeholder="password" name="LoginPassword">
                         <button type="submit" id="login_button">Login</button>
@@ -289,6 +289,20 @@
             a.style.display = "initial";
         }
     </script>
+    <script>
+    if("${userlevel}" != "not registered"){
+        var a = document.querySelector("#loginvisibility");
+        a.style.display = "none";
+    }
+    </script>
+
+    <script>
+    if("${userlevel}" == "admin" || "${userlevel}" == "user"){
+        var a = document.querySelector("#registervisibility");
+        a.style.display = "none";
+    }
+    </script>
+
 
 </body>
 

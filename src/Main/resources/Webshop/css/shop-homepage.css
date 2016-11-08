@@ -320,3 +320,10 @@ footer {
     	display: none;
     }
 
+    #registervisibility{
+        display: initial;
+    }
+
+    #loginvisibility{
+        display: initial;
+    }
