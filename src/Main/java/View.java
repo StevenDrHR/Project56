@@ -11,7 +11,6 @@ public class View {
     Deque<Modal> registerUsers = new ArrayDeque<Modal>();
     Deque<Modal> loginUsers = new ArrayDeque<Modal>();
     public  void RenderHomeView(){
-        Controller renderView = new Controller();
         get("/Home", (req, res) -> {
             Map<String, Object> attributes = new HashMap<String, Object>();
             String currentUser = req.session().attribute("User");
@@ -20,7 +19,8 @@ public class View {
             attributes.put("userlevel", currentUserLevel);
             System.out.println(currentUserLevel);
         return modelAndView(attributes, "Webshop/Index.vm");
-        },new VelocityTemplateEngine());
+        }, new VelocityTemplateEngine());
+
 
         post("/Home", (req,res)-> {
         String LoginUsername = req.queryParams("LoginUsername");
@@ -37,12 +37,10 @@ public class View {
         Controller checkUserLevel = new Controller();
         String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
         attributes.put("userlevel", currentUserLevel);
-        System.out.println(currentUserLevel+ "Shamala123");
-            return modelAndView(attributes, "Webshop/Index.vm");
+        return modelAndView(attributes, "Webshop/Index.vm");
         },new VelocityTemplateEngine());
     }
     public void RenderRegisterView(){
-        Controller renderView = new Controller();
         get("/Register", (req, res) ->  {
         Map<String, Object> attributes = new HashMap<String, Object>();
         attributes.put("message","null");
@@ -50,7 +48,7 @@ public class View {
             Controller checkUserLevel = new Controller();
             String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
             attributes.put("userlevel", currentUserLevel);
-            System.out.println(currentUserLevel);
+
         return modelAndView(attributes, "Webshop/register.vm");
     },new VelocityTemplateEngine());
 
@@ -68,27 +66,27 @@ public class View {
             String RegPostalCode = request.queryParams("RegPostalCode");
             String LoginUsername = request.queryParams("LoginUsername");
             String LoginPassword = request.queryParams("LoginPassword");
+            String button = request.queryParams().iterator().next();
+            if(button.equals("LoginUsername")) {
+                Modal loginUser = new Modal();
+                loginUser.LoginModal(LoginUsername, LoginPassword);
+                loginUsers.addFirst(loginUser);
+                String LoginUser = new Controller().LoginUser(loginUsers);
+                request.session().attribute("User", LoginUser);
+                String currentUser = request.session().attribute("User");
+                Controller checkUserLevel = new Controller();
+                String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
+                attributes.put("userlevel", currentUserLevel);
+                return modelAndView(attributes,"Webshop/index.vm");
+            }
 
-
-            Modal loginUser = new Modal();
-            loginUser.LoginModal(LoginUsername,LoginPassword);
-            loginUsers.addFirst(loginUser);
-            String LoginUser = new Controller().LoginUser(loginUsers);
-            request.session().attribute("User",LoginUser);
-            System.out.println(request.session().attribute("User")+ " Shamala");
-            String currentUser = request.session().attribute("User");
-            Controller checkUserLevel = new Controller();
-            String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
-            attributes.put("userlevel", currentUserLevel);
-            System.out.println(currentUserLevel);
-
-            Modal registerUser = new Modal();
-            registerUser.RegisterModal(RegUsername, RegPassword, RegEmail,RegFName,RegLName,RegAge,RegStreet,RegStreetNumber,RegCountry,RegPostalCode);
-            registerUsers.addFirst(registerUser);
-            String SaveUser = new Controller().RegisterUser(registerUsers);
-
-            attributes.put("message", SaveUser);
-
+            if(button.equals("RegEmail")) {
+                Modal registerUser = new Modal();
+                registerUser.RegisterModal(RegUsername, RegPassword, RegEmail, RegFName, RegLName, RegAge, RegStreet, RegStreetNumber, RegCountry, RegPostalCode);
+                registerUsers.addFirst(registerUser);
+                String SaveUser = new Controller().RegisterUser(registerUsers);
+                attributes.put("message", SaveUser);
+            }
             return modelAndView(attributes, "Webshop/register.vm");
         },new VelocityTemplateEngine());
     }
@@ -161,6 +159,7 @@ public class View {
                 unblockUser.UnblockUser(modifyUser);
             }
             else if(button.equals("return_button") ){
+                request.session().attribute("ModifyUser",null);
                 response.redirect("/Adminpage");
             }
             attributes.put("ModifyUser",modifyUser);
