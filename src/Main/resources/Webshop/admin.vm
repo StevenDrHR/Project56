@@ -88,8 +88,10 @@
            //making the buttons
            Deletebutton.setAttribute("name", "Delete "+ parts[i]);
            Deletebutton.setAttribute("type", "submit");
+           Deletebutton.innerHTML = "Delete";
            Modifybutton.setAttribute("name", "Modify "+ parts[i]);
            Modifybutton.setAttribute("type", "submit");
+           Modifybutton.innerHTML = "Modfiy";
            //adding the row
            row = table.insertRow(i);
            row.setAttribute("name", ""+parts[i]);
