@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <style> table, tr, tbody {border: 1px solid black; }</style>
-    <style> td button {width: 50 px ; height: 50 px;}  </style>
+
+    <style> table, tr, tbody, td {border: 1px solid black; }</style>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <meta charset="UTF-8">
 
     <title>Shop Homepage - Start Bootstrap Template</title>
 
@@ -18,94 +19,187 @@
     <!-- Custom CSS -->
     <link href="css/shop-homepage.css" rel="stylesheet">
 
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script>
+
+    </script>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+
 </head>
+
 <body>
-<!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://localhost:4567/Home">Homepage</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="http://localhost:4567/Register">Profile</a>
+                    </li>
+                    <li>
+                        <a href="http://localhost:4567/Register">Register</a>
+                    </li>
+                    <li>
+                        <a href="http://localhost:4567/Register">About</a>
+                    </li>
+                    <li id="adminvisibility">
+                         <a href="http://localhost:4567/Adminpage">Adminpage</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
     <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="http://localhost:4567/Home">Homepage</a>
+
+        <div class="row">
+
+            <div class="col-md-3">
+
+                <h4>Welcome Admin</h4>
+
+            </div>
+
+            <div class="col-md-9">
+
+                <div class="row carousel-holder">
+
+                    <div class="col-md-12">
+
+                       <form class="form3" method='POST' action='/Adminpage'>
+
+                       <table style="width:100%" id="admintable" >
+                           <tbody>
+
+                           </tbody>
+                       </table>
+                       </form>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li>
-                    <a href="http://localhost:4567/Register">About</a>
-                </li>
-                <li>
-                    <a href="http://localhost:4567/Register">Register</a>
-                </li>
-                <li>
-                    <a href="http://localhost:4567/Register">Contact</a>
-                </li>
-                <li id="adminvisibility">
-                    <a href="http://localhost:4567/Adminpage">Adminpage</a>
-                </li>
-                <form3>
-                    <input type="text" placeholder="search" align="right">
-                    <button type="submit" id="search_button" align="right">Search</button>
-                </form3>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
+
     </div>
     <!-- /.container -->
-</nav>
-<form class="form2" method='POST' action='/Adminpage'>
 
-<table style="width:100%" id="admintable" >
-    <tbody>
+    <div class="container">
 
-    </tbody>
-</table>
-</form>
-   <script>
-        if("${userlevel}" == "admin"){
-              var a = document.querySelector("#adminvisibility");
-              a.style.display = "initial";
-          }
-   </script>
+        <hr>
 
-   <script>
-        var dirtystring = "${users}";
-        var cleanstring = dirtystring.substr(1, dirtystring.length - 2)
-        var parts = cleanstring.split(", ");
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Shamala Webshop 2016</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+            if("${userlevel}" == "admin"){
+                  var a = document.querySelector("#adminvisibility");
+                  a.style.display = "initial";
+              }
+    </script>
+
+    <script>
+            var dirtystring = "${users}";
+            var cleanstring = dirtystring.substr(1, dirtystring.length - 2)
+            var parts = cleanstring.split(", ");
 
 
-       for (var i = 0; i < parts.length; i++){
+           for (var i = 0; i < parts.length; i++){
 
-           table = document.getElementById("admintable");
-           Deletebutton =  document.createElement("button");
-           Modifybutton =  document.createElement("button");
+               table = document.getElementById("admintable");
+               Deletebutton =  document.createElement("button");
+               Modifybutton =  document.createElement("button");
 
-           //adjusting the buttons
-           Deletebutton.setAttribute("name", "Delete "+ parts[i]);
-           Deletebutton.setAttribute("type", "submit");
-           Deletebutton.innerHTML = "Delete";
-           Modifybutton.setAttribute("name", "Modify "+ parts[i]);
-           Modifybutton.setAttribute("type", "submit");
-           Modifybutton.innerHTML = "Modfiy";
-           //adding the row
-           row = table.insertRow(i);
-           row.setAttribute("name", ""+parts[i]);
+               //adjusting the buttons
+               Deletebutton.setAttribute("name", "Delete "+ parts[i]);
+               Deletebutton.setAttribute("type", "submit");
+               Deletebutton.innerHTML = "Delete";
+               Modifybutton.setAttribute("name", "Modify "+ parts[i]);
+               Modifybutton.setAttribute("type", "submit");
+               Modifybutton.innerHTML = "Modfiy";
+               //adding the row
+               row = table.insertRow(i);
+               row.setAttribute("name", ""+parts[i]);
 
-           //making the amount of values in a row
-           cell1 = row.insertCell(0);
-           cell2 = row.insertCell(1);
-           cell3 = row.insertCell(2);
+               //making the amount of values in a row
+               cell1 = row.insertCell(0);
+               cell2 = row.insertCell(1);
+               cell3 = row.insertCell(2);
 
-           //adding values
-           cell1.innerHTML = parts[i];
-           cell2.appendChild(Deletebutton);
-           cell3.appendChild(Modifybutton);
-       }
-   </script>
+               //adding values
+               cell1.innerHTML = parts[i];
+               cell2.appendChild(Deletebutton);
+               cell3.appendChild(Modifybutton);
+           }
+    </script>
+
 </body>
+
 </html>
