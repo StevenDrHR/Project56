@@ -98,7 +98,12 @@ public class View {
             Controller getUsers = new Controller();
             List list = getUsers.GetUsers();
             attributes.put("users",list);
-
+            String currentUser = req.session().attribute("User");
+            String currentUserLevel = getUsers.checkUserLevel(currentUser);
+            attributes.put("userlevel", currentUserLevel);
+            if(currentUserLevel.equals("not registered")||currentUserLevel.equals("user")){
+                res.redirect("/Home");
+            }
             return modelAndView(attributes, "Webshop/admin.vm");
         },new VelocityTemplateEngine());
 

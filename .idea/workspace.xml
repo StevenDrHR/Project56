@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="28c3abc2-7d43-4a2f-8c8e-8846f60266aa" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/java/Controller.java" afterPath="$PROJECT_DIR$/src/Main/java/Controller.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/java/View.java" afterPath="$PROJECT_DIR$/src/Main/java/View.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/velocity.log" afterPath="$PROJECT_DIR$/velocity.log" />
     </list>
     <list id="e3ab461a-6351-49f5-82b7-fb4599d094d7" name="Rejected commit: Default" comment="Add data to adresses and users" />
     <ignored path="project56.iws" />
@@ -81,10 +79,11 @@
       <file leaf-file-name="View.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main/java/View.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="50" column="46" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
+            <state relative-caret-position="364">
+              <caret line="103" column="54" selection-start-line="103" selection-start-column="54" selection-end-line="103" selection-end-column="54" />
               <folding>
                 <element signature="e#273#280#0" expanded="true" />
+                <element signature="e#4913#4929#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -93,8 +92,8 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/java/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="15" column="115" selection-start-line="15" selection-start-column="115" selection-end-line="15" selection-end-column="115" />
+            <state relative-caret-position="340">
+              <caret line="26" column="34" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -764,7 +763,14 @@
       <option name="project" value="LOCAL" />
       <updated>1478553148170</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="added restriction">
+      <created>1478615971912</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1478615971912</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -824,7 +830,8 @@
     <MESSAGE value="deleted files that are not needed" />
     <MESSAGE value="you can now delete users as an admin" />
     <MESSAGE value="added the modify page" />
-    <option name="LAST_COMMIT_MESSAGE" value="added the modify page" />
+    <MESSAGE value="added restriction" />
+    <option name="LAST_COMMIT_MESSAGE" value="added restriction" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -898,6 +905,7 @@
           <caret line="17" column="54" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
           <folding>
             <element signature="e#273#280#0" expanded="true" />
+            <element signature="e#4913#4929#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -963,6 +971,7 @@
           <caret line="95" column="61" selection-start-line="95" selection-start-column="61" selection-end-line="95" selection-end-column="61" />
           <folding>
             <element signature="e#273#280#0" expanded="true" />
+            <element signature="e#4913#4929#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1020,6 +1029,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#273#280#0" expanded="true" />
+            <element signature="e#4913#4929#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1103,6 +1113,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="47" column="34" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1210,18 +1221,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/java/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="15" column="115" selection-start-line="15" selection-start-column="115" selection-end-line="15" selection-end-column="115" />
+        <state relative-caret-position="340">
+          <caret line="26" column="34" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/java/View.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="50" column="46" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
+        <state relative-caret-position="364">
+          <caret line="103" column="54" selection-start-line="103" selection-start-column="54" selection-end-line="103" selection-end-column="54" />
           <folding>
             <element signature="e#273#280#0" expanded="true" />
+            <element signature="e#4913#4929#0" expanded="true" />
           </folding>
         </state>
       </provider>
