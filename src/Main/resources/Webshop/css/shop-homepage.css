@@ -321,9 +321,9 @@ footer {
     }
 
     #registervisibility{
-        display: initial;
+        display: block;
     }
 
     #loginvisibility{
-        display: initial;
+        display: block;
     }
