@@ -62,10 +62,10 @@
                          <a href="http://localhost:4567/Adminpage">Adminpage</a>
                     </li>
 
-                    <form3>
-                        <input type="text" placeholder="search">
-                        <button type="submit" id="search_button">Search</button>
-                    </form3>
+##                    <form3>
+##                        <input type="text" placeholder="search">
+##                        <button type="submit" id="search_button">Search</button>
+##                    </form3>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
