@@ -27,20 +27,25 @@ public class View {
 
 
         post("/Home", (req,res)-> {
+            Map<String, Object> attributes = new HashMap<String, Object>();
             String LoginUsername = req.queryParams("LoginUsername");
             String LoginPassword = req.queryParams("LoginPassword");
             String variabel = req.queryParams().iterator().next();
             if (variabel.equals("LoginUsername")){
-
             Modal loginUser = new Modal();
             loginUser.LoginModal(LoginUsername,LoginPassword);
             loginUsers.addFirst(loginUser);
             String LoginUser = new Controller().LoginUser(loginUsers);
+            String checkUserStatus = new Controller().checkUserStatus(LoginUser);
+            if (checkUserStatus.equals("Blocked")) {
+                attributes.put("message", "Blocked");
+            }
+            else {
             req.session().attribute("User",LoginUser);
-            System.out.println(req.session().attribute("User")+ " Shamala");}
-            else {req.session().attribute("User", "");}
-
-            Map<String, Object> attributes = new HashMap<String, Object>();
+            }
+           }
+            else {
+            req.session().attribute("User", "");}
             String currentUser = req.session().attribute("User");
             attributes.put("CurrentUser", currentUser);
             Controller checkUserLevel = new Controller();
@@ -84,7 +89,13 @@ public class View {
                 loginUser.LoginModal(LoginUsername, LoginPassword);
                 loginUsers.addFirst(loginUser);
                 String LoginUser = new Controller().LoginUser(loginUsers);
-                request.session().attribute("User", LoginUser);
+                String checkUserStatus = new Controller().checkUserStatus(LoginUser);
+                if (checkUserStatus.equals("Blocked")) {
+                    attributes.put("message", "Blocked");
+                }
+                else {
+                    request.session().attribute("User",LoginUser);
+                }
                 String currentUser = request.session().attribute("User");
                 attributes.put("CurrentUser", currentUser);
                 Controller checkUserLevel = new Controller();
