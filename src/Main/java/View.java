@@ -14,45 +14,48 @@ public class View {
         get("/Home", (req, res) -> {
             Map<String, Object> attributes = new HashMap<String, Object>();
             String currentUser = req.session().attribute("User");
+            attributes.put("CurrentUser", currentUser);
             Controller checkUserLevel = new Controller();
             String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
             attributes.put("userlevel", currentUserLevel);
             System.out.println(currentUserLevel);
-        return modelAndView(attributes, "Webshop/Index.vm");
+            return modelAndView(attributes, "Webshop/Index.vm");
         }, new VelocityTemplateEngine());
 
 
         post("/Home", (req,res)-> {
-        String LoginUsername = req.queryParams("LoginUsername");
-        String LoginPassword = req.queryParams("LoginPassword");
-        Modal loginUser = new Modal();
-        loginUser.LoginModal(LoginUsername,LoginPassword);
-        loginUsers.addFirst(loginUser);
-        String LoginUser = new Controller().LoginUser(loginUsers);
-        req.session().attribute("User",LoginUser);
-        System.out.println(req.session().attribute("User")+ " Shamala");
+            String LoginUsername = req.queryParams("LoginUsername");
+            String LoginPassword = req.queryParams("LoginPassword");
+            Modal loginUser = new Modal();
+            loginUser.LoginModal(LoginUsername,LoginPassword);
+            loginUsers.addFirst(loginUser);
+            String LoginUser = new Controller().LoginUser(loginUsers);
+            req.session().attribute("User",LoginUser);
+            System.out.println(req.session().attribute("User")+ " Shamala");
 
-        Map<String, Object> attributes = new HashMap<String, Object>();
-        String currentUser = req.session().attribute("User");
-        Controller checkUserLevel = new Controller();
-        String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
-        attributes.put("userlevel", currentUserLevel);
-        return modelAndView(attributes, "Webshop/Index.vm");
+            Map<String, Object> attributes = new HashMap<String, Object>();
+            String currentUser = req.session().attribute("User");
+            attributes.put("CurrentUser", currentUser);
+            Controller checkUserLevel = new Controller();
+            String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
+            attributes.put("userlevel", currentUserLevel);
+            return modelAndView(attributes, "Webshop/Index.vm");
         },new VelocityTemplateEngine());
     }
     public void RenderRegisterView(){
         get("/Register", (req, res) ->  {
-        Map<String, Object> attributes = new HashMap<String, Object>();
-        attributes.put("message","null");
+            Map<String, Object> attributes = new HashMap<String, Object>();
+            attributes.put("message","null");
             String currentUser = req.session().attribute("User");
+            attributes.put("CurrentUser", currentUser);
             Controller checkUserLevel = new Controller();
             String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
             attributes.put("userlevel", currentUserLevel);
             if(currentUserLevel.equals("admin")||currentUserLevel.equals("user")){
                 res.redirect("/Home");
             }
-        return modelAndView(attributes, "Webshop/register.vm");
-    },new VelocityTemplateEngine());
+            return modelAndView(attributes, "Webshop/register.vm");
+        },new VelocityTemplateEngine());
 
         post("/Register", (request, response) -> {
             Map<String, Object> attributes = new HashMap<String, Object>();
@@ -76,6 +79,7 @@ public class View {
                 String LoginUser = new Controller().LoginUser(loginUsers);
                 request.session().attribute("User", LoginUser);
                 String currentUser = request.session().attribute("User");
+                attributes.put("CurrentUser", currentUser);
                 Controller checkUserLevel = new Controller();
                 String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
                 attributes.put("userlevel", currentUserLevel);
@@ -99,6 +103,7 @@ public class View {
             List list = getUsers.GetUsers();
             attributes.put("users",list);
             String currentUser = req.session().attribute("User");
+            attributes.put("CurrentUser", currentUser);
             String currentUserLevel = getUsers.checkUserLevel(currentUser);
             attributes.put("userlevel", currentUserLevel);
             if(currentUserLevel.equals("not registered")||currentUserLevel.equals("user")){
@@ -109,13 +114,15 @@ public class View {
 
         post("/Adminpage", (request, response) -> {
             Map<String, Object> attributes = new HashMap<String, Object>();
+            String currentUser = request.session().attribute("User");
+            attributes.put("CurrentUser", currentUser);
             String deleteUser = request.queryParams().iterator().next();
             String checkFunction = deleteUser.substring(0, 6);
             System.out.println(checkFunction);
             if(checkFunction.equals("Delete") ){
-            deleteUser= deleteUser.substring(7);
-            Controller databaseDeleteUser = new Controller();
-            databaseDeleteUser.DeleteUser(deleteUser);
+                deleteUser= deleteUser.substring(7);
+                Controller databaseDeleteUser = new Controller();
+                databaseDeleteUser.DeleteUser(deleteUser);
             }
             else {
                 deleteUser =deleteUser.substring(7);
@@ -134,6 +141,8 @@ public class View {
     public void RenderModifyView(){
         get("/Modify", (req, res) -> {
             Map<String, Object> attributes = new HashMap<String, Object>();
+            String currentUser = req.session().attribute("User");
+            attributes.put("CurrentUser", currentUser);
             String modifyUser = req.session().attribute("ModifyUser");
             if (modifyUser == null){
                 res.redirect("/Adminpage");
@@ -144,6 +153,8 @@ public class View {
 
         post("/Modify", (request, response) -> {
             Map<String, Object> attributes = new HashMap<String, Object>();
+            String currentUser = request.session().attribute("User");
+            attributes.put("CurrentUser", currentUser);
             String modifyUser = request.session().attribute("ModifyUser");
             if (modifyUser == null){
                 response.redirect("/Adminpage");
@@ -172,6 +183,6 @@ public class View {
             attributes.put("ModifyUser",modifyUser);
             return modelAndView(attributes, "Webshop/modify.vm");
         },new VelocityTemplateEngine());
-        }
     }
+}
 

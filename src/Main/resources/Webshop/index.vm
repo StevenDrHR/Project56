@@ -82,6 +82,11 @@
                         <input type="password" placeholder="password" name="LoginPassword">
                         <button type="submit" id="login_button">Login</button>
                     </form>
+                    <br>
+                    <form class="form" id="logoutvisibility" method="POST" action="/Home">
+                        <p>Welcome : ${CurrentUser}</p>
+                        <button type="submit" id="logout_button">Logout</button>
+                    </form>
                 </div>
             </div>
 
@@ -300,6 +305,8 @@
     if("${userlevel}" == "admin" || "${userlevel}" == "user"){
         var a = document.querySelector("#registervisibility");
         a.style.display = "none";
+        var b = document.querySelector("#logoutvisibility");
+        b.style.display = "block";
     }
     </script>
 

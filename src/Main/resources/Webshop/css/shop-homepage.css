@@ -327,3 +327,8 @@ footer {
     #loginvisibility{
         display: block;
     }
+
+    #logoutvisibility
+    {
+        display: none;
+    }
