@@ -332,3 +332,17 @@ footer {
     {
         display: none;
     }
+
+    #profilevisibility
+    {
+        display: block;
+    }
+
+    .leftbar {
+        position: relative;
+        width: 250px;
+        height: 1px;
+        left: 6px;
+    }
+
+    .tab1 { padding-left: 8em; }

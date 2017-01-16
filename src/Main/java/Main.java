@@ -13,6 +13,7 @@ public class Main {
         createPage.RenderAdminpageView();
         createPage.RenderModifyView();
         createPage.RenderShopView();
+        createPage.RenderProfileView();
     }
 
 }

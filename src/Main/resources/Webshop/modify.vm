@@ -49,26 +49,7 @@
                 <a class="navbar-brand" href="http://localhost:4567/Home">Homepage</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="http://localhost:4567/shop">Shop</a>
-                    </li>
-                    <li>
-                        <a href="http://localhost:4567/Register">Profile</a>
-                    </li>
-                    <li id="registervisibility">
-                        <a href="http://localhost:4567/Register">Register</a>
-                    </li>
-                    <li>
-                        <a href="http://localhost:4567/Register ">About</a>
-                    </li>
-                    <li id="adminvisibility">
-                        <a href="http://localhost:4567/Adminpage">Adminpage</a>
-                    </li>
-
-                </ul>
-            </div>
+            <script src="js/nav.js"></script>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
