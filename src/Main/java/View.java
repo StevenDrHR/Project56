@@ -114,6 +114,13 @@ public class View {
             return modelAndView(attributes, "Webshop/register.vm");
         },new VelocityTemplateEngine());
     }
+    public void RenderShopView(){
+        get("/Shop", (req,res) ->{
+            Map<String, Object> attributes = new HashMap<String, Object>();
+            attributes.put("message", "null");
+            return modelAndView(attributes, "Webshop/shop");
+        },new VelocityTemplateEngine());
+    }
     public void RenderAdminpageView(){
         get("/Adminpage", (req, res) -> {
             Map<String, Object> attributes = new HashMap<String, Object>();
