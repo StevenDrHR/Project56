@@ -67,12 +67,10 @@
                 </div>
                 <br>
                 <div class="leftbar">
-                    <div class="acontainer">
-                        <form class="form" id="logoutvisibility" method="POST" action="/Home">
-                            <p>Welcome : ${CurrentUser}</p>
-                            <button type="submit" id="logout_button" name="iets">Logout</button>
-                        </form>
-                    </div>
+                    <form class="form" id="logoutvisibility" method="POST" action="/Home">
+                        <p class="tab0">Welcome : ${CurrentUser}</p>
+                        <button type="submit" id="logout_button" name="iets">Logout</button>
+                    </form>
                 </div>
                 <br>
                 <br>

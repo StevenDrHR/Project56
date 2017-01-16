@@ -1,20 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28c3abc2-7d43-4a2f-8c8e-8846f60266aa" name="Default" comment="added restriction">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sparkjava_spark_template_freemarker_2_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_freemarker_freemarker_2_3_19.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Main/resources/Webshop/shop" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+    <list default="true" id="28c3abc2-7d43-4a2f-8c8e-8846f60266aa" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/java/Controller.java" afterPath="$PROJECT_DIR$/src/Main/java/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/java/Main.java" afterPath="$PROJECT_DIR$/src/Main/java/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/java/View.java" afterPath="$PROJECT_DIR$/src/Main/java/View.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/resources/Webshop/admin.vm" afterPath="$PROJECT_DIR$/src/Main/resources/Webshop/admin.vm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/resources/Webshop/css/shop-homepage.css" afterPath="$PROJECT_DIR$/src/Main/resources/Webshop/css/shop-homepage.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/resources/Webshop/index.vm" afterPath="$PROJECT_DIR$/src/Main/resources/Webshop/index.vm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/resources/Webshop/modify.vm" afterPath="$PROJECT_DIR$/src/Main/resources/Webshop/modify.vm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/resources/Webshop/register.vm" afterPath="$PROJECT_DIR$/src/Main/resources/Webshop/register.vm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/resources/Webshop/profile.vm" afterPath="$PROJECT_DIR$/src/Main/resources/Webshop/profile.vm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/velocity.log" afterPath="$PROJECT_DIR$/velocity.log" />
     </list>
     <list id="e3ab461a-6351-49f5-82b7-fb4599d094d7" name="Rejected commit: Default" comment="Add data to adresses and users" />
@@ -41,9 +32,37 @@
       <file leaf-file-name="shop-homepage.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/css/shop-homepage.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="327" column="22" lean-forward="false" selection-start-line="327" selection-start-column="17" selection-end-line="327" selection-end-column="22" />
+            <state relative-caret-position="440">
+              <caret line="346" column="27" lean-forward="false" selection-start-line="346" selection-start-column="27" selection-end-line="346" selection-end-column="27" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Main/java/Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1962">
+              <caret line="99" column="105" lean-forward="false" selection-start-line="99" selection-start-column="105" selection-end-line="99" selection-end-column="105" />
+              <folding>
+                <element signature="e#4562#4570#0" expanded="true" />
+                <marker date="1484569044009" expanded="true" signature="509:597" ph="Select usern... users" />
+                <marker date="1484569044009" expanded="true" signature="984:1059" ph="Select usern... users" />
+                <marker date="1484569044009" expanded="true" signature="1229:1304" ph="Select usern... users" />
+                <marker date="1484569044009" expanded="true" signature="1719:1797" ph="Select usern... users" />
+                <marker date="1484569044009" expanded="true" signature="1974:2043" ph="Select email... users" />
+                <marker date="1484569044009" expanded="true" signature="2220:2549" ph="INSERT INTO users... " />
+                <marker date="1484569044009" expanded="true" signature="2793:2863" ph="Select useri... users" />
+                <marker date="1484569044009" expanded="true" signature="3024:3273" ph="INSERT INTO adress... " />
+                <marker date="1484569044009" expanded="true" signature="3413:3456" ph="Delete From " />
+                <marker date="1484569044009" expanded="true" signature="3896:4027" ph="Select useri... users" />
+                <marker date="1484569044009" expanded="true" signature="4206:4282" ph="Select useri... users" />
+                <marker date="1484569044009" expanded="true" signature="4704:4750" ph="Select usern... users" />
+                <marker date="1484569044009" expanded="true" signature="5357:5405" ph="Delete from " />
+                <marker date="1484569044009" expanded="true" signature="5712:5783" ph="Update users... " />
+                <marker date="1484569044009" expanded="true" signature="6081:6151" ph="Update users... " />
+                <marker date="1484569044009" expanded="true" signature="6451:6523" ph="Update users... " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -72,8 +91,8 @@
       <file leaf-file-name="index.vm" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/index.vm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="67" column="12" lean-forward="false" selection-start-line="67" selection-start-column="12" selection-end-line="80" selection-end-column="18" />
+            <state relative-caret-position="396">
+              <caret line="75" column="27" lean-forward="true" selection-start-line="75" selection-start-column="27" selection-end-line="75" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -94,7 +113,7 @@
       <file leaf-file-name="modify.vm" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/modify.vm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
+            <state relative-caret-position="-396">
               <caret line="51" column="45" lean-forward="false" selection-start-line="51" selection-start-column="45" selection-end-line="51" selection-end-column="45" />
               <folding>
                 <marker date="1484573129895" expanded="true" signature="780:795" ph="..." />
@@ -127,13 +146,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profile.vm" pinned="false" current-in-tab="true">
+      <file leaf-file-name="profile.vm" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/profile.vm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="78" column="20" lean-forward="false" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="20" />
+            <state relative-caret-position="484">
+              <caret line="73" column="22" lean-forward="true" selection-start-line="73" selection-start-column="22" selection-end-line="73" selection-end-column="22" />
               <folding>
-                <marker date="1484573532450" expanded="true" signature="710:725" ph="..." />
+                <marker date="1484574099222" expanded="true" signature="710:725" ph="..." />
               </folding>
             </state>
           </provider>
@@ -201,16 +220,16 @@
         <option value="$PROJECT_DIR$/src/Main/resources/Webshop/shop" />
         <option value="$PROJECT_DIR$/src/Main/java/View.java" />
         <option value="$PROJECT_DIR$/src/Main/java/Main.java" />
-        <option value="$PROJECT_DIR$/src/Main/resources/Webshop/css/shop-homepage.css" />
         <option value="$PROJECT_DIR$/src/Main/java/Controller.java" />
         <option value="$PROJECT_DIR$/src/Main/resources/Webshop/navbar.html" />
-        <option value="$PROJECT_DIR$/src/Main/resources/Webshop/index.vm" />
         <option value="$PROJECT_DIR$/src/Main/resources/Webshop/js/nav.js" />
         <option value="$PROJECT_DIR$/src/Main/resources/Webshop/HTML/navbar.html" />
         <option value="$PROJECT_DIR$/src/Main/resources/Webshop/modify.vm" />
         <option value="$PROJECT_DIR$/src/Main/resources/Webshop/shop.vm" />
         <option value="$PROJECT_DIR$/src/Main/resources/Webshop/admin.vm" />
         <option value="$PROJECT_DIR$/src/Main/resources/Webshop/register.vm" />
+        <option value="$PROJECT_DIR$/src/Main/resources/Webshop/index.vm" />
+        <option value="$PROJECT_DIR$/src/Main/resources/Webshop/css/shop-homepage.css" />
         <option value="$PROJECT_DIR$/src/Main/resources/Webshop/profile.vm" />
       </list>
     </option>
@@ -890,7 +909,7 @@
       <workItem from="1478692866748" duration="833000" />
       <workItem from="1478693716772" duration="1303000" />
       <workItem from="1484562359802" duration="2043000" />
-      <workItem from="1484568508608" duration="5073000" />
+      <workItem from="1484568508608" duration="5634000" />
     </task>
     <task id="LOCAL-00001" summary="added">
       <created>1477561640598</created>
@@ -1060,11 +1079,25 @@
       <option name="project" value="LOCAL" />
       <updated>1478616474574</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="added restriction">
+      <created>1484573630321</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1484573630321</updated>
+    </task>
+    <task id="LOCAL-00026" summary="added restriction">
+      <created>1484573722004</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1484573722004</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30320000" />
+    <option name="totallyTimeSpent" value="30881000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -1495,59 +1528,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/java/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="99" column="105" lean-forward="false" selection-start-line="99" selection-start-column="105" selection-end-line="99" selection-end-column="105" />
-          <folding>
-            <element signature="e#4562#4570#0" expanded="true" />
-            <marker date="1484569044009" expanded="true" signature="509:597" ph="Select usern... users" />
-            <marker date="1484569044009" expanded="true" signature="984:1059" ph="Select usern... users" />
-            <marker date="1484569044009" expanded="true" signature="1229:1304" ph="Select usern... users" />
-            <marker date="1484569044009" expanded="true" signature="1719:1797" ph="Select usern... users" />
-            <marker date="1484569044009" expanded="true" signature="1974:2043" ph="Select email... users" />
-            <marker date="1484569044009" expanded="true" signature="2220:2549" ph="INSERT INTO users... " />
-            <marker date="1484569044009" expanded="true" signature="2793:2863" ph="Select useri... users" />
-            <marker date="1484569044009" expanded="true" signature="3024:3273" ph="INSERT INTO adress... " />
-            <marker date="1484569044009" expanded="true" signature="3413:3456" ph="Delete From " />
-            <marker date="1484569044009" expanded="true" signature="3896:4027" ph="Select useri... users" />
-            <marker date="1484569044009" expanded="true" signature="4206:4282" ph="Select useri... users" />
-            <marker date="1484569044009" expanded="true" signature="4704:4750" ph="Select usern... users" />
-            <marker date="1484569044009" expanded="true" signature="5357:5405" ph="Delete from " />
-            <marker date="1484569044009" expanded="true" signature="5712:5783" ph="Update users... " />
-            <marker date="1484569044009" expanded="true" signature="6081:6151" ph="Update users... " />
-            <marker date="1484569044009" expanded="true" signature="6451:6523" ph="Update users... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/css/shop-homepage.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="327" column="22" lean-forward="false" selection-start-line="327" selection-start-column="17" selection-end-line="327" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/java/View.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="24" column="53" lean-forward="false" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="53" />
-          <folding>
-            <element signature="e#412#428#0" expanded="true" />
-            <element signature="e#1114#1130#0" expanded="true" />
-            <element signature="e#2553#2569#0" expanded="true" />
-            <element signature="e#3293#3309#0" expanded="true" />
-            <element signature="e#5936#5952#0" expanded="true" />
-            <element signature="e#6637#6653#0" expanded="true" />
-            <element signature="e#8129#8145#0" expanded="true" />
-            <element signature="e#8905#8921#0" expanded="true" />
-            <element signature="e#10131#10147#0" expanded="true" />
-            <element signature="e#10705#10721#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/HTML/navbar.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
@@ -1582,11 +1562,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/admin.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="150" column="19" lean-forward="false" selection-start-line="150" selection-start-column="19" selection-end-line="150" selection-end-column="19" />
+          <folding>
+            <marker date="1484573244199" expanded="true" signature="780:795" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/java/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="24" column="53" lean-forward="false" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="53" />
+          <folding>
+            <element signature="e#412#428#0" expanded="true" />
+            <element signature="e#1114#1130#0" expanded="true" />
+            <element signature="e#2553#2569#0" expanded="true" />
+            <element signature="e#3293#3309#0" expanded="true" />
+            <element signature="e#5936#5952#0" expanded="true" />
+            <element signature="e#6637#6653#0" expanded="true" />
+            <element signature="e#8129#8145#0" expanded="true" />
+            <element signature="e#8905#8921#0" expanded="true" />
+            <element signature="e#10131#10147#0" expanded="true" />
+            <element signature="e#10705#10721#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/css/shop-homepage.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="346" column="27" lean-forward="false" selection-start-line="346" selection-start-column="27" selection-end-line="346" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/index.vm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="67" column="12" lean-forward="false" selection-start-line="67" selection-start-column="12" selection-end-line="80" selection-end-column="18" />
+        <state relative-caret-position="396">
+          <caret line="75" column="27" lean-forward="true" selection-start-line="75" selection-start-column="27" selection-end-line="75" selection-end-column="39" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/modify.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-396">
+          <caret line="51" column="45" lean-forward="false" selection-start-line="51" selection-start-column="45" selection-end-line="51" selection-end-column="45" />
+          <folding>
+            <marker date="1484573129895" expanded="true" signature="780:795" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1600,32 +1627,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/admin.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="150" column="19" lean-forward="false" selection-start-line="150" selection-start-column="19" selection-end-line="150" selection-end-column="19" />
-          <folding>
-            <marker date="1484573244199" expanded="true" signature="780:795" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/modify.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="51" column="45" lean-forward="false" selection-start-line="51" selection-start-column="45" selection-end-line="51" selection-end-column="45" />
-          <folding>
-            <marker date="1484573129895" expanded="true" signature="780:795" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/profile.vm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="78" column="20" lean-forward="false" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="20" />
+        <state relative-caret-position="484">
+          <caret line="73" column="22" lean-forward="true" selection-start-line="73" selection-start-column="22" selection-end-line="73" selection-end-column="22" />
           <folding>
-            <marker date="1484573532450" expanded="true" signature="710:725" ph="..." />
+            <marker date="1484574099222" expanded="true" signature="710:725" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/java/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1962">
+          <caret line="99" column="105" lean-forward="false" selection-start-line="99" selection-start-column="105" selection-end-line="99" selection-end-column="105" />
+          <folding>
+            <element signature="e#4562#4570#0" expanded="true" />
+            <marker date="1484569044009" expanded="true" signature="509:597" ph="Select usern... users" />
+            <marker date="1484569044009" expanded="true" signature="984:1059" ph="Select usern... users" />
+            <marker date="1484569044009" expanded="true" signature="1229:1304" ph="Select usern... users" />
+            <marker date="1484569044009" expanded="true" signature="1719:1797" ph="Select usern... users" />
+            <marker date="1484569044009" expanded="true" signature="1974:2043" ph="Select email... users" />
+            <marker date="1484569044009" expanded="true" signature="2220:2549" ph="INSERT INTO users... " />
+            <marker date="1484569044009" expanded="true" signature="2793:2863" ph="Select useri... users" />
+            <marker date="1484569044009" expanded="true" signature="3024:3273" ph="INSERT INTO adress... " />
+            <marker date="1484569044009" expanded="true" signature="3413:3456" ph="Delete From " />
+            <marker date="1484569044009" expanded="true" signature="3896:4027" ph="Select useri... users" />
+            <marker date="1484569044009" expanded="true" signature="4206:4282" ph="Select useri... users" />
+            <marker date="1484569044009" expanded="true" signature="4704:4750" ph="Select usern... users" />
+            <marker date="1484569044009" expanded="true" signature="5357:5405" ph="Delete from " />
+            <marker date="1484569044009" expanded="true" signature="5712:5783" ph="Update users... " />
+            <marker date="1484569044009" expanded="true" signature="6081:6151" ph="Update users... " />
+            <marker date="1484569044009" expanded="true" signature="6451:6523" ph="Update users... " />
           </folding>
         </state>
       </provider>
