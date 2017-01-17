@@ -61,20 +61,17 @@
                 <br>-->
                 <p class="lead">Profile</p>
                 <div class="list-group">
-                    <a href="#" class="list-group-item">Order History</a>
-                    <a href="#" class="list-group-item">Wishlist</a>
-                    <a href="#" class="list-group-item">Favourites</a>
+                    <a href="#" class="list-group-item" onclick="OrderHistoryContent()">Order History</a>
+                    <a href="#" class="list-group-item" onclick="WishlistContent()">Wishlist</a>
+                    <a href="#" class="list-group-item" onclick="FavouritesContent()">Favourites</a>
+                    <a href="#" class="list-group-item" onclick="ProfileContent()">Back To Profile</a>
+                    <br>
                 </div>
-                <br>
-                <div class="leftbar">
-                    <form class="form" id="logoutvisibility" method="POST" action="/Home">
-                        <p class="tab0">Welcome : ${CurrentUser}</p>
-                        <button type="submit" id="logout_button" name="iets">Logout</button>
-                    </form>
-                </div>
-                <br>
-                <br>
-                <br>
+
+                <form class="form" id="logoutvisibility" method="POST" action="/Home">
+                    <p class="tab0">Welcome : ${CurrentUser}</p>
+                    <button type="submit" id="logout_button" name="iets" align="center">Logout</button>
+                </form>
 
             </div>
 
@@ -82,41 +79,14 @@
 
                 <div class="row carousel-holder">
 
-                    <div class="col-md-12">
+                    <div class="col-md-12" id="main">
                         <h1 align="center">Profile information</h1>
                         <br>
-                        <p class="tab1">Username : ${CurrentUser}</p>
-                        <p class="tab1">User Level : ${userlevel}</p>
+                        <p class="tab1">Username : ${CurrentUser}</p><p class="tab1">First Name : ${firstname}</p>
+                        <p class="tab1">User Level : ${userlevel}</p><p class="tab1">Last Name : ${lastname}</p>
+                        <p class="tab1">Email: ${emailaddress}</p><p class="tab1">Age : ${age}</p>
+                        <p class="tab1">Password: ${userpassword}</p><p class="tab1">User Status : ${userstatus}</p>
 
-
-
-                    </div>
-
-                </div>
-
-                <div class="row">
-
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-
-                    </div>
-
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-
-                    </div>
-
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-
-                    </div>
-
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-
-                    </div>
-
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-
-                    </div>
-
-                    <div class="col-sm-4 col-lg-4 col-md-4">
 
                     </div>
 
@@ -150,6 +120,36 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <script>
+        function OrderHistoryContent(){
+            document.getElementById('main').innerHTML =
+                    '<h1 align="center">Order History</h1><br> <p align="center">This is the order history of : ${CurrentUser}</p>';
+        }
+    </script>
+
+    <script>
+        function WishlistContent(){
+            document.getElementById('main').innerHTML =
+                    '<h1 align="center">Wish List</h1><br> <p align="center">This is the wish list of : ${CurrentUser}</p>';
+        }
+
+    </script>
+
+    <script>
+        function FavouritesContent(){
+            document.getElementById('main').innerHTML =
+                    '<h1 align="center">Favourites</h1><br> <p align="center">This is the favourites of : ${CurrentUser}</p>';
+        }
+    </script>
+
+    <script>
+        function ProfileContent(){
+            document.getElementById('main').innerHTML =
+                '<h1 align="center">Profile information</h1><br> <p class="tab1">Username : ${CurrentUser}</p><p class="tab1">User Level : ${userlevel}</p>';
+        }
+
+    </script>
 
     <script>
             if("${userlevel}" == "admin"){

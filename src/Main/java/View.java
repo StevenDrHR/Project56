@@ -40,12 +40,10 @@ public class View {
             String LoginUser = new Controller().LoginUser(loginUsers);
             String checkUserStatus = new Controller().checkUserStatus(LoginUser);
             if (checkUserStatus.equals("Blocked")) {
-                attributes.put("message", "Blocked");
-            }
+                attributes.put("message", "Blocked");}
             else {
-            req.session().attribute("User",LoginUser);
+            req.session().attribute("User",LoginUser);}
             }
-           }
             else {
             req.session().attribute("User", "");}
             String currentUser = req.session().attribute("User");
@@ -265,6 +263,17 @@ public class View {
             Controller checkUserLevel = new Controller();
             String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
             attributes.put("userlevel", currentUserLevel);
+
+
+            Controller checkUser = new Controller();
+            ArrayList<String> UserData = checkUser.getEmailAdress(currentUser);
+            attributes.put("firstname", UserData.get(0));
+            attributes.put("lastname", UserData.get(1));
+            attributes.put("age", UserData.get(2));
+            attributes.put("emailaddress", UserData.get(3));
+            attributes.put("userpassword", UserData.get(4));
+            attributes.put("userstatus", UserData.get(5));
+
             System.out.println(currentUserLevel);
             return modelAndView(attributes, "Webshop/Profile.vm");
         }, new VelocityTemplateEngine());
@@ -275,26 +284,22 @@ public class View {
             String LoginUsername = req.queryParams("LoginUsername");
             String LoginPassword = req.queryParams("LoginPassword");
             String variabel = req.queryParams().iterator().next();
-            if (variabel.equals("LoginUsername")){
-                Modal loginUser = new Modal();
-                loginUser.LoginModal(LoginUsername,LoginPassword);
-                loginUsers.addFirst(loginUser);
-                String LoginUser = new Controller().LoginUser(loginUsers);
-                String checkUserStatus = new Controller().checkUserStatus(LoginUser);
-                if (checkUserStatus.equals("Blocked")) {
-                    attributes.put("message", "Blocked");
-                }
-                else {
-                    req.session().attribute("User",LoginUser);
-                }
-            }
-            else {
-                req.session().attribute("User", "");}
+
             String currentUser = req.session().attribute("User");
             attributes.put("CurrentUser", currentUser);
             Controller checkUserLevel = new Controller();
             String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
             attributes.put("userlevel", currentUserLevel);
+
+            Controller checkUser = new Controller();
+            ArrayList<String> UserData = checkUser.getEmailAdress(currentUser);
+            attributes.put("firstname", UserData.get(0));
+            attributes.put("lastname", UserData.get(1));
+            attributes.put("age", UserData.get(2));
+            attributes.put("emailaddress", UserData.get(3));
+            attributes.put("userpassword", UserData.get(4));
+            attributes.put("userstatus", UserData.get(5));
+
             return modelAndView(attributes, "Webshop/Profile.vm");
         },new VelocityTemplateEngine());
     }
