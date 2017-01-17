@@ -64,7 +64,7 @@
                     <a href="#" class="list-group-item" onclick="OrderHistoryContent()">Order History</a>
                     <a href="#" class="list-group-item" onclick="WishlistContent()">Wishlist</a>
                     <a href="#" class="list-group-item" onclick="FavouritesContent()">Favourites</a>
-                    <a href="#" class="list-group-item" onclick="ProfileContent()">Back To Profile</a>
+                    <a href="http://localhost:4567/Profile" class="list-group-item">Back To Profile</a>
                     <br>
                 </div>
 
