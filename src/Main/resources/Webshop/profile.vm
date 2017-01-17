@@ -144,14 +144,6 @@
     </script>
 
     <script>
-        function ProfileContent(){
-            document.getElementById('main').innerHTML =
-                '<h1 align="center">Profile information</h1><br> <p class="tab1">Username : ${CurrentUser}</p><p class="tab1">User Level : ${userlevel}</p>';
-        }
-
-    </script>
-
-    <script>
             if("${userlevel}" == "admin"){
                 var a = document.querySelector("#adminvisibility");
                 a.style.display = "initial";
