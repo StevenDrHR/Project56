@@ -347,3 +347,58 @@ footer {
     .tab0 { padding-left: 5em; }
     .tab1 { padding-left: 8em; }
     .tab2 { padding-left: 12em; }
+
+.formproduct
+{
+    padding:20px 0px;
+    position:relative;
+    bottom:19px;
+}
+.formproduct input
+{
+    outline: 0;
+    border:1px solid rgba(0,0,0,0.4);
+    background-color: rgba(255,255,255,0.2);
+    width: 250px;
+    border-radius: 3px;
+    padding:10px 15px;
+    margin: 10px auto 20px;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    color: black;
+    -webit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+    font-weight:300;
+
+}
+.formproduct input:hover
+{
+    background-color: lightgray;
+}
+.formproduct input:focus
+{
+    background-color: lightgray;
+    width: 270px;
+    color: black;
+
+}
+.formproduct button
+{
+    background-color:white;
+    outline:0;
+    border: 0;
+    padding: 10px 15px;
+    color: black;
+    border-radius:3px;
+    width: 250px;
+    cursor: pointer;
+    font-size: 18px;
+    position: relative;
+    left: 225px;
+
+}
+.formproduct button:hover
+{
+    background-color: lightgray;
+}
