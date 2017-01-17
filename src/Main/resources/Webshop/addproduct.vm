@@ -72,15 +72,20 @@
 
                     <div class="col-md-12">
 
-                       <form class="form3" method='POST' action='/Adminpage'>
-                            <button type="submit" name="addproduct_button"> add product</button></br>
-                       <table style="width:100%" id="admintable" >
-                           <tbody>
+                       <form class="form" method='POST'  action='/AddProduct'>
+                            <input type="text" placeholder="modal" align="center" name="Modal" required>
+                            <input type="text" placeholder="brand" align="center" name="Brand" required>
+                            <input type="text" placeholder="car type" align="center" name="CarType" required>
+                            <input type="text" placeholder="build year" align="center" name="BuildYear" required>
+                            <input type="text" placeholder="price" align="center" name="Price" required>
+                            <input type="text" placeholder="delivery time" align="center" name="DeleiveryTime" required>
+                            <input type="text" placeholder="description" align="center" name="Description" required>
+                            <button type="submit" name="add_button"> add product</button></br>
 
-                           </tbody>
-                       </table>
                        </form>
-
+                       <form class="form2" method='POST' action='/AddProduct'>
+                         <button type="submit" name="return_button"> return</button></br>
+                       </form2>
                     </div>
 
                 </div>
@@ -146,11 +151,7 @@
             if("${userlevel}" == "admin"){
                   var a = document.querySelector("#adminvisibility");
                   a.style.display = "initial";
-
-                  var b = document.querySelector("#registervisibility");
-                  b.style.display = "none";
               }
-
     </script>
 
     <script>

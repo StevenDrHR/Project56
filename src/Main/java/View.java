@@ -10,6 +10,8 @@ import static spark.Spark.*;
 public class View {
     Deque<Modal> registerUsers = new ArrayDeque<Modal>();
     Deque<Modal> loginUsers = new ArrayDeque<Modal>();
+    Deque<Modal> addProducts = new ArrayDeque<Modal>();
+
     public  void RenderHomeView(){
         get("/Home", (req, res) -> {
             Map<String, Object> attributes = new HashMap<String, Object>();
@@ -181,6 +183,11 @@ public class View {
             String deleteUser = request.queryParams().iterator().next();
             String checkFunction = deleteUser.substring(0, 6);
             System.out.println(checkFunction);
+            String addProduct = request.queryParams().iterator().next();
+            if (addProduct.equals("addproduct_button")){
+                response.redirect("/AddProduct");
+            }
+
             if(checkFunction.equals("Delete") ){
                 deleteUser= deleteUser.substring(7);
                 Controller databaseDeleteUser = new Controller();
@@ -289,6 +296,65 @@ public class View {
             String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
             attributes.put("userlevel", currentUserLevel);
             return modelAndView(attributes, "Webshop/Profile.vm");
+        },new VelocityTemplateEngine());
+    }
+
+    public void RenderAddProductView(){
+        get("/AddProduct", (req, res) -> {
+            Map<String, Object> attributes = new HashMap<String, Object>();
+            Controller getUsers = new Controller();
+            List list = getUsers.GetUsers();
+            attributes.put("users",list);
+            String currentUser = req.session().attribute("User");
+            attributes.put("CurrentUser", currentUser);
+            String currentUserLevel = getUsers.checkUserLevel(currentUser);
+            attributes.put("userlevel", currentUserLevel);
+            if(currentUserLevel.equals("not registered")||currentUserLevel.equals("user")){
+                res.redirect("/Home");
+            }
+            return modelAndView(attributes, "Webshop/addproduct.vm");
+        },new VelocityTemplateEngine());
+
+        post("/AddProduct", (request, response) -> {
+            Map<String, Object> attributes = new HashMap<String, Object>();
+            Controller getUsers = new Controller();
+            List list = getUsers.GetUsers();
+            attributes.put("users",list);
+            String currentUser = request.session().attribute("User");
+            attributes.put("CurrentUser", currentUser);
+            String currentUserLevel = getUsers.checkUserLevel(currentUser);
+            attributes.put("userlevel", currentUserLevel);
+
+            if(currentUserLevel.equals("not registered")||currentUserLevel.equals("user")){
+                response.redirect("/Home");
+            }
+            String button = request.queryParams().iterator().next();
+            System.out.println(button + " Shamala");
+            String modal = request.queryParams("Modal");
+            String brand = request.queryParams("Brand");
+            String type = request.queryParams("CarType");
+            String year = request.queryParams("BuildYear");
+            String price = request.queryParams("Price");
+            String deliveryTime = request.queryParams("DeleiveryTime");
+            String description = request.queryParams("Description");
+
+            System.out.println("" + brand);
+
+
+
+            if(button.equals("Brand") ){
+                Modal addProduct = new Modal();
+                addProduct.AddProductModal(modal, brand, type, year, price, deliveryTime, description);
+                addProducts.addFirst(addProduct);
+                String AddProduct = new Controller().AddProduct(addProducts);
+                attributes.put("message", AddProduct);
+
+            }
+            else if(button.equals("return_button") ){
+                request.session().attribute("ModifyUser",null);
+                response.redirect("/Adminpage");
+            }
+            return modelAndView(attributes, "Webshop/addproduct.vm");
         },new VelocityTemplateEngine());
     }
 }

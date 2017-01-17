@@ -20,6 +20,13 @@ public class Modal {
     private String StreetNumber;
     private String Country;
     private String PostalCode;
+    private String Modal;
+    private String Brand;
+    private String Type;
+    private String Year;
+    private String Price;
+    private String Deliverytime;
+    private String Description;
 
     public void RegisterModal(String username, String password, String Email,String FName,String LName ,String Age,String Street,String StreetNumber,String Country,String PostalCode) {
         this.username = username;
@@ -41,6 +48,16 @@ public class Modal {
         this.username = username;
         this.password = password;
     }
+    public void AddProductModal(String modal, String brand, String type,String year,String price ,String deliveryTime,String description) {
+        this.Modal = modal;
+        this.Brand = brand;
+        this.Type = type;
+        this.Year = year;
+        this.Price = price;
+        this.Deliverytime = deliveryTime;
+        this.Description = description;
+    }
+
     public String getUsername() {
         return username;
     }
@@ -55,6 +72,16 @@ public class Modal {
     public String getStreetNumber(){return StreetNumber;}
     public String getCounrty(){return Country;}
     public String getPostalCode(){return PostalCode;}
+    public String getModal(){return  Modal;}
+    public String getBrand(){return  Brand;}
+    public String getType(){return  Type;}
+    public String getYear(){return  Year;}
+    public String getPrice(){return  Price;}
+    public String getDeliverytime(){return  Deliverytime;}
+    public String getDescription(){return  Description;}
+
+
+
 
     public void setUsername(String username) {this.username = username;}
     public void setPassword(String password) {

@@ -14,6 +14,7 @@ public class Main {
         createPage.RenderModifyView();
         createPage.RenderShopView();
         createPage.RenderProfileView();
+        createPage.RenderAddProductView();
     }
 
 }
