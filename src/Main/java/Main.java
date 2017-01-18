@@ -15,6 +15,7 @@ public class Main {
         createPage.RenderShopView();
         createPage.RenderProfileView();
         createPage.RenderAddProductView();
+        createPage.RenderShoppingcartView();
     }
 
 }

@@ -59,13 +59,8 @@
             <div class="col-md-3">
                 <!--<h1 align="center">Profile</h1>
                 <br>-->
-                <p class="lead">Profile</p>
+                <p class="lead">Shopping Cart</p>
                 <div class="list-group">
-                    <a href="#" class="list-group-item" onclick="OrderHistoryContent()">Order History</a>
-                    <a href="#" class="list-group-item" onclick="WishlistContent()">Wishlist</a>
-                    <a href="#" class="list-group-item" onclick="FavouritesContent()">Favourites</a>
-                    <a href="http://localhost:4567/Profile" class="list-group-item">Back To Profile</a>
-                    <br>
                 </div>
 
                 <form class="form" id="logoutvisibility" method="POST" action="/Home">
@@ -80,19 +75,13 @@
                 <div class="row carousel-holder">
 
                     <div class="col-md-12" id="main">
-                        <h1 align="center">Profile information</h1>
+                        <h1 align="center">Shopping Cart</h1>
                         <br>
                         <div class="bodyleftcolumn">
-                            <p>Username : ${CurrentUser}</p>
-                            <p>First Name : ${firstname}</p>
-                            <p>User Level : ${userlevel}</p>
-                            <p>Last Name : ${lastname}</p>
-                        </div>
-                        <div class="bodyrightcolumn">
-                            <p>Email: ${emailaddress}</p>
-                            <p>Age : ${age}</p>
-                            <p>Password: ${userpassword}</p>
-                            <p>User Status : ${userstatus}</p>
+                            <p>Brand : </p>
+                            <p>Type : </p>
+                            <p>Price : </p>
+                            <p>Amount :</p>
                         </div>
 
                         <!--<button type="button" onclick="Spoiler()">Show/Hide</button>-->
@@ -131,28 +120,6 @@
     <script src="js/bootstrap.min.js"></script>
 
     <script>
-        function OrderHistoryContent(){
-            document.getElementById('main').innerHTML =
-                    '<h1 align="center">Order History</h1><br> <p align="center">This is the order history of : ${CurrentUser}</p>';
-        }
-    </script>
-
-    <script>
-        function WishlistContent(){
-            document.getElementById('main').innerHTML =
-                    '<h1 align="center">Wish List</h1><br> <p align="center">This is the wish list of : ${CurrentUser}</p>';
-        }
-
-    </script>
-
-    <script>
-        function FavouritesContent(){
-            document.getElementById('main').innerHTML =
-                    '<h1 align="center">Favourites</h1><br> <p align="center">This is the favourites of : ${CurrentUser}</p>';
-        }
-    </script>
-
-    <script>
         function Spoiler(){
             if(document.getElementById('spoiler').style.display=='none')
             {document.getElementById('spoiler').style.display='initial'}
@@ -161,10 +128,21 @@
     </script>
 
     <script>
-            if("${userlevel}" == "admin"){
-                var a = document.querySelector("#adminvisibility");
-                a.style.display = "initial";
-            }
+        if("${userlevel}" == "admin"){
+            var a = document.querySelector("#adminvisibility");
+            a.style.display = "initial";
+        }
+
+        if("${userlevel}" != "not registered"){
+            var a = document.querySelector("#loginvisibility");
+            a.style.display = "none";
+        }
+
+        if("${userlevel}" == "not registered"){
+            var a = document.querySelector("#profilevisibility");
+            a.style.display = "none";
+        }
+
     </script>
 
     <script>

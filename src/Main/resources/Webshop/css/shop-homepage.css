@@ -55,232 +55,232 @@ footer {
 
 .acontainer
 {
-	max-width: 600px;
-	margin: 0 auto;
-	padding:80px 0;
-	max-height:350px;
-	text-align:center;
-	margin-top:5%;
-	position:relative;
-	bottom:93px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding:80px 0;
+    max-height:350px;
+    text-align:center;
+    margin-top:5%;
+    position:relative;
+    bottom:93px;
 }
 
 .bcontainer
 {
-	max-width: 600px;
-	height: 400px;
-	position:relative;
-	left:130px;
+    max-width: 600px;
+    height: 400px;
+    position:relative;
+    left:130px;
 }
 
 .form
 {
-	padding:20px 0px;
-	position:relative;
-	bottom:19px;
+    padding:20px 0px;
+    position:relative;
+    bottom:19px;
 }
 .form input
 {
-	outline: 0;
-	border:1px solid rgba(0,0,0,0.4);
-	background-color: rgba(255,255,255,0.2);
-	width: 250px;
-	border-radius: 3px;
-	padding:10px 15px;
-	margin: 10px auto 20px;
-	display: block;
-	text-align: center;
-	font-size: 18px;
-	color: black;
-	-webit-transition-duration: 0.25s;
-			transition-duration: 0.25s;
-	font-weight:300;
+    outline: 0;
+    border:1px solid rgba(0,0,0,0.4);
+    background-color: rgba(255,255,255,0.2);
+    width: 250px;
+    border-radius: 3px;
+    padding:10px 15px;
+    margin: 10px auto 20px;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    color: black;
+    -webit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+    font-weight:300;
 
 }
 .form input:hover
 {
-	background-color: lightgray;
+    background-color: lightgray;
 }
 .form input:focus
 {
-	background-color: lightgray;
-	width: 270px;
-	color: black;
+    background-color: lightgray;
+    width: 270px;
+    color: black;
 
 }
 .form button
 {
-	background-color:white;
-	outline:0;
-	border: 0;
-	padding: 10px 15px;
-	color: black;
-	border-radius:3px;
-	width: 250px;
-	cursor: pointer;
-	font-size: 18px;
+    background-color:white;
+    outline:0;
+    border: 0;
+    padding: 10px 15px;
+    color: black;
+    border-radius:3px;
+    width: 250px;
+    cursor: pointer;
+    font-size: 18px;
 
 }
- .form button:hover
- {
-	 background-color: lightgray;
- }
+.form button:hover
+{
+    background-color: lightgray;
+}
 
- .form2
- {
- 	padding:20px 0px;
- 	max-height:400px;
- 	max-width:800px;
- }
- .form2 input
- {
- 	outline: 0;
- 	border:1px solid rgba(0,0,0,0.4);
- 	background-color: rgba(255,255,255,0.2);
- 	width: 250px;
- 	border-radius: 3px;
- 	padding:10px 15px;
- 	margin: 10px auto 20px;
- 	display: block;
- 	text-align: center;
- 	font-size: 18px;
- 	color: black;
- 	-webit-transition-duration: 0.25s;
- 			transition-duration: 0.25s;
- 	font-weight:300;
- 	position:relative;
-      right:150px;
+.form2
+{
+    padding:20px 0px;
+    max-height:400px;
+    max-width:800px;
+}
+.form2 input
+{
+    outline: 0;
+    border:1px solid rgba(0,0,0,0.4);
+    background-color: rgba(255,255,255,0.2);
+    width: 250px;
+    border-radius: 3px;
+    padding:10px 15px;
+    margin: 10px auto 20px;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    color: black;
+    -webit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+    font-weight:300;
+    position:relative;
+    right:150px;
 
- }
- .form2 input:hover
- {
- 	background-color: lightgray;
- }
- .form2 input:focus
- {
- 	background-color: lightgray;
- 	width: 270px;
- 	color: black;
+}
+.form2 input:hover
+{
+    background-color: lightgray;
+}
+.form2 input:focus
+{
+    background-color: lightgray;
+    width: 270px;
+    color: black;
 
- }
- .form2 button
- {
- 	background-color:white;
- 	outline:0;
- 	border: 0;
- 	padding: 10px 15px;
- 	color: black;
- 	border-radius:3px;
- 	width: 250px;
- 	cursor: pointer;
- 	font-size: 18px;
- 	position:relative;
- 	left:175px;
+}
+.form2 button
+{
+    background-color:white;
+    outline:0;
+    border: 0;
+    padding: 10px 15px;
+    color: black;
+    border-radius:3px;
+    width: 250px;
+    cursor: pointer;
+    font-size: 18px;
+    position:relative;
+    left:175px;
 
- }
- .form2 button:hover
-  {
- 	 background-color: lightgray;
-  }
+}
+.form2 button:hover
+{
+    background-color: lightgray;
+}
 
- form3
- {
- 	padding:20px 0px;
- 	position:relative;
- }
+form3
+{
+    padding:20px 0px;
+    position:relative;
+}
 
- form3 input
- {
+form3 input
+{
     position:relative;
     left:590px;
     top: 10px;
- }
+}
 
- form3 button
- {
+form3 button
+{
     position:relative;
     left:590px;
     top: 10px;
- }
+}
 
-  .form4
-  {
-   	padding:20px 0px;
-   	position:relative;
-  }
-  .form4 input
-  {
-   	outline: 0;
-   	border:1px solid rgba(0,0,0,0.4);
-   	background-color: rgba(255,255,255,0.2);
-   	width: 250px;
-   	border-radius: 3px;
+.form4
+{
+    padding:20px 0px;
+    position:relative;
+}
+.form4 input
+{
+    outline: 0;
+    border:1px solid rgba(0,0,0,0.4);
+    background-color: rgba(255,255,255,0.2);
+    width: 250px;
+    border-radius: 3px;
 
-   	display: block;
-   	text-align: center;
-   	font-size: 18px;
-   	color: black;
-   	-webit-transition-duration: 0.25s;
-   			transition-duration: 0.25s;
-   	font-weight:300;
-   	position:relative;
-      left:150px;
-      bottom:431px;
-  }
-  .form4 input:hover
-  {
-   	background-color: lightgray;
-  }
-  .form4 input:focus
-  {
-   	background-color: lightgray;
-   	width: 270px;
-   	color: black;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    color: black;
+    -webit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+    font-weight:300;
+    position:relative;
+    left:150px;
+    bottom:431px;
+}
+.form4 input:hover
+{
+    background-color: lightgray;
+}
+.form4 input:focus
+{
+    background-color: lightgray;
+    width: 270px;
+    color: black;
 
-  }
-  .form4 button
-  {
-   	background-color:white;
-   	outline:0;
-   	border: 0;
-   	padding: 10px 15px;
-   	color: black;
-   	border-radius:3px;
-   	width: 250px;
-   	cursor: pointer;
-   	font-size: 18px;
+}
+.form4 button
+{
+    background-color:white;
+    outline:0;
+    border: 0;
+    padding: 10px 15px;
+    color: black;
+    border-radius:3px;
+    width: 250px;
+    cursor: pointer;
+    font-size: 18px;
 
-  }
-  .form4 button:hover
-  {
-   	 background-color: lightgray;
-  }
+}
+.form4 button:hover
+{
+    background-color: lightgray;
+}
 
-  .sidecol
-  {
+.sidecol
+{
     position:relative;
     left:350px;
     bottom:335.5px;
-  }
+}
 
-  .regbutton
-  {
-  	position:relative;
+.regbutton
+{
+    position:relative;
     left:120px;
-  	bottom:335.5px;
-  }
+    bottom:335.5px;
+}
 
-  .pagebody
-  {
+.pagebody
+{
     max-width:400px;
     max-height:450px;
     position:relative;
     left:200px;
 
-  }
+}
 
-  .messagehandlerpopup
-  {
+.messagehandlerpopup
+{
     width: 200px;
     height: 100px;
     background: silver;
@@ -289,72 +289,64 @@ footer {
     left: 140px;
     border: outset;
     display:none;
-  }
+}
 
-  .messageinput
-  {
+.messageinput
+{
     background:transparent;
     color: black;
     border: none;
-  }
+}
 
-  .messagehandlerbtn1
-  {
+.messagehandlerbtn1
+{
     position: relative;
     bottom:25px;
     left: 140px;
     border: outset;
     display:none;
-  }
+}
 
-  .messagehandlerbtn2
-    {
-      position: relative;
-      bottom:65px;
-      left: 230px;
-      border: outset;
-      display:none;
-    }
+.messagehandlerbtn2
+{
+    position: relative;
+    bottom:65px;
+    left: 230px;
+    border: outset;
+    display:none;
+}
 
-    #adminvisibility{
-    	display: none;
-    }
+#adminvisibility{
+    display: none;
+}
 
-    #wishlistvisibility{
-        display: none;
-    }
+#registervisibility{
+    display: block;
+}
 
-    #wishlistvisibilityshow{
-        display: block;
-    }
+#loginvisibility{
+    display: block;
+}
 
-    #registervisibility{
-        display: block;
-    }
+#logoutvisibility
+{
+    display: none;
+}
 
-    #loginvisibility{
-        display: block;
-    }
+#profilevisibility
+{
+    display: block;
+}
 
-    #logoutvisibility
-    {
-        display: none;
-    }
-
-    #profilevisibility
-    {
-        display: block;
-    }
-
-    .leftbar {
-        position: relative;
-        width: 250px;
-        height: 1px;
-        left: 6px;
-    }
-    .tab0 { padding-left: 5em; }
-    .tab1 { padding-left: 8em; }
-    .tab2 { padding-left: 12em; }
+.leftbar {
+    position: relative;
+    width: 250px;
+    height: 1px;
+    left: 6px;
+}
+.tab0 { padding-left: 5em; }
+.tab1 { padding-left: 8em; }
+.tab2 { padding-left: 12em; }
 
 .formproduct
 {
@@ -409,4 +401,21 @@ footer {
 .formproduct button:hover
 {
     background-color: lightgray;
+}
+
+.shoppingcart{
+    position: relative;
+    left: 847px;
+    bottom:-12px;
+}
+.bodyleftcolumn{
+    position: relative;
+    left: 250px;
+}
+
+.bodyrightcolumn{
+    position: relative;
+    left: 500px;
+    bottom: 120px;
+
 }
