@@ -149,10 +149,10 @@
             cell4 = row.insertCell(3);
             cell5 = row.insertCell(4);
 
-            cell1.innerHTML = "Model";
-            cell2.innerHTML = "Brand";
-            cell3.innerHTML = "Type";
-            cell4.innerHTML = "Price";
+            cell1.innerHTML = "<b>Model</b>";
+            cell2.innerHTML = "<b>Brand</b>";
+            cell3.innerHTML = "<b>Type</b>";
+            cell4.innerHTML = "<b>Price</b>";
             cell5.innerHTML = "";
         }
 
