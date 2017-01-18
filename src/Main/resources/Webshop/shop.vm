@@ -180,10 +180,7 @@
         cell3.innerHTML = typ[i];
         cell4.innerHTML = prc[i];
         cell5.appendChild(Buybutton);
-
-
     }
-
 
 </script>
 
