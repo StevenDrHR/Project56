@@ -46,6 +46,7 @@ public class View {
             }
             else {
             req.session().attribute("User", "");}
+
             String currentUser = req.session().attribute("User");
             attributes.put("CurrentUser", currentUser);
             Controller checkUserLevel = new Controller();
@@ -129,19 +130,19 @@ public class View {
             attributes.put("userlevel", currentUserLevel);
 
             Controller getModel = new Controller();
-            List models = getModel.GetModels();
+            List models = getModel.GetModels("");
             attributes.put("models", models);
 
             Controller getBrand = new Controller();
-            List brands = getBrand.GetBrands();
+            List brands = getBrand.GetBrands("");
             attributes.put("brands", brands);
 
             Controller getType = new Controller();
-            List types = getType.GetType();
+            List types = getType.GetType("");
             attributes.put("types", types);
 
             Controller getPrice = new Controller();
-            List price = getPrice.GetPrice();
+            List price = getPrice.GetPrice("");
             attributes.put("price", price);
 
             return modelAndView(attributes, "Webshop/shop.vm");
@@ -150,6 +151,112 @@ public class View {
 
         post("/Shop", (req,res)-> {
             Map<String, Object> attributes = new HashMap<String, Object>();
+
+            String LoginUsername = req.queryParams("LoginUsername");
+            String LoginPassword = req.queryParams("LoginPassword");
+            String variabel = req.queryParams().iterator().next();
+            System.out.println(variabel + " Shamala");
+            if (variabel.equals("LoginUsername")){
+                Modal loginUser = new Modal();
+                loginUser.LoginModal(LoginUsername,LoginPassword);
+                loginUsers.addFirst(loginUser);
+                String LoginUser = new Controller().LoginUser(loginUsers);
+                String checkUserStatus = new Controller().checkUserStatus(LoginUser);
+                if (checkUserStatus.equals("Blocked")) {
+                    attributes.put("message", "Blocked");}
+                else {
+                    req.session().attribute("User",LoginUser);}
+            }
+            else {
+                req.session().attribute("User", "");}
+
+            if (variabel.equals("OrderedBrands")) {
+                Controller getProducts = new Controller();
+                List models = getProducts.GetModels("brand");
+                attributes.put("models", models);
+
+                List brands = getProducts.GetBrands("brand");
+                attributes.put("brands", brands);
+
+                List types = getProducts.GetType("brand");
+                attributes.put("types", types);
+
+                List price = getProducts.GetPrice("brand");
+                attributes.put("price", price);
+            }
+            else if (variabel.equals("OrderedTypes")) {
+                Controller getProducts = new Controller();
+                List models = getProducts.GetModels("type");
+                attributes.put("models", models);
+
+                List brands = getProducts.GetBrands("type");
+                attributes.put("brands", brands);
+
+                List types = getProducts.GetType("type");
+                attributes.put("types", types);
+
+                List price = getProducts.GetPrice("type");
+                attributes.put("price", price);
+            }
+            else if (variabel.equals("OrderedYears")) {
+                Controller getProducts = new Controller();
+                List models = getProducts.GetModels("year");
+                attributes.put("models", models);
+
+                List brands = getProducts.GetBrands("year");
+                attributes.put("brands", brands);
+
+                List types = getProducts.GetType("year");
+                attributes.put("types", types);
+
+                List price = getProducts.GetPrice("year");
+                attributes.put("price", price);
+            }
+            else if (variabel.equals("OrderedPriceLtH")) {
+                Controller getProducts = new Controller();
+                List models = getProducts.GetModels("pricelth");
+                attributes.put("models", models);
+
+                List brands = getProducts.GetBrands("pricelth");
+                attributes.put("brands", brands);
+
+                List types = getProducts.GetType("pricelth");
+                attributes.put("types", types);
+
+                List price = getProducts.GetPrice("pricelth");
+                attributes.put("price", price);
+            }
+            else if (variabel.equals("OrderedPriceHtL")) {
+                Controller getProducts = new Controller();
+                List models = getProducts.GetModels("pricehtl");
+                attributes.put("models", models);
+
+                List brands = getProducts.GetBrands("pricehtl");
+                attributes.put("brands", brands);
+
+                List types = getProducts.GetType("pricehtl");
+                attributes.put("types", types);
+
+                List price = getProducts.GetPrice("pricehtl");
+                attributes.put("price", price);
+            }
+            else{
+                Controller getProducts = new Controller();
+                List models = getProducts.GetModels("");
+                attributes.put("models", models);
+
+
+                List brands = getProducts.GetBrands("");
+                attributes.put("brands", brands);
+
+
+                List types = getProducts.GetType("");
+                attributes.put("types", types);
+
+
+                List price = getProducts.GetPrice("");
+                attributes.put("price", price);
+            }
 
             Controller getUsers = new Controller();
             List list = getUsers.GetUsers();

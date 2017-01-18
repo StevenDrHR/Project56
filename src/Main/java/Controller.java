@@ -107,50 +107,197 @@ public List<String> GetUsers() throws SQLException {
     return list;
 }
 
-    public List<String> GetModels() throws SQLException {
+    public List<String> GetModels(String Category) throws SQLException {
         ArrayList<String> list = new ArrayList<String>();
         connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "sql");
-        String Querry = "Select modal from products";
-        ResultSet rs = connection.prepareStatement(Querry).executeQuery();
-        while (rs.next()) {
-            list.add(rs.getString("modal"));
+        if(Category.equals("")) {
+            String Querry = "Select modal from products";
+            ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+            while (rs.next()) {
+                list.add(rs.getString("modal"));
 
+            }
+        }
+        else if(Category.equals("brand")){
+            String Querry = "Select modal from products order by brand ASC";
+            ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+            while (rs.next()) {
+                list.add(rs.getString("modal"));
+            }
+        }
+        else if(Category.equals("type")){
+            String Querry = "Select modal from products order by car_type ASC";
+            ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+            while (rs.next()) {
+                list.add(rs.getString("modal"));
+            }
+        }
+        else if(Category.equals("year")){
+            String Querry = "Select modal from products order by build_year ASC";
+            ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+            while (rs.next()) {
+                list.add(rs.getString("modal"));
+            }
+        }
+        else if(Category.equals("pricelth")){
+            String Querry = "Select modal from products order by price ASC";
+            ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+            while (rs.next()) {
+                list.add(rs.getString("modal"));
+            }
+        }
+        else if(Category.equals("pricehtl")){
+            String Querry = "Select modal from products order by price DESC";
+            ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+            while (rs.next()) {
+                list.add(rs.getString("modal"));
+            }
         }
         return list;
     }
 
-    public List<String> GetBrands() throws SQLException {
+    public List<String> GetBrands(String Category) throws SQLException {
         ArrayList<String> list = new ArrayList<String>();
         connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "sql");
-        String Querry = "Select brand from products";
-        ResultSet rs = connection.prepareStatement(Querry).executeQuery();
-        while (rs.next()) {
-            list.add(rs.getString("brand"));
+        if(Category.equals("")) {
+            String Querry = "Select brand from products";
+            ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+            while (rs.next()) {
+                list.add(rs.getString("brand"));
 
+            }
+        }
+        else if(Category.equals("brand")){
+            String Querry = "Select brand from products order by brand ASC";
+            ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+            while (rs.next()) {
+                list.add(rs.getString("brand"));
+            }
+        }
+        else if(Category.equals("type")){
+            String Querry = "Select brand from products order by car_type ASC";
+            ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+            while (rs.next()) {
+                list.add(rs.getString("brand"));
+            }
+        }
+        else if(Category.equals("year")){
+            String Querry = "Select brand from products order by build_year ASC";
+            ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+            while (rs.next()) {
+                list.add(rs.getString("brand"));
+            }
+        }
+        else if(Category.equals("pricelth")){
+            String Querry = "Select brand from products order by price ASC";
+            ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+            while (rs.next()) {
+                list.add(rs.getString("brand"));
+            }
+        }
+        else if(Category.equals("pricehtl")){
+            String Querry = "Select brand from products order by price DESC";
+            ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+            while (rs.next()) {
+                list.add(rs.getString("brand"));
+            }
         }
         return list;
     }
 
-    public List<String> GetType() throws SQLException {
+    public List<String> GetType(String Category) throws SQLException {
         ArrayList<String> list = new ArrayList<String>();
         connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "sql");
-        String Querry = "Select car_type from products";
-        ResultSet rs = connection.prepareStatement(Querry).executeQuery();
-        while (rs.next()) {
-            list.add(rs.getString("car_type"));
+        if(Category.equals("")) {
+            String Querry = "Select car_type from products";
+            ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+            while (rs.next()) {
+                list.add(rs.getString("car_type"));
 
+            }
+        }
+        else if(Category.equals("brand")){
+            String Querry = "Select car_type from products order by brand ASC";
+            ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+            while (rs.next()) {
+                list.add(rs.getString("car_type"));
+            }
+        }
+        else if(Category.equals("type")){
+            String Querry = "Select car_type from products order by car_type ASC";
+            ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+            while (rs.next()) {
+                list.add(rs.getString("car_type"));
+            }
+        }
+        else if(Category.equals("year")){
+            String Querry = "Select car_type from products order by build_year ASC";
+            ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+            while (rs.next()) {
+                list.add(rs.getString("car_type"));
+            }
+        }
+        else if(Category.equals("pricelth")){
+            String Querry = "Select car_type from products order by price ASC";
+            ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+            while (rs.next()) {
+                list.add(rs.getString("car_type"));
+            }
+        }
+        else if(Category.equals("pricehtl")){
+            String Querry = "Select car_type from products order by price DESC";
+            ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+            while (rs.next()) {
+                list.add(rs.getString("car_type"));
+            }
         }
         return list;
     }
 
-    public List<String> GetPrice() throws SQLException {
+    public List<String> GetPrice(String Category) throws SQLException {
         ArrayList<String> list = new ArrayList<String>();
         connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "sql");
-        String Querry = "Select price from products";
-        ResultSet rs = connection.prepareStatement(Querry).executeQuery();
-        while (rs.next()) {
-            list.add(rs.getString("price"));
-
+        if(Category.equals("")) {
+            String Querry = "Select price from products";
+            ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+            while (rs.next()) {
+                list.add(rs.getString("price"));
+            }
+        }
+        else if(Category.equals("brand")){
+            String Querry = "Select price from products order by brand ASC";
+            ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+            while (rs.next()) {
+                list.add(rs.getString("price"));
+            }
+        }
+        else if(Category.equals("type")){
+            String Querry = "Select price from products order by car_type ASC";
+            ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+            while (rs.next()) {
+                list.add(rs.getString("price"));
+            }
+        }
+        else if(Category.equals("year")){
+            String Querry = "Select price from products order by build_year ASC";
+            ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+            while (rs.next()) {
+                list.add(rs.getString("price"));
+            }
+        }
+        else if(Category.equals("pricelth")){
+            String Querry = "Select price from products order by price ASC";
+            ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+            while (rs.next()) {
+                list.add(rs.getString("price"));
+            }
+        }
+        else if(Category.equals("pricehtl")){
+            String Querry = "Select price from products order by price DESC";
+            ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+            while (rs.next()) {
+                list.add(rs.getString("price"));
+            }
         }
         return list;
     }

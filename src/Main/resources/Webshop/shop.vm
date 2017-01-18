@@ -56,12 +56,19 @@
         <div class="col-md-3">
             <p class="lead">Shamala Car Shop</p>
             <div class="list-group">
-                <a href="#" class="list-group-item">Brand</a>
-                <a href="#" class="list-group-item">Type</a>
-                <a href="#" class="list-group-item">Built Year</a>
-                <a href="#" class="list-group-item">Price Low to High</a>
-                <a href="#" class="list-group-item">Price High to Low</a>
+                <form class="CatalogForm" method="POST" action="/Shop">
+                    <button class="list-group-item" type="submit" name="OrderedBrands">Brands</button>
+                    <button class="list-group-item" type="submit" name="OrderedTypes">Type</button>
+                    <button class="list-group-item" type="submit" name="OrderedYears">Built Year</button>
+                    <button class="list-group-item" type="submit" name="OrderedPriceLtH">Price Low to High</button>
+                    <button class="list-group-item" type="submit" name="OrderedPriceHtL">Price High to Low</button>
+                </form>
             </div>
+
+            <form class="form" id="logoutvisibility" method="POST" action="/Shop">
+                <p class="tab0">Welcome : ${CurrentUser}</p>
+                <button type="submit" id="logout_button" name="iets">Logout</button>
+            </form>
 
         </div>
 
@@ -77,13 +84,6 @@
 
                             </tbody>
 
-                            <!--<tr>
-
-                            </tr>
-                            <tr><td>Row 1 Cell 1</td><td>Row 1 Cell 2</td><td>Row 1 Cell 3</td><td>Row 1 Cell 4</td><td><button type="button">Add to Cart</button></td></tr>
-                            <tr><td>Row 2 Cell 1</td><td>Row 2 Cell 2</td><td>Row 2 Cell 3</td><td>Row 2 Cell 4</td><td><button type="button">Add to Cart</button></td></tr>
-                            <tr><td>Row 3 Cell 1</td><td>Row 3 Cell 2</td><td>Row 3 Cell 3</td><td>Row 3 Cell 4</td><td><button type="button">Add to Cart</button></td></tr>
-                            <tr><td>Row 4 Cell 1</td><td>Row 4 Cell 2</td><td>Row 4 Cell 3</td><td>Row 4 Cell 4</td><td><button type="button">Add to Cart</button></td></tr>-->
                         </table>
                     </form>
                 </div>
