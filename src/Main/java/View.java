@@ -120,6 +120,14 @@ public class View {
             if (req.session().attribute("User") == null)
             {req.session().attribute("User", " ");}
 
+            Controller getUsers = new Controller();
+            List list = getUsers.GetUsers();
+            attributes.put("users",list);
+            String currentUser = req.session().attribute("User");
+            attributes.put("CurrentUser", currentUser);
+            String currentUserLevel = getUsers.checkUserLevel(currentUser);
+            attributes.put("userlevel", currentUserLevel);
+
             Controller getModel = new Controller();
             List models = getModel.GetModels();
             attributes.put("models", models);
@@ -136,9 +144,6 @@ public class View {
             List price = getPrice.GetPrice();
             attributes.put("price", price);
 
-            String currentUser = req.session().attribute("User");
-            attributes.put("CurrentUser", currentUser);
-
             return modelAndView(attributes, "Webshop/shop.vm");
         }, new VelocityTemplateEngine());
 
@@ -146,10 +151,13 @@ public class View {
         post("/Shop", (req,res)-> {
             Map<String, Object> attributes = new HashMap<String, Object>();
 
+            Controller getUsers = new Controller();
+            List list = getUsers.GetUsers();
+            attributes.put("users",list);
             String currentUser = req.session().attribute("User");
             attributes.put("CurrentUser", currentUser);
-
-
+            String currentUserLevel = getUsers.checkUserLevel(currentUser);
+            attributes.put("userlevel", currentUserLevel);
 
             return modelAndView(attributes, "Webshop/shop.vm");
         },new VelocityTemplateEngine());
