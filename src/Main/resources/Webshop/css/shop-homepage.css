@@ -320,6 +320,14 @@ footer {
     	display: none;
     }
 
+    #wishlistvisibility{
+        display: none;
+    }
+
+    #wishlistvisibilityshow{
+        display: block;
+    }
+
     #registervisibility{
         display: block;
     }
