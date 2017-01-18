@@ -102,16 +102,71 @@ public List<String> GetUsers() throws SQLException {
     ResultSet rs = connection.prepareStatement(Querry).executeQuery();
     while(rs.next()){
         list.add(rs.getString("username"));
-        System.out.println(rs.getString("username"));
-        String zin = "hallo,shithoofd";
-        String[] parts = zin.split(",");
 
-        for (int i = 0; i < parts.length; i++){
-            System.out.println(parts[i]);
-        }
     }
     return list;
 }
+
+    public List<String> GetModels() throws SQLException {
+        ArrayList<String> list = new ArrayList<String>();
+        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "sql");
+        String Querry = "Select modal from products";
+        ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+        while (rs.next()) {
+            list.add(rs.getString("modal"));
+
+        }
+        return list;
+    }
+
+    public List<String> GetBrands() throws SQLException {
+        ArrayList<String> list = new ArrayList<String>();
+        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "sql");
+        String Querry = "Select brand from products";
+        ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+        while (rs.next()) {
+            list.add(rs.getString("brand"));
+
+        }
+        return list;
+    }
+
+    public List<String> GetType() throws SQLException {
+        ArrayList<String> list = new ArrayList<String>();
+        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "sql");
+        String Querry = "Select car_type from products";
+        ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+        while (rs.next()) {
+            list.add(rs.getString("car_type"));
+
+        }
+        return list;
+    }
+
+    public List<String> GetPrice() throws SQLException {
+        ArrayList<String> list = new ArrayList<String>();
+        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "sql");
+        String Querry = "Select price from products";
+        ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+        while (rs.next()) {
+            list.add(rs.getString("price"));
+
+        }
+        return list;
+    }
+
+    public List<String> GetDescription() throws SQLException {
+        ArrayList<String> list = new ArrayList<String>();
+        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "sql");
+        String Querry = "Select description from products";
+        ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+        while (rs.next()) {
+            list.add(rs.getString("description"));
+
+        }
+        return list;
+    }
+
     public String DeleteUser(String username) throws SQLException {
         connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres", "sql");
         String Querry = "Delete from users where username ='"+username+"';";
@@ -139,7 +194,7 @@ public List<String> GetUsers() throws SQLException {
     }
 
     public String AddProduct(Deque<Modal> list) throws SQLException{
-        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres", "123lol123");
+        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres", "sql");
         String Querry = "INSERT INTO products (modal,brand,car_type,build_year,price,deliverytime,description) VALUES ('" + list.getFirst().getModal() + "','"+list.getFirst().getBrand() +"','"+ list.getFirst().getType() +"','"+ list.getFirst().getYear()+"',"+ list.getFirst().getPrice() +",'"+list.getFirst().getDeliverytime()+"','"+list.getFirst().getDescription()+"');";
         connection.prepareStatement(Querry).executeUpdate();
         return "Done";

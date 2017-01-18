@@ -70,19 +70,22 @@
             <div class="row carousel-holder">
 
                 <div class="col-md-12">
-                    <table border="1">
-                        <tr>
-                            <th>Brand</th>
-                            <th>Type</th>
-                            <th>Build-Year</th>
-                            <th>Price</th>
-                            <th></th>
-                        </tr>
-                        <tr><td>Row 1 Cell 1</td><td>Row 1 Cell 2</td><td>Row 1 Cell 3</td><td>Row 1 Cell 4</td><td><button type="button">Add to Cart</button></td></tr>
-                        <tr><td>Row 2 Cell 2</td><td>Row 2 Cell 3</td><td>Row 2 Cell 3</td><td>Row 2 Cell 4</td><td><button type="button">Add to Cart</button></td></tr>
-                        <tr><td>Row 3 Cell 1</td><td>Row 3 Cell 2</td><td>Row 3 Cell 3</td><td>Row 3 Cell 4</td><td><button type="button">Add to Cart</button></td></tr>
-                        <tr><td>Row 4 Cell 1</td><td>Row 4 Cell 2</td><td>Row 4 Cell 3</td><td>Row 4 Cell 4</td><td><button type="button">Add to Cart</button></td></tr>
-                    </table>
+                    <form class="form3" method='POST' action='/Shop'>
+                        <table border="1" style="width:100%" id="producttable">
+
+                            <tbody>
+
+                            </tbody>
+
+                            <!--<tr>
+
+                            </tr>
+                            <tr><td>Row 1 Cell 1</td><td>Row 1 Cell 2</td><td>Row 1 Cell 3</td><td>Row 1 Cell 4</td><td><button type="button">Add to Cart</button></td></tr>
+                            <tr><td>Row 2 Cell 1</td><td>Row 2 Cell 2</td><td>Row 2 Cell 3</td><td>Row 2 Cell 4</td><td><button type="button">Add to Cart</button></td></tr>
+                            <tr><td>Row 3 Cell 1</td><td>Row 3 Cell 2</td><td>Row 3 Cell 3</td><td>Row 3 Cell 4</td><td><button type="button">Add to Cart</button></td></tr>
+                            <tr><td>Row 4 Cell 1</td><td>Row 4 Cell 2</td><td>Row 4 Cell 3</td><td>Row 4 Cell 4</td><td><button type="button">Add to Cart</button></td></tr>-->
+                        </table>
+                    </form>
                 </div>
 
             </div>
@@ -117,38 +120,71 @@
 <script src="js/bootstrap.min.js"></script>
 
 <script>
-    var dirtystring = "${users}";
+    var dirtystring = "${models}";
     var cleanstring = dirtystring.substr(1, dirtystring.length - 2)
-    var parts = cleanstring.split(", ");
+    var mdl = cleanstring.split(", ");
+
+    var dirtystring = "${brands}";
+    var cleanstring = dirtystring.substr(1, dirtystring.length - 2)
+    var brnd = cleanstring.split(", ");
+
+    var dirtystring = "${types}";
+    var cleanstring = dirtystring.substr(1, dirtystring.length - 2)
+    var typ = cleanstring.split(", ");
+
+    var dirtystring = "${price}";
+    var cleanstring = dirtystring.substr(1, dirtystring.length - 2)
+    var prc = cleanstring.split(", ");
 
 
-    for (var i = 0; i < parts.length; i++){
+    for (var i = 0; i < mdl.length; i++){
 
-        table = document.getElementById("admintable");
-        Deletebutton =  document.createElement("button");
-        Modifybutton =  document.createElement("button");
+        if(i == 0){
+            table = document.getElementById("producttable");
+            row = table.insertRow(0);
+            row.setAttribute("name", "info");
+            cell1 = row.insertCell(0);
+            cell2 = row.insertCell(1);
+            cell3 = row.insertCell(2);
+            cell4 = row.insertCell(3);
+            cell5 = row.insertCell(4);
+
+            cell1.innerHTML = "Model";
+            cell2.innerHTML = "Brand";
+            cell3.innerHTML = "Type";
+            cell4.innerHTML = "Price";
+            cell5.innerHTML = "";
+        }
+
+        table = document.getElementById("producttable");
+        Buybutton =  document.createElement("button");
 
         //adjusting the buttons
-        Deletebutton.setAttribute("name", "Delete "+ parts[i]);
-        Deletebutton.setAttribute("type", "submit");
-        Deletebutton.innerHTML = "Delete";
-        Modifybutton.setAttribute("name", "Modify "+ parts[i]);
-        Modifybutton.setAttribute("type", "submit");
-        Modifybutton.innerHTML = "Modfiy";
+        Buybutton.setAttribute("name", "AddToCart "+ mdl[i]);
+        Buybutton.setAttribute("type", "submit");
+        Buybutton.innerHTML = "Add to Cart";
         //adding the row
-        row = table.insertRow(i);
-        row.setAttribute("name", ""+parts[i]);
+        row = table.insertRow(i+1);
+        row.setAttribute("name", ""+mdl[i]);
 
         //making the amount of values in a row
         cell1 = row.insertCell(0);
         cell2 = row.insertCell(1);
         cell3 = row.insertCell(2);
+        cell4 = row.insertCell(3);
+        cell5 = row.insertCell(4);
 
         //adding values
-        cell1.innerHTML = parts[i];
-        cell2.appendChild(Deletebutton);
-        cell3.appendChild(Modifybutton);
+        cell1.innerHTML = mdl[i];
+        cell2.innerHTML = brnd[i];
+        cell3.innerHTML = typ[i];
+        cell4.innerHTML = prc[i];
+        cell5.appendChild(Buybutton);
+
+
     }
+
+
 </script>
 
 <script>

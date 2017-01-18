@@ -120,41 +120,37 @@ public class View {
             if (req.session().attribute("User") == null)
             {req.session().attribute("User", " ");}
 
+            Controller getModel = new Controller();
+            List models = getModel.GetModels();
+            attributes.put("models", models);
+
+            Controller getBrand = new Controller();
+            List brands = getBrand.GetBrands();
+            attributes.put("brands", brands);
+
+            Controller getType = new Controller();
+            List types = getType.GetType();
+            attributes.put("types", types);
+
+            Controller getPrice = new Controller();
+            List price = getPrice.GetPrice();
+            attributes.put("price", price);
+
             String currentUser = req.session().attribute("User");
             attributes.put("CurrentUser", currentUser);
-            Controller checkUserLevel = new Controller();
-            String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
-            attributes.put("userlevel", currentUserLevel);
-            System.out.println(currentUserLevel);
+
             return modelAndView(attributes, "Webshop/shop.vm");
         }, new VelocityTemplateEngine());
 
 
         post("/Shop", (req,res)-> {
             Map<String, Object> attributes = new HashMap<String, Object>();
-            String LoginUsername = req.queryParams("LoginUsername");
-            String LoginPassword = req.queryParams("LoginPassword");
-            String variabel = req.queryParams().iterator().next();
-            if (variabel.equals("LoginUsername")){
-                Modal loginUser = new Modal();
-                loginUser.LoginModal(LoginUsername,LoginPassword);
-                loginUsers.addFirst(loginUser);
-                String LoginUser = new Controller().LoginUser(loginUsers);
-                String checkUserStatus = new Controller().checkUserStatus(LoginUser);
-                if (checkUserStatus.equals("Blocked")) {
-                    attributes.put("message", "Blocked");
-                }
-                else {
-                    req.session().attribute("User",LoginUser);
-                }
-            }
-            else {
-                req.session().attribute("User", "");}
+
             String currentUser = req.session().attribute("User");
             attributes.put("CurrentUser", currentUser);
-            Controller checkUserLevel = new Controller();
-            String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
-            attributes.put("userlevel", currentUserLevel);
+
+
+
             return modelAndView(attributes, "Webshop/shop.vm");
         },new VelocityTemplateEngine());
     }
