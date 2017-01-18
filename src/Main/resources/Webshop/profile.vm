@@ -82,12 +82,17 @@
                     <div class="col-md-12" id="main">
                         <h1 align="center">Profile information</h1>
                         <br>
-                        <p class="tab1">Username : ${CurrentUser}</p><p class="tab1">First Name : ${firstname}</p>
-                        <p class="tab1">User Level : ${userlevel}</p><p class="tab1">Last Name : ${lastname}</p>
-                        <p class="tab1">Email: ${emailaddress}</p><p class="tab1">Age : ${age}</p>
-                        <p class="tab1">Password: ${userpassword}</p><p class="tab1">User Status : ${userstatus}</p>
+                        <p class="tab1">Username : ${CurrentUser}</p>
+                        <p class="tab1">First Name : ${firstname}</p>
+                        <p class="tab1">User Level : ${userlevel}</p>
+                        <p class="tab1">Last Name : ${lastname}</p>
+                        <p class="tab1">Email: ${emailaddress}</p>
+                        <p class="tab1">Age : ${age}</p>
+                        <p class="tab1">Password: ${userpassword}</p>
+                        <p class="tab1">User Status : ${userstatus}</p>
 
-
+                        <!--<button type="button" onclick="Spoiler()">Show/Hide</button>-->
+                        <!--<div id="spoiler" style="display:none"></div>-->
                     </div>
 
                 </div>
@@ -140,6 +145,14 @@
         function FavouritesContent(){
             document.getElementById('main').innerHTML =
                     '<h1 align="center">Favourites</h1><br> <p align="center">This is the favourites of : ${CurrentUser}</p>';
+        }
+    </script>
+
+    <script>
+        function Spoiler(){
+            if(document.getElementById('spoiler').style.display=='none')
+            {document.getElementById('spoiler').style.display='initial'}
+            else{document.getElementById('spoiler').style.display='none'};
         }
     </script>
 
