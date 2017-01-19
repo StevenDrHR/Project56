@@ -65,6 +65,12 @@
                 </form>
             </div>
 
+            <form class="form" method="POST" action="/Shop" id="loginvisibility">
+                <input type="text" placeholder="username" name="LoginUsername">
+                <input type="password" placeholder="password" name="LoginPassword">
+                <button type="submit" id="login_button">Login</button>
+            </form>
+
             <form class="form" id="logoutvisibility" method="POST" action="/Shop">
                 <p class="tab0">Welcome : ${CurrentUser}</p>
                 <button type="submit" id="logout_button" name="iets">Logout</button>
@@ -86,6 +92,7 @@
 
                         </table>
                     </form>
+                    ${productid}
                 </div>
 
             </div>
@@ -136,6 +143,10 @@
     var cleanstring = dirtystring.substr(1, dirtystring.length - 2)
     var prc = cleanstring.split(", ");
 
+    var dirtystring = "${productid}";
+    var cleanstring = dirtystring.substr(1, dirtystring.length - 2)
+    var pid = cleanstring.split(", ");
+
     for (var i = 0; i < mdl.length; i++) {
 
         if (i == 0) {
@@ -162,18 +173,18 @@
         Wishlistbutton = document.createElement("button");
 
         //adjusting the buttons
-        Buybutton.setAttribute("name", "AddToCart " + mdl[i]);
+        Buybutton.setAttribute("name", "AddToCart" + pid[i]);
         Buybutton.setAttribute("type", "submit");
         Buybutton.innerHTML = "Add to Cart";
 
 
-        Wishlistbutton.setAttribute("name", "AddToWishlist" + mdl[i])
+        Wishlistbutton.setAttribute("name", "AddToWishlist" + pid[i])
         Wishlistbutton.setAttribute("type", "submit")
         Wishlistbutton.innerHTML = "Add to Wishlist"
 
         //adding the row
         row = table.insertRow(i + 1);
-        row.setAttribute("name", "" + mdl[i]);
+        row.setAttribute("name", "" + pid[i]);
 
         //making the amount of values in a row
         cell1 = row.insertCell(0);

@@ -78,10 +78,11 @@
                         <h1 align="center">Shopping Cart</h1>
                         <br>
                         <div class="bodyleftcolumn">
-                            <p>Brand : </p>
-                            <p>Type : </p>
-                            <p>Price : </p>
-                            <p>Amount :</p>
+                            <p>Model : ${model}</p>
+                            <p>Brand : ${brand}</p>
+                            <p>Type : ${type}</p>
+                            <p>Price : ${price}</p>
+                            <p>Amount : 1</p>
                         </div>
 
                         <!--<button type="button" onclick="Spoiler()">Show/Hide</button>-->
