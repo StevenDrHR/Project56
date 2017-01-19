@@ -23,82 +23,92 @@
     <script>
 
     </script>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="http://localhost:4567/Home">Homepage</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <script src="js/nav.js"></script>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-    <!-- Page Content -->
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://localhost:4567/Home">Homepage</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <script src="js/nav.js"></script>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
 
-        <div class="row">
+<!-- Page Content -->
+<div class="container">
 
-            <div class="col-md-3">
-                <!--<h1 align="center">Profile</h1>
-                <br>-->
-                <p class="lead">Profile</p>
-                <div class="list-group">
-                    <a href="#" class="list-group-item" onclick="OrderHistoryContent()">Order History</a>
-                    <a href="#" class="list-group-item" onclick="WishlistContent()">Wishlist</a>
-                    <a href="#" class="list-group-item" onclick="FavouritesContent()">Favourites</a>
-                    <a href="http://localhost:4567/Profile" class="list-group-item">Back To Profile</a>
-                    <br>
-                </div>
+    <div class="row">
 
-                <form class="form" id="logoutvisibility" method="POST" action="/Home">
-                    <p class="tab0">Welcome : ${CurrentUser}</p>
-                    <button type="submit" id="logout_button" name="iets" align="center">Logout</button>
-                </form>
-
+        <div class="col-md-3">
+            <!--<h1 align="center">Profile</h1>
+            <br>-->
+            <p class="lead">Profile</p>
+            <div class="list-group">
+                <a href="#" class="list-group-item" onclick="OrderHistoryContent()">Order History</a>
+                <a href="#" class="list-group-item" onclick="WishlistContent()">Wishlist</a>
+                <a href="#" class="list-group-item" onclick="FavouritesContent()">Favourites</a>
+                <a href="http://localhost:4567/Profile" class="list-group-item">Back To Profile</a>
+                <br>
             </div>
 
-            <div class="col-md-9">
+            <form class="form" id="logoutvisibility" method="POST" action="/Home">
+                <p class="tab0">Welcome : ${CurrentUser}</p>
+                <button type="submit" id="logout_button" name="iets" align="center">Logout</button>
+            </form>
 
-                <div class="row carousel-holder">
+        </div>
 
-                    <div class="col-md-12" id="main">
-                        <h1 align="center">Profile information</h1>
-                        <br>
-                        <div class="bodyleftcolumn">
-                            <p>Username : ${CurrentUser}</p>
-                            <p>First Name : ${firstname}</p>
-                            <p>User Level : ${userlevel}</p>
-                            <p>Last Name : ${lastname}</p>
-                        </div>
-                        <div class="bodyrightcolumn">
-                            <p>Email: ${emailaddress}</p>
-                            <p>Age : ${age}</p>
-                            <p>Password: ${userpassword}</p>
-                            <p>User Status : ${userstatus}</p>
-                        </div>
+        <div class="col-md-9">
 
-                        <!--<button type="button" onclick="Spoiler()">Show/Hide</button>-->
-                        <!--<div id="spoiler" style="display:none"></div>-->
+            <div class="row carousel-holder">
+
+                <div class="col-md-12" id="main">
+                    <h1 align="center">Profile information</h1>
+                    <br>
+                    <div class="bodyleftcolumn">
+                        <p>Username : ${CurrentUser}</p>
+                        <p>First Name : ${firstname}</p>
+                        <p>User Level : ${userlevel}</p>
+                        <p>Last Name : ${lastname}</p>
+                    </div>
+                    <div class="bodyrightcolumn">
+                        <p>Email: ${emailaddress}</p>
+                        <p>Age : ${age}</p>
+                        <p>Password: ${userpassword}</p>
+                        <p>User Status : ${userstatus}</p>
                     </div>
 
+                    <!--<button type="button" onclick="Spoiler()">Show/Hide</button>-->
+                    <!--<div id="spoiler" style="display:none"></div>-->
+                </div>
+
+                <div class="col-md-12">
+                    <form class="form3" method='POST' action='/Shop'>
+                        <table border="1" style="width:100%" id="alltables">
+
+                            <tbody>
+
+                            </tbody>
+
+                        </table>
+                    </form>
                 </div>
 
             </div>
@@ -106,75 +116,115 @@
         </div>
 
     </div>
-    <!-- /.container -->
 
-    <div class="container">
+</div>
+<!-- /.container -->
 
-        <hr>
+<div class="container">
 
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Shamala Webshop 2016</p>
-                </div>
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Copyright &copy; Shamala Webshop 2016</p>
             </div>
-        </footer>
+        </div>
+    </footer>
 
-    </div>
-    <!-- /.container -->
+</div>
+<!-- /.container -->
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
 
-    <script>
-        function OrderHistoryContent(){
-            document.getElementById('main').innerHTML =
-                    '<h1 align="center">Order History</h1><br> <p align="center">This is the order history of : ${CurrentUser}</p>';
-        }
-    </script>
+<script>
+    function OrderHistoryContent(){
+        document.getElementById('main').innerHTML =
+                '<h1 align="center">Order History</h1><br> <p align="center">This is the order history of : ${CurrentUser}</p>';
+    }
+</script>
 
-    <script>
-        function WishlistContent(){
-            document.getElementById('main').innerHTML =
-                    '<h1 align="center">Wish List</h1><br> <p align="center">This is the wish list of : ${CurrentUser}</p>';
-        }
+<script>
+    var once = 1
+    var dirtystring = "${models}";
+    var cleanstring = dirtystring.substr(1, dirtystring.length - 2)
+    var mdl = cleanstring.split(", ");
 
-    </script>
+    var dirtystring = "${brands}";
+    var cleanstring = dirtystring.substr(1, dirtystring.length - 2)
+    var brnd = cleanstring.split(", ");
 
-    <script>
-        function FavouritesContent(){
-            document.getElementById('main').innerHTML =
-                    '<h1 align="center">Favourites</h1><br> <p align="center">This is the favourites of : ${CurrentUser}</p>';
-        }
-    </script>
+    var dirtystring = "${types}";
+    var cleanstring = dirtystring.substr(1, dirtystring.length - 2)
+    var typ = cleanstring.split(", ");
 
-    <script>
-        function Spoiler(){
-            if(document.getElementById('spoiler').style.display=='none')
-            {document.getElementById('spoiler').style.display='initial'}
-            else{document.getElementById('spoiler').style.display='none'};
-        }
-    </script>
+    var dirtystring = "${price}";
+    var cleanstring = dirtystring.substr(1, dirtystring.length - 2)
+    var prc = cleanstring.split(", ");
 
-    <script>
-            if("${userlevel}" == "admin"){
-                var a = document.querySelector("#adminvisibility");
-                a.style.display = "initial";
+    function WishlistContent() {
+        document.getElementById('main').innerHTML =
+                '<h1 align="center">Wish List</h1><br> <p align="center">This is the wish list of : ${CurrentUser}</p>';
+
+        for (var i = 0; i < mdl.length; i++) {
+            if (i == 0 && once == 1) {
+                once = 2
+                table = document.getElementById("alltables");
+                row = table.insertRow(0);
+                row.setAttribute("name", "info");
+                cell1 = row.insertCell(0);
+                cell2 = row.insertCell(1);
+                cell3 = row.insertCell(2);
+                cell4 = row.insertCell(3);
+                cell5 = row.insertCell(4);
+
+
+                cell1.innerHTML = "<b>Model</b>";
+                cell2.innerHTML = "<b>Brand</b>";
+                cell3.innerHTML = "<b>Type</b>";
+                cell4.innerHTML = "<b>Price</b>";
+                cell5.innerHTML = "";
+
             }
-    </script>
-
-    <script>
-        if("${userlevel}" == "admin" || "${userlevel}" == "user"){
-            var a = document.querySelector("#registervisibility");
-            a.style.display = "none";
-            var b = document.querySelector("#logoutvisibility");
-            b.style.display = "block";
         }
-    </script>
+    }
+</script>
+
+<script>
+    function FavouritesContent(){
+        document.getElementById('main').innerHTML =
+                '<h1 align="center">Favourites</h1><br> <p align="center">This is the favourites of : ${CurrentUser}</p>';
+    }
+</script>
+
+<script>
+    function Spoiler(){
+        if(document.getElementById('spoiler').style.display=='none')
+        {document.getElementById('spoiler').style.display='initial'}
+        else{document.getElementById('spoiler').style.display='none'};
+    }
+</script>
+
+<script>
+    if("${userlevel}" == "admin"){
+        var a = document.querySelector("#adminvisibility");
+        a.style.display = "initial";
+    }
+</script>
+
+<script>
+    if("${userlevel}" == "admin" || "${userlevel}" == "user"){
+        var a = document.querySelector("#registervisibility");
+        a.style.display = "none";
+        var b = document.querySelector("#logoutvisibility");
+        b.style.display = "block";
+    }
+</script>
 
 </body>
 
