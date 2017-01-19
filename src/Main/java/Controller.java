@@ -14,6 +14,7 @@ public class Controller {
 
     public void connection() throws SQLException{
         connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/project56", "postgres", "sql");
+
     }
 
     public String checkUserStatus(String UserName) throws SQLException {
