@@ -483,8 +483,14 @@ public class View {
             else if (variabel.contains("AddToCart")){
                 String productid = variabel.substring(9);
                 System.out.println(productid + " pid");
-                req.session().attribute("product", productid);
-                System.out.println(req.session().attribute("product") + " vet");
+                if(req.session().attribute("productid")== null){
+                    req.session().attribute("productid", productid);
+                }
+                else{
+                    req.session().attribute("productid", productid + ", " + req.session().attribute("productid"));
+                }
+
+                System.out.println(req.session().attribute("productid") + " vet");
                 res.redirect("/Shoppingcart");
 
             }
@@ -531,15 +537,36 @@ public class View {
             String currentUserLevel = getUsers.checkUserLevel(currentUser);
             attributes.put("userlevel", currentUserLevel);
 
-            String currentPid = req.session().attribute("product");
+            String currentPid = req.session().attribute("productid");
+            String[] pid = currentPid.split(", ");
 
-            System.out.println(currentPid + " get cur pid");
-            Controller getProductInfo = new Controller();
-            List productinfo = getProductInfo.getPinfo(currentPid);
-            attributes.put("model", productinfo.get(0));
-            attributes.put("brand", productinfo.get(1));
-            attributes.put("type", productinfo.get(2));
-            attributes.put("price", productinfo.get(3));
+            System.out.println(pid[0] + " get pid");
+
+            System.out.println(currentPid + " get curpid");
+
+            for (int i = 0; i < pid.length; i++) {
+                Controller getProductInfo = new Controller();
+                List productinfo = getProductInfo.getPinfo(pid[i]);
+                if(i == 0){
+                    req.session().attribute("model", productinfo.get(0));
+                    req.session().attribute("brand", productinfo.get(1));
+                    req.session().attribute("type", productinfo.get(2));
+                    req.session().attribute("price", productinfo.get(3));
+                }
+                else{
+                    req.session().attribute("model", productinfo.get(0) + ", " + req.session().attribute("model"));
+                    req.session().attribute("brand", productinfo.get(1) + ", " + req.session().attribute("brand"));
+                    req.session().attribute("type", productinfo.get(2) + ", " + req.session().attribute("type"));
+                    req.session().attribute("price", productinfo.get(3) + ", " + req.session().attribute("price"));
+                }
+
+            }
+            System.out.println(req.session().attribute("model") + " test");
+
+            attributes.put("model", req.session().attribute("model"));
+            attributes.put("brand", req.session().attribute("brand"));
+            attributes.put("type", req.session().attribute("type"));
+            attributes.put("price", req.session().attribute("price"));
 
             return modelAndView(attributes, "Webshop/shoppingcart.vm");
         }, new VelocityTemplateEngine());
@@ -549,7 +576,7 @@ public class View {
             Map<String, Object> attributes = new HashMap<String, Object>();
 
             String currentPid = req.session().attribute("product");
-            System.out.println(currentPid + " post cur pid");
+            System.out.println(currentPid + " post curpid");
 
             String LoginUsername = req.queryParams("LoginUsername");
             String LoginPassword = req.queryParams("LoginPassword");
