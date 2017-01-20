@@ -13,7 +13,7 @@ public class Controller {
     static Connection connection;
 
     public void connection() throws SQLException{
-        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/project56", "postgres", "sql");
+        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "0906986");
 
     }
 
@@ -426,9 +426,19 @@ public List<String> GetUsers() throws SQLException {
             result.add(rs.getString("email"));
             result.add(rs.getString("user_password"));
             result.add(rs.getString("userstatus"));
+            result.add(rs.getString("userid"));
+
         }
 
         return result;
+    }
+    public String setToWishlist(String userid, String productid) throws SQLException {
+        connection();
+        String Querry = "insert INTO wishlist (userid, productid) VALUES ("+userid+" , "+productid+");";
+        connection.prepareStatement(Querry).executeUpdate();
+
+
+        return "Done";
     }
 }
 

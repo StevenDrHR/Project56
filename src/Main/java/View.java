@@ -257,6 +257,7 @@ public class View {
             attributes.put("emailaddress", UserData.get(3));
             attributes.put("userpassword", UserData.get(4));
             attributes.put("userstatus", UserData.get(5));
+            attributes.put("userid", UserData.get(6));
 
             return modelAndView(attributes, "Webshop/Profile.vm");
         },new VelocityTemplateEngine());
@@ -475,8 +476,14 @@ public class View {
 
             System.out.println(variabel + " trololol");
             if (variabel.contains("AddToWishlist")){
-
-                res.redirect("/Shop");
+                System.out.println(variabel + " Shamala1");
+                Controller settoWishlist = new Controller();
+                System.out.println(variabel + " Shamala2");
+                ArrayList<String> userid = settoWishlist.getUserData(req.session().attribute("User"));
+                System.out.println(variabel + " Shamala3");
+                settoWishlist.setToWishlist(userid.get(6), variabel.substring(13));
+                System.out.println(variabel + " Shamala4");
+                res.redirect("/Profile");
                 System.out.println(variabel + " Shamala");
             }
 
