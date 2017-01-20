@@ -386,7 +386,7 @@ public List<String> GetUsers() throws SQLException {
         String Querry = "Delete from users where username ='"+username+"';";
         connection.prepareStatement(Querry).executeUpdate();
         return "Done";
-        }
+    }
 
     public String ResetPassword(String username) throws SQLException{
         connection();
