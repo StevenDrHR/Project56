@@ -157,14 +157,14 @@
             cell2 = row.insertCell(1);
             cell3 = row.insertCell(2);
             cell4 = row.insertCell(3);
-            cell5 = row.insertCell(4);
+            //cell5 = row.insertCell(4);
 
 
             cell1.innerHTML = "<b>Model</b>";
             cell2.innerHTML = "<b>Brand</b>";
             cell3.innerHTML = "<b>Type</b>";
             cell4.innerHTML = "<b>Price</b>";
-            cell5.innerHTML = "";
+            //cell5.innerHTML = "";
 
         }
 

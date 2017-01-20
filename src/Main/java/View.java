@@ -224,7 +224,7 @@ public class View {
 
 
             Controller checkUser = new Controller();
-            ArrayList<String> UserData = checkUser.getEmailAdress(currentUser);
+            ArrayList<String> UserData = checkUser.getUserData(currentUser);
             attributes.put("firstname", UserData.get(0));
             attributes.put("lastname", UserData.get(1));
             attributes.put("age", UserData.get(2));
@@ -250,7 +250,7 @@ public class View {
             attributes.put("userlevel", currentUserLevel);
 
             Controller checkUser = new Controller();
-            ArrayList<String> UserData = checkUser.getEmailAdress(currentUser);
+            ArrayList<String> UserData = checkUser.getUserData(currentUser);
             attributes.put("firstname", UserData.get(0));
             attributes.put("lastname", UserData.get(1));
             attributes.put("age", UserData.get(2));

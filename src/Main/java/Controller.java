@@ -414,7 +414,7 @@ public List<String> GetUsers() throws SQLException {
         return "Done";
     }
 
-    public ArrayList<String> getEmailAdress(String username) throws SQLException {
+    public ArrayList<String> getUserData(String username) throws SQLException {
         connection();
         String Querry = "Select * from users where username ='"+username+"';";
         ResultSet rs = connection.prepareStatement(Querry).executeQuery();
