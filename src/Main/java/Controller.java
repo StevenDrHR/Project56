@@ -435,7 +435,11 @@ public List<String> GetUsers() throws SQLException {
     public String setToWishlist(String userid, String productid) throws SQLException {
         connection();
         String Querry = "insert INTO wishlist (userid, productid) VALUES ("+userid+" , "+productid+");";
-        connection.prepareStatement(Querry).executeUpdate();
+        try {
+            connection.prepareStatement(Querry).executeUpdate();
+        } catch (SQLException e) {
+            return "Already added to the wishlist";
+        }
 
 
         return "Done";
