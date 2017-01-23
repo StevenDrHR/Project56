@@ -13,7 +13,7 @@ public class Controller {
     static Connection connection;
 
     public void connection() throws SQLException{
-        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "123lol123");
+        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "0906986");
 
     }
 
@@ -436,7 +436,24 @@ public List<String> GetUsers() throws SQLException {
         connection();
         String Querry = "insert INTO wishlist (userid, productid) VALUES ("+userid+" , "+productid+");";
         connection.prepareStatement(Querry).executeUpdate();
+
+
         return "Done";
+    }
+
+    public List<String> getWishlistinfo(String username) throws SQLException {
+        ArrayList<String> list = new ArrayList<String>();
+        connection();
+        String Querry = "Select p.modal, p.brand, p.car_type, p.price from products p, wishlist w, users u where p.productid = w.productid and u.userid = w.userid and u.username = '"+username+"'";
+        ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+        while (rs.next()) {
+            list.add(rs.getString("modal"));
+            list.add(rs.getString("brand"));
+            list.add(rs.getString("car_type"));
+            list.add(rs.getString("price"));
+
+        }
+        return list;
     }
 }
 
