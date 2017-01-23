@@ -235,6 +235,7 @@
         var b = document.querySelector("#logoutvisibility");
         b.style.display = "block";
     }
+
 </script>
 
 

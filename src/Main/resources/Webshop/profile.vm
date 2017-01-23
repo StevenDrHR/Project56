@@ -175,7 +175,7 @@
         document.getElementById('main').innerHTML =
                 '<h1 align="center">Wish List</h1><br> <p align="center">This is the wish list of : ${CurrentUser}</p>';
 
-        window.alert(mdl.length);
+        ##window.alert(mdl.length);
         if (once == 1){
         for (var i = 0; i < mdl.length; i++) {
             if (i == 0) {

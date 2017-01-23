@@ -577,7 +577,7 @@ public class View {
             String currentUserLevel = getUsers.checkUserLevel(currentUser);
             attributes.put("userlevel", currentUserLevel);
 
-            return modelAndView(attributes, "Webshop/shop.vm");
+            return modelAndView(attributes, "Webshop/Shop.vm");
         },new VelocityTemplateEngine());
     }
 
@@ -596,6 +596,14 @@ public class View {
             String currentUserLevel = getUsers.checkUserLevel(currentUser);
             attributes.put("userlevel", currentUserLevel);
 
+            if(req.session().attribute("productid") == null){
+                attributes.put("shopcheck", "none");
+            }
+            else {
+                attributes.put("shopcheck", req.session().attribute("productid"));
+            }
+            if(req.session().attribute("productid") != null){
+
             String currentPid = req.session().attribute("productid");
             String[] pid = currentPid.split(", ");
 
@@ -603,30 +611,30 @@ public class View {
 
             System.out.println(currentPid + " get curpid");
 
-            for (int i = 0; i < pid.length; i++) {
-                Controller getProductInfo = new Controller();
-                List productinfo = getProductInfo.getPinfo(pid[i]);
-                if(i == 0){
-                    req.session().attribute("model", productinfo.get(0));
-                    req.session().attribute("brand", productinfo.get(1));
-                    req.session().attribute("type", productinfo.get(2));
-                    req.session().attribute("price", productinfo.get(3));
-                }
-                else{
-                    req.session().attribute("model", productinfo.get(0) + ", " + req.session().attribute("model"));
-                    req.session().attribute("brand", productinfo.get(1) + ", " + req.session().attribute("brand"));
-                    req.session().attribute("type", productinfo.get(2) + ", " + req.session().attribute("type"));
-                    req.session().attribute("price", productinfo.get(3) + ", " + req.session().attribute("price"));
-                }
+                for (int i = 0; i < pid.length; i++) {
+                    Controller getProductInfo = new Controller();
+                    List productinfo = getProductInfo.getPinfo(pid[i]);
+                    if (i == 0) {
+                        req.session().attribute("model", productinfo.get(0));
+                        req.session().attribute("brand", productinfo.get(1));
+                        req.session().attribute("type", productinfo.get(2));
+                        req.session().attribute("price", productinfo.get(3));
+                    } else {
+                        req.session().attribute("model", productinfo.get(0) + ", " + req.session().attribute("model"));
+                        req.session().attribute("brand", productinfo.get(1) + ", " + req.session().attribute("brand"));
+                        req.session().attribute("type", productinfo.get(2) + ", " + req.session().attribute("type"));
+                        req.session().attribute("price", productinfo.get(3) + ", " + req.session().attribute("price"));
+                    }
 
+                }
+                System.out.println(req.session().attribute("model") + " test");
+
+                attributes.put("model", req.session().attribute("model"));
+                attributes.put("brand", req.session().attribute("brand"));
+                attributes.put("type", req.session().attribute("type"));
+                attributes.put("price", req.session().attribute("price"));
+                attributes.put("amount", req.session().attribute("amount"));
             }
-            System.out.println(req.session().attribute("model") + " test");
-
-            attributes.put("model", req.session().attribute("model"));
-            attributes.put("brand", req.session().attribute("brand"));
-            attributes.put("type", req.session().attribute("type"));
-            attributes.put("price", req.session().attribute("price"));
-            attributes.put("amount",req.session().attribute("amount"));
 
             return modelAndView(attributes, "Webshop/shoppingcart.vm");
         }, new VelocityTemplateEngine());
@@ -638,23 +646,18 @@ public class View {
             String currentPid = req.session().attribute("product");
             System.out.println(currentPid + " post curpid");
 
-            String LoginUsername = req.queryParams("LoginUsername");
-            String LoginPassword = req.queryParams("LoginPassword");
             String variabel = req.queryParams().iterator().next();
             System.out.println(variabel + " Shamala");
-            if (variabel.equals("LoginUsername")) {
-                Modal loginUser = new Modal();
-                loginUser.LoginModal(LoginUsername, LoginPassword);
-                loginUsers.addFirst(loginUser);
-                String LoginUser = new Controller().LoginUser(loginUsers);
-                String checkUserStatus = new Controller().checkUserStatus(LoginUser);
-                if (checkUserStatus.equals("Blocked")) {
-                    attributes.put("message", "Blocked");
-                } else {
-                    req.session().attribute("User", LoginUser);
-                }
-            } else {
-                req.session().attribute("User", "");
+            if (variabel.equals("resetcart")) {
+                req.session().attribute("productid", null);
+                req.session().attribute("amount", null);
+            }
+
+            if(req.session().attribute("productid") == null){
+                attributes.put("shopcheck", "none");
+            }
+            else {
+                attributes.put("shopcheck", req.session().attribute("productid"));
             }
 
             Controller getUsers = new Controller();
@@ -664,6 +667,7 @@ public class View {
             attributes.put("CurrentUser", currentUser);
             String currentUserLevel = getUsers.checkUserLevel(currentUser);
             attributes.put("userlevel", currentUserLevel);
+
 
             return modelAndView(attributes, "Webshop/shoppingcart.vm");
         }, new VelocityTemplateEngine());

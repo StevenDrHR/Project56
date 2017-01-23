@@ -23,73 +23,73 @@
     <script>
 
     </script>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="http://localhost:4567/Home">Homepage</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <script src="js/nav.js"></script>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-    <!-- Page Content -->
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://localhost:4567/Home">Homepage</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <script src="js/nav.js"></script>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
 
-        <div class="row">
+<!-- Page Content -->
+<div class="container">
 
-            <div class="col-md-3">
-                <!--<h1 align="center">Profile</h1>
-                <br>-->
-                <p class="lead">Shopping Cart</p>
-                <div class="list-group">
-                </div>
+    <div class="row">
 
-                <form class="form" id="logoutvisibility" method="POST" action="/Home">
-                    <p class="tab0">Welcome : ${CurrentUser}</p>
-                    <button type="submit" id="logout_button" name="iets" align="center">Logout</button>
-                </form>
+        <div class="col-md-3">
+            <!--<h1 align="center">Profile</h1>
+            <br>-->
+            <p class="lead">Shopping Cart</p>
+
+            <div class="list-group">
+                <p id="ordervisibility">Login on the homepage to order</p>
 
             </div>
 
-            <div class="col-md-9">
+        </div>
 
-                <div class="row carousel-holder">
+        <div class="col-md-9">
 
-                    <div class="col-md-12" id="main">
-                        <h1 align="center">Shopping Cart</h1>
-                        <br>
-                        <div class="bodyleftcolumn">
-                            <div id="shoplist">
+            <div class="row carousel-holder">
 
-
-                            </div>
-
+                <div class="col-md-12" id="main">
+                    <h1 align="center">Shopping Cart</h1>
+                    <br>
+                    <div align="center">
+                        <div id="shoplist">
 
                         </div>
 
-                        <!--<button type="button" onclick="Spoiler()">Show/Hide</button>-->
-                        <!--<div id="spoiler" style="display:none"></div>-->
+                        <form class="form" method="POST" action="/Shoppingcart">
+                            <button type="submit" id="rstcart_button" name="resetcart" align="center">Reset Cart</button>
+                        </form>
+                        <form class="form" id="orderbuttonvisibility" method="POST" action="/Home">
+                            <button type="submit" id="order_button" name="iets" align="center">Order</button>
+                        </form>
                     </div>
 
+                    <!--<button type="button" onclick="Spoiler()">Show/Hide</button>-->
+                    <!--<div id="spoiler" style="display:none"></div>-->
                 </div>
 
             </div>
@@ -97,31 +97,45 @@
         </div>
 
     </div>
-    <!-- /.container -->
 
-    <div class="container">
+</div>
+<!-- /.container -->
 
-        <hr>
+<div class="container">
 
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Shamala Webshop 2016</p>
-                </div>
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Copyright &copy; Shamala Webshop 2016</p>
             </div>
-        </footer>
+        </div>
+    </footer>
 
-    </div>
-    <!-- /.container -->
+</div>
+<!-- /.container -->
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
 
-    <script>
+<script>
+    if("${shopcheck}" == "none"){
+
+        var para = document.createElement("p");
+
+        var node = document.createTextNode("Shoppingcart is empty");
+        para.appendChild(node);
+
+        var element = document.getElementById("shoplist");
+        element.appendChild(para);
+
+        }
+        else{
         var dirtystring = "${model}";
         var mdl = dirtystring.split(", ");
 
@@ -142,71 +156,89 @@
         var pid = cleanstring.split(", ");
 
         for (var i = 0; i < mdl.length; i++) {
-            var reversed = mdl.length -1;
-            var reversed = reversed - i
+            var reversed = mdl.length - 1;
+            var reversed = reversed - i;
+        ## var newdiv = document.createElement("cartdiv");
+        ##newdiv.id = "divcart";
+        ##newdiv.style.border = "thick solid";
+
             var para = document.createElement("p");
+        ##newdiv.appendChild(para);
+            para.id = "shop";
+            para.style.border = "thick solid";
 
-            var node = document.createTextNode("Model : "+ mdl[i]+"")
+            var node = document.createTextNode("Shoppingcart Item " + [i + 1] + "");
+            para.appendChild(node);
+            para.appendChild(document.createElement("br"));
+            para.appendChild(document.createElement("br"));
+
+            var node = document.createTextNode("Model : " + mdl[i] + "");
             para.appendChild(node);
             para.appendChild(document.createElement("br"));
 
-            var node = document.createTextNode("Brand : "+ brnd[i]+"")
+            var node = document.createTextNode("Brand : " + brnd[i] + "");
             para.appendChild(node);
             para.appendChild(document.createElement("br"));
 
-            var node = document.createTextNode("Type : "+ typ[i]+"")
+            var node = document.createTextNode("Type : " + typ[i] + "");
             para.appendChild(node);
             para.appendChild(document.createElement("br"));
 
-            var node = document.createTextNode("Price : "+ prc[i]+"")
+            var node = document.createTextNode("Price : " + prc[i] + "");
             para.appendChild(node);
             para.appendChild(document.createElement("br"));
 
-            var node = document.createTextNode("Amount : "+ amt[reversed]+"")
+            var node = document.createTextNode("Amount : " + amt[reversed] + "");
             para.appendChild(node);
 
 
             var element = document.getElementById("shoplist");
             element.appendChild(para);
-
-
-        }
-    </script>
-
-    <script>
-        function Spoiler(){
-            if(document.getElementById('spoiler').style.display=='none')
-            {document.getElementById('spoiler').style.display='initial'}
-            else{document.getElementById('spoiler').style.display='none'};
-        }
-    </script>
-
-    <script>
-        if("${userlevel}" == "admin"){
-            var a = document.querySelector("#adminvisibility");
-            a.style.display = "initial";
         }
 
-        if("${userlevel}" != "not registered"){
-            var a = document.querySelector("#loginvisibility");
-            a.style.display = "none";
-        }
+    }
+</script>
 
-        if("${userlevel}" == "not registered"){
-            var a = document.querySelector("#profilevisibility");
-            a.style.display = "none";
-        }
+<script>
+    function Spoiler(){
+        if(document.getElementById('spoiler').style.display=='none')
+        {document.getElementById('spoiler').style.display='initial'}
+        else{document.getElementById('spoiler').style.display='none'};
+    }
+</script>
 
-    </script>
+<script>
+    if("${userlevel}" == "admin"){
+        var a = document.querySelector("#adminvisibility");
+        a.style.display = "initial";
+    }
 
-    <script>
-        if("${userlevel}" == "admin" || "${userlevel}" == "user"){
-            var a = document.querySelector("#registervisibility");
-            a.style.display = "none";
-            var b = document.querySelector("#logoutvisibility");
-            b.style.display = "block";
-        }
-    </script>
+    if("${userlevel}" != "not registered"){
+        var a = document.querySelector("#loginvisibility");
+        a.style.display = "none";
+    }
+
+    if("${userlevel}" == "not registered"){
+        var a = document.querySelector("#profilevisibility");
+        a.style.display = "none";
+        var b = document.querySelector("#ordervisibility");
+        b.style.display = "block";
+        var c = document.querySelector("#orderbuttonvisibility");
+        c.style.display = "none";
+
+
+    }
+
+</script>
+
+<script>
+    if("${userlevel}" == "admin" || "${userlevel}" == "user"){
+        var a = document.querySelector("#registervisibility");
+        a.style.display = "none";
+        var b = document.querySelector("#logoutvisibility");
+        b.style.display = "block";
+    }
+</script>
 
 </body>
 

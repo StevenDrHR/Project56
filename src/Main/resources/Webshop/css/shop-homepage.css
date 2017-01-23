@@ -338,6 +338,21 @@ form3 button
     display: block;
 }
 
+#ordervisibility
+{
+    display: none;
+}
+
+#orderbuttonvisibility
+{
+    display: block;
+}
+
+#shoppingcartbutton
+{
+    display: block;
+}
+
 .leftbar {
     position: relative;
     width: 250px;
