@@ -134,12 +134,16 @@
         var dirtystring = "${price}";
         var prc = dirtystring.split(", ");
 
+        var dirtystring = "${amount}";
+        var amt = dirtystring.split(", ");
+
         var dirtystring = "${productid}";
         var cleanstring = dirtystring.substr(1, dirtystring.length - 2)
         var pid = cleanstring.split(", ");
 
         for (var i = 0; i < mdl.length; i++) {
-
+            var reversed = mdl.length -1;
+            var reversed = reversed - i
             var para = document.createElement("p");
 
             var node = document.createTextNode("Model : "+ mdl[i]+"")
@@ -158,9 +162,8 @@
             para.appendChild(node);
             para.appendChild(document.createElement("br"));
 
-            var node = document.createTextNode("Amount : ")
+            var node = document.createTextNode("Amount : "+ amt[reversed]+"")
             para.appendChild(node);
-
 
 
             var element = document.getElementById("shoplist");

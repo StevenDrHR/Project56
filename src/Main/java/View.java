@@ -492,9 +492,41 @@ public class View {
                 System.out.println(productid + " pid");
                 if(req.session().attribute("productid")== null){
                     req.session().attribute("productid", productid);
+                    req.session().attribute("amount", 1 +"");
                 }
                 else{
-                    req.session().attribute("productid", productid + ", " + req.session().attribute("productid"));
+
+                    String currentPid = req.session().attribute("productid");
+                    String currentAmount = req.session().attribute("amount");
+
+                    String[]  currentPids =  currentPid.split(", ");
+                    String[] currentAmounts = currentAmount.split(", ");
+
+                    int dubble = -1;
+                    for(int i = 0; i < currentPids.length; i++){
+                        if (currentPids[i].equals(productid)){
+                            currentAmounts[i] = (Integer.valueOf(currentAmounts[i]) + 1) + "";
+                            dubble = i;
+                            currentAmount = "";
+                            for (int j = 0; j < currentAmounts.length; j++){
+                                if(j == 0){
+                                    req.session().attribute("amount",currentAmounts[j]);
+                                    currentAmount = currentAmounts[j];
+                                }
+                                else {
+                                    req.session().attribute("amount", req.session().attribute("amount") + ", " + currentAmounts[j]);
+                                    System.out.println(currentAmount + "Shamlalalalalala");
+                                }
+                            }
+
+
+                        }
+                    }
+                    if (dubble == -1){
+                        req.session().attribute("productid", productid + ", " + req.session().attribute("productid"));
+                        req.session().attribute("amount", 1 + ", " + req.session().attribute("amount"));
+                    }
+
                 }
 
                 System.out.println(req.session().attribute("productid") + " vet");
@@ -574,6 +606,7 @@ public class View {
             attributes.put("brand", req.session().attribute("brand"));
             attributes.put("type", req.session().attribute("type"));
             attributes.put("price", req.session().attribute("price"));
+            attributes.put("amount",req.session().attribute("amount"));
 
             return modelAndView(attributes, "Webshop/shoppingcart.vm");
         }, new VelocityTemplateEngine());
