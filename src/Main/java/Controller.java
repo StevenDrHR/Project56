@@ -13,7 +13,7 @@ public class Controller {
     static Connection connection;
 
     public void connection() throws SQLException{
-        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/project56", "postgres", "sql");
+        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "0906986");
 
     }
 
@@ -456,6 +456,16 @@ public List<String> GetUsers() throws SQLException {
             list.add(rs.getString("car_type"));
             list.add(rs.getString("price"));
 
+        }
+        return list;
+    }
+    public List<String> getPublicusers(String CurrentUser) throws SQLException {
+        ArrayList<String> list = new ArrayList<String>();
+        connection();
+        String Querry = "select username from users where wishlist = 'public' and username != '"+CurrentUser+"'";
+        ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+        while (rs.next()) {
+            list.add(rs.getString("username"));
         }
         return list;
     }

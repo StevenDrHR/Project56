@@ -232,6 +232,17 @@ public class View {
             attributes.put("userpassword", UserData.get(4));
             attributes.put("userstatus", UserData.get(5));
 
+            Controller getAllUsers = new Controller();
+            List getallusers = getAllUsers.getPublicusers(currentUser);
+            for (int i = 0; i < getallusers.size(); i ++) {
+                if (i == 0) {
+                    attributes.put("usernames", getallusers.get(i));
+                }
+                else {
+                    attributes.put("usernames", getallusers.get(i) + ", " + attributes.get("usernames"));
+                }
+            }
+
             Controller getWishlistData = new Controller();
             List getwishlistdata = getWishlistData.getWishlistinfo(currentUser);
             for (int i = 0; i < getwishlistdata.size(); i += 4){

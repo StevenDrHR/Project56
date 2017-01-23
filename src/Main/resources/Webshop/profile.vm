@@ -65,6 +65,7 @@
                 <a href="#" class="list-group-item" onclick="WishlistContent()">Wishlist</a>
                 <a href="#" class="list-group-item" onclick="FavouritesContent()">Favourites</a>
                 <a href="http://localhost:4567/Profile" class="list-group-item">Back To Profile</a>
+                <a href="#" class="list-group-item" onclick="AllWishlistContent()">Get all wishlists</a>
                 <br>
             </div>
 
@@ -215,6 +216,53 @@
             cell3.innerHTML = typ[i];
             cell4.innerHTML = prc[i];
             once = 2;
+            }
+        }
+    }
+</script>
+
+<script>
+    var once = 1
+    var dirtystring = "${usernames}";
+    var cleanstring = dirtystring.substr(0, dirtystring.length)
+    var usrnm = cleanstring.split(", ");
+
+
+
+    function AllWishlistContent() {
+
+        window.alert(usrnm.length);
+        if (once == 1){
+            for (var i = 0; i < usrnm.length; i++) {
+                if (i == 0) {
+                    table = document.getElementById("alltables");
+                    row = table.insertRow(0);
+                    row.setAttribute("name", "info");
+                    cell1 = row.insertCell(0);
+
+                    cell1.innerHTML = "<b>Username</b>";
+
+                }
+                table = document.getElementById("alltables");
+                userbutton = document.createElement("button");
+
+                userbutton.setAttribute("name", "Username" + usrnm[i])
+                userbutton.setAttribute("type", "submit")
+                userbutton.innerHTML = "${usernames}";
+
+                //adding the row
+                row = table.insertRow(i + 1);
+                row.setAttribute("name", "" + usrnm[i]);
+                //            window.alert(mdl[i]);
+
+                //making the amount of values in a row
+                cell1 = row.insertCell(0);
+                cell2 = row.insertCell(1);
+
+                //adding values
+                cell1.innerHTML = usrnm[i];
+                cell2.appendChild(userbutton);
+                once = 2;
             }
         }
     }
