@@ -13,7 +13,7 @@ public class Controller {
     static Connection connection;
 
     public void connection() throws SQLException{
-        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/project56", "postgres", "sql");
+        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "0906986");
 
     }
 
@@ -468,6 +468,12 @@ public class Controller {
             list.add(rs.getString("username"));
         }
         return list;
+    }
+    public String setWishlistToPublic(String username) throws SQLException{
+        connection();
+        String Querry = "UPDATE users SET wishlist = 'public' WHERE username = '"+username+"';";
+        connection.prepareStatement(Querry).executeUpdate();
+        return "Done";
     }
 }
 

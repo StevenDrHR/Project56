@@ -397,3 +397,6 @@ form3 button
     bottom: 150px;
 
 }
+#wishlistbuttonvisibility{
+    display: block;
+}

@@ -311,6 +311,18 @@ public class View {
             attributes.put("userid", UserData.get(6));
             attributes.put("wishlist", UserData.get(7));
 
+            String button = req.queryParams().iterator().next();
+
+            System.out.println(button + " Shamala");
+            Controller checkWishlistStatus = new Controller();
+            if (button.equals("makewishlistpublic")) {
+                System.out.println(button + " Shamala2");
+                checkWishlistStatus.setWishlistToPublic(currentUser);
+            }
+            else if (button.equals("makewishlistprivate")){
+                System.out.println(button +" Shamala3");
+            }
+
             return modelAndView(attributes, "Webshop/Profile.vm");
         },new VelocityTemplateEngine());
     }

@@ -60,7 +60,7 @@
             <!--<h1 align="center">Profile</h1>
             <br>-->
             <p class="lead">Profile</p>
-            <div class="list-group">
+            <div class="list-group" method="POST" action="/Profile">
                 <a href="#" class="list-group-item" onclick="OrderHistoryContent()">Order History</a>
                 <a href="#" class="list-group-item" onclick="WishlistContent()">Wishlist</a>
                 <a href="#" class="list-group-item" onclick="FavouritesContent()">Favourites</a>
@@ -68,6 +68,11 @@
                 <a href="#" class="list-group-item" onclick="AllWishlistContent()">Get all wishlists</a>
                 <br>
             </div>
+
+            <form class="list-group" method="POST" action="/Profile">
+                <button href="#" id="wishlistbuttonvisibilitypu" name="makewishlistpublic" type="submit" class="list-group-item">Make wishlist public</button>
+                <br>
+            </form>
 
             <form class="form" id="logoutvisibility" method="POST" action="/Home">
                 <p class="tab0">Welcome : ${CurrentUser}</p>
@@ -264,6 +269,13 @@
                 once = 2;
             }
         }
+    }
+</script>
+
+<script>
+    if ('${wishlist}' == "public"){
+        var a = document.querySelector("#wishlistbuttonvisibilitypu");
+        a.style.display = "none";
     }
 </script>
 
