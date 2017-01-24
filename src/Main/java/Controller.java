@@ -62,7 +62,7 @@ public class Controller {
             connection.prepareStatement(Querry).executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
-            return "Something went wrong with the regestration";
+            return "Something went wrong with the registration";
         }
 
         Querry ="Select userid from users where email='"+ list.getFirst().getEmail()+"'";
