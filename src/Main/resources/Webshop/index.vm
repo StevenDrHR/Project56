@@ -47,7 +47,7 @@
 
     </div>
 
-        <!-- /.navbar-collapse -->
+    <!-- /.navbar-collapse -->
     </div>
     <!-- /.container -->
 </nav>
@@ -61,16 +61,16 @@
             <p class="lead">Shamala Car Shop</p>
 
             <div class="leftbar">
-                    <form class="form" method="POST" action="/Home" id="loginvisibility">
-                        <input type="text" placeholder="username" name="LoginUsername">
-                        <input type="password" placeholder="password" name="LoginPassword">
-                        <button type="submit" id="login_button">Login</button>
-                    </form>
-                    <br>
-                    <form class="form" id="logoutvisibility" method="POST" action="/Home">
-                        <p class="tab0">Welcome : ${CurrentUser}</p>
-                        <button type="submit" id="logout_button" name="iets">Logout</button>
-                    </form>
+                <form class="form" method="POST" action="/Home" id="loginvisibility">
+                    <input type="text" placeholder="username" name="LoginUsername">
+                    <input type="password" placeholder="password" name="LoginPassword">
+                    <button type="submit" id="login_button">Login</button>
+                </form>
+                <br>
+                <form class="form" id="logoutvisibility" method="POST" action="/Home">
+                    <p class="tab0">Welcome : ${CurrentUser}</p>
+                    <button type="submit" id="logout_button" name="iets">Logout</button>
+                </form>
             </div>
 
         </div>
@@ -302,6 +302,12 @@
     }
 </script>
 
+<script>
+    //if("${message}" != "null")
+    //{
+    //    window.alert("${message}")
+    //}
+</script>
 
 </body>
 

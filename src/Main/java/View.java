@@ -18,8 +18,12 @@ public class View {
             if (req.session().attribute("User") == null)
             {req.session().attribute("User", " ");}
 
+            attributes.put("message", "null");
+
             String currentUser = req.session().attribute("User");
             attributes.put("CurrentUser", currentUser);
+            System.out.println(currentUser + " currentuservalue");
+            System.out.println(req.session().attribute("User") + " uservalue");
             Controller checkUserLevel = new Controller();
             String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
             attributes.put("userlevel", currentUserLevel);
@@ -30,28 +34,36 @@ public class View {
 
         post("/Home", (req,res)-> {
             Map<String, Object> attributes = new HashMap<String, Object>();
+
+
             String LoginUsername = req.queryParams("LoginUsername");
             String LoginPassword = req.queryParams("LoginPassword");
             String variabel = req.queryParams().iterator().next();
             if (variabel.equals("LoginUsername")){
-            Modal loginUser = new Modal();
-            loginUser.LoginModal(LoginUsername,LoginPassword);
-            loginUsers.addFirst(loginUser);
-            String LoginUser = new Controller().LoginUser(loginUsers);
-            String checkUserStatus = new Controller().checkUserStatus(LoginUser);
-            if (checkUserStatus.equals("Blocked")) {
-                attributes.put("message", "Blocked");}
-            else {
-            req.session().attribute("User",LoginUser);}
+                Modal loginUser = new Modal();
+                loginUser.LoginModal(LoginUsername,LoginPassword);
+                loginUsers.addFirst(loginUser);
+                String LoginUser = new Controller().LoginUser(loginUsers);
+                String checkUserStatus = new Controller().checkUserStatus(LoginUser);
+                if (checkUserStatus.equals("Blocked")) {
+                    attributes.put("message", "Blocked");
+                }
+                else {
+                    req.session().attribute("User",LoginUser);
+                    //attributes.put("message", "Login Failed, Please Try Again");
+                }
             }
             else {
-            req.session().attribute("User", "");}
+                req.session().attribute("User", "");
+                //attributes.put("message", "Login Succesful");
+            }
 
             String currentUser = req.session().attribute("User");
             attributes.put("CurrentUser", currentUser);
             Controller checkUserLevel = new Controller();
             String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
             attributes.put("userlevel", currentUserLevel);
+
             return modelAndView(attributes, "Webshop/Index.vm");
         },new VelocityTemplateEngine());
     }
@@ -222,6 +234,13 @@ public class View {
             String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
             attributes.put("userlevel", currentUserLevel);
 
+            if(req.session().attribute("message") == null ){
+                attributes.put("message", "null");
+            }
+            else{
+                attributes.put("message", req.session().attribute("message"));
+                req.session().attribute("message", null);
+            }
 
             Controller checkUser = new Controller();
             ArrayList<String> UserData = checkUser.getUserData(currentUser);
@@ -231,6 +250,8 @@ public class View {
             attributes.put("emailaddress", UserData.get(3));
             attributes.put("userpassword", UserData.get(4));
             attributes.put("userstatus", UserData.get(5));
+            attributes.put("userid", UserData.get(6));
+            attributes.put("wishlist", UserData.get(7));
 
             Controller getAllUsers = new Controller();
             List getallusers = getAllUsers.getPublicusers(currentUser);
@@ -270,15 +291,14 @@ public class View {
 
         post("/Profile", (req,res)-> {
             Map<String, Object> attributes = new HashMap<String, Object>();
-            String LoginUsername = req.queryParams("LoginUsername");
-            String LoginPassword = req.queryParams("LoginPassword");
-            String variabel = req.queryParams().iterator().next();
 
             String currentUser = req.session().attribute("User");
             attributes.put("CurrentUser", currentUser);
             Controller checkUserLevel = new Controller();
             String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
             attributes.put("userlevel", currentUserLevel);
+
+            req.session().attribute("message");
 
             Controller checkUser = new Controller();
             ArrayList<String> UserData = checkUser.getUserData(currentUser);
@@ -289,6 +309,7 @@ public class View {
             attributes.put("userpassword", UserData.get(4));
             attributes.put("userstatus", UserData.get(5));
             attributes.put("userid", UserData.get(6));
+            attributes.put("wishlist", UserData.get(7));
 
             return modelAndView(attributes, "Webshop/Profile.vm");
         },new VelocityTemplateEngine());
@@ -615,12 +636,12 @@ public class View {
             }
             if(req.session().attribute("productid") != null){
 
-            String currentPid = req.session().attribute("productid");
-            String[] pid = currentPid.split(", ");
+                String currentPid = req.session().attribute("productid");
+                String[] pid = currentPid.split(", ");
 
-            System.out.println(pid[0] + " get pid");
+                System.out.println(pid[0] + " get pid");
 
-            System.out.println(currentPid + " get curpid");
+                System.out.println(currentPid + " get curpid");
 
                 for (int i = 0; i < pid.length; i++) {
                     Controller getProductInfo = new Controller();
@@ -663,6 +684,13 @@ public class View {
                 req.session().attribute("productid", null);
                 req.session().attribute("amount", null);
             }
+            if (variabel.equals("orderbutton")) {
+                System.out.println("ordermsg");
+                req.session().attribute("message", "Succesfully Ordered");
+                req.session().attribute("productid", null);
+                req.session().attribute("amount", null);
+                res.redirect("/Profile");
+            }
 
             if(req.session().attribute("productid") == null){
                 attributes.put("shopcheck", "none");
@@ -670,6 +698,8 @@ public class View {
             else {
                 attributes.put("shopcheck", req.session().attribute("productid"));
             }
+
+
 
             Controller getUsers = new Controller();
             List list = getUsers.GetUsers();

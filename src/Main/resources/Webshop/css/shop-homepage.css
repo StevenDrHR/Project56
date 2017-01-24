@@ -279,43 +279,6 @@ form3 button
 
 }
 
-.messagehandlerpopup
-{
-    width: 200px;
-    height: 100px;
-    background: silver;
-    color: black;
-    position: relative;
-    left: 140px;
-    border: outset;
-    display:none;
-}
-
-.messageinput
-{
-    background:transparent;
-    color: black;
-    border: none;
-}
-
-.messagehandlerbtn1
-{
-    position: relative;
-    bottom:25px;
-    left: 140px;
-    border: outset;
-    display:none;
-}
-
-.messagehandlerbtn2
-{
-    position: relative;
-    bottom:65px;
-    left: 230px;
-    border: outset;
-    display:none;
-}
-
 #adminvisibility{
     display: none;
 }
@@ -431,6 +394,6 @@ form3 button
 .bodyrightcolumn{
     position: relative;
     left: 500px;
-    bottom: 120px;
+    bottom: 150px;
 
 }

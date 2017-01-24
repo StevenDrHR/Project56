@@ -83,8 +83,8 @@
                         <form class="form" method="POST" action="/Shoppingcart">
                             <button type="submit" id="rstcart_button" name="resetcart" align="center">Reset Cart</button>
                         </form>
-                        <form class="form" id="orderbuttonvisibility" method="POST" action="/Home">
-                            <button type="submit" id="order_button" name="iets" align="center">Order</button>
+                        <form class="form" id="orderbuttonvisibility" method="POST" action="/Shoppingcart">
+                            <button type="submit" id="order_button" name="orderbutton" align="center">Order</button>
                         </form>
                     </div>
 
@@ -134,8 +134,8 @@
         var element = document.getElementById("shoplist");
         element.appendChild(para);
 
-        }
-        else{
+    }
+    else{
         var dirtystring = "${model}";
         var mdl = dirtystring.split(", ");
 

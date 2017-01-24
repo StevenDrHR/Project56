@@ -13,7 +13,7 @@ public class Controller {
     static Connection connection;
 
     public void connection() throws SQLException{
-        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "0906986");
+        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/project56", "postgres", "sql");
 
     }
 
@@ -31,16 +31,16 @@ public class Controller {
         connection();
         String Querry = "Select username from users where username ='"+UserName+"' and userlevel = 1";
         ResultSet rs = connection.prepareStatement(Querry).executeQuery();
-            if(rs.next()) {
-                return "admin";
-            }
+        if(rs.next()) {
+            return "admin";
+        }
         Querry = "Select username from users where username ='"+UserName+"' and userlevel = 0";
         rs = connection.prepareStatement(Querry).executeQuery();
         if(rs.next()) {
             return "user";
         }
-            return "not registered";
-        }
+        return "not registered";
+    }
 
 
 
@@ -68,7 +68,7 @@ public class Controller {
         Querry ="Select userid from users where email='"+ list.getFirst().getEmail()+"'";
         rs = connection.prepareStatement(Querry).executeQuery();
         if(rs.next()) {
-          userid = rs.getInt("userid") ;
+            userid = rs.getInt("userid") ;
         }
         Querry = "INSERT INTO adress (userid,country,streetname,streetnumber,postalcode) VALUES (" + userid + ",'"+list.getFirst().getCounrty() +"','"+list.getFirst().getStreet() +"','"+ list.getFirst().getStreetNumber()+"','"+   list.getFirst().getPostalCode() +"' );";
         try {
@@ -98,19 +98,19 @@ public class Controller {
         }
         else{return "Wrong Username";
 
+        }
     }
-}
-public List<String> GetUsers() throws SQLException {
-    ArrayList<String> list = new ArrayList<String>();
-    connection();
-    String Querry = "Select username from users where userlevel = 0";
-    ResultSet rs = connection.prepareStatement(Querry).executeQuery();
-    while(rs.next()){
-        list.add(rs.getString("username"));
+    public List<String> GetUsers() throws SQLException {
+        ArrayList<String> list = new ArrayList<String>();
+        connection();
+        String Querry = "Select username from users where userlevel = 0";
+        ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+        while(rs.next()){
+            list.add(rs.getString("username"));
 
+        }
+        return list;
     }
-    return list;
-}
 
     public List<String> GetModels(String Category) throws SQLException {
         ArrayList<String> list = new ArrayList<String>();
@@ -427,7 +427,7 @@ public List<String> GetUsers() throws SQLException {
             result.add(rs.getString("user_password"));
             result.add(rs.getString("userstatus"));
             result.add(rs.getString("userid"));
-
+            result.add(rs.getString("wishlist"));
         }
 
         return result;

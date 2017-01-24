@@ -86,14 +86,16 @@
                     <div class="bodyleftcolumn">
                         <p>Username : ${CurrentUser}</p>
                         <p>First Name : ${firstname}</p>
-                        <p>User Level : ${userlevel}</p>
                         <p>Last Name : ${lastname}</p>
+                        <p>Age : ${age}</p>
+                        <p>Wishlist Status: $wishlist</p>
                     </div>
                     <div class="bodyrightcolumn">
                         <p>Email: ${emailaddress}</p>
-                        <p>Age : ${age}</p>
                         <p>Password: ${userpassword}</p>
                         <p>User Status : ${userstatus}</p>
+                        <p>User Level : ${userlevel}</p>
+                        <p>User ID: $userid </p>
                     </div>
 
                     <!--<button type="button" onclick="Spoiler()">Show/Hide</button>-->
@@ -169,53 +171,50 @@
     var prc = cleanstring.split(", ");
 
 
-
-
-
     function WishlistContent() {
         document.getElementById('main').innerHTML =
                 '<h1 align="center">Wish List</h1><br> <p align="center">This is the wish list of : ${CurrentUser}</p>';
 
-        ##window.alert(mdl.length);
+    ##window.alert(mdl.length);
         if (once == 1){
-        for (var i = 0; i < mdl.length; i++) {
-            if (i == 0) {
+            for (var i = 0; i < mdl.length; i++) {
+                if (i == 0) {
+                    table = document.getElementById("alltables");
+                    row = table.insertRow(0);
+                    row.setAttribute("name", "info");
+                    cell1 = row.insertCell(0);
+                    cell2 = row.insertCell(1);
+                    cell3 = row.insertCell(2);
+                    cell4 = row.insertCell(3);
+
+
+                    cell1.innerHTML = "<b>Model</b>";
+                    cell2.innerHTML = "<b>Brand</b>";
+                    cell3.innerHTML = "<b>Type</b>";
+                    cell4.innerHTML = "<b>Price</b>";
+                }
+
+
                 table = document.getElementById("alltables");
-                row = table.insertRow(0);
-                row.setAttribute("name", "info");
+
+                //adding the row
+                row = table.insertRow(i + 1);
+                row.setAttribute("name", "" + mdl[i]);
+                //            window.alert(mdl[i]);
+
+                //making the amount of values in a row
                 cell1 = row.insertCell(0);
                 cell2 = row.insertCell(1);
                 cell3 = row.insertCell(2);
                 cell4 = row.insertCell(3);
 
 
-                cell1.innerHTML = "<b>Model</b>";
-                cell2.innerHTML = "<b>Brand</b>";
-                cell3.innerHTML = "<b>Type</b>";
-                cell4.innerHTML = "<b>Price</b>";
-            }
-
-
-            table = document.getElementById("alltables");
-
-            //adding the row
-            row = table.insertRow(i + 1);
-            row.setAttribute("name", "" + mdl[i]);
-            //            window.alert(mdl[i]);
-
-            //making the amount of values in a row
-            cell1 = row.insertCell(0);
-            cell2 = row.insertCell(1);
-            cell3 = row.insertCell(2);
-            cell4 = row.insertCell(3);
-
-
-            //adding values
-            cell1.innerHTML = mdl[i];
-            cell2.innerHTML = brnd[i];
-            cell3.innerHTML = typ[i];
-            cell4.innerHTML = prc[i];
-            once = 2;
+                //adding values
+                cell1.innerHTML = mdl[i];
+                cell2.innerHTML = brnd[i];
+                cell3.innerHTML = typ[i];
+                cell4.innerHTML = prc[i];
+                once = 2;
             }
         }
     }
@@ -280,6 +279,16 @@
         if(document.getElementById('spoiler').style.display=='none')
         {document.getElementById('spoiler').style.display='initial'}
         else{document.getElementById('spoiler').style.display='none'};
+    }
+</script>
+
+<script>
+    if("$message" == "null" ){
+        var a = document.getElementById("msg");
+        a.style.display = "none";
+    }
+    else{
+        window.alert("$message");
     }
 </script>
 
