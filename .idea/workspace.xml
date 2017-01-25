@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28c3abc2-7d43-4a2f-8c8e-8846f60266aa" name="Default" comment="hehe eindelijk">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Main/resources/Webshop/allwishlist.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Main/resources/Webshop/favourite.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Main/resources/Webshop/orderhistory.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Main/resources/Webshop/otherwishlist.vm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Main/resources/Webshop/ownwishlist.vm" />
+    <list default="true" id="28c3abc2-7d43-4a2f-8c8e-8846f60266aa" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/java/Controller.java" afterPath="$PROJECT_DIR$/src/Main/java/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/java/Main.java" afterPath="$PROJECT_DIR$/src/Main/java/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/java/View.java" afterPath="$PROJECT_DIR$/src/Main/java/View.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/resources/Webshop/css/shop-homepage.css" afterPath="$PROJECT_DIR$/src/Main/resources/Webshop/css/shop-homepage.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/resources/Webshop/profile.vm" afterPath="$PROJECT_DIR$/src/Main/resources/Webshop/profile.vm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/velocity.log" afterPath="$PROJECT_DIR$/velocity.log" />
     </list>
@@ -36,13 +31,92 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="View.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="shop-homepage.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/css/shop-homepage.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.653846">
+              <caret line="404" column="17" selection-start-line="404" selection-start-column="17" selection-end-line="404" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main/java/Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="479" column="61" selection-start-line="479" selection-start-column="61" selection-end-line="479" selection-end-column="61" />
+              <folding>
+                <marker date="1485358677774" expanded="true" signature="593:681" placeholder="Select usern... users" />
+                <marker date="1485358677774" expanded="true" signature="977:1052" placeholder="Select usern... users" />
+                <marker date="1485358677774" expanded="true" signature="1210:1285" placeholder="Select usern... users" />
+                <marker date="1485358677774" expanded="true" signature="1601:1679" placeholder="Select usern... users" />
+                <marker date="1485358677774" expanded="true" signature="1856:1925" placeholder="Select email... users" />
+                <marker date="1485358677774" expanded="true" signature="2102:2451" placeholder="INSERT INTO users... " />
+                <marker date="1485358677774" expanded="true" signature="2695:2765" placeholder="Select useri... users" />
+                <marker date="1485358677774" expanded="true" signature="2928:3177" placeholder="INSERT INTO adress... " />
+                <marker date="1485358677774" expanded="true" signature="3317:3360" placeholder="Delete From " />
+                <marker date="1485358677774" expanded="true" signature="3709:3840" placeholder="Select useri... users" />
+                <marker date="1485358677774" expanded="true" signature="4019:4095" placeholder="Select useri... users" />
+                <marker date="1485358677774" expanded="true" signature="4450:4496" placeholder="Select usern... users" />
+                <marker date="1485358677774" expanded="true" signature="4903:4929" placeholder="Select modal... products" />
+                <marker date="1485358677774" expanded="true" signature="5189:5234" placeholder="Select modal... products" />
+                <marker date="1485358677774" expanded="true" signature="5492:5540" placeholder="Select modal... products" />
+                <marker date="1485358677774" expanded="true" signature="5798:5848" placeholder="Select modal... products" />
+                <marker date="1485358677774" expanded="true" signature="6110:6155" placeholder="Select modal... products" />
+                <marker date="1485358677774" expanded="true" signature="6417:6463" placeholder="Select modal... products" />
+                <marker date="1485358677774" expanded="true" signature="6894:6920" placeholder="Select brand... products" />
+                <marker date="1485358677774" expanded="true" signature="7180:7225" placeholder="Select brand... products" />
+                <marker date="1485358677774" expanded="true" signature="7483:7531" placeholder="Select brand... products" />
+                <marker date="1485358677774" expanded="true" signature="7789:7839" placeholder="Select brand... products" />
+                <marker date="1485358677774" expanded="true" signature="8101:8146" placeholder="Select brand... products" />
+                <marker date="1485358677774" expanded="true" signature="8408:8454" placeholder="Select brand... products" />
+                <marker date="1485358677774" expanded="true" signature="8883:8912" placeholder="Select car_t... products" />
+                <marker date="1485358677774" expanded="true" signature="9175:9223" placeholder="Select car_t... products" />
+                <marker date="1485358677774" expanded="true" signature="9484:9535" placeholder="Select car_t... products" />
+                <marker date="1485358677774" expanded="true" signature="9796:9849" placeholder="Select car_t... products" />
+                <marker date="1485358677774" expanded="true" signature="10114:10162" placeholder="Select car_t... products" />
+                <marker date="1485358677774" expanded="true" signature="10427:10476" placeholder="Select car_t... products" />
+                <marker date="1485358677774" expanded="true" signature="10909:10935" placeholder="Select price... products" />
+                <marker date="1485358677774" expanded="true" signature="11194:11239" placeholder="Select price... products" />
+                <marker date="1485358677774" expanded="true" signature="11497:11545" placeholder="Select price... products" />
+                <marker date="1485358677774" expanded="true" signature="11803:11853" placeholder="Select price... products" />
+                <marker date="1485358677774" expanded="true" signature="12115:12160" placeholder="Select price... products" />
+                <marker date="1485358677774" expanded="true" signature="12422:12468" placeholder="Select price... products" />
+                <marker date="1485358677774" expanded="true" signature="12902:12932" placeholder="Select produ... products" />
+                <marker date="1485358677774" expanded="true" signature="13195:13244" placeholder="Select produ... products" />
+                <marker date="1485358677774" expanded="true" signature="13506:13558" placeholder="Select produ... products" />
+                <marker date="1485358677774" expanded="true" signature="13820:13874" placeholder="Select produ... products" />
+                <marker date="1485358677774" expanded="true" signature="14140:14189" placeholder="Select produ... products" />
+                <marker date="1485358677774" expanded="true" signature="14455:14505" placeholder="Select produ... products" />
+                <marker date="1485358677774" expanded="true" signature="14896:14937" placeholder="Select * fro... products" />
+                <marker date="1485358677774" expanded="true" signature="15436:15468" placeholder="Select descr... products" />
+                <marker date="1485358677774" expanded="true" signature="15779:15827" placeholder="Delete from " />
+                <marker date="1485358677774" expanded="true" signature="16039:16110" placeholder="Update users... " />
+                <marker date="1485358677774" expanded="true" signature="16317:16387" placeholder="Update users... " />
+                <marker date="1485358677774" expanded="true" signature="16596:16668" placeholder="Update users... " />
+                <marker date="1485358677774" expanded="true" signature="16879:17223" placeholder="INSERT INTO products... " />
+                <marker date="1485358677774" expanded="true" signature="17445:17495" placeholder="Select * fro... users" />
+                <marker date="1485358677774" expanded="true" signature="18225:18301" placeholder="insert INTO wishlist... " />
+                <marker date="1485358677774" expanded="true" signature="18697:18866" placeholder="Select p.mod... products" />
+                <marker date="1485358677774" expanded="true" signature="19379:19465" placeholder="select usern... users" />
+                <marker date="1485358677774" expanded="true" signature="19779:19847" placeholder="UPDATE users... " />
+                <marker date="1485358677774" expanded="true" signature="20065:20134" placeholder="UPDATE users... " />
+                <marker date="1485358677774" expanded="true" signature="20465:20511" placeholder="INSERT INTO orders... " />
+                <marker date="1485358677774" expanded="true" signature="20594:20670" placeholder="Select order... orders" />
+                <marker date="1485358677774" expanded="true" signature="20967:21083" placeholder="INSERT INTO orders_products... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="View.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main/java/View.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.5172415">
-              <caret line="886" column="81" selection-start-line="886" selection-start-column="81" selection-end-line="886" selection-end-column="81" />
+            <state vertical-scroll-proportion="0.5104167">
+              <caret line="321" column="39" selection-start-line="321" selection-start-column="39" selection-end-line="321" selection-end-column="39" />
               <folding>
-                <element signature="e#34039#34055#0" expanded="true" />
+                <element signature="e#34226#34242#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -61,10 +135,10 @@
       <file leaf-file-name="profile.vm" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/profile.vm">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-32.692307">
-              <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="67" selection-end-column="78" />
+            <state vertical-scroll-proportion="-3.090909">
+              <caret line="279" column="32" selection-start-line="279" selection-start-column="32" selection-end-line="279" selection-end-column="32" />
               <folding>
-                <marker date="1485354911975" expanded="true" signature="710:725" placeholder="..." />
+                <marker date="1485358505184" expanded="true" signature="710:725" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -82,11 +156,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="otherwishlist.vm" pinned="false" current-in-tab="true">
+      <file leaf-file-name="otherwishlist.vm" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/otherwishlist.vm">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2849162">
-              <caret line="203" column="32" selection-start-line="203" selection-start-column="32" selection-end-line="203" selection-end-column="32" />
+            <state vertical-scroll-proportion="-1.8545455">
+              <caret line="72" column="59" selection-start-line="72" selection-start-column="59" selection-end-line="72" selection-end-column="59" />
               <folding>
                 <element signature="n#style#0;n#table#0;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <marker date="1485358019627" expanded="true" signature="710:725" placeholder="..." />
@@ -181,18 +255,18 @@
         <option value="$PROJECT_DIR$/src/Main/resources/Webshop/js/nav.js" />
         <option value="$PROJECT_DIR$/src/Main/resources/Webshop/shoppingcart.vm" />
         <option value="$PROJECT_DIR$/src/Main/resources/Webshop/shop.vm" />
-        <option value="$PROJECT_DIR$/src/Main/resources/Webshop/css/shop-homepage.css" />
         <option value="$PROJECT_DIR$/src/Main/resources/Webshop/admin.vm" />
         <option value="$PROJECT_DIR$/src/Main/java/Main.java" />
-        <option value="$PROJECT_DIR$/src/Main/java/Controller.java" />
-        <option value="$PROJECT_DIR$/src/Main/resources/Webshop/profile.vm" />
         <option value="$PROJECT_DIR$/src/Main/resources/Webshop/favourite.vm" />
         <option value="$PROJECT_DIR$/src/Main/resources/Webshop/orderhistory.vm" />
         <option value="$PROJECT_DIR$/src/Main/resources/Webshop/alllwishlist.vm" />
         <option value="$PROJECT_DIR$/src/Main/resources/Webshop/ownwishlist.vm" />
         <option value="$PROJECT_DIR$/src/Main/resources/Webshop/allwishlist.vm" />
-        <option value="$PROJECT_DIR$/src/Main/java/View.java" />
         <option value="$PROJECT_DIR$/src/Main/resources/Webshop/otherwishlist.vm" />
+        <option value="$PROJECT_DIR$/src/Main/resources/Webshop/css/shop-homepage.css" />
+        <option value="$PROJECT_DIR$/src/Main/resources/Webshop/profile.vm" />
+        <option value="$PROJECT_DIR$/src/Main/java/Controller.java" />
+        <option value="$PROJECT_DIR$/src/Main/java/View.java" />
       </list>
     </option>
   </component>
@@ -288,6 +362,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Webshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project56" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project56" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Webshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -905,7 +1009,7 @@
       <workItem from="1485266723547" duration="29000" />
       <workItem from="1485277490946" duration="736000" />
       <workItem from="1485352418452" duration="1085000" />
-      <workItem from="1485353869133" duration="4142000" />
+      <workItem from="1485353869133" duration="4935000" />
     </task>
     <task id="LOCAL-00001" summary="added">
       <created>1477561640598</created>
@@ -1147,11 +1251,17 @@
       <option name="project" value="LOCAL" />
       <updated>1485174049818</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="i just jizzed">
+      <created>1485358044825</created>
+      <option name="number" value="00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1485358044825</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99472000" />
+    <option name="totallyTimeSpent" value="100265000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1217,7 +1327,8 @@
     <MESSAGE value="added restriction" />
     <MESSAGE value="wishlist db knop" />
     <MESSAGE value="hehe eindelijk" />
-    <option name="LAST_COMMIT_MESSAGE" value="hehe eindelijk" />
+    <MESSAGE value="i just jizzed" />
+    <option name="LAST_COMMIT_MESSAGE" value="i just jizzed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1423,14 +1534,6 @@
     <entry file="file://$PROJECT_DIR$/../Project56 backup/Project56 v0.7/src/Main/java/Controller.java" />
     <entry file="file://$PROJECT_DIR$/../Project56 backup/Project56 v0.7/src/Main/java/View.java" />
     <entry file="file://$PROJECT_DIR$/../Project56 backup/Project56 v0.7/src/Main/resources/Webshop/css/shop-homepage.css" />
-    <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/css/shop-homepage.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-262.19232">
-          <caret line="401" column="1" selection-start-line="401" selection-start-column="1" selection-end-line="401" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Project56 backup/Project56 v0.7/src/Main/resources/Webshop/profile.vm" />
     <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/shop.vm">
       <provider selected="true" editor-type-id="text-editor">
@@ -1486,82 +1589,6 @@
             <element signature="e#37546#37562#0" expanded="false" />
             <element signature="e#40148#40164#0" expanded="false" />
             <element signature="e#43290#43306#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/java/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="114" selection-start-line="15" selection-start-column="114" selection-end-line="15" selection-end-column="114" />
-          <folding>
-            <marker date="1485354612853" expanded="true" signature="593:681" placeholder="Select usern... users" />
-            <marker date="1485354612853" expanded="true" signature="977:1052" placeholder="Select usern... users" />
-            <marker date="1485354612853" expanded="true" signature="1210:1285" placeholder="Select usern... users" />
-            <marker date="1485354612853" expanded="true" signature="1601:1679" placeholder="Select usern... users" />
-            <marker date="1485354612853" expanded="true" signature="1856:1925" placeholder="Select email... users" />
-            <marker date="1485354612853" expanded="true" signature="2102:2451" placeholder="INSERT INTO users... " />
-            <marker date="1485354612853" expanded="true" signature="2695:2765" placeholder="Select useri... users" />
-            <marker date="1485354612853" expanded="true" signature="2928:3177" placeholder="INSERT INTO adress... " />
-            <marker date="1485354612853" expanded="true" signature="3317:3360" placeholder="Delete From " />
-            <marker date="1485354612853" expanded="true" signature="3709:3840" placeholder="Select useri... users" />
-            <marker date="1485354612853" expanded="true" signature="4019:4095" placeholder="Select useri... users" />
-            <marker date="1485354612853" expanded="true" signature="4450:4496" placeholder="Select usern... users" />
-            <marker date="1485354612853" expanded="true" signature="4903:4929" placeholder="Select modal... products" />
-            <marker date="1485354612853" expanded="true" signature="5189:5234" placeholder="Select modal... products" />
-            <marker date="1485354612853" expanded="true" signature="5492:5540" placeholder="Select modal... products" />
-            <marker date="1485354612853" expanded="true" signature="5798:5848" placeholder="Select modal... products" />
-            <marker date="1485354612853" expanded="true" signature="6110:6155" placeholder="Select modal... products" />
-            <marker date="1485354612853" expanded="true" signature="6417:6463" placeholder="Select modal... products" />
-            <marker date="1485354612853" expanded="true" signature="6894:6920" placeholder="Select brand... products" />
-            <marker date="1485354612853" expanded="true" signature="7180:7225" placeholder="Select brand... products" />
-            <marker date="1485354612853" expanded="true" signature="7483:7531" placeholder="Select brand... products" />
-            <marker date="1485354612853" expanded="true" signature="7789:7839" placeholder="Select brand... products" />
-            <marker date="1485354612853" expanded="true" signature="8101:8146" placeholder="Select brand... products" />
-            <marker date="1485354612853" expanded="true" signature="8408:8454" placeholder="Select brand... products" />
-            <marker date="1485354612853" expanded="true" signature="8883:8912" placeholder="Select car_t... products" />
-            <marker date="1485354612853" expanded="true" signature="9175:9223" placeholder="Select car_t... products" />
-            <marker date="1485354612853" expanded="true" signature="9484:9535" placeholder="Select car_t... products" />
-            <marker date="1485354612853" expanded="true" signature="9796:9849" placeholder="Select car_t... products" />
-            <marker date="1485354612853" expanded="true" signature="10114:10162" placeholder="Select car_t... products" />
-            <marker date="1485354612853" expanded="true" signature="10427:10476" placeholder="Select car_t... products" />
-            <marker date="1485354612853" expanded="true" signature="10909:10935" placeholder="Select price... products" />
-            <marker date="1485354612853" expanded="true" signature="11194:11239" placeholder="Select price... products" />
-            <marker date="1485354612853" expanded="true" signature="11497:11545" placeholder="Select price... products" />
-            <marker date="1485354612853" expanded="true" signature="11803:11853" placeholder="Select price... products" />
-            <marker date="1485354612853" expanded="true" signature="12115:12160" placeholder="Select price... products" />
-            <marker date="1485354612853" expanded="true" signature="12422:12468" placeholder="Select price... products" />
-            <marker date="1485354612853" expanded="true" signature="12902:12932" placeholder="Select produ... products" />
-            <marker date="1485354612853" expanded="true" signature="13195:13244" placeholder="Select produ... products" />
-            <marker date="1485354612853" expanded="true" signature="13506:13558" placeholder="Select produ... products" />
-            <marker date="1485354612853" expanded="true" signature="13820:13874" placeholder="Select produ... products" />
-            <marker date="1485354612853" expanded="true" signature="14140:14189" placeholder="Select produ... products" />
-            <marker date="1485354612853" expanded="true" signature="14455:14505" placeholder="Select produ... products" />
-            <marker date="1485354612853" expanded="true" signature="14896:14937" placeholder="Select * fro... products" />
-            <marker date="1485354612853" expanded="true" signature="15436:15468" placeholder="Select descr... products" />
-            <marker date="1485354612853" expanded="true" signature="15779:15827" placeholder="Delete from " />
-            <marker date="1485354612853" expanded="true" signature="16039:16110" placeholder="Update users... " />
-            <marker date="1485354612853" expanded="true" signature="16317:16387" placeholder="Update users... " />
-            <marker date="1485354612853" expanded="true" signature="16596:16668" placeholder="Update users... " />
-            <marker date="1485354612853" expanded="true" signature="16879:17223" placeholder="INSERT INTO products... " />
-            <marker date="1485354612853" expanded="true" signature="17445:17495" placeholder="Select * fro... users" />
-            <marker date="1485354612853" expanded="true" signature="18225:18301" placeholder="insert INTO wishlist... " />
-            <marker date="1485354612853" expanded="true" signature="18697:18866" placeholder="Select p.mod... products" />
-            <marker date="1485354612853" expanded="true" signature="19379:19465" placeholder="select usern... users" />
-            <marker date="1485354612853" expanded="true" signature="19779:19847" placeholder="UPDATE users... " />
-            <marker date="1485354612853" expanded="true" signature="20178:20224" placeholder="INSERT INTO orders... " />
-            <marker date="1485354612853" expanded="true" signature="20307:20383" placeholder="Select order... orders" />
-            <marker date="1485354612853" expanded="true" signature="20680:20796" placeholder="INSERT INTO orders_products... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/profile.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-32.692307">
-          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="67" selection-end-column="78" />
-          <folding>
-            <marker date="1485354911975" expanded="true" signature="710:725" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1625,23 +1652,108 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/java/View.java">
+    <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/otherwishlist.vm">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.5172415">
-          <caret line="886" column="81" selection-start-line="886" selection-start-column="81" selection-end-line="886" selection-end-column="81" />
+        <state vertical-scroll-proportion="-1.8545455">
+          <caret line="72" column="59" selection-start-line="72" selection-start-column="59" selection-end-line="72" selection-end-column="59" />
           <folding>
-            <element signature="e#34039#34055#0" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1485358019627" expanded="true" signature="710:725" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/otherwishlist.vm">
+    <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/profile.vm">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2849162">
-          <caret line="203" column="32" selection-start-line="203" selection-start-column="32" selection-end-line="203" selection-end-column="32" />
+        <state vertical-scroll-proportion="-3.090909">
+          <caret line="279" column="32" selection-start-line="279" selection-start-column="32" selection-end-line="279" selection-end-column="32" />
           <folding>
-            <element signature="n#style#0;n#table#0;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1485358019627" expanded="true" signature="710:725" placeholder="..." />
+            <marker date="1485358505184" expanded="true" signature="710:725" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/css/shop-homepage.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.653846">
+          <caret line="404" column="17" selection-start-line="404" selection-start-column="17" selection-end-line="404" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/java/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="479" column="61" selection-start-line="479" selection-start-column="61" selection-end-line="479" selection-end-column="61" />
+          <folding>
+            <marker date="1485358677774" expanded="true" signature="593:681" placeholder="Select usern... users" />
+            <marker date="1485358677774" expanded="true" signature="977:1052" placeholder="Select usern... users" />
+            <marker date="1485358677774" expanded="true" signature="1210:1285" placeholder="Select usern... users" />
+            <marker date="1485358677774" expanded="true" signature="1601:1679" placeholder="Select usern... users" />
+            <marker date="1485358677774" expanded="true" signature="1856:1925" placeholder="Select email... users" />
+            <marker date="1485358677774" expanded="true" signature="2102:2451" placeholder="INSERT INTO users... " />
+            <marker date="1485358677774" expanded="true" signature="2695:2765" placeholder="Select useri... users" />
+            <marker date="1485358677774" expanded="true" signature="2928:3177" placeholder="INSERT INTO adress... " />
+            <marker date="1485358677774" expanded="true" signature="3317:3360" placeholder="Delete From " />
+            <marker date="1485358677774" expanded="true" signature="3709:3840" placeholder="Select useri... users" />
+            <marker date="1485358677774" expanded="true" signature="4019:4095" placeholder="Select useri... users" />
+            <marker date="1485358677774" expanded="true" signature="4450:4496" placeholder="Select usern... users" />
+            <marker date="1485358677774" expanded="true" signature="4903:4929" placeholder="Select modal... products" />
+            <marker date="1485358677774" expanded="true" signature="5189:5234" placeholder="Select modal... products" />
+            <marker date="1485358677774" expanded="true" signature="5492:5540" placeholder="Select modal... products" />
+            <marker date="1485358677774" expanded="true" signature="5798:5848" placeholder="Select modal... products" />
+            <marker date="1485358677774" expanded="true" signature="6110:6155" placeholder="Select modal... products" />
+            <marker date="1485358677774" expanded="true" signature="6417:6463" placeholder="Select modal... products" />
+            <marker date="1485358677774" expanded="true" signature="6894:6920" placeholder="Select brand... products" />
+            <marker date="1485358677774" expanded="true" signature="7180:7225" placeholder="Select brand... products" />
+            <marker date="1485358677774" expanded="true" signature="7483:7531" placeholder="Select brand... products" />
+            <marker date="1485358677774" expanded="true" signature="7789:7839" placeholder="Select brand... products" />
+            <marker date="1485358677774" expanded="true" signature="8101:8146" placeholder="Select brand... products" />
+            <marker date="1485358677774" expanded="true" signature="8408:8454" placeholder="Select brand... products" />
+            <marker date="1485358677774" expanded="true" signature="8883:8912" placeholder="Select car_t... products" />
+            <marker date="1485358677774" expanded="true" signature="9175:9223" placeholder="Select car_t... products" />
+            <marker date="1485358677774" expanded="true" signature="9484:9535" placeholder="Select car_t... products" />
+            <marker date="1485358677774" expanded="true" signature="9796:9849" placeholder="Select car_t... products" />
+            <marker date="1485358677774" expanded="true" signature="10114:10162" placeholder="Select car_t... products" />
+            <marker date="1485358677774" expanded="true" signature="10427:10476" placeholder="Select car_t... products" />
+            <marker date="1485358677774" expanded="true" signature="10909:10935" placeholder="Select price... products" />
+            <marker date="1485358677774" expanded="true" signature="11194:11239" placeholder="Select price... products" />
+            <marker date="1485358677774" expanded="true" signature="11497:11545" placeholder="Select price... products" />
+            <marker date="1485358677774" expanded="true" signature="11803:11853" placeholder="Select price... products" />
+            <marker date="1485358677774" expanded="true" signature="12115:12160" placeholder="Select price... products" />
+            <marker date="1485358677774" expanded="true" signature="12422:12468" placeholder="Select price... products" />
+            <marker date="1485358677774" expanded="true" signature="12902:12932" placeholder="Select produ... products" />
+            <marker date="1485358677774" expanded="true" signature="13195:13244" placeholder="Select produ... products" />
+            <marker date="1485358677774" expanded="true" signature="13506:13558" placeholder="Select produ... products" />
+            <marker date="1485358677774" expanded="true" signature="13820:13874" placeholder="Select produ... products" />
+            <marker date="1485358677774" expanded="true" signature="14140:14189" placeholder="Select produ... products" />
+            <marker date="1485358677774" expanded="true" signature="14455:14505" placeholder="Select produ... products" />
+            <marker date="1485358677774" expanded="true" signature="14896:14937" placeholder="Select * fro... products" />
+            <marker date="1485358677774" expanded="true" signature="15436:15468" placeholder="Select descr... products" />
+            <marker date="1485358677774" expanded="true" signature="15779:15827" placeholder="Delete from " />
+            <marker date="1485358677774" expanded="true" signature="16039:16110" placeholder="Update users... " />
+            <marker date="1485358677774" expanded="true" signature="16317:16387" placeholder="Update users... " />
+            <marker date="1485358677774" expanded="true" signature="16596:16668" placeholder="Update users... " />
+            <marker date="1485358677774" expanded="true" signature="16879:17223" placeholder="INSERT INTO products... " />
+            <marker date="1485358677774" expanded="true" signature="17445:17495" placeholder="Select * fro... users" />
+            <marker date="1485358677774" expanded="true" signature="18225:18301" placeholder="insert INTO wishlist... " />
+            <marker date="1485358677774" expanded="true" signature="18697:18866" placeholder="Select p.mod... products" />
+            <marker date="1485358677774" expanded="true" signature="19379:19465" placeholder="select usern... users" />
+            <marker date="1485358677774" expanded="true" signature="19779:19847" placeholder="UPDATE users... " />
+            <marker date="1485358677774" expanded="true" signature="20065:20134" placeholder="UPDATE users... " />
+            <marker date="1485358677774" expanded="true" signature="20465:20511" placeholder="INSERT INTO orders... " />
+            <marker date="1485358677774" expanded="true" signature="20594:20670" placeholder="Select order... orders" />
+            <marker date="1485358677774" expanded="true" signature="20967:21083" placeholder="INSERT INTO orders_products... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/java/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5104167">
+          <caret line="321" column="39" selection-start-line="321" selection-start-column="39" selection-end-line="321" selection-end-column="39" />
+          <folding>
+            <element signature="e#34226#34242#0" expanded="true" />
           </folding>
         </state>
       </provider>

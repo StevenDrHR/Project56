@@ -71,6 +71,7 @@
 
             <form class="list-group" method="POST" action="/Profile">
                 <button href="#" id="wishlistbuttonvisibilitypu" name="makewishlistpublic" type="submit" class="list-group-item">Make wishlist public</button>
+                <button href="#" id="wishlistbuttonvisibilitypr" name="makewishlistprivate" type="submit" class="list-group-item">Make wishlist private</button>
                 <br>
             </form>
 
@@ -275,6 +276,10 @@
     if ('${wishlist}' == "public"){
         var a = document.querySelector("#wishlistbuttonvisibilitypu");
         a.style.display = "none";
+    }
+    if ('${wishlist}' == "public"){
+        var a = document.querySelector("#wishlistbuttonvisibilitypr");
+        a.style.display = "block";
     }
 </script>
 

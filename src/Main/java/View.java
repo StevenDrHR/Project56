@@ -1,4 +1,5 @@
 import spark.template.velocity.VelocityTemplateEngine;
+import sun.java2d.cmm.Profile;
 
 import java.util.*;
 
@@ -318,10 +319,14 @@ public class View {
             if (button.equals("makewishlistpublic")) {
                 System.out.println(button + " Shamala2");
                 checkWishlistStatus.setWishlistToPublic(currentUser);
+                res.redirect("/Profile");
             }
             else if (button.equals("makewishlistprivate")){
                 System.out.println(button +" Shamala3");
+                checkWishlistStatus.setWishlistToPrivate(currentUser);
+                res.redirect("/Profile");
             }
+
 
             return modelAndView(attributes, "Webshop/Profile.vm");
         },new VelocityTemplateEngine());

@@ -475,6 +475,12 @@ public class Controller {
         connection.prepareStatement(Querry).executeUpdate();
         return "Done";
     }
+    public String setWishlistToPrivate(String username) throws SQLException{
+        connection();
+        String Querry = "UPDATE users SET wishlist = 'private' WHERE username = '"+username+"';";
+        connection.prepareStatement(Querry).executeUpdate();
+        return "Done";
+    }
 
     public String SetOrderHistory(String userid,String[] products, String[] amounts) throws SQLException{
         connection();
