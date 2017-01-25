@@ -13,7 +13,7 @@ public class Controller {
     static Connection connection;
 
     public void connection() throws SQLException{
-        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "0906986");
+        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "123lol123");
 
     }
 
@@ -475,6 +475,26 @@ public class Controller {
         connection.prepareStatement(Querry).executeUpdate();
         return "Done";
     }
+
+    public String SetOrderHistory(String userid,String[] products, String[] amounts) throws SQLException{
+        connection();
+        int orderid = 0;
+        ArrayList<String> list = new ArrayList<String>();
+        String Querry = "INSERT INTO orders(userid) Values ("+userid+");";
+        connection.prepareStatement(Querry).executeUpdate();
+        Querry = "Select orderid from orders where userid = '"+userid+"' order by orderid desc";
+        ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+        if(rs.next()) {
+            orderid = rs.getInt("orderid") ;
+        }
+        for (int i = 0; i<products.length; i++) {
+            System.out.println(products[i] + " shamlalalalalalal");
+            Querry = "INSERT INTO orders_products(orderid,productid,amount) Values(" + orderid + "," + products[i] + "," + amounts[i] + ") ";
+            connection.prepareStatement(Querry).executeUpdate();
+        }
+        return "Done";
+    }
+
 }
 
 

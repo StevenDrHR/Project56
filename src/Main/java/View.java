@@ -699,8 +699,19 @@ public class View {
             if (variabel.equals("orderbutton")) {
                 System.out.println("ordermsg");
                 req.session().attribute("message", "Succesfully Ordered");
+                String currentUser = req.session().attribute("User");
+                Controller setOrderHistory = new Controller();
+                String userid  = setOrderHistory.getUserData(currentUser).get(6);
+                String products = req.session().attribute("productid");
+                String amounts = req.session().attribute("amount");
+                String[] product = products.split(", ");
+                String[] amount = amounts.split(", ");
+
+                setOrderHistory.SetOrderHistory(userid, product, amount);
                 req.session().attribute("productid", null);
                 req.session().attribute("amount", null);
+
+
                 res.redirect("/Profile");
             }
 
