@@ -108,7 +108,7 @@
                 </div>
 
                 <div class="col-md-12">
-                    <form class="form3" method='POST' action='/Shop'>
+                    <form class="form3" method='POST' action='/Profile'>
                         <table border="1" style="width:100%" id="alltables">
 
                             <tbody>
@@ -180,7 +180,6 @@
         document.getElementById('main').innerHTML =
                 '<h1 align="center">Wish List</h1><br> <p align="center">This is the wish list of : ${CurrentUser}</p>';
 
-    ##window.alert(mdl.length);
         if (once == 1){
             for (var i = 0; i < mdl.length; i++) {
                 if (i == 0) {
@@ -235,7 +234,6 @@
 
     function AllWishlistContent() {
 
-        window.alert(usrnm.length);
         if (once == 1){
             for (var i = 0; i < usrnm.length; i++) {
                 if (i == 0) {
@@ -252,7 +250,8 @@
 
                 userbutton.setAttribute("name", "Username" + usrnm[i])
                 userbutton.setAttribute("type", "submit")
-                userbutton.innerHTML = "${usernames}";
+//                userbutton.setAttribute("onclick", WishlistContent(usrnm[i]))
+                userbutton.innerHTML = usrnm[i];
 
                 //adding the row
                 row = table.insertRow(i + 1);
@@ -295,12 +294,8 @@
 </script>
 
 <script>
-    if("$message" == "null" ){
-        var a = document.getElementById("msg");
-        a.style.display = "none";
-    }
-    else{
-        window.alert("$message");
+    if("${message}" != "null" ){
+        window.alert("${message}");
     }
 </script>
 
