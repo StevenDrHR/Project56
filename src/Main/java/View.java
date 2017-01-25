@@ -736,5 +736,559 @@ public class View {
             return modelAndView(attributes, "Webshop/shoppingcart.vm");
         }, new VelocityTemplateEngine());
     }
+    public void RenderOwnWishlistView(){
+        get("/Ownwishlist", (req, res) -> {
+            Map<String, Object> attributes = new HashMap<String, Object>();
+            if (req.session().attribute("User") == null)
+            {req.session().attribute("User", " ");}
+
+            String currentUser = req.session().attribute("User");
+            attributes.put("CurrentUser", currentUser);
+            Controller checkUserLevel = new Controller();
+            String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
+            attributes.put("userlevel", currentUserLevel);
+
+            if(req.session().attribute("message") == null ){
+                attributes.put("message", "null");
+            }
+            else{
+                attributes.put("message", req.session().attribute("message"));
+                req.session().attribute("message", null);
+            }
+
+            Controller checkUser = new Controller();
+            ArrayList<String> UserData = checkUser.getUserData(currentUser);
+            attributes.put("firstname", UserData.get(0));
+            attributes.put("lastname", UserData.get(1));
+            attributes.put("age", UserData.get(2));
+            attributes.put("emailaddress", UserData.get(3));
+            attributes.put("userpassword", UserData.get(4));
+            attributes.put("userstatus", UserData.get(5));
+            attributes.put("userid", UserData.get(6));
+            attributes.put("wishlist", UserData.get(7));
+
+            Controller getAllUsers = new Controller();
+            List getallusers = getAllUsers.getPublicusers(currentUser);
+            for (int i = 0; i < getallusers.size(); i ++) {
+                if (i == 0) {
+                    attributes.put("usernames", getallusers.get(i));
+                }
+                else {
+                    attributes.put("usernames", getallusers.get(i) + ", " + attributes.get("usernames"));
+                }
+            }
+
+            Controller getWishlistData = new Controller();
+            List getwishlistdata = getWishlistData.getWishlistinfo(currentUser);
+            for (int i = 0; i < getwishlistdata.size(); i += 4){
+                int j = 1;
+                int k = 2;
+                int l = 3;
+                if (i < 4) {
+                    attributes.put("model", getwishlistdata.get(i));
+                    attributes.put("brand", getwishlistdata.get(j));
+                    attributes.put("type", getwishlistdata.get(k));
+                    attributes.put("price", getwishlistdata.get(l));
+                }
+                else{
+                    attributes.put("model", getwishlistdata.get(i) + ", " + attributes.get("model"));
+                    attributes.put("brand", getwishlistdata.get(i) + ", " + attributes.get("brand"));
+                    attributes.put("type", getwishlistdata.get(i) + ", " + attributes.get("type"));
+                    attributes.put("price", getwishlistdata.get(i) + ", " + attributes.get("price"));
+                }
+            }
+
+            System.out.println(currentUserLevel);
+            return modelAndView(attributes, "Webshop/Ownwishlist.vm");
+        }, new VelocityTemplateEngine());
+
+
+        post("/Ownwishlist", (req,res)-> {
+            Map<String, Object> attributes = new HashMap<String, Object>();
+
+            String currentUser = req.session().attribute("User");
+            attributes.put("CurrentUser", currentUser);
+            Controller checkUserLevel = new Controller();
+            String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
+            attributes.put("userlevel", currentUserLevel);
+            String deleteUser = req.queryParams().iterator().next();
+            String checkFunction = deleteUser.substring(0, 6);
+            System.out.println(checkFunction + "dikkop");
+            System.out.println(deleteUser + " dikkop2");
+
+            if(checkFunction.equals("usernames") ){
+                deleteUser= deleteUser.substring(7);
+                Controller databaseDeleteUser = new Controller();
+                databaseDeleteUser.DeleteUser(deleteUser);
+            }
+
+            req.session().attribute("message");
+
+            Controller checkUser = new Controller();
+            ArrayList<String> UserData = checkUser.getUserData(currentUser);
+            attributes.put("firstname", UserData.get(0));
+            attributes.put("lastname", UserData.get(1));
+            attributes.put("age", UserData.get(2));
+            attributes.put("emailaddress", UserData.get(3));
+            attributes.put("userpassword", UserData.get(4));
+            attributes.put("userstatus", UserData.get(5));
+            attributes.put("userid", UserData.get(6));
+            attributes.put("wishlist", UserData.get(7));
+
+            String buttonuser = req.queryParams().iterator().next();
+
+            Controller getWishlistData = new Controller();
+
+            System.out.println(buttonuser + " Shamala");
+            Controller checkWishlistStatus = new Controller();
+            if (buttonuser.equals("makewishlistpublic")) {
+                System.out.println(buttonuser + " Shamala2");
+                checkWishlistStatus.setWishlistToPublic(currentUser);
+            }
+            if (buttonuser.equals("makewishlistprivate")){
+                System.out.println(buttonuser +" Shamala3");
+            }
+            if (buttonuser.equals(buttonuser)){
+                System.out.println(buttonuser.substring(8) + " shamala4");
+                getWishlistData.getWishlistinfo(buttonuser.substring(8));
+                System.out.println(buttonuser + " shamala5");
+            }
+
+
+            return modelAndView(attributes, "Webshop/Ownwishlist.vm");
+        },new VelocityTemplateEngine());
+    }
+    public void RenderOtherWishlistView(){
+        get("/Otherwishlist", (req, res) -> {
+            Map<String, Object> attributes = new HashMap<String, Object>();
+            if (req.session().attribute("User") == null)
+            {req.session().attribute("User", " ");}
+
+            String currentUser = req.session().attribute("User");
+            attributes.put("CurrentUser", currentUser);
+            Controller checkUserLevel = new Controller();
+            String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
+            attributes.put("userlevel", currentUserLevel);
+            String Selecteduserwl = req.session().attribute("Selecteduserwl");
+            System.out.println(req.session().attribute("Selecteduserwl") + " jemoeder");
+
+            Controller checkUser = new Controller();
+            ArrayList<String> UserData = checkUser.getUserData(currentUser);
+            attributes.put("firstname", UserData.get(0));
+            attributes.put("lastname", UserData.get(1));
+            attributes.put("age", UserData.get(2));
+            attributes.put("emailaddress", UserData.get(3));
+            attributes.put("userpassword", UserData.get(4));
+            attributes.put("userstatus", UserData.get(5));
+            attributes.put("userid", UserData.get(6));
+            attributes.put("wishlist", UserData.get(7));
+
+            Controller getWishlistData = new Controller();
+            List getwishlistdata = getWishlistData.getWishlistinfo(Selecteduserwl);
+            for (int i = 0; i < getwishlistdata.size(); i += 4){
+                int j = 1;
+                int k = 2;
+                int l = 3;
+                if (i < 4) {
+                    attributes.put("model", getwishlistdata.get(i));
+                    attributes.put("brand", getwishlistdata.get(j));
+                    attributes.put("type", getwishlistdata.get(k));
+                    attributes.put("price", getwishlistdata.get(l));
+                }
+                else{
+                    attributes.put("model", getwishlistdata.get(i) + ", " + attributes.get("model"));
+                    attributes.put("brand", getwishlistdata.get(i) + ", " + attributes.get("brand"));
+                    attributes.put("type", getwishlistdata.get(i) + ", " + attributes.get("type"));
+                    attributes.put("price", getwishlistdata.get(i) + ", " + attributes.get("price"));
+                }
+            }
+
+            System.out.println(currentUserLevel);
+            return modelAndView(attributes, "Webshop/Otherwishlist.vm");
+        }, new VelocityTemplateEngine());
+
+
+        post("/Otherwishlist", (req,res)-> {
+            Map<String, Object> attributes = new HashMap<String, Object>();
+
+            String currentUser = req.session().attribute("User");
+            attributes.put("CurrentUser", currentUser);
+            Controller checkUserLevel = new Controller();
+            String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
+            attributes.put("userlevel", currentUserLevel);
+            String deleteUser = req.queryParams().iterator().next();
+
+            return modelAndView(attributes, "Webshop/Otherwishlist.vm");
+        },new VelocityTemplateEngine());
+    }
+    public void RenderAllWishlistView(){
+        get("/Allwishlist", (req, res) -> {
+            Map<String, Object> attributes = new HashMap<String, Object>();
+            if (req.session().attribute("User") == null)
+            {req.session().attribute("User", " ");}
+
+            String currentUser = req.session().attribute("User");
+            attributes.put("CurrentUser", currentUser);
+            Controller checkUserLevel = new Controller();
+            String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
+            attributes.put("userlevel", currentUserLevel);
+
+            if(req.session().attribute("message") == null ){
+                attributes.put("message", "null");
+            }
+            else{
+                attributes.put("message", req.session().attribute("message"));
+                req.session().attribute("message", null);
+            }
+
+            Controller checkUser = new Controller();
+            ArrayList<String> UserData = checkUser.getUserData(currentUser);
+            attributes.put("firstname", UserData.get(0));
+            attributes.put("lastname", UserData.get(1));
+            attributes.put("age", UserData.get(2));
+            attributes.put("emailaddress", UserData.get(3));
+            attributes.put("userpassword", UserData.get(4));
+            attributes.put("userstatus", UserData.get(5));
+            attributes.put("userid", UserData.get(6));
+            attributes.put("wishlist", UserData.get(7));
+
+            Controller getAllUsers = new Controller();
+            List getallusers = getAllUsers.getPublicusers(currentUser);
+            for (int i = 0; i < getallusers.size(); i ++) {
+                if (i == 0) {
+                    attributes.put("usernames", getallusers.get(i));
+                }
+                else {
+                    attributes.put("usernames", getallusers.get(i) + ", " + attributes.get("usernames"));
+                }
+            }
+
+            Controller getWishlistData = new Controller();
+            List getwishlistdata = getWishlistData.getWishlistinfo(currentUser);
+            for (int i = 0; i < getwishlistdata.size(); i += 4){
+                int j = 1;
+                int k = 2;
+                int l = 3;
+                if (i < 4) {
+                    attributes.put("model", getwishlistdata.get(i));
+                    attributes.put("brand", getwishlistdata.get(j));
+                    attributes.put("type", getwishlistdata.get(k));
+                    attributes.put("price", getwishlistdata.get(l));
+                }
+                else{
+                    attributes.put("model", getwishlistdata.get(i) + ", " + attributes.get("model"));
+                    attributes.put("brand", getwishlistdata.get(i) + ", " + attributes.get("brand"));
+                    attributes.put("type", getwishlistdata.get(i) + ", " + attributes.get("type"));
+                    attributes.put("price", getwishlistdata.get(i) + ", " + attributes.get("price"));
+                }
+            }
+
+            System.out.println(currentUserLevel);
+            return modelAndView(attributes, "Webshop/Allwishlist.vm");
+        }, new VelocityTemplateEngine());
+
+
+        post("/Allwishlist", (req,res)-> {
+            Map<String, Object> attributes = new HashMap<String, Object>();
+
+            String currentUser = req.session().attribute("User");
+            attributes.put("CurrentUser", currentUser);
+            Controller checkUserLevel = new Controller();
+            String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
+            attributes.put("userlevel", currentUserLevel);
+            String deleteUser = req.queryParams().iterator().next();
+            String checkFunction = deleteUser.substring(0, 6);
+            System.out.println(checkFunction + "dikkop");
+            System.out.println(deleteUser + " dikkop2");
+
+            if(checkFunction.equals("usernames") ){
+                deleteUser= deleteUser.substring(7);
+                Controller databaseDeleteUser = new Controller();
+                databaseDeleteUser.DeleteUser(deleteUser);
+            }
+
+            req.session().attribute("message");
+
+            Controller checkUser = new Controller();
+            ArrayList<String> UserData = checkUser.getUserData(currentUser);
+            attributes.put("firstname", UserData.get(0));
+            attributes.put("lastname", UserData.get(1));
+            attributes.put("age", UserData.get(2));
+            attributes.put("emailaddress", UserData.get(3));
+            attributes.put("userpassword", UserData.get(4));
+            attributes.put("userstatus", UserData.get(5));
+            attributes.put("userid", UserData.get(6));
+            attributes.put("wishlist", UserData.get(7));
+
+            String buttonuser = req.queryParams().iterator().next();
+
+            Controller getWishlistData = new Controller();
+
+            System.out.println(buttonuser + " Shamala");
+            Controller checkWishlistStatus = new Controller();
+            if (buttonuser.equals("makewishlistpublic")) {
+                System.out.println(buttonuser + " Shamala2");
+                checkWishlistStatus.setWishlistToPublic(currentUser);
+            }
+            if (buttonuser.equals("makewishlistprivate")){
+                System.out.println(buttonuser +" Shamala3");
+            }
+            if (buttonuser.equals(buttonuser)){
+                System.out.println(buttonuser.substring(8) + " shamala4");
+                getWishlistData.getWishlistinfo(buttonuser.substring(8));
+                req.session().attribute("Selecteduserwl", buttonuser.substring(8));
+                System.out.println(req.session().attribute("Selecteduserwl") + " jemoeder2");
+                System.out.println(buttonuser + " shamala5");
+                res.redirect("/Otherwishlist");
+            }
+
+
+            return modelAndView(attributes, "Webshop/Allwishlist.vm");
+        },new VelocityTemplateEngine());
+    }
+    public void RenderOrderHistoryView(){
+        get("/Orderhistory", (req, res) -> {
+            Map<String, Object> attributes = new HashMap<String, Object>();
+            if (req.session().attribute("User") == null)
+            {req.session().attribute("User", " ");}
+
+            String currentUser = req.session().attribute("User");
+            attributes.put("CurrentUser", currentUser);
+            Controller checkUserLevel = new Controller();
+            String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
+            attributes.put("userlevel", currentUserLevel);
+
+            if(req.session().attribute("message") == null ){
+                attributes.put("message", "null");
+            }
+            else{
+                attributes.put("message", req.session().attribute("message"));
+                req.session().attribute("message", null);
+            }
+
+            Controller checkUser = new Controller();
+            ArrayList<String> UserData = checkUser.getUserData(currentUser);
+            attributes.put("firstname", UserData.get(0));
+            attributes.put("lastname", UserData.get(1));
+            attributes.put("age", UserData.get(2));
+            attributes.put("emailaddress", UserData.get(3));
+            attributes.put("userpassword", UserData.get(4));
+            attributes.put("userstatus", UserData.get(5));
+            attributes.put("userid", UserData.get(6));
+            attributes.put("wishlist", UserData.get(7));
+
+            Controller getAllUsers = new Controller();
+            List getallusers = getAllUsers.getPublicusers(currentUser);
+            for (int i = 0; i < getallusers.size(); i ++) {
+                if (i == 0) {
+                    attributes.put("usernames", getallusers.get(i));
+                }
+                else {
+                    attributes.put("usernames", getallusers.get(i) + ", " + attributes.get("usernames"));
+                }
+            }
+
+            Controller getWishlistData = new Controller();
+            List getwishlistdata = getWishlistData.getWishlistinfo(currentUser);
+            for (int i = 0; i < getwishlistdata.size(); i += 4){
+                int j = 1;
+                int k = 2;
+                int l = 3;
+                if (i < 4) {
+                    attributes.put("model", getwishlistdata.get(i));
+                    attributes.put("brand", getwishlistdata.get(j));
+                    attributes.put("type", getwishlistdata.get(k));
+                    attributes.put("price", getwishlistdata.get(l));
+                }
+                else{
+                    attributes.put("model", getwishlistdata.get(i) + ", " + attributes.get("model"));
+                    attributes.put("brand", getwishlistdata.get(i) + ", " + attributes.get("brand"));
+                    attributes.put("type", getwishlistdata.get(i) + ", " + attributes.get("type"));
+                    attributes.put("price", getwishlistdata.get(i) + ", " + attributes.get("price"));
+                }
+            }
+
+            System.out.println(currentUserLevel);
+            return modelAndView(attributes, "Webshop/Orderhistory.vm");
+        }, new VelocityTemplateEngine());
+
+
+        post("/Orderhistory", (req,res)-> {
+            Map<String, Object> attributes = new HashMap<String, Object>();
+
+            String currentUser = req.session().attribute("User");
+            attributes.put("CurrentUser", currentUser);
+            Controller checkUserLevel = new Controller();
+            String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
+            attributes.put("userlevel", currentUserLevel);
+            String deleteUser = req.queryParams().iterator().next();
+            String checkFunction = deleteUser.substring(0, 6);
+            System.out.println(checkFunction + "dikkop");
+            System.out.println(deleteUser + " dikkop2");
+
+            if(checkFunction.equals("usernames") ){
+                deleteUser= deleteUser.substring(7);
+                Controller databaseDeleteUser = new Controller();
+                databaseDeleteUser.DeleteUser(deleteUser);
+            }
+
+            req.session().attribute("message");
+
+            Controller checkUser = new Controller();
+            ArrayList<String> UserData = checkUser.getUserData(currentUser);
+            attributes.put("firstname", UserData.get(0));
+            attributes.put("lastname", UserData.get(1));
+            attributes.put("age", UserData.get(2));
+            attributes.put("emailaddress", UserData.get(3));
+            attributes.put("userpassword", UserData.get(4));
+            attributes.put("userstatus", UserData.get(5));
+            attributes.put("userid", UserData.get(6));
+            attributes.put("wishlist", UserData.get(7));
+
+            String buttonuser = req.queryParams().iterator().next();
+
+            Controller getWishlistData = new Controller();
+
+            System.out.println(buttonuser + " Shamala");
+            Controller checkWishlistStatus = new Controller();
+            if (buttonuser.equals("makewishlistpublic")) {
+                System.out.println(buttonuser + " Shamala2");
+                checkWishlistStatus.setWishlistToPublic(currentUser);
+            }
+            if (buttonuser.equals("makewishlistprivate")){
+                System.out.println(buttonuser +" Shamala3");
+            }
+            if (buttonuser.equals(buttonuser)){
+                System.out.println(buttonuser.substring(8) + " shamala4");
+                getWishlistData.getWishlistinfo(buttonuser.substring(8));
+                System.out.println(buttonuser + " shamala5");
+            }
+
+
+            return modelAndView(attributes, "Webshop/Orderhistory.vm");
+        },new VelocityTemplateEngine());
+    }
+    public void RenderFavouriteView(){
+        get("/Favourite", (req, res) -> {
+            Map<String, Object> attributes = new HashMap<String, Object>();
+            if (req.session().attribute("User") == null)
+            {req.session().attribute("User", " ");}
+
+            String currentUser = req.session().attribute("User");
+            attributes.put("CurrentUser", currentUser);
+            Controller checkUserLevel = new Controller();
+            String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
+            attributes.put("userlevel", currentUserLevel);
+
+            if(req.session().attribute("message") == null ){
+                attributes.put("message", "null");
+            }
+            else{
+                attributes.put("message", req.session().attribute("message"));
+                req.session().attribute("message", null);
+            }
+
+            Controller checkUser = new Controller();
+            ArrayList<String> UserData = checkUser.getUserData(currentUser);
+            attributes.put("firstname", UserData.get(0));
+            attributes.put("lastname", UserData.get(1));
+            attributes.put("age", UserData.get(2));
+            attributes.put("emailaddress", UserData.get(3));
+            attributes.put("userpassword", UserData.get(4));
+            attributes.put("userstatus", UserData.get(5));
+            attributes.put("userid", UserData.get(6));
+            attributes.put("wishlist", UserData.get(7));
+
+            Controller getAllUsers = new Controller();
+            List getallusers = getAllUsers.getPublicusers(currentUser);
+            for (int i = 0; i < getallusers.size(); i ++) {
+                if (i == 0) {
+                    attributes.put("usernames", getallusers.get(i));
+                }
+                else {
+                    attributes.put("usernames", getallusers.get(i) + ", " + attributes.get("usernames"));
+                }
+            }
+
+            Controller getWishlistData = new Controller();
+            List getwishlistdata = getWishlistData.getWishlistinfo(currentUser);
+            for (int i = 0; i < getwishlistdata.size(); i += 4){
+                int j = 1;
+                int k = 2;
+                int l = 3;
+                if (i < 4) {
+                    attributes.put("model", getwishlistdata.get(i));
+                    attributes.put("brand", getwishlistdata.get(j));
+                    attributes.put("type", getwishlistdata.get(k));
+                    attributes.put("price", getwishlistdata.get(l));
+                }
+                else{
+                    attributes.put("model", getwishlistdata.get(i) + ", " + attributes.get("model"));
+                    attributes.put("brand", getwishlistdata.get(i) + ", " + attributes.get("brand"));
+                    attributes.put("type", getwishlistdata.get(i) + ", " + attributes.get("type"));
+                    attributes.put("price", getwishlistdata.get(i) + ", " + attributes.get("price"));
+                }
+            }
+
+            System.out.println(currentUserLevel);
+            return modelAndView(attributes, "Webshop/Favourite.vm");
+        }, new VelocityTemplateEngine());
+
+
+        post("/Favourite", (req,res)-> {
+            Map<String, Object> attributes = new HashMap<String, Object>();
+
+            String currentUser = req.session().attribute("User");
+            attributes.put("CurrentUser", currentUser);
+            Controller checkUserLevel = new Controller();
+            String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
+            attributes.put("userlevel", currentUserLevel);
+            String deleteUser = req.queryParams().iterator().next();
+            String checkFunction = deleteUser.substring(0, 6);
+            System.out.println(checkFunction + "dikkop");
+            System.out.println(deleteUser + " dikkop2");
+
+            if(checkFunction.equals("usernames") ){
+                deleteUser= deleteUser.substring(7);
+                Controller databaseDeleteUser = new Controller();
+                databaseDeleteUser.DeleteUser(deleteUser);
+            }
+
+            req.session().attribute("message");
+
+            Controller checkUser = new Controller();
+            ArrayList<String> UserData = checkUser.getUserData(currentUser);
+            attributes.put("firstname", UserData.get(0));
+            attributes.put("lastname", UserData.get(1));
+            attributes.put("age", UserData.get(2));
+            attributes.put("emailaddress", UserData.get(3));
+            attributes.put("userpassword", UserData.get(4));
+            attributes.put("userstatus", UserData.get(5));
+            attributes.put("userid", UserData.get(6));
+            attributes.put("wishlist", UserData.get(7));
+
+            String buttonuser = req.queryParams().iterator().next();
+
+            Controller getWishlistData = new Controller();
+
+            System.out.println(buttonuser + " Shamala");
+            Controller checkWishlistStatus = new Controller();
+            if (buttonuser.equals("makewishlistpublic")) {
+                System.out.println(buttonuser + " Shamala2");
+                checkWishlistStatus.setWishlistToPublic(currentUser);
+            }
+            if (buttonuser.equals("makewishlistprivate")){
+                System.out.println(buttonuser +" Shamala3");
+            }
+            if (buttonuser.equals(buttonuser)){
+                System.out.println(buttonuser.substring(8) + " shamala4");
+                getWishlistData.getWishlistinfo(buttonuser.substring(8));
+                System.out.println(buttonuser + " shamala5");
+            }
+
+
+            return modelAndView(attributes, "Webshop/Favourite.vm");
+        },new VelocityTemplateEngine());
+    }
 }
 

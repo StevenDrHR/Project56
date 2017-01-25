@@ -108,7 +108,7 @@
                 </div>
 
                 <div class="col-md-12">
-                    <form class="form3" method='POST' action='/Profile'>
+                    <form class="form3" method='POST' action='/Otherwishlist'>
                         <table border="1" style="width:100%" id="alltables">
 
                             <tbody>
@@ -176,7 +176,7 @@
     var prc = cleanstring.split(", ");
 
 
-    function WishlistContent() {
+
         document.getElementById('main').innerHTML =
                 '<h1 align="center">Wish List</h1><br> <p align="center">This is the wish list of : ${CurrentUser}</p>';
 
@@ -219,7 +219,7 @@
                 cell3.innerHTML = typ[i];
                 cell4.innerHTML = prc[i];
                 once = 2;
-            }
+
         }
     }
 </script>
@@ -229,7 +229,6 @@
     var dirtystring = "${usernames}";
     var cleanstring = dirtystring.substr(0, dirtystring.length)
     var usrnm = cleanstring.split(", ");
-
 
 
     function AllWishlistContent() {
@@ -293,11 +292,6 @@
     }
 </script>
 
-<script>
-    if("${message}" != "null" ){
-        window.alert("${message}");
-    }
-</script>
 
 <script>
     if("${userlevel}" == "admin"){

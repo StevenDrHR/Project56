@@ -16,6 +16,11 @@ public class Main {
         createPage.RenderProfileView();
         createPage.RenderAddProductView();
         createPage.RenderShoppingcartView();
+        createPage.RenderAllWishlistView();
+        createPage.RenderOrderHistoryView();
+        createPage.RenderOwnWishlistView();
+        createPage.RenderOtherWishlistView();
+        createPage.RenderFavouriteView();
     }
 
 }

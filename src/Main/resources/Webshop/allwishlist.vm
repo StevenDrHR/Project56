@@ -108,7 +108,7 @@
                 </div>
 
                 <div class="col-md-12">
-                    <form class="form3" method='POST' action='/Profile'>
+                    <form class="form3" method='POST' action='/Allwishlist'>
                         <table border="1" style="width:100%" id="alltables">
 
                             <tbody>
@@ -232,41 +232,38 @@
 
 
 
-    function AllWishlistContent() {
-
-        if (once == 1){
-            for (var i = 0; i < usrnm.length; i++) {
-                if (i == 0) {
-                    table = document.getElementById("alltables");
-                    row = table.insertRow(0);
-                    row.setAttribute("name", "info");
-                    cell1 = row.insertCell(0);
-
-                    cell1.innerHTML = "<b>Username</b>";
-
-                }
+    if (once == 1){
+        for (var i = 0; i < usrnm.length; i++) {
+            if (i == 0) {
                 table = document.getElementById("alltables");
-                userbutton = document.createElement("button");
-
-                userbutton.setAttribute("name", "Username" + usrnm[i])
-                userbutton.setAttribute("type", "submit")
-//                userbutton.setAttribute("onclick", WishlistContent(usrnm[i]))
-                userbutton.innerHTML = usrnm[i];
-
-                //adding the row
-                row = table.insertRow(i + 1);
-                row.setAttribute("name", "" + usrnm[i]);
-                //            window.alert(mdl[i]);
-
-                //making the amount of values in a row
+                row = table.insertRow(0);
+                row.setAttribute("name", "info");
                 cell1 = row.insertCell(0);
-                cell2 = row.insertCell(1);
 
-                //adding values
-                cell1.innerHTML = usrnm[i];
-                cell2.appendChild(userbutton);
-                once = 2;
+                cell1.innerHTML = "<b>Username</b>";
+
             }
+            table = document.getElementById("alltables");
+            userbutton = document.createElement("button");
+
+            userbutton.setAttribute("name", "Username" + usrnm[i])
+            userbutton.setAttribute("type", "submit")
+//                userbutton.setAttribute("onclick", WishlistContent(usrnm[i]))
+            userbutton.innerHTML = usrnm[i];
+
+            //adding the row
+            row = table.insertRow(i + 1);
+            row.setAttribute("name", "" + usrnm[i]);
+            //            window.alert(mdl[i]);
+
+            //making the amount of values in a row
+            cell1 = row.insertCell(0);
+            cell2 = row.insertCell(1);
+
+            //adding values
+            cell1.innerHTML = usrnm[i];
+            cell2.appendChild(userbutton);
+            once = 2;
         }
     }
 </script>
@@ -293,11 +290,7 @@
     }
 </script>
 
-<script>
-    if("${message}" != "null" ){
-        window.alert("${message}");
-    }
-</script>
+
 
 <script>
     if("${userlevel}" == "admin"){
