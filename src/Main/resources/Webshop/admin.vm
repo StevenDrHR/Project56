@@ -63,6 +63,10 @@
             <div class="col-md-3">
 
                 <h4>Welcome : ${CurrentUser}</h4>
+                <div class="list-group">
+                    <a href="/AddProduct"><button class="list-group-item" type="button" name="addProduct">Add Product</button></a>
+                    <a href="/Graphs"><button class="list-group-item" type="button" name="Graphs">Graphs</button></a>
+                </div>
 
             </div>
 
@@ -73,7 +77,7 @@
                     <div class="col-md-12">
 
                        <form class="form3" method='POST' action='/Adminpage'>
-                            <button type="submit" name="addproduct_button"> add product</button></br>
+
                        <table style="width:100%" id="admintable" >
                            <tbody>
 
