@@ -1153,7 +1153,14 @@ public class View {
             Controller checkUserLevel = new Controller();
             String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
             attributes.put("userlevel", currentUserLevel);
-            req.session().attribute("message");
+            String variable =req.queryParams().iterator().next();
+            if(variable.contains("Favourite")){
+                Controller AddFavourite = new Controller();
+                System.out.println(variable.substring(10, 11) +" "+ AddFavourite.getUserData(currentUser).get(6) + " Shamlalalalalalalalalalalalalalal");
+                AddFavourite.addFavourite(variable.substring(10,11), AddFavourite.getUserData(currentUser).get(6));
+                res.redirect("/Favourite");
+            }
+            
 
             Controller checkUser = new Controller();
             ArrayList<String> UserData = checkUser.getUserData(currentUser);
@@ -1175,55 +1182,9 @@ public class View {
             String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
             attributes.put("userlevel", currentUserLevel);
 
-            if(req.session().attribute("message") == null ){
-                attributes.put("message", "null");
-            }
-            else{
-                attributes.put("message", req.session().attribute("message"));
-                req.session().attribute("message", null);
-            }
-
-            Controller checkUser = new Controller();
-            ArrayList<String> UserData = checkUser.getUserData(currentUser);
-            attributes.put("firstname", UserData.get(0));
-            attributes.put("lastname", UserData.get(1));
-            attributes.put("age", UserData.get(2));
-            attributes.put("emailaddress", UserData.get(3));
-            attributes.put("userpassword", UserData.get(4));
-            attributes.put("userstatus", UserData.get(5));
-            attributes.put("userid", UserData.get(6));
-            attributes.put("wishlist", UserData.get(7));
-
-            Controller getAllUsers = new Controller();
-            List getallusers = getAllUsers.getPublicusers(currentUser);
-            for (int i = 0; i < getallusers.size(); i ++) {
-                if (i == 0) {
-                    attributes.put("usernames", getallusers.get(i));
-                }
-                else {
-                    attributes.put("usernames", getallusers.get(i) + ", " + attributes.get("usernames"));
-                }
-            }
-
-            Controller getWishlistData = new Controller();
-            List getwishlistdata = getWishlistData.getWishlistinfo(currentUser);
-            for (int i = 0; i < getwishlistdata.size(); i += 4){
-                int j = 1;
-                int k = 2;
-                int l = 3;
-                if (i < 4) {
-                    attributes.put("model", getwishlistdata.get(i));
-                    attributes.put("brand", getwishlistdata.get(j));
-                    attributes.put("type", getwishlistdata.get(k));
-                    attributes.put("price", getwishlistdata.get(l));
-                }
-                else{
-                    attributes.put("model", getwishlistdata.get(i) + ", " + attributes.get("model"));
-                    attributes.put("brand", getwishlistdata.get(i) + ", " + attributes.get("brand"));
-                    attributes.put("type", getwishlistdata.get(i) + ", " + attributes.get("type"));
-                    attributes.put("price", getwishlistdata.get(i) + ", " + attributes.get("price"));
-                }
-            }
+            Controller getFavourites = new Controller();
+            ArrayList<String> favourites = getFavourites.getFavourites(getFavourites.getUserData(currentUser).get(6));
+            attributes.put("favourites", favourites);
 
             System.out.println(currentUserLevel);
             return modelAndView(attributes, "Webshop/Favourite.vm");
@@ -1263,23 +1224,6 @@ public class View {
             attributes.put("wishlist", UserData.get(7));
 
             String buttonuser = req.queryParams().iterator().next();
-
-            Controller getWishlistData = new Controller();
-
-            System.out.println(buttonuser + " Shamala");
-            Controller checkWishlistStatus = new Controller();
-            if (buttonuser.equals("makewishlistpublic")) {
-                System.out.println(buttonuser + " Shamala2");
-                checkWishlistStatus.setWishlistToPublic(currentUser);
-            }
-            if (buttonuser.equals("makewishlistprivate")){
-                System.out.println(buttonuser +" Shamala3");
-            }
-            if (buttonuser.equals(buttonuser)){
-                System.out.println(buttonuser.substring(8) + " shamala4");
-                getWishlistData.getWishlistinfo(buttonuser.substring(8));
-                System.out.println(buttonuser + " shamala5");
-            }
 
 
             return modelAndView(attributes, "Webshop/Favourite.vm");

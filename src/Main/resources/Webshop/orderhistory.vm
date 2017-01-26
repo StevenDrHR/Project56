@@ -162,7 +162,7 @@
         for(var j = 0; j < orders.length / 3; j++ ){
 
             favouritebutton = document.createElement("button");
-            favouritebutton.setAttribute("name", "Favourite")
+            favouritebutton.setAttribute("name", "Favourite "+ orders[i + 2])
             favouritebutton.setAttribute("type", "submit")
             favouritebutton.innerHTML = "Add to Favourite";
 

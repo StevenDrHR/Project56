@@ -133,6 +133,21 @@ public class Controller {
         }
         return list;
     }
+    public ArrayList<String> getFavourites(String userid) throws SQLException {
+        ArrayList<String> list = new ArrayList<String>();
+        connection();
+        String Querry = "Select p.brand, p.modal, p.car_type, p.price from products p, favourites f where p.productid = f.productid and f.userid = "+userid;
+        ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+        while(rs.next()){
+            list.add(rs.getString("brand"));
+            list.add(rs.getString("modal"));
+            list.add(rs.getString("car_type"));
+            list.add(rs.getString("price"));
+
+        }
+        return list;
+    }
+
 
     public List<String> getMostSold() throws SQLException {
         ArrayList<String> list = new ArrayList<String>();
@@ -449,6 +464,13 @@ public class Controller {
         return "Done";
     }
 
+    public String addFavourite(String productid, String userid) throws SQLException{
+        connection();
+        String Querry = "INSERT INTO favourites (productid,userid) VALUES ("+productid+", "+userid+");";
+        connection.prepareStatement(Querry).executeUpdate();
+        return "Done";
+    }
+
     public ArrayList<String> getUserData(String username) throws SQLException {
         connection();
         String Querry = "Select * from users where username ='"+username+"';";
@@ -480,7 +502,7 @@ public class Controller {
         }
         return result;
     }
-    
+
 
     public String setToWishlist(String userid, String productid) throws SQLException {
         connection();
