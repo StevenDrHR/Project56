@@ -1,0 +1,283 @@
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/data.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <style> table, tr, tbody, td {border: 1px solid black; }</style>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Shop Homepage - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/shop-homepage.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script>
+
+    </script>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://localhost:4567/Home">Homepage</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <script src="js/nav.js"></script>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-3">
+
+                <h4>Welcome : ${CurrentUser}</h4>
+
+            </div>
+
+            <div class="col-md-9">
+
+                <div class="row carousel-holder">
+
+                    <div class="col-md-12 id = "container">
+
+
+
+                 <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+                 <table id="datatable" style="display:none;">
+                 </table>
+
+                       <form class="formproduct" method='POST' action='/Graphs'>
+                       <button type="submit" name="user_button"> Users</button></br>
+                       <button type="submit" name="car_type_button"> car type</button></br>
+                       <button type="submit" name="most_sold_button"> most sold</button></br>
+                       <button type="submit" name="return_button"> return</button></br>
+                       </form>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+    <div class="container">
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Shamala Webshop 2016</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+            if("${userlevel}" == "admin"){
+                  var a = document.querySelector("#adminvisibility");
+                  a.style.display = "initial";
+              }
+    </script>
+
+    <script>
+     if("${variable}" == "User"){
+     var dirtystring = "${users}";
+     var cleanstring = dirtystring.substr(1, dirtystring.length - 2)
+     var users = cleanstring.split(", ");
+
+     var dirtystring = "${admins}";
+     var cleanstring = dirtystring.substr(1, dirtystring.length - 2)
+     var admins = cleanstring.split(", ");
+
+     table = document.getElementById("datatable");
+     //adding the row
+     row = table.insertRow(0);
+     row.setAttribute("name", "Accounts");
+     //making the amount of values in a row
+     cell1 = row.insertCell(0);
+     cell2 = row.insertCell(1);
+     //adding values
+     cell1.innerHTML = "";
+     cell2.innerHTML = "Accounts";
+
+     row = table.insertRow(1);
+     row.setAttribute("name", "Accounts");
+     //making the amount of values in a row
+     cell1 = row.insertCell(0);
+     cell2 = row.insertCell(1);
+     //adding values
+     cell1.innerHTML = "Users";
+     cell2.innerHTML = users.length;
+
+     row = table.insertRow(2);
+     row.setAttribute("name", "Accounts");
+     //making the amount of values in a row
+     cell1 = row.insertCell(0);
+     cell2 = row.insertCell(1);
+     //adding values
+     cell1.innerHTML = "Admins";
+     cell2.innerHTML = admins.length;
+     }
+     </script>
+     <script>
+     if("${variable}" == "Car_Type"){
+         var dirtystring = "${cartype}";
+         var cleanstring = dirtystring.substr(1, dirtystring.length - 2)
+         var car_type = cleanstring.split(", ");
+
+         table = document.getElementById("datatable");
+         //adding the row
+         row = table.insertRow(0);
+         row.setAttribute("name", "Accounts");
+         //making the amount of values in a row
+         cell1 = row.insertCell(0);
+         cell2 = row.insertCell(1);
+         //adding values
+         cell1.innerHTML = "";
+         cell2.innerHTML = "Car_type";
+         for (var i = 0; i < car_type.length; i = i + 2) {
+             if (i == 0) {
+                 row = table.insertRow(1);
+                 row.setAttribute("name", "Accounts");
+                 cell1 = row.insertCell(0);
+                 cell2 = row.insertCell(1)
+                 cell1.innerHTML = car_type[0];
+                 cell2.innerHTML = car_type[1]
+             }
+             else {
+                 row = table.insertRow(i / 2 + 1);
+                 row.setAttribute("name", "Accounts");
+                 //making the amount of values in a row
+                 cell1 = row.insertCell(0);
+                 cell2 = row.insertCell(1);
+                 //adding values
+                 cell1.innerHTML = car_type[i];
+                 cell2.innerHTML = car_type[i + 1];
+             }
+         }
+
+     }
+     </script>
+     <script>
+          if("${variable}" == "Most_Sold"){
+              var dirtystring = "${mostsold}";
+              var cleanstring = dirtystring.substr(1, dirtystring.length - 2)
+              var most_sold = cleanstring.split(", ");
+
+              table = document.getElementById("datatable");
+              //adding the row
+              row = table.insertRow(0);
+              row.setAttribute("name", "Accounts");
+              //making the amount of values in a row
+              cell1 = row.insertCell(0);
+              cell2 = row.insertCell(1);
+              //adding values
+              cell1.innerHTML = "";
+              cell2.innerHTML = "Most Sold";
+              for (var i = 0; i < most_sold.length; i = i + 3) {
+                  if (i == 0) {
+                      row = table.insertRow(1);
+                      row.setAttribute("name", "Accounts");
+                      cell1 = row.insertCell(0);
+                      cell2 = row.insertCell(1)
+                      cell1.innerHTML = most_sold[1] + " "+most_sold[0];
+                      cell2.innerHTML = most_sold[2]
+                  }
+                  else {
+                      row = table.insertRow(i / 3 + 1);
+                      row.setAttribute("name", "Accounts");
+                      //making the amount of values in a row
+                      cell1 = row.insertCell(0);
+                      cell2 = row.insertCell(1);
+                      //adding values
+                      cell1.innerHTML = most_sold[i+ 1]+" "+most_sold[i];
+                      cell2.innerHTML = most_sold[i + 2];
+                  }
+              }
+
+          }
+          </script>
+
+
+<script type='text/javascript'>
+    $(function () {
+        Highcharts.chart('container', {
+            data: {
+                table: 'datatable'
+            },
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'The current stock per game'
+            },
+            yAxis: {
+                allowDecimals: false,
+                title: {
+                    text: 'Stock'
+                }
+            },
+            tooltip: {
+                formatter: function () {
+                    return '<b>Game: ' + this.point.name + '</b><br/>' +
+                            'Stock: ' + this.point.y;
+                }
+            }
+        });
+    });
+</script>
+
+
+</body>
+
+</html>

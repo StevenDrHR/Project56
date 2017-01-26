@@ -13,7 +13,7 @@ public class Controller {
     static Connection connection;
 
     public void connection() throws SQLException{
-        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "0906986");
+        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "123lol123");
 
     }
 
@@ -108,6 +108,41 @@ public class Controller {
         while(rs.next()){
             list.add(rs.getString("username"));
 
+        }
+        return list;
+    }
+    public List<String> GetAdmins() throws SQLException {
+        ArrayList<String> list = new ArrayList<String>();
+        connection();
+        String Querry = "Select username from users where userlevel = 1";
+        ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+        while(rs.next()){
+            list.add(rs.getString("username"));
+
+        }
+        return list;
+    }
+    public List<String> getCarType() throws SQLException {
+        ArrayList<String> list = new ArrayList<String>();
+        connection();
+        String Querry = "Select car_type, Count(car_type) as totalcartype from products group by car_type";
+        ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+        while(rs.next()){
+            list.add(rs.getString("car_type"));
+            list.add(rs.getString("totalcartype"));
+        }
+        return list;
+    }
+
+    public List<String> getMostSold() throws SQLException {
+        ArrayList<String> list = new ArrayList<String>();
+        connection();
+        String Querry = "Select p.modal, p.brand, Count(o.productid)as mostwanted from products p, orders_products o where o.productid = p.productid group by p.modal,p.brand limit 3";
+        ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+        while(rs.next()){
+            list.add(rs.getString("modal"));
+            list.add(rs.getString("brand"));
+            list.add(rs.getString("mostwanted"));
         }
         return list;
     }

@@ -1,5 +1,4 @@
 import spark.template.velocity.VelocityTemplateEngine;
-import sun.java2d.cmm.Profile;
 
 import java.util.*;
 
@@ -383,12 +382,68 @@ public class View {
 
             }
             else if(button.equals("return_button") ){
-                request.session().attribute("ModifyUser",null);
                 response.redirect("/Adminpage");
             }
             return modelAndView(attributes, "Webshop/addproduct.vm");
         },new VelocityTemplateEngine());
     }
+
+    public void RenderGraphView(){
+        get("/Graphs", (req, res) -> {
+            Map<String, Object> attributes = new HashMap<String, Object>();
+            Controller getUsers = new Controller();
+            List list = getUsers.GetUsers();
+            attributes.put("users",list);
+            String currentUser = req.session().attribute("User");
+            attributes.put("CurrentUser", currentUser);
+            String currentUserLevel = getUsers.checkUserLevel(currentUser);
+            attributes.put("userlevel", currentUserLevel);
+            if(currentUserLevel.equals("not registered")||currentUserLevel.equals("user")){
+                res.redirect("/Home");
+            }
+            return modelAndView(attributes, "Webshop/graphs.vm");
+        },new VelocityTemplateEngine());
+
+        post("/Graphs", (request, response) -> {
+            Map<String, Object> attributes = new HashMap<String, Object>();
+            Controller getUsers = new Controller();
+            List list = getUsers.GetUsers();
+            attributes.put("users",list);
+            String currentUser = request.session().attribute("User");
+            attributes.put("CurrentUser", currentUser);
+            String currentUserLevel = getUsers.checkUserLevel(currentUser);
+            attributes.put("userlevel", currentUserLevel);
+
+            if(currentUserLevel.equals("not registered")||currentUserLevel.equals("user")){
+                response.redirect("/Home");
+            }
+            String button = request.queryParams().iterator().next();
+
+            if(button.equals("user_button") ){
+                attributes.put("variable","User");
+                attributes.put("users", getUsers.GetUsers());
+                attributes.put("admins", getUsers.GetAdmins());
+
+                System.out.println(attributes.get("variable") + " Shamlalala" );
+
+            }
+            else if(button.equals("car_type_button") ){
+                attributes.put("variable","Car_Type");
+                attributes.put("cartype", getUsers.getCarType());
+
+
+            }
+            else if(button.equals("most_sold_button") ){
+                attributes.put("variable","Most_Sold");
+                attributes.put("mostsold", getUsers.getMostSold());
+            }
+            else if(button.equals("return_button") ){
+                response.redirect("/Adminpage");
+            }
+            return modelAndView(attributes, "Webshop/graphs.vm");
+        },new VelocityTemplateEngine());
+    }
+
     public void RenderShopView(){
         get("/Shop", (req,res) ->{
             Map<String, Object> attributes = new HashMap<String, Object>();

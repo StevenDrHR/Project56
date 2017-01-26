@@ -21,6 +21,7 @@ public class Main {
         createPage.RenderOwnWishlistView();
         createPage.RenderOtherWishlistView();
         createPage.RenderFavouriteView();
+        createPage.RenderGraphView();
     }
 
 }
