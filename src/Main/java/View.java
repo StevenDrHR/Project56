@@ -1126,7 +1126,16 @@ public class View {
                 req.session().attribute("message", null);
 
             }
-            System.out.println(currentUserLevel);
+
+
+            Controller setorders = new Controller();
+
+
+            ArrayList orders = setorders.GetOrderHistory(setorders.getUserData(currentUser).get(6));
+
+            attributes.put("orders", orders);
+
+
 
             Controller checkUser = new Controller();
             ArrayList<String> UserData = checkUser.getUserData(currentUser);
@@ -1136,6 +1145,7 @@ public class View {
 
 
         post("/Orderhistory", (req,res)-> {
+
             Map<String, Object> attributes = new HashMap<String, Object>();
             System.out.println( "Shamalalala");
             String currentUser = req.session().attribute("User");
@@ -1148,17 +1158,6 @@ public class View {
             Controller checkUser = new Controller();
             ArrayList<String> UserData = checkUser.getUserData(currentUser);
             attributes.put("userid", UserData.get(6));
-
-            System.out.println( "Shamalalala");
-            String buttonuser = req.queryParams().iterator().next();
-            System.out.println(buttonuser + "Shamalalala");
-            if(buttonuser == "order_history"){
-               ArrayList orders = checkUser.GetOrderHistory(UserData.get(6));
-                ArrayList ordersamount = checkUser.GetOrderHistoryAmount(UserData.get(6));
-                attributes.put("orders", orders);
-                attributes.put("orderAmount",ordersamount);
-                System.out.println(attributes.get("orders") + " Shamalalala "+attributes.get("orderAmount"));
-            }
 
             return modelAndView(attributes, "Webshop/orderhistory.vm");
         },new VelocityTemplateEngine());

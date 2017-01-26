@@ -468,31 +468,19 @@ public class Controller {
         return result;
     }
 
-    public ArrayList<String> GetOrderHistory(String userid) throws SQLException {
+    public ArrayList GetOrderHistory(String userid) throws SQLException {
         connection();
         String Querry = "Select  op.orderid , op.amount , op.productid from orders_products op,orders o where op.orderid = o.orderid and o.userid = "+userid+";";
         ResultSet rs = connection.prepareStatement(Querry).executeQuery();
-        ArrayList<String> result = new ArrayList<>();
-        if (rs.next()) {
-            result.add(rs.getString("orderid"));
-            result.add(rs.getString("amount"));
-            result.add(rs.getString("productid"));
+        ArrayList result = new ArrayList<>();
+        while(rs.next()) {
+            result.add(rs.getInt("orderid"));
+            result.add(rs.getInt("amount"));
+            result.add(rs.getInt("productid"));
         }
         return result;
     }
-
-    public ArrayList<String> GetOrderHistoryAmount(String userid) throws SQLException {
-        connection();
-        String Querry = "Select op.orderid,Count(op.orderid)as productamount from orders_products op , orders o where op.orderid = o.orderid and o.userid = "+userid+" group by op.orderid";
-        ResultSet rs = connection.prepareStatement(Querry).executeQuery();
-        ArrayList<String> result = new ArrayList<>();
-        if (rs.next()) {
-            result.add(rs.getString("orderid"));
-            result.add(rs.getString("productamount"));
-        }
-        return result;
-    }
-
+    
 
     public String setToWishlist(String userid, String productid) throws SQLException {
         connection();

@@ -143,33 +143,41 @@
 
 <script>
     var dirtystring = "${orders}";
-    var cleanstring = dirtystring.substr(0, dirtystring.length)
+    var cleanstring = dirtystring.substr(1, dirtystring.length-2)
     var orders = cleanstring.split(", ");
 
-    var dirtystring = "${orderAmount}";
-    var cleanstring = dirtystring.substr(0, dirtystring.length)
-    var orderAmount = cleanstring.split(", ");
 
     var count = 1;
-    var count2= 0;
+    var count2= 1;
 
     table = document.getElementById("alltables");
     row = table.insertRow(0);
     row.setAttribute("name", "info");
     cell1 = row.insertCell(0);
     cell2 = row.insertCell(1);
-    cell1.innerHTML = "<b>orderid</b>" + orderAmount;
+    cell1.innerHTML = "<b>orderid</b>" + orders;
     cell2.innerHTML = "<b>products</b>";
 
-    for (var i = 0; i < orders.length; i=i+3) {
-        for(var j = 0; j < orderAmount[count2]; j++ ){
-         table = document.getElementById("alltables");
+    for( var i = 0; i < orders.length; i += 0) {
+        for(var j = 0; j < orders.length / 3; j++ ){
+
+            favouritebutton = document.createElement("button");
+            favouritebutton.setAttribute("name", "Favourite")
+            favouritebutton.setAttribute("type", "submit")
+            favouritebutton.innerHTML = "Add to Favourite";
+
             row = table.insertRow(count);
             row.setAttribute("name", "info");
             cell1 = row.insertCell(0);
             cell2 = row.insertCell(1);
+            cell3 = row.insertCell(2);
             cell1.innerHTML = orders[i];
             cell2.innerHTML = orders[i + 1] + " "+ orders[i+2];
+            cell3.appendChild(favouritebutton);
+
+
+            i  = i + 3;
+
             count = count + 1;
         }
         count2 = count2 + 2
