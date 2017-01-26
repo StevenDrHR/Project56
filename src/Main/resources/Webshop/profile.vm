@@ -61,10 +61,11 @@
             <br>-->
             <p class="lead">Profile</p>
             <div class="list-group" method="POST" action="/Profile">
-                <a href="/Orderhistory"><button class="list-group-item" type="button" name="addProduct">Order history</button></a>
-                <a href="/Ownwishlist"><button class="list-group-item" type="button" name="Graphs">Own wishlist</button></a>
-                <a href="/Favourite"><button class="list-group-item" type="button" name="Graphs">Favourite</button></a>
-                <a href="/Allwishlist"><button class="list-group-item" type="button" name="Graphs">All public wishlist</button></a>
+
+                <a href="/Orderhistory"><button class="list-group-item" type="button" name="order_history">Order history</button></a>
+                <a href="/Ownwishlist"><button class="list-group-item" type="button" name="wishlist">Own wishlist</button></a>
+                <a href="/Favourite"><button class="list-group-item" type="button" name="favourite">Favourite</button></a>
+                <a href="/Allwishlist"><button class="list-group-item" type="button" name="public_wishlist">All public wishlist</button></a>
                 <a href="/Profile" class="list-group-item">Back To Profile</a>
                 <br>
             </div>

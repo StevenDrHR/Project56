@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28c3abc2-7d43-4a2f-8c8e-8846f60266aa" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Main/resources/Webshop/graphs.vm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/java/Controller.java" afterPath="$PROJECT_DIR$/src/Main/java/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/java/Main.java" afterPath="$PROJECT_DIR$/src/Main/java/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/java/View.java" afterPath="$PROJECT_DIR$/src/Main/java/View.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/resources/Webshop/allwishlist.vm" afterPath="$PROJECT_DIR$/src/Main/resources/Webshop/allwishlist.vm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/resources/Webshop/favourite.vm" afterPath="$PROJECT_DIR$/src/Main/resources/Webshop/favourite.vm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/resources/Webshop/orderhistory.vm" afterPath="$PROJECT_DIR$/src/Main/resources/Webshop/orderhistory.vm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/resources/Webshop/otherwishlist.vm" afterPath="$PROJECT_DIR$/src/Main/resources/Webshop/otherwishlist.vm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/resources/Webshop/ownwishlist.vm" afterPath="$PROJECT_DIR$/src/Main/resources/Webshop/ownwishlist.vm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/resources/Webshop/profile.vm" afterPath="$PROJECT_DIR$/src/Main/resources/Webshop/profile.vm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/velocity.log" afterPath="$PROJECT_DIR$/velocity.log" />
     </list>
     <list id="e3ab461a-6351-49f5-82b7-fb4599d094d7" name="Rejected commit: Default" comment="Add data to adresses and users" />
@@ -33,7 +37,7 @@
       <file leaf-file-name="shop-homepage.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/css/shop-homepage.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="503">
+            <state relative-caret-position="6868">
               <caret line="404" column="17" selection-start-line="404" selection-start-column="17" selection-end-line="404" selection-end-column="17" />
               <folding />
             </state>
@@ -43,18 +47,8 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/java/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1519">
-              <caret line="143" column="40" selection-start-line="143" selection-start-column="40" selection-end-line="143" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="graphs.vm" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/graphs.vm">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-51">
-              <caret line="213" column="13" selection-start-line="213" selection-start-column="13" selection-end-line="213" selection-end-column="13" />
+            <state relative-caret-position="426">
+              <caret line="485" column="69" selection-start-line="485" selection-start-column="69" selection-end-line="485" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -63,8 +57,70 @@
       <file leaf-file-name="View.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main/java/View.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="602">
-              <caret line="440" column="48" selection-start-line="440" selection-start-column="48" selection-end-line="440" selection-end-column="48" />
+            <state relative-caret-position="550">
+              <caret line="1161" column="0" selection-start-line="1161" selection-start-column="0" selection-end-line="1161" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="favourite.vm" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/favourite.vm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="63" column="105" selection-start-line="63" selection-start-column="105" selection-end-line="63" selection-end-column="105" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="otherwishlist.vm" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/otherwishlist.vm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="452">
+              <caret line="63" column="105" selection-start-line="63" selection-start-column="105" selection-end-line="63" selection-end-column="105" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ownwishlist.vm" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/ownwishlist.vm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="63" column="105" selection-start-line="63" selection-start-column="105" selection-end-line="63" selection-end-column="105" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="allwishlist.vm" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/allwishlist.vm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="63" column="105" selection-start-line="63" selection-start-column="105" selection-end-line="63" selection-end-column="105" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="orderhistory.vm" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/orderhistory.vm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="69" column="18" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profile.vm" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/profile.vm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="69" column="20" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -166,18 +222,18 @@
         <option value="$PROJECT_DIR$/src/Main/resources/Webshop/shoppingcart.vm" />
         <option value="$PROJECT_DIR$/src/Main/resources/Webshop/shop.vm" />
         <option value="$PROJECT_DIR$/src/Main/resources/Webshop/admin.vm" />
-        <option value="$PROJECT_DIR$/src/Main/resources/Webshop/favourite.vm" />
-        <option value="$PROJECT_DIR$/src/Main/resources/Webshop/orderhistory.vm" />
         <option value="$PROJECT_DIR$/src/Main/resources/Webshop/alllwishlist.vm" />
-        <option value="$PROJECT_DIR$/src/Main/resources/Webshop/ownwishlist.vm" />
-        <option value="$PROJECT_DIR$/src/Main/resources/Webshop/allwishlist.vm" />
-        <option value="$PROJECT_DIR$/src/Main/resources/Webshop/otherwishlist.vm" />
         <option value="$PROJECT_DIR$/src/Main/resources/Webshop/css/shop-homepage.css" />
-        <option value="$PROJECT_DIR$/src/Main/resources/Webshop/profile.vm" />
         <option value="$PROJECT_DIR$/src/Main/resources/Webshop/Graphs.vm" />
         <option value="$PROJECT_DIR$/src/Main/java/Main.java" />
-        <option value="$PROJECT_DIR$/src/Main/java/Controller.java" />
         <option value="$PROJECT_DIR$/src/Main/resources/Webshop/graphs.vm" />
+        <option value="$PROJECT_DIR$/src/Main/java/Controller.java" />
+        <option value="$PROJECT_DIR$/src/Main/resources/Webshop/favourite.vm" />
+        <option value="$PROJECT_DIR$/src/Main/resources/Webshop/otherwishlist.vm" />
+        <option value="$PROJECT_DIR$/src/Main/resources/Webshop/ownwishlist.vm" />
+        <option value="$PROJECT_DIR$/src/Main/resources/Webshop/allwishlist.vm" />
+        <option value="$PROJECT_DIR$/src/Main/resources/Webshop/profile.vm" />
+        <option value="$PROJECT_DIR$/src/Main/resources/Webshop/orderhistory.vm" />
         <option value="$PROJECT_DIR$/src/Main/java/View.java" />
       </list>
     </option>
@@ -230,9 +286,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -301,6 +354,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -984,14 +1040,21 @@
       <option name="project" value="LOCAL" />
       <updated>1485358044825</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="finallly done please kill me">
+      <created>1485392512727</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1485392512727</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="100265000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1055,7 +1118,8 @@
     <MESSAGE value="wishlist db knop" />
     <MESSAGE value="hehe eindelijk" />
     <MESSAGE value="i just jizzed" />
-    <option name="LAST_COMMIT_MESSAGE" value="i just jizzed" />
+    <MESSAGE value="finallly done please kill me" />
+    <option name="LAST_COMMIT_MESSAGE" value="finallly done please kill me" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1257,58 +1321,10 @@
     <entry file="file://$PROJECT_DIR$/../Project56 backup/Project56 v0.8/src/Main/resources/Webshop/otherwishlist.vm" />
     <entry file="file://$PROJECT_DIR$/../Project56 backup/Project56 v0.8/src/Main/resources/Webshop/ownwishlist.vm" />
     <entry file="file://$PROJECT_DIR$/../Project56 backup/Project56 v0.8/src/Main/java/View.java" />
-    <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/favourite.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="67" column="78" selection-start-line="67" selection-start-column="78" selection-end-line="67" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/orderhistory.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="60" column="19" selection-start-line="60" selection-start-column="19" selection-end-line="60" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/ownwishlist.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/allwishlist.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1870">
-          <caret line="110" column="74" selection-start-line="110" selection-start-column="74" selection-end-line="110" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/otherwishlist.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1224">
-          <caret line="72" column="59" selection-start-line="72" selection-start-column="59" selection-end-line="72" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/profile.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4743">
-          <caret line="279" column="32" selection-start-line="279" selection-start-column="32" selection-end-line="279" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../Project56-master/src/Main/java/ViewController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1316,13 +1332,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="136" column="0" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/css/shop-homepage.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
+        <state relative-caret-position="6868">
           <caret line="404" column="17" selection-start-line="404" selection-start-column="17" selection-end-line="404" selection-end-column="17" />
           <folding />
         </state>
@@ -1338,25 +1353,75 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/graphs.vm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
+        <state relative-caret-position="3621">
           <caret line="213" column="13" selection-start-line="213" selection-start-column="13" selection-end-line="213" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/favourite.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="63" column="105" selection-start-line="63" selection-start-column="105" selection-end-line="63" selection-end-column="105" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/otherwishlist.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="63" column="105" selection-start-line="63" selection-start-column="105" selection-end-line="63" selection-end-column="105" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/ownwishlist.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="63" column="105" selection-start-line="63" selection-start-column="105" selection-end-line="63" selection-end-column="105" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/allwishlist.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="63" column="105" selection-start-line="63" selection-start-column="105" selection-end-line="63" selection-end-column="105" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/profile.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="69" column="20" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/orderhistory.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="69" column="18" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/java/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1519">
-          <caret line="143" column="40" selection-start-line="143" selection-start-column="40" selection-end-line="143" selection-end-column="40" />
+        <state relative-caret-position="426">
+          <caret line="485" column="69" selection-start-line="485" selection-start-column="69" selection-end-line="485" selection-end-column="69" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/java/View.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="602">
-          <caret line="440" column="48" selection-start-line="440" selection-start-column="48" selection-end-line="440" selection-end-column="48" />
-          <folding />
+        <state relative-caret-position="550">
+          <caret line="1161" column="0" selection-start-line="1161" selection-start-column="0" selection-end-line="1161" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
