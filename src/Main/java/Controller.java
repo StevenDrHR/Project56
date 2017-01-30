@@ -140,8 +140,8 @@ public class Controller extends TestCase {
         String Querry = "Select p.brand, p.modal, p.car_type, p.price from products p, favourites f where p.productid = f.productid and f.userid = "+userid;
         ResultSet rs = connection.prepareStatement(Querry).executeQuery();
         while(rs.next()){
-            list.add(rs.getString("brand"));
             list.add(rs.getString("modal"));
+            list.add(rs.getString("brand"));
             list.add(rs.getString("car_type"));
             list.add(rs.getString("price"));
 

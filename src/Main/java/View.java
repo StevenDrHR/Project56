@@ -475,9 +475,20 @@ public class View {
         post("/Shop", (req,res)-> {
             Map<String, Object> attributes = new HashMap<String, Object>();
 
+
             String LoginUsername = req.queryParams("LoginUsername");
             String LoginPassword = req.queryParams("LoginPassword");
             String variabel = req.queryParams().iterator().next();
+            if (req.session().attribute("User") == null)
+            {req.session().attribute("User", " ");}
+
+            Controller getUsers = new Controller();
+            List list = getUsers.GetUsers();
+            attributes.put("users",list);
+            String currentUser = req.session().attribute("User");
+            attributes.put("CurrentUser", currentUser);
+            String currentUserLevel = getUsers.checkUserLevel(currentUser);
+            attributes.put("userlevel", currentUserLevel);
 
             if (variabel.equals("OrderedBrands")) {
                 Controller getProducts = new Controller();
@@ -660,17 +671,6 @@ public class View {
                 else {
                     req.session().attribute("User",LoginUser);}
             }
-            else {
-                System.out.println(variabel + " Shamala3");
-                req.session().attribute("User", "");}
-
-            Controller getUsers = new Controller();
-
-            String currentUser = req.session().attribute("User");
-            attributes.put("CurrentUser", currentUser);
-            String currentUserLevel = getUsers.checkUserLevel(currentUser);
-            attributes.put("userlevel", currentUserLevel);
-
             return modelAndView(attributes, "Webshop/Shop.vm");
         },new VelocityTemplateEngine());
     }
