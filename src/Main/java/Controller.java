@@ -1,3 +1,5 @@
+import junit.framework.TestCase;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -9,11 +11,11 @@ import java.util.List;
 /**
  * Created by nilmor on 10/27/2016.
  */
-public class Controller {
+public class Controller extends TestCase {
     static Connection connection;
 
     public void connection() throws SQLException{
-        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "123lol123");
+        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "0906986");
 
     }
 

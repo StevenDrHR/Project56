@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28c3abc2-7d43-4a2f-8c8e-8846f60266aa" name="Default" comment="">
+    <list default="true" id="28c3abc2-7d43-4a2f-8c8e-8846f60266aa" name="Default" comment="Unit test Local">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/junit-4.10.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/junit_4_10.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Main/java/TestJUnit.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Main/java/TestRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my-app.iml" afterPath="$PROJECT_DIR$/my-app.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/java/Controller.java" afterPath="$PROJECT_DIR$/src/Main/java/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/java/View.java" afterPath="$PROJECT_DIR$/src/Main/java/View.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/resources/Webshop/favourite.vm" afterPath="$PROJECT_DIR$/src/Main/resources/Webshop/favourite.vm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/resources/Webshop/orderhistory.vm" afterPath="$PROJECT_DIR$/src/Main/resources/Webshop/orderhistory.vm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/velocity.log" afterPath="$PROJECT_DIR$/velocity.log" />
     </list>
     <list id="e3ab461a-6351-49f5-82b7-fb4599d094d7" name="Rejected commit: Default" comment="Add data to adresses and users" />
     <ignored path="project56.iws" />
@@ -21,6 +23,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -33,8 +36,83 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/java/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="135" column="20" selection-start-line="135" selection-start-column="20" selection-end-line="135" selection-end-column="20" />
+            <state relative-caret-position="-11082">
+              <caret line="54" column="19" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="44" />
+              <folding>
+                <marker date="1485772462220" expanded="true" signature="644:732" ph="Select usern... users" />
+                <marker date="1485772462220" expanded="true" signature="1028:1103" ph="Select usern... users" />
+                <marker date="1485772462220" expanded="true" signature="1261:1336" ph="Select usern... users" />
+                <marker date="1485772462220" expanded="true" signature="1652:1730" ph="Select usern... users" />
+                <marker date="1485772462220" expanded="true" signature="1907:1976" ph="Select email... users" />
+                <marker date="1485772462220" expanded="true" signature="2153:2502" ph="INSERT INTO users... " />
+                <marker date="1485772462220" expanded="true" signature="2746:2816" ph="Select useri... users" />
+                <marker date="1485772462220" expanded="true" signature="2979:3228" ph="INSERT INTO adress... " />
+                <marker date="1485772462220" expanded="true" signature="3368:3411" ph="Delete From " />
+                <marker date="1485772462220" expanded="true" signature="3760:3891" ph="Select useri... users" />
+                <marker date="1485772462220" expanded="true" signature="4070:4146" ph="Select useri... users" />
+                <marker date="1485772462220" expanded="true" signature="4501:4547" ph="Select usern... users" />
+                <marker date="1485772462220" expanded="true" signature="4900:4946" ph="Select usern... users" />
+                <marker date="1485772462220" expanded="true" signature="5300:5380" ph="Select car_t... products" />
+                <marker date="1485772462220" expanded="true" signature="5806:5928" ph="Select p.bra... products" />
+                <marker date="1485772462220" expanded="true" signature="6427:6583" ph="Select p.mod... products" />
+                <marker date="1485772462220" expanded="true" signature="7081:7107" ph="Select modal... products" />
+                <marker date="1485772462220" expanded="true" signature="7367:7412" ph="Select modal... products" />
+                <marker date="1485772462220" expanded="true" signature="7670:7718" ph="Select modal... products" />
+                <marker date="1485772462220" expanded="true" signature="7976:8026" ph="Select modal... products" />
+                <marker date="1485772462220" expanded="true" signature="8288:8333" ph="Select modal... products" />
+                <marker date="1485772462220" expanded="true" signature="8595:8641" ph="Select modal... products" />
+                <marker date="1485772462220" expanded="true" signature="9072:9098" ph="Select brand... products" />
+                <marker date="1485772462220" expanded="true" signature="9358:9403" ph="Select brand... products" />
+                <marker date="1485772462220" expanded="true" signature="9661:9709" ph="Select brand... products" />
+                <marker date="1485772462220" expanded="true" signature="9967:10017" ph="Select brand... products" />
+                <marker date="1485772462220" expanded="true" signature="10279:10324" ph="Select brand... products" />
+                <marker date="1485772462220" expanded="true" signature="10586:10632" ph="Select brand... products" />
+                <marker date="1485772462220" expanded="true" signature="11061:11090" ph="Select car_t... products" />
+                <marker date="1485772462220" expanded="true" signature="11353:11401" ph="Select car_t... products" />
+                <marker date="1485772462220" expanded="true" signature="11662:11713" ph="Select car_t... products" />
+                <marker date="1485772462220" expanded="true" signature="11974:12027" ph="Select car_t... products" />
+                <marker date="1485772462220" expanded="true" signature="12292:12340" ph="Select car_t... products" />
+                <marker date="1485772462220" expanded="true" signature="12605:12654" ph="Select car_t... products" />
+                <marker date="1485772462220" expanded="true" signature="13087:13113" ph="Select price... products" />
+                <marker date="1485772462220" expanded="true" signature="13372:13417" ph="Select price... products" />
+                <marker date="1485772462220" expanded="true" signature="13675:13723" ph="Select price... products" />
+                <marker date="1485772462220" expanded="true" signature="13981:14031" ph="Select price... products" />
+                <marker date="1485772462220" expanded="true" signature="14293:14338" ph="Select price... products" />
+                <marker date="1485772462220" expanded="true" signature="14600:14646" ph="Select price... products" />
+                <marker date="1485772462220" expanded="true" signature="15080:15110" ph="Select produ... products" />
+                <marker date="1485772462220" expanded="true" signature="15373:15422" ph="Select produ... products" />
+                <marker date="1485772462220" expanded="true" signature="15684:15736" ph="Select produ... products" />
+                <marker date="1485772462220" expanded="true" signature="15998:16052" ph="Select produ... products" />
+                <marker date="1485772462220" expanded="true" signature="16318:16367" ph="Select produ... products" />
+                <marker date="1485772462220" expanded="true" signature="16633:16683" ph="Select produ... products" />
+                <marker date="1485772462220" expanded="true" signature="17074:17115" ph="Select * fro... products" />
+                <marker date="1485772462220" expanded="true" signature="17614:17646" ph="Select descr... products" />
+                <marker date="1485772462220" expanded="true" signature="17957:18005" ph="Delete from " />
+                <marker date="1485772462220" expanded="true" signature="18217:18288" ph="Update users... " />
+                <marker date="1485772462220" expanded="true" signature="18495:18565" ph="Update users... " />
+                <marker date="1485772462220" expanded="true" signature="18774:18846" ph="Update users... " />
+                <marker date="1485772462220" expanded="true" signature="19057:19401" ph="INSERT INTO products... " />
+                <marker date="1485772462220" expanded="true" signature="19628:19704" ph="INSERT INTO favourites... " />
+                <marker date="1485772462220" expanded="true" signature="19926:19976" ph="Select * fro... users" />
+                <marker date="1485772462220" expanded="true" signature="20694:20817" ph="Select op.or... orders_products" />
+                <marker date="1485772462220" expanded="true" signature="21293:21369" ph="insert INTO wishlist... " />
+                <marker date="1485772462220" expanded="true" signature="21765:21934" ph="Select p.mod... products" />
+                <marker date="1485772462220" expanded="true" signature="22447:22533" ph="select usern... users" />
+                <marker date="1485772462220" expanded="true" signature="22847:22915" ph="UPDATE users... " />
+                <marker date="1485772462220" expanded="true" signature="23133:23202" ph="UPDATE users... " />
+                <marker date="1485772462220" expanded="true" signature="23533:23579" ph="INSERT INTO orders... " />
+                <marker date="1485772462220" expanded="true" signature="23662:23738" ph="Select order... orders" />
+                <marker date="1485772462220" expanded="true" signature="24035:24151" ph="INSERT INTO orders_products... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="565">
+              <caret line="47" column="34" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -43,23 +121,55 @@
       <file leaf-file-name="View.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/java/View.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="1198" column="40" selection-start-line="1198" selection-start-column="40" selection-end-line="1198" selection-end-column="40" />
+            <state relative-caret-position="198">
+              <caret line="120" column="49" selection-start-line="120" selection-start-column="16" selection-end-line="120" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1485446439691" expanded="false" signature="52904:52920" ph="&lt;~&gt;" />
-                <marker date="1485446439691" expanded="false" signature="55195:55211" ph="&lt;~&gt;" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="favourite.vm" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Modal.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main/java/Modal.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="206">
+              <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestJUnit.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main/java/TestJUnit.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="440">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestRunner.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main/java/TestRunner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="favourite.vm" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/favourite.vm">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="510">
               <caret line="177" column="36" selection-start-line="177" selection-start-column="36" selection-end-line="177" selection-end-column="36" />
-              <folding />
+              <folding>
+                <marker date="1485771085002" expanded="true" signature="710:725" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -67,7 +177,7 @@
       <file leaf-file-name="profile.vm" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/profile.vm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
+            <state relative-caret-position="2134">
               <caret line="97" column="20" selection-start-line="97" selection-start-column="20" selection-end-line="97" selection-end-column="20" />
               <folding />
             </state>
@@ -77,7 +187,7 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
+            <state relative-caret-position="376">
               <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
               <folding />
             </state>
@@ -132,8 +242,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Main/java/View/registerView.java" />
-        <option value="$PROJECT_DIR$/src/Main/java/Controller/RenderHTML.java" />
         <option value="$PROJECT_DIR$/src/Main/java/View/ViewController.java" />
         <option value="$PROJECT_DIR$/src/Main/java/ViewController.java" />
         <option value="$PROJECT_DIR$/src/Main/java/View/LoginView.java" />
@@ -180,16 +288,19 @@
         <option value="$PROJECT_DIR$/src/Main/resources/Webshop/allwishlist.vm" />
         <option value="$PROJECT_DIR$/src/Main/resources/Webshop/profile.vm" />
         <option value="$PROJECT_DIR$/src/Main/resources/Webshop/orderhistory.vm" />
-        <option value="$PROJECT_DIR$/src/Main/java/Controller.java" />
         <option value="$PROJECT_DIR$/src/Main/java/View.java" />
         <option value="$PROJECT_DIR$/src/Main/resources/Webshop/favourite.vm" />
+        <option value="$PROJECT_DIR$/src/Main/java/TestRunner.java" />
+        <option value="$PROJECT_DIR$/src/Main/java/Controller.java" />
+        <option value="$PROJECT_DIR$/src/Main/java/TestJUnit.java" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" />
-  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -204,10 +315,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1912" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1098" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -234,6 +345,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -269,14 +381,6 @@
               <option name="myItemId" value="Main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Webshop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -302,9 +406,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -358,10 +461,25 @@
       <recent name="C:\Users\nilmor\Desktop\Project56_Version1.1\src\Main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.TestRunner">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="Main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="my-app" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="TestRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="TestRunner" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -394,13 +512,8 @@
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="DEBUGGER_TYPE" value="Java" />
       <option name="USE_LAST_SELECTED_DEVICE" value="false" />
       <option name="PREFERRED_AVD" value="" />
-      <Java />
-      <Profilers>
-        <option name="GAPID_DISABLE_PCS" value="false" />
-      </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method />
@@ -419,13 +532,8 @@
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="DEBUGGER_TYPE" value="Java" />
       <option name="USE_LAST_SELECTED_DEVICE" value="false" />
       <option name="PREFERRED_AVD" value="" />
-      <Java />
-      <Profilers>
-        <option name="GAPID_DISABLE_PCS" value="false" />
-      </Profilers>
       <method />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -451,6 +559,74 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
     <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -465,6 +641,14 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="passParentEnv" value="true" />
+      <setting name="launchBrowser" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -530,6 +714,9 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -561,6 +748,12 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -619,13 +812,31 @@
       <listeners />
       <method />
     </configuration>
-    <list size="1">
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
+      <method />
+    </configuration>
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+      <item index="1" class="java.lang.String" itemvalue="Application.TestRunner" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="Application.TestRunner" />
         <item index="1" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Main" />
       </list>
     </recent_temporary>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
@@ -700,6 +911,7 @@
       <workItem from="1485277490946" duration="736000" />
       <workItem from="1485352418452" duration="1085000" />
       <workItem from="1485353869133" duration="4935000" />
+      <workItem from="1485771097549" duration="2780000" />
     </task>
     <task id="LOCAL-00001" summary="added">
       <created>1477561640598</created>
@@ -1013,10 +1225,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100265000" />
+    <option name="totallyTimeSpent" value="103045000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="0" />
+    <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1026,24 +1238,24 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24363233" sideWeight="0.52682406" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27735645" sideWeight="0.47317597" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12908497" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27906978" sideWeight="0.47317597" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13725491" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2585288" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25804722" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18383168" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1112,7 +1324,8 @@
     <MESSAGE value="hehe eindelijk" />
     <MESSAGE value="i just jizzed" />
     <MESSAGE value="finallly done please kill me" />
-    <option name="LAST_COMMIT_MESSAGE" value="finallly done please kill me" />
+    <MESSAGE value="Unit test Local" />
+    <option name="LAST_COMMIT_MESSAGE" value="Unit test Local" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1125,20 +1338,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/sparkjava/spark-core/2.5/spark-core-2.5.jar!/spark/ResponseTransformer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/sparkjava/spark-core/2.5/spark-core-2.5.jar!/spark/Session.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1164,14 +1363,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="47" column="34" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1248,13 +1439,6 @@
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_74/src.zip!/java/util/Deque.java" />
-    <entry file="file://$PROJECT_DIR$/src/Main/java/Modal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/modify.vm">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1307,13 +1491,7 @@
     <entry file="file://$PROJECT_DIR$/../Project56 backup/Project56 v0.8/src/Main/resources/Webshop/otherwishlist.vm" />
     <entry file="file://$PROJECT_DIR$/../Project56 backup/Project56 v0.8/src/Main/resources/Webshop/ownwishlist.vm" />
     <entry file="file://$PROJECT_DIR$/../Project56 backup/Project56 v0.8/src/Main/java/View.java" />
-    <entry file="file://$PROJECT_DIR$/../../Project56-master/src/Main/java/ViewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Project56-master/src/Main/java/ViewController.java" />
     <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/admin.vm">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -1325,15 +1503,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6868">
           <caret line="404" column="17" selection-start-line="404" selection-start-column="17" selection-end-line="404" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1381,35 +1550,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
           <caret line="150" column="0" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/profile.vm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
+        <state relative-caret-position="2134">
           <caret line="97" column="20" selection-start-line="97" selection-start-column="20" selection-end-line="97" selection-end-column="20" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/java/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="135" column="20" selection-start-line="135" selection-start-column="20" selection-end-line="135" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/java/View.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="1198" column="40" selection-start-line="1198" selection-start-column="40" selection-end-line="1198" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1485446439691" expanded="false" signature="52904:52920" ph="&lt;~&gt;" />
-            <marker date="1485446439691" expanded="false" signature="55195:55211" ph="&lt;~&gt;" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1417,6 +1565,133 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="177" column="36" selection-start-line="177" selection-start-column="36" selection-end-line="177" selection-end-column="36" />
+          <folding>
+            <marker date="1485771085002" expanded="true" signature="710:725" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/java/Modal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/java/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="120" column="49" selection-start-line="120" selection-start-column="16" selection-end-line="120" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/java/TestRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/java/TestJUnit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/java/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-11082">
+          <caret line="54" column="19" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="44" />
+          <folding>
+            <marker date="1485772462220" expanded="true" signature="644:732" ph="Select usern... users" />
+            <marker date="1485772462220" expanded="true" signature="1028:1103" ph="Select usern... users" />
+            <marker date="1485772462220" expanded="true" signature="1261:1336" ph="Select usern... users" />
+            <marker date="1485772462220" expanded="true" signature="1652:1730" ph="Select usern... users" />
+            <marker date="1485772462220" expanded="true" signature="1907:1976" ph="Select email... users" />
+            <marker date="1485772462220" expanded="true" signature="2153:2502" ph="INSERT INTO users... " />
+            <marker date="1485772462220" expanded="true" signature="2746:2816" ph="Select useri... users" />
+            <marker date="1485772462220" expanded="true" signature="2979:3228" ph="INSERT INTO adress... " />
+            <marker date="1485772462220" expanded="true" signature="3368:3411" ph="Delete From " />
+            <marker date="1485772462220" expanded="true" signature="3760:3891" ph="Select useri... users" />
+            <marker date="1485772462220" expanded="true" signature="4070:4146" ph="Select useri... users" />
+            <marker date="1485772462220" expanded="true" signature="4501:4547" ph="Select usern... users" />
+            <marker date="1485772462220" expanded="true" signature="4900:4946" ph="Select usern... users" />
+            <marker date="1485772462220" expanded="true" signature="5300:5380" ph="Select car_t... products" />
+            <marker date="1485772462220" expanded="true" signature="5806:5928" ph="Select p.bra... products" />
+            <marker date="1485772462220" expanded="true" signature="6427:6583" ph="Select p.mod... products" />
+            <marker date="1485772462220" expanded="true" signature="7081:7107" ph="Select modal... products" />
+            <marker date="1485772462220" expanded="true" signature="7367:7412" ph="Select modal... products" />
+            <marker date="1485772462220" expanded="true" signature="7670:7718" ph="Select modal... products" />
+            <marker date="1485772462220" expanded="true" signature="7976:8026" ph="Select modal... products" />
+            <marker date="1485772462220" expanded="true" signature="8288:8333" ph="Select modal... products" />
+            <marker date="1485772462220" expanded="true" signature="8595:8641" ph="Select modal... products" />
+            <marker date="1485772462220" expanded="true" signature="9072:9098" ph="Select brand... products" />
+            <marker date="1485772462220" expanded="true" signature="9358:9403" ph="Select brand... products" />
+            <marker date="1485772462220" expanded="true" signature="9661:9709" ph="Select brand... products" />
+            <marker date="1485772462220" expanded="true" signature="9967:10017" ph="Select brand... products" />
+            <marker date="1485772462220" expanded="true" signature="10279:10324" ph="Select brand... products" />
+            <marker date="1485772462220" expanded="true" signature="10586:10632" ph="Select brand... products" />
+            <marker date="1485772462220" expanded="true" signature="11061:11090" ph="Select car_t... products" />
+            <marker date="1485772462220" expanded="true" signature="11353:11401" ph="Select car_t... products" />
+            <marker date="1485772462220" expanded="true" signature="11662:11713" ph="Select car_t... products" />
+            <marker date="1485772462220" expanded="true" signature="11974:12027" ph="Select car_t... products" />
+            <marker date="1485772462220" expanded="true" signature="12292:12340" ph="Select car_t... products" />
+            <marker date="1485772462220" expanded="true" signature="12605:12654" ph="Select car_t... products" />
+            <marker date="1485772462220" expanded="true" signature="13087:13113" ph="Select price... products" />
+            <marker date="1485772462220" expanded="true" signature="13372:13417" ph="Select price... products" />
+            <marker date="1485772462220" expanded="true" signature="13675:13723" ph="Select price... products" />
+            <marker date="1485772462220" expanded="true" signature="13981:14031" ph="Select price... products" />
+            <marker date="1485772462220" expanded="true" signature="14293:14338" ph="Select price... products" />
+            <marker date="1485772462220" expanded="true" signature="14600:14646" ph="Select price... products" />
+            <marker date="1485772462220" expanded="true" signature="15080:15110" ph="Select produ... products" />
+            <marker date="1485772462220" expanded="true" signature="15373:15422" ph="Select produ... products" />
+            <marker date="1485772462220" expanded="true" signature="15684:15736" ph="Select produ... products" />
+            <marker date="1485772462220" expanded="true" signature="15998:16052" ph="Select produ... products" />
+            <marker date="1485772462220" expanded="true" signature="16318:16367" ph="Select produ... products" />
+            <marker date="1485772462220" expanded="true" signature="16633:16683" ph="Select produ... products" />
+            <marker date="1485772462220" expanded="true" signature="17074:17115" ph="Select * fro... products" />
+            <marker date="1485772462220" expanded="true" signature="17614:17646" ph="Select descr... products" />
+            <marker date="1485772462220" expanded="true" signature="17957:18005" ph="Delete from " />
+            <marker date="1485772462220" expanded="true" signature="18217:18288" ph="Update users... " />
+            <marker date="1485772462220" expanded="true" signature="18495:18565" ph="Update users... " />
+            <marker date="1485772462220" expanded="true" signature="18774:18846" ph="Update users... " />
+            <marker date="1485772462220" expanded="true" signature="19057:19401" ph="INSERT INTO products... " />
+            <marker date="1485772462220" expanded="true" signature="19628:19704" ph="INSERT INTO favourites... " />
+            <marker date="1485772462220" expanded="true" signature="19926:19976" ph="Select * fro... users" />
+            <marker date="1485772462220" expanded="true" signature="20694:20817" ph="Select op.or... orders_products" />
+            <marker date="1485772462220" expanded="true" signature="21293:21369" ph="insert INTO wishlist... " />
+            <marker date="1485772462220" expanded="true" signature="21765:21934" ph="Select p.mod... products" />
+            <marker date="1485772462220" expanded="true" signature="22447:22533" ph="select usern... users" />
+            <marker date="1485772462220" expanded="true" signature="22847:22915" ph="UPDATE users... " />
+            <marker date="1485772462220" expanded="true" signature="23133:23202" ph="UPDATE users... " />
+            <marker date="1485772462220" expanded="true" signature="23533:23579" ph="INSERT INTO orders... " />
+            <marker date="1485772462220" expanded="true" signature="23662:23738" ph="Select order... orders" />
+            <marker date="1485772462220" expanded="true" signature="24035:24151" ph="INSERT INTO orders_products... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="565">
+          <caret line="47" column="34" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
           <folding />
         </state>
       </provider>
