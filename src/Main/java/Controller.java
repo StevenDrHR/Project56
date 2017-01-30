@@ -15,7 +15,7 @@ public class Controller extends TestCase {
     static Connection connection;
 
     public void connection() throws SQLException{
-        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "0906986");
+        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "123lol123");
     }
 
     public String checkUserStatus(String UserName) throws SQLException {
@@ -538,7 +538,12 @@ public class Controller extends TestCase {
         String Querry = "select username from users where wishlist = 'public' and username != '"+CurrentUser+"'";
         ResultSet rs = connection.prepareStatement(Querry).executeQuery();
         while (rs.next()) {
-            list.add(rs.getString("username"));
+            Querry = "select u.username from users u ,wishlist w where u.username ='"+rs.getString("username")+"' and u.userid = w.userid and w.userid > 0;";
+            ResultSet rs2 = connection.prepareStatement(Querry).executeQuery();
+            if(rs2.next()) {
+                list.add(rs2.getString("username"));
+            }
+
         }
         return list;
     }
