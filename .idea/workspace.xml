@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28c3abc2-7d43-4a2f-8c8e-8846f60266aa" name="Default" comment="Unit test Local">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/junit-4.10.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/junit_4_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Main/java/TestJUnit.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Main/java/TestRunner.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my-app.iml" afterPath="$PROJECT_DIR$/my-app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/java/Controller.java" afterPath="$PROJECT_DIR$/src/Main/java/Controller.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/java/TestRunner.java" afterPath="$PROJECT_DIR$/src/Main/java/TestRunner.java" />
     </list>
     <list id="e3ab461a-6351-49f5-82b7-fb4599d094d7" name="Rejected commit: Default" comment="Add data to adresses and users" />
     <ignored path="project56.iws" />
@@ -36,7 +30,7 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/java/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-11082">
+            <state relative-caret-position="-7650">
               <caret line="54" column="19" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="44" />
               <folding>
                 <marker date="1485772462220" expanded="true" signature="644:732" ph="Select usern... users" />
@@ -108,7 +102,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="565">
@@ -121,7 +115,7 @@
       <file leaf-file-name="View.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/java/View.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
+            <state relative-caret-position="2640">
               <caret line="120" column="49" selection-start-line="120" selection-start-column="16" selection-end-line="120" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -133,7 +127,7 @@
       <file leaf-file-name="Modal.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/java/Modal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
+            <state relative-caret-position="-1072">
               <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
               <folding />
             </state>
@@ -143,8 +137,8 @@
       <file leaf-file-name="TestJUnit.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/java/TestJUnit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="198">
+              <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -152,11 +146,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestRunner.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TestRunner.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main/java/TestRunner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+            <state relative-caret-position="198">
+              <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -290,9 +284,9 @@
         <option value="$PROJECT_DIR$/src/Main/resources/Webshop/orderhistory.vm" />
         <option value="$PROJECT_DIR$/src/Main/java/View.java" />
         <option value="$PROJECT_DIR$/src/Main/resources/Webshop/favourite.vm" />
-        <option value="$PROJECT_DIR$/src/Main/java/TestRunner.java" />
         <option value="$PROJECT_DIR$/src/Main/java/Controller.java" />
         <option value="$PROJECT_DIR$/src/Main/java/TestJUnit.java" />
+        <option value="$PROJECT_DIR$/src/Main/java/TestRunner.java" />
       </list>
     </option>
   </component>
@@ -439,8 +433,19 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Gebruiker\IdeaProjects\Project56\src\Main\java" />
+      <recent name="C:\Users\nilmor\Desktop\Project56_Version1.1\src\Main\resources\Webshop" />
+      <recent name="C:\Users\Shervin\Documents\git\Project56\src\Main\java" />
+      <recent name="C:\Users\nilmor\Desktop\Project56_Version1.1\src\Main\resources\HTML" />
+      <recent name="C:\Users\nilmor\Desktop\Project56_Version1.1\src\Main\resources" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="View" />
+      <recent name="Modal" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\nilmor\Desktop\Project56Version2.3\Project56\src\Main\resources\Webshop" />
@@ -448,17 +453,6 @@
       <recent name="C:\Users\Gebruiker\IdeaProjects\Project56\src\Main\java" />
       <recent name="C:\Users\Shervin\Documents\git\Project56\src\Main\resources\Webshop" />
       <recent name="C:\Users\Shervin\Documents\git\Project56\src\Main\resources\Webshop\js" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="View" />
-      <recent name="Modal" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Gebruiker\IdeaProjects\Project56\src\Main\java" />
-      <recent name="C:\Users\nilmor\Desktop\Project56_Version1.1\src\Main\resources\Webshop" />
-      <recent name="C:\Users\Shervin\Documents\git\Project56\src\Main\java" />
-      <recent name="C:\Users\nilmor\Desktop\Project56_Version1.1\src\Main\resources\HTML" />
-      <recent name="C:\Users\nilmor\Desktop\Project56_Version1.1\src\Main\resources" />
     </key>
   </component>
   <component name="RunManager" selected="Application.TestRunner">
@@ -911,7 +905,7 @@
       <workItem from="1485277490946" duration="736000" />
       <workItem from="1485352418452" duration="1085000" />
       <workItem from="1485353869133" duration="4935000" />
-      <workItem from="1485771097549" duration="2780000" />
+      <workItem from="1485771097549" duration="6470000" />
     </task>
     <task id="LOCAL-00001" summary="added">
       <created>1477561640598</created>
@@ -1221,11 +1215,18 @@
       <option name="project" value="LOCAL" />
       <updated>1485442120088</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Unit test Local">
+      <created>1485773911214</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1485773911214</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103045000" />
+    <option name="totallyTimeSpent" value="106735000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
@@ -1571,42 +1572,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/java/Modal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/java/View.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="120" column="49" selection-start-line="120" selection-start-column="16" selection-end-line="120" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/java/TestRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/java/TestJUnit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="376">
@@ -1615,9 +1580,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="565">
+          <caret line="47" column="34" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/java/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11082">
+        <state relative-caret-position="-7650">
           <caret line="54" column="19" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="44" />
           <folding>
             <marker date="1485772462220" expanded="true" signature="644:732" ph="Select usern... users" />
@@ -1688,10 +1661,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/Main/java/Modal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="565">
-          <caret line="47" column="34" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
+        <state relative-caret-position="-1072">
+          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/java/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2640">
+          <caret line="120" column="49" selection-start-line="120" selection-start-column="16" selection-end-line="120" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/java/TestJUnit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/java/TestRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
           <folding />
         </state>
       </provider>
