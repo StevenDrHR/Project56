@@ -15,7 +15,7 @@ public class Controller extends TestCase {
     static Connection connection;
 
     public void connection() throws SQLException{
-        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "123lol123");
+        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "0906986");
     }
 
     public String checkUserStatus(String UserName) throws SQLException {
@@ -573,7 +573,26 @@ public class Controller extends TestCase {
         }
         return "Done";
     }
-
+    public ArrayList<Integer> checkWishlistStatus() throws SQLException {
+        ArrayList<Integer> list = new ArrayList<>();
+        connection();
+        String Querry = "Select count(username) AS total from users where wishlist = 'public'";
+        ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+        if (rs.next()) {
+            list.add(rs.getInt("total"));
+        }
+        return list;
+    }
+    public ArrayList<Integer> checkOwnWishlistStatus(String username) throws SQLException {
+        ArrayList<Integer> list = new ArrayList<>();
+        connection();
+        String Querry = "Select count(username) AS total from users where wishlist = 'public' and username != '"+username+"'";
+        ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+        if (rs.next()) {
+            list.add(rs.getInt("total"));
+        }
+        return list;
+    }
 }
 
 
