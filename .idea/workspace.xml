@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28c3abc2-7d43-4a2f-8c8e-8846f60266aa" name="Default" comment="huppekee op getieft v2">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+    <list default="true" id="28c3abc2-7d43-4a2f-8c8e-8846f60266aa" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="e3ab461a-6351-49f5-82b7-fb4599d094d7" name="Rejected commit: Default" comment="Add data to adresses and users" />
@@ -833,7 +832,7 @@
       <workItem from="1485353869133" duration="4935000" />
       <workItem from="1485771097549" duration="2780000" />
       <workItem from="1485777537644" duration="3898000" />
-      <workItem from="1485786376374" duration="45000" />
+      <workItem from="1485786376374" duration="57000" />
     </task>
     <task id="LOCAL-00001" summary="added">
       <created>1477561640598</created>
@@ -1164,11 +1163,18 @@
       <option name="project" value="LOCAL" />
       <updated>1485777993065</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="TestCase">
+      <created>1485786430791</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1485786430791</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106988000" />
+    <option name="totallyTimeSpent" value="107000000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
@@ -1270,7 +1276,8 @@
     <MESSAGE value="Unit test Local" />
     <MESSAGE value="fixed own wishlist" />
     <MESSAGE value="huppekee op getieft" />
-    <option name="LAST_COMMIT_MESSAGE" value="huppekee op getieft" />
+    <MESSAGE value="TestCase" />
+    <option name="LAST_COMMIT_MESSAGE" value="TestCase" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
