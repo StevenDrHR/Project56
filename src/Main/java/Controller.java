@@ -15,8 +15,7 @@ public class Controller extends TestCase {
     static Connection connection;
 
     public void connection() throws SQLException{
-        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "0906986");
-
+        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "123lol123");
     }
 
     public String checkUserStatus(String UserName) throws SQLException {
