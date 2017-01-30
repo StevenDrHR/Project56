@@ -16,7 +16,6 @@ public class Controller extends TestCase {
 
     public void connection() throws SQLException{
         connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "0906986");
-
     }
 
     public String checkUserStatus(String UserName) throws SQLException {
@@ -141,8 +140,8 @@ public class Controller extends TestCase {
         String Querry = "Select p.brand, p.modal, p.car_type, p.price from products p, favourites f where p.productid = f.productid and f.userid = "+userid;
         ResultSet rs = connection.prepareStatement(Querry).executeQuery();
         while(rs.next()){
-            list.add(rs.getString("brand"));
             list.add(rs.getString("modal"));
+            list.add(rs.getString("brand"));
             list.add(rs.getString("car_type"));
             list.add(rs.getString("price"));
 
@@ -574,7 +573,36 @@ public class Controller extends TestCase {
         }
         return "Done";
     }
-
+    public ArrayList<Integer> checkWishlistStatus() throws SQLException {
+        ArrayList<Integer> list = new ArrayList<>();
+        connection();
+        String Querry = "Select count(username) AS total from users where wishlist = 'public'";
+        ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+        if (rs.next()) {
+            list.add(rs.getInt("total"));
+        }
+        return list;
+    }
+    public ArrayList<Integer> checkWishlistStatusOwn(String username) throws SQLException {
+        ArrayList<Integer> list = new ArrayList<>();
+        connection();
+        String Querry = "Select count(username) AS total from users where wishlist = 'public' and username != '"+username+"'";
+        ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+        if (rs.next()) {
+            list.add(rs.getInt("total"));
+        }
+        return list;
+    }
+    public ArrayList<Integer> checkOwnWishlist(String username) throws SQLException {
+        ArrayList<Integer> list = new ArrayList<>();
+        connection();
+        String Querry = "Select count(p.modal) AS total from products p, wishlist w, users u where p.productid = w.productid and u.userid = w.userid and u.username = '"+username+"'";
+        ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+        if (rs.next()) {
+            list.add(rs.getInt("total"));
+        }
+        return list;
+    }
 }
 
 

@@ -71,6 +71,7 @@
 
             <form class="list-group" method="POST" action="/Profile">
                 <button href="#" id="wishlistbuttonvisibilitypu" name="makewishlistpublic" type="submit" class="list-group-item">Make wishlist public</button>
+                <button href="#" id="wishlistbuttonvisibilitypr" name="makewishlistprivate" type="submit" class="list-group-item">Make wishlist private</button>
                 <br>
             </form>
 
@@ -86,25 +87,7 @@
             <div class="row carousel-holder">
 
                 <div class="col-md-12" id="main">
-                    <h1 align="center">Profile information</h1>
-                    <br>
-                    <div class="bodyleftcolumn">
-                        <p>Username : ${CurrentUser}</p>
-                        <p>First Name : ${firstname}</p>
-                        <p>Last Name : ${lastname}</p>
-                        <p>Age : ${age}</p>
-                        <p>Wishlist Status: $wishlist</p>
-                    </div>
-                    <div class="bodyrightcolumn">
-                        <p>Email: ${emailaddress}</p>
-                        <p>Password: ${userpassword}</p>
-                        <p>User Status : ${userstatus}</p>
-                        <p>User Level : ${userlevel}</p>
-                        <p>User ID: $userid </p>
-                    </div>
 
-                    <!--<button type="button" onclick="Spoiler()">Show/Hide</button>-->
-                    <!--<div id="spoiler" style="display:none"></div>-->
                 </div>
 
                 <div class="col-md-12">
@@ -151,13 +134,6 @@
 <script src="js/bootstrap.min.js"></script>
 
 <script>
-    function OrderHistoryContent(){
-        document.getElementById('main').innerHTML =
-                '<h1 align="center">Order History</h1><br> <p align="center">This is the order history of : ${CurrentUser}</p>';
-    }
-</script>
-
-<script>
     var once = 1
     var dirtystring = "${model}";
     var cleanstring = dirtystring.substr(0, dirtystring.length)
@@ -175,125 +151,71 @@
     var cleanstring = dirtystring.substr(0, dirtystring.length)
     var prc = cleanstring.split(", ");
 
+    var dirtystring = "${amountitems}";
+    var cleanstring = dirtystring.substr(1, dirtystring.length-2)
+    var amntitems = cleanstring.split(", ");
+    window.alert(amntitems)
+
 
     document.getElementById('main').innerHTML =
             '<h1 align="center">Wish List</h1><br> <p align="center">This is the wish list of : ${CurrentUser}</p>';
 
     if (once == 1){
-        for (var i = 0; i < mdl.length; i++) {
-            if (i == 0) {
+        if (mdl.length > 0 && amntitems > 0) {
+            window.alert(mdl.length)
+            for (var i = 0; i < mdl.length-1; i++) {
+                if (i == 0) {
+                    table = document.getElementById("alltables");
+                    row = table.insertRow(0);
+                    row.setAttribute("name", "info");
+                    cell1 = row.insertCell(0);
+                    cell2 = row.insertCell(1);
+                    cell3 = row.insertCell(2);
+                    cell4 = row.insertCell(3);
+
+
+                    cell1.innerHTML = "<b>Model</b>";
+                    cell2.innerHTML = "<b>Brand</b>";
+                    cell3.innerHTML = "<b>Type</b>";
+                    cell4.innerHTML = "<b>Price</b>";
+                }
+
+
                 table = document.getElementById("alltables");
-                row = table.insertRow(0);
-                row.setAttribute("name", "info");
+
+                //adding the row
+                row = table.insertRow(i + 1);
+                row.setAttribute("name", "" + mdl[i]);
+                //            window.alert(mdl[i]);
+
+                //making the amount of values in a row
                 cell1 = row.insertCell(0);
                 cell2 = row.insertCell(1);
                 cell3 = row.insertCell(2);
                 cell4 = row.insertCell(3);
 
 
-                cell1.innerHTML = "<b>Model</b>";
-                cell2.innerHTML = "<b>Brand</b>";
-                cell3.innerHTML = "<b>Type</b>";
-                cell4.innerHTML = "<b>Price</b>";
-            }
-
-
-            table = document.getElementById("alltables");
-
-            //adding the row
-            row = table.insertRow(i + 1);
-            row.setAttribute("name", "" + mdl[i]);
-            //            window.alert(mdl[i]);
-
-            //making the amount of values in a row
-            cell1 = row.insertCell(0);
-            cell2 = row.insertCell(1);
-            cell3 = row.insertCell(2);
-            cell4 = row.insertCell(3);
-
-
-            //adding values
-            cell1.innerHTML = mdl[i];
-            cell2.innerHTML = brnd[i];
-            cell3.innerHTML = typ[i];
-            cell4.innerHTML = prc[i];
-            once = 2;
-        }
-    }
-</script>
-
-<script>
-    var once = 1
-    var dirtystring = "${usernames}";
-    var cleanstring = dirtystring.substr(0, dirtystring.length)
-    var usrnm = cleanstring.split(", ");
-
-
-
-    function AllWishlistContent() {
-
-        if (once == 1){
-            for (var i = 0; i < usrnm.length; i++) {
-                if (i == 0) {
-                    table = document.getElementById("alltables");
-                    row = table.insertRow(0);
-                    row.setAttribute("name", "info");
-                    cell1 = row.insertCell(0);
-
-                    cell1.innerHTML = "<b>Username</b>";
-
-                }
-                table = document.getElementById("alltables");
-                userbutton = document.createElement("button");
-
-                userbutton.setAttribute("name", "Username" + usrnm[i])
-                userbutton.setAttribute("type", "submit")
-//                userbutton.setAttribute("onclick", WishlistContent(usrnm[i]))
-                userbutton.innerHTML = usrnm[i];
-
-                //adding the row
-                row = table.insertRow(i + 1);
-                row.setAttribute("name", "" + usrnm[i]);
-                //            window.alert(mdl[i]);
-
-                //making the amount of values in a row
-                cell1 = row.insertCell(0);
-                cell2 = row.insertCell(1);
-
                 //adding values
-                cell1.innerHTML = usrnm[i];
-                cell2.appendChild(userbutton);
+                cell1.innerHTML = mdl[i];
+                cell2.innerHTML = brnd[i];
+                cell3.innerHTML = typ[i];
+                cell4.innerHTML = prc[i];
                 once = 2;
             }
         }
+        else {
+            document.getElementById('main').innerHTML =
+                    '<h1 align="center">THERE IS NOTHING TO SHOW BIATCH</h1>';
+            window.alert(mdl.length)
+        }
     }
 </script>
+
 
 <script>
     if ('${wishlist}' == "public"){
         var a = document.querySelector("#wishlistbuttonvisibilitypu");
         a.style.display = "none";
-    }
-</script>
-
-<script>
-    function FavouritesContent(){
-        document.getElementById('main').innerHTML =
-                '<h1 align="center">Favourites</h1><br> <p align="center">This is the favourites of : ${CurrentUser}</p>';
-    }
-</script>
-
-<script>
-    function Spoiler(){
-        if(document.getElementById('spoiler').style.display=='none')
-        {document.getElementById('spoiler').style.display='initial'}
-        else{document.getElementById('spoiler').style.display='none'};
-    }
-</script>
-
-<script>
-    if("${message}" != "null" ){
-        window.alert("${message}");
     }
 </script>
 

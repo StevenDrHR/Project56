@@ -267,21 +267,12 @@ public class View {
             Controller getWishlistData = new Controller();
             List getwishlistdata = getWishlistData.getWishlistinfo(currentUser);
             for (int i = 0; i < getwishlistdata.size(); i += 4){
-                int j = 1;
-                int k = 2;
-                int l = 3;
-                if (i < 4) {
-                    attributes.put("model", getwishlistdata.get(i));
-                    attributes.put("brand", getwishlistdata.get(j));
-                    attributes.put("type", getwishlistdata.get(k));
-                    attributes.put("price", getwishlistdata.get(l));
-                }
-                else{
+
                     attributes.put("model", getwishlistdata.get(i) + ", " + attributes.get("model"));
-                    attributes.put("brand", getwishlistdata.get(i) + ", " + attributes.get("brand"));
-                    attributes.put("type", getwishlistdata.get(i) + ", " + attributes.get("type"));
-                    attributes.put("price", getwishlistdata.get(i) + ", " + attributes.get("price"));
-                }
+                    attributes.put("brand", getwishlistdata.get(i+1) + ", " + attributes.get("brand"));
+                    attributes.put("type", getwishlistdata.get(i+2) + ", " + attributes.get("type"));
+                    attributes.put("price", getwishlistdata.get(i+3) + ", " + attributes.get("price"));
+
             }
 
             System.out.println(currentUserLevel);
@@ -484,9 +475,20 @@ public class View {
         post("/Shop", (req,res)-> {
             Map<String, Object> attributes = new HashMap<String, Object>();
 
+
             String LoginUsername = req.queryParams("LoginUsername");
             String LoginPassword = req.queryParams("LoginPassword");
             String variabel = req.queryParams().iterator().next();
+            if (req.session().attribute("User") == null)
+            {req.session().attribute("User", " ");}
+
+            Controller getUsers = new Controller();
+            List list = getUsers.GetUsers();
+            attributes.put("users",list);
+            String currentUser = req.session().attribute("User");
+            attributes.put("CurrentUser", currentUser);
+            String currentUserLevel = getUsers.checkUserLevel(currentUser);
+            attributes.put("userlevel", currentUserLevel);
 
             if (variabel.equals("OrderedBrands")) {
                 Controller getProducts = new Controller();
@@ -669,17 +671,6 @@ public class View {
                 else {
                     req.session().attribute("User",LoginUser);}
             }
-            else {
-                System.out.println(variabel + " Shamala3");
-                req.session().attribute("User", "");}
-
-            Controller getUsers = new Controller();
-
-            String currentUser = req.session().attribute("User");
-            attributes.put("CurrentUser", currentUser);
-            String currentUserLevel = getUsers.checkUserLevel(currentUser);
-            attributes.put("userlevel", currentUserLevel);
-
             return modelAndView(attributes, "Webshop/Shop.vm");
         },new VelocityTemplateEngine());
     }
@@ -806,6 +797,8 @@ public class View {
             Controller checkUserLevel = new Controller();
             String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
             attributes.put("userlevel", currentUserLevel);
+            ArrayList<Integer> checkamountitems = checkUserLevel.checkOwnWishlist(currentUser);
+            attributes.put("amountitems", checkamountitems);
 
             if(req.session().attribute("message") == null ){
                 attributes.put("message", "null");
@@ -840,21 +833,11 @@ public class View {
             Controller getWishlistData = new Controller();
             List getwishlistdata = getWishlistData.getWishlistinfo(currentUser);
             for (int i = 0; i < getwishlistdata.size(); i += 4){
-                int j = 1;
-                int k = 2;
-                int l = 3;
-                if (i < 4) {
-                    attributes.put("model", getwishlistdata.get(i));
-                    attributes.put("brand", getwishlistdata.get(j));
-                    attributes.put("type", getwishlistdata.get(k));
-                    attributes.put("price", getwishlistdata.get(l));
-                }
-                else{
-                    attributes.put("model", getwishlistdata.get(i) + ", " + attributes.get("model"));
-                    attributes.put("brand", getwishlistdata.get(i) + ", " + attributes.get("brand"));
-                    attributes.put("type", getwishlistdata.get(i) + ", " + attributes.get("type"));
-                    attributes.put("price", getwishlistdata.get(i) + ", " + attributes.get("price"));
-                }
+
+                attributes.put("model", getwishlistdata.get(i) + ", " + attributes.get("model"));
+                attributes.put("brand", getwishlistdata.get(i+1) + ", " + attributes.get("brand"));
+                attributes.put("type", getwishlistdata.get(i+2) + ", " + attributes.get("type"));
+                attributes.put("price", getwishlistdata.get(i+3) + ", " + attributes.get("price"));
             }
 
             System.out.println(currentUserLevel);
@@ -991,6 +974,12 @@ public class View {
             Controller checkUserLevel = new Controller();
             String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
             attributes.put("userlevel", currentUserLevel);
+            Controller checkwishliststatus = new Controller();
+            ArrayList<Integer> AllUserStats = checkwishliststatus.checkWishlistStatus();
+            attributes.put("allwishliststats", AllUserStats);
+            ArrayList<Integer> OwnUserStats = checkwishliststatus.checkWishlistStatusOwn(currentUser);
+            attributes.put("ownwishliststats", OwnUserStats);
+
 
             if(req.session().attribute("message") == null ){
                 attributes.put("message", "null");
@@ -1025,21 +1014,12 @@ public class View {
             Controller getWishlistData = new Controller();
             List getwishlistdata = getWishlistData.getWishlistinfo(currentUser);
             for (int i = 0; i < getwishlistdata.size(); i += 4){
-                int j = 1;
-                int k = 2;
-                int l = 3;
-                if (i < 4) {
-                    attributes.put("model", getwishlistdata.get(i));
-                    attributes.put("brand", getwishlistdata.get(j));
-                    attributes.put("type", getwishlistdata.get(k));
-                    attributes.put("price", getwishlistdata.get(l));
-                }
-                else{
-                    attributes.put("model", getwishlistdata.get(i) + ", " + attributes.get("model"));
-                    attributes.put("brand", getwishlistdata.get(i) + ", " + attributes.get("brand"));
-                    attributes.put("type", getwishlistdata.get(i) + ", " + attributes.get("type"));
-                    attributes.put("price", getwishlistdata.get(i) + ", " + attributes.get("price"));
-                }
+
+                attributes.put("model", getwishlistdata.get(i) + ", " + attributes.get("model"));
+                attributes.put("brand", getwishlistdata.get(i+1) + ", " + attributes.get("brand"));
+                attributes.put("type", getwishlistdata.get(i+2) + ", " + attributes.get("type"));
+                attributes.put("price", getwishlistdata.get(i+3) + ", " + attributes.get("price"));
+
             }
 
             System.out.println(currentUserLevel);
