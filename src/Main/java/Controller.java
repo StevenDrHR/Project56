@@ -583,10 +583,20 @@ public class Controller extends TestCase {
         }
         return list;
     }
-    public ArrayList<Integer> checkOwnWishlistStatus(String username) throws SQLException {
+    public ArrayList<Integer> checkWishlistStatusOwn(String username) throws SQLException {
         ArrayList<Integer> list = new ArrayList<>();
         connection();
         String Querry = "Select count(username) AS total from users where wishlist = 'public' and username != '"+username+"'";
+        ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+        if (rs.next()) {
+            list.add(rs.getInt("total"));
+        }
+        return list;
+    }
+    public ArrayList<Integer> checkOwnWishlist(String username) throws SQLException {
+        ArrayList<Integer> list = new ArrayList<>();
+        connection();
+        String Querry = "Select count(p.modal) AS total from products p, wishlist w, users u where p.productid = w.productid and u.userid = w.userid and u.username = '"+username+"'";
         ResultSet rs = connection.prepareStatement(Querry).executeQuery();
         if (rs.next()) {
             list.add(rs.getInt("total"));

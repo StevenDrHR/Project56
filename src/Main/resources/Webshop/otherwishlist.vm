@@ -151,7 +151,7 @@
             '<h1 align="center">Wish List</h1><br> <p align="center">This is the wish list of : ${clickeduserwl}</p>';
 
     if (once == 1){
-        for (var i = 0; i < mdl.length; i++) {
+        for (var i = 0; i < mdl.length-1; i++) {
             if (i == 0) {
                 table = document.getElementById("alltables");
                 row = table.insertRow(0);

@@ -797,6 +797,8 @@ public class View {
             Controller checkUserLevel = new Controller();
             String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
             attributes.put("userlevel", currentUserLevel);
+            ArrayList<Integer> checkamountitems = checkUserLevel.checkOwnWishlist(currentUser);
+            attributes.put("amountitems", checkamountitems);
 
             if(req.session().attribute("message") == null ){
                 attributes.put("message", "null");
@@ -833,9 +835,9 @@ public class View {
             for (int i = 0; i < getwishlistdata.size(); i += 4){
 
                 attributes.put("model", getwishlistdata.get(i) + ", " + attributes.get("model"));
-                attributes.put("brand", getwishlistdata.get(i) + ", " + attributes.get("brand"));
-                attributes.put("type", getwishlistdata.get(i) + ", " + attributes.get("type"));
-                attributes.put("price", getwishlistdata.get(i) + ", " + attributes.get("price"));
+                attributes.put("brand", getwishlistdata.get(i+1) + ", " + attributes.get("brand"));
+                attributes.put("type", getwishlistdata.get(i+2) + ", " + attributes.get("type"));
+                attributes.put("price", getwishlistdata.get(i+3) + ", " + attributes.get("price"));
             }
 
             System.out.println(currentUserLevel);
@@ -975,7 +977,7 @@ public class View {
             Controller checkwishliststatus = new Controller();
             ArrayList<Integer> AllUserStats = checkwishliststatus.checkWishlistStatus();
             attributes.put("allwishliststats", AllUserStats);
-            ArrayList<Integer> OwnUserStats = checkwishliststatus.checkOwnWishlistStatus(currentUser);
+            ArrayList<Integer> OwnUserStats = checkwishliststatus.checkWishlistStatusOwn(currentUser);
             attributes.put("ownwishliststats", OwnUserStats);
 
 

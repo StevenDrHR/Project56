@@ -134,13 +134,6 @@
 <script src="js/bootstrap.min.js"></script>
 
 <script>
-    function OrderHistoryContent(){
-        document.getElementById('main').innerHTML =
-                '<h1 align="center">Order History</h1><br> <p align="center">This is the order history of : ${CurrentUser}</p>';
-    }
-</script>
-
-<script>
     var once = 1
     var dirtystring = "${model}";
     var cleanstring = dirtystring.substr(0, dirtystring.length)
@@ -158,14 +151,19 @@
     var cleanstring = dirtystring.substr(0, dirtystring.length)
     var prc = cleanstring.split(", ");
 
+    var dirtystring = "${amountitems}";
+    var cleanstring = dirtystring.substr(1, dirtystring.length-2)
+    var amntitems = cleanstring.split(", ");
+    window.alert(amntitems)
+
 
     document.getElementById('main').innerHTML =
             '<h1 align="center">Wish List</h1><br> <p align="center">This is the wish list of : ${CurrentUser}</p>';
 
     if (once == 1){
-        if (((mdl.length >= 1 && mdl[1] == "undefined") || mdl.length >= 1)) {
+        if (mdl.length > 0 && amntitems > 0) {
             window.alert(mdl.length)
-            for (var i = 0; i < mdl.length; i++) {
+            for (var i = 0; i < mdl.length-1; i++) {
                 if (i == 0) {
                     table = document.getElementById("alltables");
                     row = table.insertRow(0);
@@ -218,13 +216,6 @@
     if ('${wishlist}' == "public"){
         var a = document.querySelector("#wishlistbuttonvisibilitypu");
         a.style.display = "none";
-    }
-</script>
-
-
-<script>
-    if("${message}" != "null" ){
-        window.alert("${message}");
     }
 </script>
 
