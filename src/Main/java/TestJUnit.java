@@ -1,12 +1,12 @@
 import junit.framework.Assert;
 import org.junit.Test;
 
-import java.sql.SQLException;
+//import java.sql.SQLException;
 
 public class TestJUnit {
     @Test
 
-    public void testAdd() throws SQLException{
+    public void testAdd(){
         //Deque<Modal> RegisterUsers = new ArrayDeque<>();
         //Modal registerUser = new Modal();
         //registerUser.RegisterModal("Kees", "Kees", "Kees@kees.nl", "Kees", "Kees", "2", "Keesstraat", "12", "Keesland", "3030KE");
