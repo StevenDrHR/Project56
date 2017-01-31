@@ -430,34 +430,31 @@ public class View {
         },new VelocityTemplateEngine());
     }
 
-    public void RenderShopView(){
-        get("/Shop", (req,res) ->{
+    public void RenderShopView(){       // renders the shop.vm, get's called in main
+        get("/Shop", (req,res) ->{      // gets the shop.vm data
             Map<String, Object> attributes = new HashMap<String, Object>();
-            if (req.session().attribute("User") == null)
+            if (req.session().attribute("User") == null)        // cookie to know the status of the user (registered/nonregistered/admin)
             {req.session().attribute("User", " ");}
 
             Controller getUsers = new Controller();
-            List list = getUsers.GetUsers();
-            attributes.put("users",list);
+            List nonregusers = getUsers.GetUsers();        // GetUsers() gets all the users out of the db that are non registered
+            attributes.put("users", nonregusers);       // the nonregusers are then put in the attributes, where after it is used as a reference in the shop.vm file
             String currentUser = req.session().attribute("User");
             attributes.put("CurrentUser", currentUser);
             String currentUserLevel = getUsers.checkUserLevel(currentUser);
             attributes.put("userlevel", currentUserLevel);
 
-            Controller getModel = new Controller();
-            List models = getModel.GetModels("");
+            Controller getShopData = new Controller();
+            List models = getShopData.GetModels("");       // every function gets the respected data out of the db
             attributes.put("models", models);
 
-            Controller getBrand = new Controller();
-            List brands = getBrand.GetBrands("");
+            List brands = getShopData.GetBrands("");
             attributes.put("brands", brands);
 
-            Controller getType = new Controller();
-            List types = getType.GetType("");
+            List types = getShopData.GetType("");
             attributes.put("types", types);
 
-            Controller getPrice = new Controller();
-            List price = getPrice.GetPrice("");
+            List price = getShopData.GetPrice("");
             attributes.put("price", price);
 
             Controller getPid = new Controller();
@@ -468,13 +465,13 @@ public class View {
         }, new VelocityTemplateEngine());
 
 
-        post("/Shop", (req,res)-> {
+        post("/Shop", (req,res)-> {     // the post receives the data from the frontend, whenever a button is pushed, the post handles it
             Map<String, Object> attributes = new HashMap<String, Object>();
 
 
             String LoginUsername = req.queryParams("LoginUsername");
             String LoginPassword = req.queryParams("LoginPassword");
-            String variabel = req.queryParams().iterator().next();
+            String variabel = req.queryParams().iterator().next();      // variabel is just a check that iterates through every button
             if (req.session().attribute("User") == null)
             {req.session().attribute("User", " ");}
 
@@ -486,7 +483,7 @@ public class View {
             String currentUserLevel = getUsers.checkUserLevel(currentUser);
             attributes.put("userlevel", currentUserLevel);
 
-            if (variabel.equals("OrderedBrands")) {
+            if (variabel.equals("OrderedBrands")) {     // here it checks if the button has a specific value and acts accordingly
                 Controller getProducts = new Controller();
                 List models = getProducts.GetModels("brand");
                 attributes.put("models", models);
@@ -595,12 +592,11 @@ public class View {
                 System.out.println(productid + " nothing");
             }
 
-            System.out.println(variabel + " trololol");
-            if (variabel.contains("AddToWishlist")){
+            if (variabel.contains("AddToWishlist")){        // this checks if the button contains the "AddToWishlist" value
                 System.out.println(variabel + " Shamala1");
                 Controller settoWishlist = new Controller();
                 System.out.println(variabel + " Shamala2");
-                ArrayList<String> userid = settoWishlist.getUserData(req.session().attribute("User"));
+                ArrayList<String> userid = settoWishlist.getUserData(req.session().attribute("User"));      // puts it in a cookie
                 System.out.println(variabel + " Shamala3");
                 settoWishlist.setToWishlist(userid.get(6), variabel.substring(13));
                 System.out.println(variabel + " Shamala4");
@@ -608,7 +604,7 @@ public class View {
                 System.out.println(variabel + " Shamala");
             }
 
-            else if (variabel.contains("AddToCart")){
+            else if (variabel.contains("AddToCart")){       // adds to cart if button contains "AddToCart"
                 String productid = variabel.substring(9);
                 System.out.println(productid + " pid");
                 if(req.session().attribute("productid")== null){
@@ -617,22 +613,22 @@ public class View {
                 }
                 else{
 
-                    String currentPid = req.session().attribute("productid");
+                    String currentPid = req.session().attribute("productid");       // sessions the productid
                     String currentAmount = req.session().attribute("amount");
 
-                    String[]  currentPids =  currentPid.split(", ");
+                    String[]  currentPids =  currentPid.split(", ");        // filters the list
                     String[] currentAmounts = currentAmount.split(", ");
 
                     int dubble = -1;
-                    for(int i = 0; i < currentPids.length; i++){
-                        if (currentPids[i].equals(productid)){
-                            currentAmounts[i] = (Integer.valueOf(currentAmounts[i]) + 1) + "";
+                    for(int i = 0; i < currentPids.length; i++){        // for every currentPid do the following
+                        if (currentPids[i].equals(productid)){      // if the first item in the list == productid do the following
+                            currentAmounts[i] = (Integer.valueOf(currentAmounts[i]) + 1) + "";      // increments tha product amounts
                             dubble = i;
                             currentAmount = "";
-                            for (int j = 0; j < currentAmounts.length; j++){
-                                if(j == 0){
+                            for (int j = 0; j < currentAmounts.length; j++){        // for every item in currentAmounts do the following
+                                if(j == 0){     // this starts the first amount as 0
                                     req.session().attribute("amount",currentAmounts[j]);
-                                    currentAmount = currentAmounts[j];
+                                    currentAmount = currentAmounts[j];      // here it initiates the currentAmount to the j'th (integer) currentAmounts
                                 }
                                 else {
                                     req.session().attribute("amount", req.session().attribute("amount") + ", " + currentAmounts[j]);
@@ -655,14 +651,14 @@ public class View {
 
             }
 
-            else if (variabel.equals("LoginUsername")){
+            else if (variabel.equals("LoginUsername")){     // if the button is "LoginUsername"
                 System.out.println(variabel + " Shamala2");
                 Modal loginUser = new Modal();
                 loginUser.LoginModal(LoginUsername,LoginPassword);
                 loginUsers.addFirst(loginUser);
                 String LoginUser = new Controller().LoginUser(loginUsers);
                 String checkUserStatus = new Controller().checkUserStatus(LoginUser);
-                if (checkUserStatus.equals("Blocked")) {
+                if (checkUserStatus.equals("Blocked")) {        // checks the validity of a user
                     attributes.put("message", "Blocked");}
                 else {
                     req.session().attribute("User",LoginUser);}

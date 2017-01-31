@@ -18,15 +18,15 @@ public class Controller{
     }
 
     public String checkUserStatus(String UserName) throws SQLException {
-        connection();
-        String Querry = "Select username from users where username ='" + UserName + "' and userstatus = 'Blocked'";
-        ResultSet rs = connection.prepareStatement(Querry).executeQuery();
-        if (rs.next()) {
+        connection();       // connect to the database with connection string
+        String Querry = "Select username from users where username ='" + UserName + "' and userstatus = 'Blocked'";     // query statement with flexible variable
+        ResultSet rs = connection.prepareStatement(Querry).executeQuery();      // execute query
+        if (rs.next()) {        // checks if there is a result, go in the if
             return "Blocked";
         }
         return "Available";
     }
-
+        // basically the same logic everywhere
     public String checkUserLevel(String UserName) throws SQLException{
         connection();
         String Querry = "Select username from users where username ='"+UserName+"' and userlevel = 1";

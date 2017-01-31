@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28c3abc2-7d43-4a2f-8c8e-8846f60266aa" name="Default" comment="weg met de catalog pid amount">
+    <list default="true" id="28c3abc2-7d43-4a2f-8c8e-8846f60266aa" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/java/Controller.java" afterPath="$PROJECT_DIR$/src/Main/java/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/resources/Webshop/index.vm" afterPath="$PROJECT_DIR$/src/Main/resources/Webshop/index.vm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/resources/Webshop/shop.vm" afterPath="$PROJECT_DIR$/src/Main/resources/Webshop/shop.vm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/java/View.java" afterPath="$PROJECT_DIR$/src/Main/java/View.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/velocity.log" afterPath="$PROJECT_DIR$/velocity.log" />
     </list>
     <list id="e3ab461a-6351-49f5-82b7-fb4599d094d7" name="Rejected commit: Default" comment="Add data to adresses and users" />
@@ -33,88 +32,88 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/java/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.689655">
-              <caret line="468" column="24" selection-start-line="468" selection-start-column="24" selection-end-line="468" selection-end-column="104" />
+            <state vertical-scroll-proportion="-4.448276">
+              <caret line="506" column="18" selection-start-line="506" selection-start-column="18" selection-end-line="506" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1485866366674" expanded="true" signature="715:803" placeholder="Select usern... users" />
-                <marker date="1485866366674" expanded="true" signature="1099:1174" placeholder="Select usern... users" />
-                <marker date="1485866366674" expanded="true" signature="1332:1407" placeholder="Select usern... users" />
-                <marker date="1485866366674" expanded="true" signature="1723:1801" placeholder="Select usern... users" />
-                <marker date="1485866366674" expanded="true" signature="1978:2047" placeholder="Select email... users" />
-                <marker date="1485866366674" expanded="true" signature="2224:2573" placeholder="INSERT INTO users... " />
-                <marker date="1485866366674" expanded="true" signature="2817:2887" placeholder="Select useri... users" />
-                <marker date="1485866366674" expanded="true" signature="3050:3299" placeholder="INSERT INTO adress... " />
-                <marker date="1485866366674" expanded="true" signature="3439:3482" placeholder="Delete From " />
-                <marker date="1485866366674" expanded="true" signature="3831:3962" placeholder="Select useri... users" />
-                <marker date="1485866366674" expanded="true" signature="4141:4217" placeholder="Select useri... users" />
-                <marker date="1485866366674" expanded="true" signature="4572:4618" placeholder="Select usern... users" />
-                <marker date="1485866366674" expanded="true" signature="4971:5017" placeholder="Select usern... users" />
-                <marker date="1485866366674" expanded="true" signature="5371:5451" placeholder="Select car_t... products" />
-                <marker date="1485866366674" expanded="true" signature="5877:5999" placeholder="Select p.bra... products" />
-                <marker date="1485866366674" expanded="true" signature="6498:6654" placeholder="Select p.mod... products" />
-                <marker date="1485866366674" expanded="true" signature="7152:7178" placeholder="Select modal... products" />
-                <marker date="1485866366674" expanded="true" signature="7438:7483" placeholder="Select modal... products" />
-                <marker date="1485866366674" expanded="true" signature="7741:7789" placeholder="Select modal... products" />
-                <marker date="1485866366674" expanded="true" signature="8047:8097" placeholder="Select modal... products" />
-                <marker date="1485866366674" expanded="true" signature="8359:8404" placeholder="Select modal... products" />
-                <marker date="1485866366674" expanded="true" signature="8666:8712" placeholder="Select modal... products" />
-                <marker date="1485866366674" expanded="true" signature="9143:9169" placeholder="Select brand... products" />
-                <marker date="1485866366674" expanded="true" signature="9429:9474" placeholder="Select brand... products" />
-                <marker date="1485866366674" expanded="true" signature="9732:9780" placeholder="Select brand... products" />
-                <marker date="1485866366674" expanded="true" signature="10038:10088" placeholder="Select brand... products" />
-                <marker date="1485866366674" expanded="true" signature="10350:10395" placeholder="Select brand... products" />
-                <marker date="1485866366674" expanded="true" signature="10657:10703" placeholder="Select brand... products" />
-                <marker date="1485866366674" expanded="true" signature="11132:11161" placeholder="Select car_t... products" />
-                <marker date="1485866366674" expanded="true" signature="11424:11472" placeholder="Select car_t... products" />
-                <marker date="1485866366674" expanded="true" signature="11733:11784" placeholder="Select car_t... products" />
-                <marker date="1485866366674" expanded="true" signature="12045:12098" placeholder="Select car_t... products" />
-                <marker date="1485866366674" expanded="true" signature="12363:12411" placeholder="Select car_t... products" />
-                <marker date="1485866366674" expanded="true" signature="12676:12725" placeholder="Select car_t... products" />
-                <marker date="1485866366674" expanded="true" signature="13158:13184" placeholder="Select price... products" />
-                <marker date="1485866366674" expanded="true" signature="13443:13488" placeholder="Select price... products" />
-                <marker date="1485866366674" expanded="true" signature="13746:13794" placeholder="Select price... products" />
-                <marker date="1485866366674" expanded="true" signature="14052:14102" placeholder="Select price... products" />
-                <marker date="1485866366674" expanded="true" signature="14364:14409" placeholder="Select price... products" />
-                <marker date="1485866366674" expanded="true" signature="14671:14717" placeholder="Select price... products" />
-                <marker date="1485866366674" expanded="true" signature="15151:15181" placeholder="Select produ... products" />
-                <marker date="1485866366674" expanded="true" signature="15444:15493" placeholder="Select produ... products" />
-                <marker date="1485866366674" expanded="true" signature="15755:15807" placeholder="Select produ... products" />
-                <marker date="1485866366674" expanded="true" signature="16069:16123" placeholder="Select produ... products" />
-                <marker date="1485866366674" expanded="true" signature="16389:16438" placeholder="Select produ... products" />
-                <marker date="1485866366674" expanded="true" signature="16704:16754" placeholder="Select produ... products" />
-                <marker date="1485866366674" expanded="true" signature="17145:17186" placeholder="Select * fro... products" />
-                <marker date="1485866366674" expanded="true" signature="17685:17717" placeholder="Select descr... products" />
-                <marker date="1485866366674" expanded="true" signature="18028:18076" placeholder="Delete from " />
-                <marker date="1485866366674" expanded="true" signature="18288:18359" placeholder="Update users... " />
-                <marker date="1485866366674" expanded="true" signature="18566:18636" placeholder="Update users... " />
-                <marker date="1485866366674" expanded="true" signature="18845:18917" placeholder="Update users... " />
-                <marker date="1485866366674" expanded="true" signature="19128:19472" placeholder="INSERT INTO products... " />
-                <marker date="1485866366674" expanded="true" signature="19699:19775" placeholder="INSERT INTO favourites... " />
-                <marker date="1485866366674" expanded="true" signature="19997:20047" placeholder="Select * fro... users" />
-                <marker date="1485866366674" expanded="true" signature="20765:20888" placeholder="Select op.or... orders_products" />
-                <marker date="1485866366674" expanded="true" signature="21364:21440" placeholder="insert INTO wishlist... " />
-                <marker date="1485866366674" expanded="true" signature="21836:22005" placeholder="Select p.mod... products" />
-                <marker date="1485866366674" expanded="true" signature="22518:22604" placeholder="select usern... users" />
-                <marker date="1485866366674" expanded="true" signature="22732:22864" placeholder="select u.use... users" />
-                <marker date="1485866366674" expanded="true" signature="23205:23273" placeholder="UPDATE users... " />
-                <marker date="1485866366674" expanded="true" signature="23491:23560" placeholder="UPDATE users... " />
-                <marker date="1485866366674" expanded="true" signature="23891:23937" placeholder="INSERT INTO orders... " />
-                <marker date="1485866366674" expanded="true" signature="24020:24096" placeholder="Select order... orders" />
-                <marker date="1485866366674" expanded="true" signature="24393:24509" placeholder="INSERT INTO orders_products... " />
-                <marker date="1485866366674" expanded="true" signature="24791:24859" placeholder="Select count... users" />
-                <marker date="1485866366674" expanded="true" signature="25233:25332" placeholder="Select count... users" />
-                <marker date="1485866366674" expanded="true" signature="25700:25855" placeholder="Select count... products" />
+                <marker date="1485873964142" expanded="true" signature="771:859" placeholder="Select usern... users" />
+                <marker date="1485873964142" expanded="true" signature="1321:1396" placeholder="Select usern... users" />
+                <marker date="1485873964142" expanded="true" signature="1554:1629" placeholder="Select usern... users" />
+                <marker date="1485873964142" expanded="true" signature="1945:2023" placeholder="Select usern... users" />
+                <marker date="1485873964142" expanded="true" signature="2200:2269" placeholder="Select email... users" />
+                <marker date="1485873964142" expanded="true" signature="2446:2795" placeholder="INSERT INTO users... " />
+                <marker date="1485873964142" expanded="true" signature="3039:3109" placeholder="Select useri... users" />
+                <marker date="1485873964142" expanded="true" signature="3272:3521" placeholder="INSERT INTO adress... " />
+                <marker date="1485873964142" expanded="true" signature="3661:3704" placeholder="Delete From " />
+                <marker date="1485873964142" expanded="true" signature="4053:4184" placeholder="Select useri... users" />
+                <marker date="1485873964142" expanded="true" signature="4363:4439" placeholder="Select useri... users" />
+                <marker date="1485873964142" expanded="true" signature="4794:4840" placeholder="Select usern... users" />
+                <marker date="1485873964142" expanded="true" signature="5193:5239" placeholder="Select usern... users" />
+                <marker date="1485873964142" expanded="true" signature="5593:5673" placeholder="Select car_t... products" />
+                <marker date="1485873964142" expanded="true" signature="6099:6221" placeholder="Select p.bra... products" />
+                <marker date="1485873964142" expanded="true" signature="6720:6876" placeholder="Select p.mod... products" />
+                <marker date="1485873964142" expanded="true" signature="7374:7400" placeholder="Select modal... products" />
+                <marker date="1485873964142" expanded="true" signature="7660:7705" placeholder="Select modal... products" />
+                <marker date="1485873964142" expanded="true" signature="7963:8011" placeholder="Select modal... products" />
+                <marker date="1485873964142" expanded="true" signature="8269:8319" placeholder="Select modal... products" />
+                <marker date="1485873964142" expanded="true" signature="8581:8626" placeholder="Select modal... products" />
+                <marker date="1485873964142" expanded="true" signature="8888:8934" placeholder="Select modal... products" />
+                <marker date="1485873964142" expanded="true" signature="9365:9391" placeholder="Select brand... products" />
+                <marker date="1485873964142" expanded="true" signature="9651:9696" placeholder="Select brand... products" />
+                <marker date="1485873964142" expanded="true" signature="9954:10002" placeholder="Select brand... products" />
+                <marker date="1485873964142" expanded="true" signature="10260:10310" placeholder="Select brand... products" />
+                <marker date="1485873964142" expanded="true" signature="10572:10617" placeholder="Select brand... products" />
+                <marker date="1485873964142" expanded="true" signature="10879:10925" placeholder="Select brand... products" />
+                <marker date="1485873964142" expanded="true" signature="11354:11383" placeholder="Select car_t... products" />
+                <marker date="1485873964142" expanded="true" signature="11646:11694" placeholder="Select car_t... products" />
+                <marker date="1485873964142" expanded="true" signature="11955:12006" placeholder="Select car_t... products" />
+                <marker date="1485873964142" expanded="true" signature="12267:12320" placeholder="Select car_t... products" />
+                <marker date="1485873964142" expanded="true" signature="12585:12633" placeholder="Select car_t... products" />
+                <marker date="1485873964142" expanded="true" signature="12898:12947" placeholder="Select car_t... products" />
+                <marker date="1485873964142" expanded="true" signature="13380:13406" placeholder="Select price... products" />
+                <marker date="1485873964142" expanded="true" signature="13665:13710" placeholder="Select price... products" />
+                <marker date="1485873964142" expanded="true" signature="13968:14016" placeholder="Select price... products" />
+                <marker date="1485873964142" expanded="true" signature="14274:14324" placeholder="Select price... products" />
+                <marker date="1485873964142" expanded="true" signature="14586:14631" placeholder="Select price... products" />
+                <marker date="1485873964142" expanded="true" signature="14893:14939" placeholder="Select price... products" />
+                <marker date="1485873964142" expanded="true" signature="15373:15403" placeholder="Select produ... products" />
+                <marker date="1485873964142" expanded="true" signature="15666:15715" placeholder="Select produ... products" />
+                <marker date="1485873964142" expanded="true" signature="15977:16029" placeholder="Select produ... products" />
+                <marker date="1485873964142" expanded="true" signature="16291:16345" placeholder="Select produ... products" />
+                <marker date="1485873964142" expanded="true" signature="16611:16660" placeholder="Select produ... products" />
+                <marker date="1485873964142" expanded="true" signature="16926:16976" placeholder="Select produ... products" />
+                <marker date="1485873964142" expanded="true" signature="17367:17408" placeholder="Select * fro... products" />
+                <marker date="1485873964142" expanded="true" signature="17907:17939" placeholder="Select descr... products" />
+                <marker date="1485873964142" expanded="true" signature="18250:18298" placeholder="Delete from " />
+                <marker date="1485873964142" expanded="true" signature="18510:18581" placeholder="Update users... " />
+                <marker date="1485873964142" expanded="true" signature="18788:18858" placeholder="Update users... " />
+                <marker date="1485873964142" expanded="true" signature="19067:19139" placeholder="Update users... " />
+                <marker date="1485873964142" expanded="true" signature="19350:19694" placeholder="INSERT INTO products... " />
+                <marker date="1485873964142" expanded="true" signature="19921:19997" placeholder="INSERT INTO favourites... " />
+                <marker date="1485873964142" expanded="true" signature="20219:20269" placeholder="Select * fro... users" />
+                <marker date="1485873964142" expanded="true" signature="20987:21110" placeholder="Select op.or... orders_products" />
+                <marker date="1485873964142" expanded="true" signature="21586:21662" placeholder="insert INTO wishlist... " />
+                <marker date="1485873964142" expanded="true" signature="22058:22227" placeholder="Select p.mod... products" />
+                <marker date="1485873964142" expanded="true" signature="22740:22826" placeholder="select usern... users" />
+                <marker date="1485873964142" expanded="true" signature="22954:23086" placeholder="select u.use... users" />
+                <marker date="1485873964142" expanded="true" signature="23427:23495" placeholder="UPDATE users... " />
+                <marker date="1485873964142" expanded="true" signature="23713:23782" placeholder="UPDATE users... " />
+                <marker date="1485873964142" expanded="true" signature="24113:24159" placeholder="INSERT INTO orders... " />
+                <marker date="1485873964142" expanded="true" signature="24242:24318" placeholder="Select order... orders" />
+                <marker date="1485873964142" expanded="true" signature="24615:24731" placeholder="INSERT INTO orders_products... " />
+                <marker date="1485873964142" expanded="true" signature="25013:25081" placeholder="Select count... users" />
+                <marker date="1485873964142" expanded="true" signature="25455:25554" placeholder="Select count... users" />
+                <marker date="1485873964142" expanded="true" signature="25922:26077" placeholder="Select count... products" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="View.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="View.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main/java/View.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.569378">
+              <caret line="660" column="96" selection-start-line="660" selection-start-column="96" selection-end-line="660" selection-end-column="96" />
               <folding />
             </state>
           </provider>
@@ -172,10 +171,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.vm" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.vm" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/index.vm">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5229592">
+            <state vertical-scroll-proportion="-23.576923">
               <caret line="228" column="58" selection-start-line="228" selection-start-column="58" selection-end-line="228" selection-end-column="58" />
               <folding />
             </state>
@@ -304,10 +303,10 @@
         <option value="$PROJECT_DIR$/src/Main/resources/Webshop/orderhistory.vm" />
         <option value="$PROJECT_DIR$/src/Main/resources/Webshop/otherwishlist.vm" />
         <option value="$PROJECT_DIR$/src/Main/resources/Webshop/profile.vm" />
-        <option value="$PROJECT_DIR$/src/Main/java/View.java" />
-        <option value="$PROJECT_DIR$/src/Main/java/Controller.java" />
         <option value="$PROJECT_DIR$/src/Main/resources/Webshop/shop.vm" />
         <option value="$PROJECT_DIR$/src/Main/resources/Webshop/index.vm" />
+        <option value="$PROJECT_DIR$/src/Main/java/Controller.java" />
+        <option value="$PROJECT_DIR$/src/Main/java/View.java" />
       </list>
     </option>
   </component>
@@ -917,13 +916,7 @@
       <workItem from="1485786376374" duration="57000" />
       <workItem from="1485790785363" duration="103000" />
       <workItem from="1485864368874" duration="1756000" />
-      <workItem from="1485866282623" duration="3270000" />
-    </task>
-    <task id="LOCAL-00003" summary="set the database coneection">
-      <created>1477563740381</created>
-      <option name="number" value="00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1477563740381</updated>
+      <workItem from="1485866282623" duration="5739000" />
     </task>
     <task id="LOCAL-00004" summary="set the database coneection">
       <created>1477564116129</created>
@@ -1213,11 +1206,17 @@
       <option name="project" value="LOCAL" />
       <updated>1485864659051</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="index fotos">
+      <created>1485871545592</created>
+      <option name="number" value="00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1485871545618</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112129000" />
+    <option name="totallyTimeSpent" value="114598000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1290,7 +1289,8 @@
     <MESSAGE value="huppekee op getieft" />
     <MESSAGE value="TestCase" />
     <MESSAGE value="Cleaned evrything almost v1.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleaned evrything almost v1.0" />
+    <MESSAGE value="index fotos" />
+    <option name="LAST_COMMIT_MESSAGE" value="index fotos" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1547,92 +1547,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/java/View.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/java/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.689655">
-          <caret line="468" column="24" selection-start-line="468" selection-start-column="24" selection-end-line="468" selection-end-column="104" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1485866366674" expanded="true" signature="715:803" placeholder="Select usern... users" />
-            <marker date="1485866366674" expanded="true" signature="1099:1174" placeholder="Select usern... users" />
-            <marker date="1485866366674" expanded="true" signature="1332:1407" placeholder="Select usern... users" />
-            <marker date="1485866366674" expanded="true" signature="1723:1801" placeholder="Select usern... users" />
-            <marker date="1485866366674" expanded="true" signature="1978:2047" placeholder="Select email... users" />
-            <marker date="1485866366674" expanded="true" signature="2224:2573" placeholder="INSERT INTO users... " />
-            <marker date="1485866366674" expanded="true" signature="2817:2887" placeholder="Select useri... users" />
-            <marker date="1485866366674" expanded="true" signature="3050:3299" placeholder="INSERT INTO adress... " />
-            <marker date="1485866366674" expanded="true" signature="3439:3482" placeholder="Delete From " />
-            <marker date="1485866366674" expanded="true" signature="3831:3962" placeholder="Select useri... users" />
-            <marker date="1485866366674" expanded="true" signature="4141:4217" placeholder="Select useri... users" />
-            <marker date="1485866366674" expanded="true" signature="4572:4618" placeholder="Select usern... users" />
-            <marker date="1485866366674" expanded="true" signature="4971:5017" placeholder="Select usern... users" />
-            <marker date="1485866366674" expanded="true" signature="5371:5451" placeholder="Select car_t... products" />
-            <marker date="1485866366674" expanded="true" signature="5877:5999" placeholder="Select p.bra... products" />
-            <marker date="1485866366674" expanded="true" signature="6498:6654" placeholder="Select p.mod... products" />
-            <marker date="1485866366674" expanded="true" signature="7152:7178" placeholder="Select modal... products" />
-            <marker date="1485866366674" expanded="true" signature="7438:7483" placeholder="Select modal... products" />
-            <marker date="1485866366674" expanded="true" signature="7741:7789" placeholder="Select modal... products" />
-            <marker date="1485866366674" expanded="true" signature="8047:8097" placeholder="Select modal... products" />
-            <marker date="1485866366674" expanded="true" signature="8359:8404" placeholder="Select modal... products" />
-            <marker date="1485866366674" expanded="true" signature="8666:8712" placeholder="Select modal... products" />
-            <marker date="1485866366674" expanded="true" signature="9143:9169" placeholder="Select brand... products" />
-            <marker date="1485866366674" expanded="true" signature="9429:9474" placeholder="Select brand... products" />
-            <marker date="1485866366674" expanded="true" signature="9732:9780" placeholder="Select brand... products" />
-            <marker date="1485866366674" expanded="true" signature="10038:10088" placeholder="Select brand... products" />
-            <marker date="1485866366674" expanded="true" signature="10350:10395" placeholder="Select brand... products" />
-            <marker date="1485866366674" expanded="true" signature="10657:10703" placeholder="Select brand... products" />
-            <marker date="1485866366674" expanded="true" signature="11132:11161" placeholder="Select car_t... products" />
-            <marker date="1485866366674" expanded="true" signature="11424:11472" placeholder="Select car_t... products" />
-            <marker date="1485866366674" expanded="true" signature="11733:11784" placeholder="Select car_t... products" />
-            <marker date="1485866366674" expanded="true" signature="12045:12098" placeholder="Select car_t... products" />
-            <marker date="1485866366674" expanded="true" signature="12363:12411" placeholder="Select car_t... products" />
-            <marker date="1485866366674" expanded="true" signature="12676:12725" placeholder="Select car_t... products" />
-            <marker date="1485866366674" expanded="true" signature="13158:13184" placeholder="Select price... products" />
-            <marker date="1485866366674" expanded="true" signature="13443:13488" placeholder="Select price... products" />
-            <marker date="1485866366674" expanded="true" signature="13746:13794" placeholder="Select price... products" />
-            <marker date="1485866366674" expanded="true" signature="14052:14102" placeholder="Select price... products" />
-            <marker date="1485866366674" expanded="true" signature="14364:14409" placeholder="Select price... products" />
-            <marker date="1485866366674" expanded="true" signature="14671:14717" placeholder="Select price... products" />
-            <marker date="1485866366674" expanded="true" signature="15151:15181" placeholder="Select produ... products" />
-            <marker date="1485866366674" expanded="true" signature="15444:15493" placeholder="Select produ... products" />
-            <marker date="1485866366674" expanded="true" signature="15755:15807" placeholder="Select produ... products" />
-            <marker date="1485866366674" expanded="true" signature="16069:16123" placeholder="Select produ... products" />
-            <marker date="1485866366674" expanded="true" signature="16389:16438" placeholder="Select produ... products" />
-            <marker date="1485866366674" expanded="true" signature="16704:16754" placeholder="Select produ... products" />
-            <marker date="1485866366674" expanded="true" signature="17145:17186" placeholder="Select * fro... products" />
-            <marker date="1485866366674" expanded="true" signature="17685:17717" placeholder="Select descr... products" />
-            <marker date="1485866366674" expanded="true" signature="18028:18076" placeholder="Delete from " />
-            <marker date="1485866366674" expanded="true" signature="18288:18359" placeholder="Update users... " />
-            <marker date="1485866366674" expanded="true" signature="18566:18636" placeholder="Update users... " />
-            <marker date="1485866366674" expanded="true" signature="18845:18917" placeholder="Update users... " />
-            <marker date="1485866366674" expanded="true" signature="19128:19472" placeholder="INSERT INTO products... " />
-            <marker date="1485866366674" expanded="true" signature="19699:19775" placeholder="INSERT INTO favourites... " />
-            <marker date="1485866366674" expanded="true" signature="19997:20047" placeholder="Select * fro... users" />
-            <marker date="1485866366674" expanded="true" signature="20765:20888" placeholder="Select op.or... orders_products" />
-            <marker date="1485866366674" expanded="true" signature="21364:21440" placeholder="insert INTO wishlist... " />
-            <marker date="1485866366674" expanded="true" signature="21836:22005" placeholder="Select p.mod... products" />
-            <marker date="1485866366674" expanded="true" signature="22518:22604" placeholder="select usern... users" />
-            <marker date="1485866366674" expanded="true" signature="22732:22864" placeholder="select u.use... users" />
-            <marker date="1485866366674" expanded="true" signature="23205:23273" placeholder="UPDATE users... " />
-            <marker date="1485866366674" expanded="true" signature="23491:23560" placeholder="UPDATE users... " />
-            <marker date="1485866366674" expanded="true" signature="23891:23937" placeholder="INSERT INTO orders... " />
-            <marker date="1485866366674" expanded="true" signature="24020:24096" placeholder="Select order... orders" />
-            <marker date="1485866366674" expanded="true" signature="24393:24509" placeholder="INSERT INTO orders_products... " />
-            <marker date="1485866366674" expanded="true" signature="24791:24859" placeholder="Select count... users" />
-            <marker date="1485866366674" expanded="true" signature="25233:25332" placeholder="Select count... users" />
-            <marker date="1485866366674" expanded="true" signature="25700:25855" placeholder="Select count... products" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/shop.vm">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.21818182">
@@ -1643,8 +1557,94 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/index.vm">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5229592">
+        <state vertical-scroll-proportion="-23.576923">
           <caret line="228" column="58" selection-start-line="228" selection-start-column="58" selection-end-line="228" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/java/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.448276">
+          <caret line="506" column="18" selection-start-line="506" selection-start-column="18" selection-end-line="506" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1485873964142" expanded="true" signature="771:859" placeholder="Select usern... users" />
+            <marker date="1485873964142" expanded="true" signature="1321:1396" placeholder="Select usern... users" />
+            <marker date="1485873964142" expanded="true" signature="1554:1629" placeholder="Select usern... users" />
+            <marker date="1485873964142" expanded="true" signature="1945:2023" placeholder="Select usern... users" />
+            <marker date="1485873964142" expanded="true" signature="2200:2269" placeholder="Select email... users" />
+            <marker date="1485873964142" expanded="true" signature="2446:2795" placeholder="INSERT INTO users... " />
+            <marker date="1485873964142" expanded="true" signature="3039:3109" placeholder="Select useri... users" />
+            <marker date="1485873964142" expanded="true" signature="3272:3521" placeholder="INSERT INTO adress... " />
+            <marker date="1485873964142" expanded="true" signature="3661:3704" placeholder="Delete From " />
+            <marker date="1485873964142" expanded="true" signature="4053:4184" placeholder="Select useri... users" />
+            <marker date="1485873964142" expanded="true" signature="4363:4439" placeholder="Select useri... users" />
+            <marker date="1485873964142" expanded="true" signature="4794:4840" placeholder="Select usern... users" />
+            <marker date="1485873964142" expanded="true" signature="5193:5239" placeholder="Select usern... users" />
+            <marker date="1485873964142" expanded="true" signature="5593:5673" placeholder="Select car_t... products" />
+            <marker date="1485873964142" expanded="true" signature="6099:6221" placeholder="Select p.bra... products" />
+            <marker date="1485873964142" expanded="true" signature="6720:6876" placeholder="Select p.mod... products" />
+            <marker date="1485873964142" expanded="true" signature="7374:7400" placeholder="Select modal... products" />
+            <marker date="1485873964142" expanded="true" signature="7660:7705" placeholder="Select modal... products" />
+            <marker date="1485873964142" expanded="true" signature="7963:8011" placeholder="Select modal... products" />
+            <marker date="1485873964142" expanded="true" signature="8269:8319" placeholder="Select modal... products" />
+            <marker date="1485873964142" expanded="true" signature="8581:8626" placeholder="Select modal... products" />
+            <marker date="1485873964142" expanded="true" signature="8888:8934" placeholder="Select modal... products" />
+            <marker date="1485873964142" expanded="true" signature="9365:9391" placeholder="Select brand... products" />
+            <marker date="1485873964142" expanded="true" signature="9651:9696" placeholder="Select brand... products" />
+            <marker date="1485873964142" expanded="true" signature="9954:10002" placeholder="Select brand... products" />
+            <marker date="1485873964142" expanded="true" signature="10260:10310" placeholder="Select brand... products" />
+            <marker date="1485873964142" expanded="true" signature="10572:10617" placeholder="Select brand... products" />
+            <marker date="1485873964142" expanded="true" signature="10879:10925" placeholder="Select brand... products" />
+            <marker date="1485873964142" expanded="true" signature="11354:11383" placeholder="Select car_t... products" />
+            <marker date="1485873964142" expanded="true" signature="11646:11694" placeholder="Select car_t... products" />
+            <marker date="1485873964142" expanded="true" signature="11955:12006" placeholder="Select car_t... products" />
+            <marker date="1485873964142" expanded="true" signature="12267:12320" placeholder="Select car_t... products" />
+            <marker date="1485873964142" expanded="true" signature="12585:12633" placeholder="Select car_t... products" />
+            <marker date="1485873964142" expanded="true" signature="12898:12947" placeholder="Select car_t... products" />
+            <marker date="1485873964142" expanded="true" signature="13380:13406" placeholder="Select price... products" />
+            <marker date="1485873964142" expanded="true" signature="13665:13710" placeholder="Select price... products" />
+            <marker date="1485873964142" expanded="true" signature="13968:14016" placeholder="Select price... products" />
+            <marker date="1485873964142" expanded="true" signature="14274:14324" placeholder="Select price... products" />
+            <marker date="1485873964142" expanded="true" signature="14586:14631" placeholder="Select price... products" />
+            <marker date="1485873964142" expanded="true" signature="14893:14939" placeholder="Select price... products" />
+            <marker date="1485873964142" expanded="true" signature="15373:15403" placeholder="Select produ... products" />
+            <marker date="1485873964142" expanded="true" signature="15666:15715" placeholder="Select produ... products" />
+            <marker date="1485873964142" expanded="true" signature="15977:16029" placeholder="Select produ... products" />
+            <marker date="1485873964142" expanded="true" signature="16291:16345" placeholder="Select produ... products" />
+            <marker date="1485873964142" expanded="true" signature="16611:16660" placeholder="Select produ... products" />
+            <marker date="1485873964142" expanded="true" signature="16926:16976" placeholder="Select produ... products" />
+            <marker date="1485873964142" expanded="true" signature="17367:17408" placeholder="Select * fro... products" />
+            <marker date="1485873964142" expanded="true" signature="17907:17939" placeholder="Select descr... products" />
+            <marker date="1485873964142" expanded="true" signature="18250:18298" placeholder="Delete from " />
+            <marker date="1485873964142" expanded="true" signature="18510:18581" placeholder="Update users... " />
+            <marker date="1485873964142" expanded="true" signature="18788:18858" placeholder="Update users... " />
+            <marker date="1485873964142" expanded="true" signature="19067:19139" placeholder="Update users... " />
+            <marker date="1485873964142" expanded="true" signature="19350:19694" placeholder="INSERT INTO products... " />
+            <marker date="1485873964142" expanded="true" signature="19921:19997" placeholder="INSERT INTO favourites... " />
+            <marker date="1485873964142" expanded="true" signature="20219:20269" placeholder="Select * fro... users" />
+            <marker date="1485873964142" expanded="true" signature="20987:21110" placeholder="Select op.or... orders_products" />
+            <marker date="1485873964142" expanded="true" signature="21586:21662" placeholder="insert INTO wishlist... " />
+            <marker date="1485873964142" expanded="true" signature="22058:22227" placeholder="Select p.mod... products" />
+            <marker date="1485873964142" expanded="true" signature="22740:22826" placeholder="select usern... users" />
+            <marker date="1485873964142" expanded="true" signature="22954:23086" placeholder="select u.use... users" />
+            <marker date="1485873964142" expanded="true" signature="23427:23495" placeholder="UPDATE users... " />
+            <marker date="1485873964142" expanded="true" signature="23713:23782" placeholder="UPDATE users... " />
+            <marker date="1485873964142" expanded="true" signature="24113:24159" placeholder="INSERT INTO orders... " />
+            <marker date="1485873964142" expanded="true" signature="24242:24318" placeholder="Select order... orders" />
+            <marker date="1485873964142" expanded="true" signature="24615:24731" placeholder="INSERT INTO orders_products... " />
+            <marker date="1485873964142" expanded="true" signature="25013:25081" placeholder="Select count... users" />
+            <marker date="1485873964142" expanded="true" signature="25455:25554" placeholder="Select count... users" />
+            <marker date="1485873964142" expanded="true" signature="25922:26077" placeholder="Select count... products" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/java/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.569378">
+          <caret line="660" column="96" selection-start-line="660" selection-start-column="96" selection-end-line="660" selection-end-column="96" />
           <folding />
         </state>
       </provider>
