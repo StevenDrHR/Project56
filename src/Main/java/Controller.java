@@ -1,5 +1,3 @@
-import junit.framework.TestCase;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -11,7 +9,7 @@ import java.util.List;
 /**
  * Created by nilmor on 10/27/2016.
  */
-public class Controller extends TestCase {
+public class Controller {
     static Connection connection;
 
     public void connection() throws SQLException{
