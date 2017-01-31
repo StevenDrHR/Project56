@@ -69,12 +69,6 @@
                 <br>
             </div>
 
-            <form class="list-group" method="POST" action="/Profile">
-                <button href="#" id="wishlistbuttonvisibilitypu" name="makewishlistpublic" type="submit" class="list-group-item">Make wishlist public</button>
-                <button href="#" id="wishlistbuttonvisibilitypr" name="makewishlistprivate" type="submit" class="list-group-item">Make wishlist private</button>
-                <br>
-            </form>
-
             <form class="form" id="logoutvisibility" method="POST" action="/Home">
                 <p class="tab0">Welcome : ${CurrentUser}</p>
                 <button type="submit" id="logout_button" name="iets" align="center">Logout</button>
@@ -154,7 +148,7 @@
     var dirtystring = "${amountitems}";
     var cleanstring = dirtystring.substr(1, dirtystring.length-2)
     var amntitems = cleanstring.split(", ");
-    window.alert(amntitems)
+    //window.alert(amntitems)
 
 
     document.getElementById('main').innerHTML =
@@ -162,7 +156,7 @@
 
     if (once == 1){
         if (mdl.length > 0 && amntitems > 0) {
-            window.alert(mdl.length)
+            //window.alert(mdl.length)
             for (var i = 0; i < mdl.length-1; i++) {
                 if (i == 0) {
                     table = document.getElementById("alltables");
@@ -186,7 +180,6 @@
                 //adding the row
                 row = table.insertRow(i + 1);
                 row.setAttribute("name", "" + mdl[i]);
-                //            window.alert(mdl[i]);
 
                 //making the amount of values in a row
                 cell1 = row.insertCell(0);
@@ -206,7 +199,7 @@
         else {
             document.getElementById('main').innerHTML =
                     '<h1 align="center">THERE IS NOTHING TO SHOW BIATCH</h1>';
-            window.alert(mdl.length)
+            //window.alert(mdl.length)
         }
     }
 </script>

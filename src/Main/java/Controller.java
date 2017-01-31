@@ -9,11 +9,12 @@ import java.util.List;
 /**
  * Created by nilmor on 10/27/2016.
  */
-public class Controller {
+public class Controller{
     static Connection connection;
 
     public void connection() throws SQLException{
-        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "123lol123");
+        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/project56", "postgres", "sql");
+        //connection = DriverManager.getConnection("jdbc:postgresql://145.24.222.73:5432/postgres", "postgres", "shamala");
     }
 
     public String checkUserStatus(String UserName) throws SQLException {

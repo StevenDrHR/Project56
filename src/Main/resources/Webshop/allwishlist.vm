@@ -137,12 +137,12 @@
     var dirtystring = '"${allwishliststats}"';
     var cleanstring = dirtystring.substr(2, dirtystring.length-4)
     var wlsts = cleanstring.split(", ");
-    window.alert(wlsts)
+    //window.alert(wlsts)
 
     var dirtystring = '"${ownwishliststats}"';
     var cleanstring = dirtystring.substr(2, dirtystring.length-4)
     var owlsts = cleanstring.split(", ");
-    window.alert(owlsts)
+    //window.alert(owlsts)
 
     document.getElementById('main').innerHTML =
             '<h1 align="center">All Wish List</h1><br> <p align="center">These are all the wishlists</p>';
@@ -159,7 +159,7 @@
 
             }
             if (wlsts > 0 && owlsts != 0) {
-                window.alert(usrnm[i])
+                //window.alert(usrnm[i])
                 table = document.getElementById("alltables");
                 userbutton = document.createElement("button");
 
@@ -185,8 +185,8 @@
             else {
                 document.getElementById('main').innerHTML =
                         '<h1 align="center">THERE IS NOTHING TO SHOW BIATCH</h1>';
-                window.alert(usrnm.length)
-                window.alert(usrnm[i])
+                //window.alert(usrnm.length)
+                //window.alert(usrnm[i])
             }
         }
     }

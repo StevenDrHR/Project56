@@ -300,12 +300,6 @@
 </script>
 
 <script>
-    if("${message}" != "null" ){
-        window.alert("${message}");
-    }
-</script>
-
-<script>
     if("${userlevel}" == "admin"){
         var a = document.querySelector("#adminvisibility");
         a.style.display = "initial";

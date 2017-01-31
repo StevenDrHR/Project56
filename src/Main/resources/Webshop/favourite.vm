@@ -133,42 +133,54 @@
     var fvrts = cleanstring.split(", ");
     var count = 1;
 
-    table = document.getElementById("alltables");
-    row = table.insertRow(0);
-    row.setAttribute("name", "info");
-    cell1 = row.insertCell(0);
-    cell2 = row.insertCell(1);
-    cell3 = row.insertCell(2);
-    cell4 = row.insertCell(3);
 
+    if (fvrts.length > 3){
 
-    cell1.innerHTML = "<b>Model fvrts</b>";
-    cell2.innerHTML = "<b>Brand</b>";
-    cell3.innerHTML = "<b>Type</b>";
-    cell4.innerHTML = "<b>Price</b>";
+        document.getElementById('main').innerHTML =
+                '<h1 align="center">Favourites</h1><br> <p align="center">This is the favourite list of : ${CurrentUser}</p>';
 
-    for (var i = 0; i < fvrts.length; i = i + 4) {
         table = document.getElementById("alltables");
-
-        //adding the row
-        row = table.insertRow(count);
-        row.setAttribute("name", "" + fvrts[i]);
-
-
-        //making the amount of values in a row
+        row = table.insertRow(0);
+        row.setAttribute("name", "info");
         cell1 = row.insertCell(0);
         cell2 = row.insertCell(1);
         cell3 = row.insertCell(2);
         cell4 = row.insertCell(3);
 
 
-        //adding values
-        cell1.innerHTML = fvrts[i];
-        cell2.innerHTML = fvrts[i+1];
-        cell3.innerHTML = fvrts[i+2];
-        cell4.innerHTML = fvrts[i+3];
+        cell1.innerHTML = "<b>Model</b>";
+        cell2.innerHTML = "<b>Brand</b>";
+        cell3.innerHTML = "<b>Type</b>";
+        cell4.innerHTML = "<b>Price</b>";
 
-        count = count + 1
+        for (var i = 0; i < fvrts.length; i = i + 4) {
+            table = document.getElementById("alltables");
+
+            //adding the row
+            row = table.insertRow(count);
+            row.setAttribute("name", "" + fvrts[i]);
+
+
+            //making the amount of values in a row
+            cell1 = row.insertCell(0);
+            cell2 = row.insertCell(1);
+            cell3 = row.insertCell(2);
+            cell4 = row.insertCell(3);
+
+
+            //adding values
+            cell1.innerHTML = fvrts[i];
+            cell2.innerHTML = fvrts[i+1];
+            cell3.innerHTML = fvrts[i+2];
+            cell4.innerHTML = fvrts[i+3];
+
+            count = count + 1
+        }
+    }
+    else {
+        document.getElementById('main').innerHTML =
+                '<h1 align="center">THERE IS NOTHING TO SHOW BIATCH</h1>';
+
     }
 
 </script>

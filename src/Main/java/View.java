@@ -234,13 +234,7 @@ public class View {
             String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
             attributes.put("userlevel", currentUserLevel);
 
-            if(req.session().attribute("message") == null ){
-                attributes.put("message", "null");
-            }
-            else{
-                attributes.put("message", req.session().attribute("message"));
-                req.session().attribute("message", null);
-            }
+
 
             Controller checkUser = new Controller();
             ArrayList<String> UserData = checkUser.getUserData(currentUser);
@@ -268,10 +262,10 @@ public class View {
             List getwishlistdata = getWishlistData.getWishlistinfo(currentUser);
             for (int i = 0; i < getwishlistdata.size(); i += 4){
 
-                    attributes.put("model", getwishlistdata.get(i) + ", " + attributes.get("model"));
-                    attributes.put("brand", getwishlistdata.get(i+1) + ", " + attributes.get("brand"));
-                    attributes.put("type", getwishlistdata.get(i+2) + ", " + attributes.get("type"));
-                    attributes.put("price", getwishlistdata.get(i+3) + ", " + attributes.get("price"));
+                attributes.put("model", getwishlistdata.get(i) + ", " + attributes.get("model"));
+                attributes.put("brand", getwishlistdata.get(i+1) + ", " + attributes.get("brand"));
+                attributes.put("type", getwishlistdata.get(i+2) + ", " + attributes.get("type"));
+                attributes.put("price", getwishlistdata.get(i+3) + ", " + attributes.get("price"));
 
             }
 
@@ -608,7 +602,7 @@ public class View {
                 System.out.println(variabel + " Shamala3");
                 settoWishlist.setToWishlist(userid.get(6), variabel.substring(13));
                 System.out.println(variabel + " Shamala4");
-                res.redirect("/Profile");
+                res.redirect("/Wishlist");
                 System.out.println(variabel + " Shamala");
             }
 
@@ -761,8 +755,7 @@ public class View {
                 req.session().attribute("productid", null);
                 req.session().attribute("amount", null);
 
-
-                res.redirect("/Profile");
+                res.redirect("/Orderhistory");
             }
 
             if(req.session().attribute("productid") == null){
@@ -771,7 +764,6 @@ public class View {
             else {
                 attributes.put("shopcheck", req.session().attribute("productid"));
             }
-
 
 
             Controller getUsers = new Controller();
@@ -928,10 +920,10 @@ public class View {
             Controller getWishlistData = new Controller();
             List getwishlistdata = getWishlistData.getWishlistinfo(Selecteduserwl);
             for (int i = 0; i < getwishlistdata.size(); i += 4){
-                    attributes.put("model", getwishlistdata.get(i) + ", " + attributes.get("model"));
-                    attributes.put("brand", getwishlistdata.get(i+1) + ", " + attributes.get("brand"));
-                    attributes.put("type", getwishlistdata.get(i+2) + ", " + attributes.get("type"));
-                    attributes.put("price", getwishlistdata.get(i+3) + ", " + attributes.get("price"));
+                attributes.put("model", getwishlistdata.get(i) + ", " + attributes.get("model"));
+                attributes.put("brand", getwishlistdata.get(i+1) + ", " + attributes.get("brand"));
+                attributes.put("type", getwishlistdata.get(i+2) + ", " + attributes.get("type"));
+                attributes.put("price", getwishlistdata.get(i+3) + ", " + attributes.get("price"));
             }
 
             System.out.println(currentUserLevel);
@@ -1093,12 +1085,10 @@ public class View {
             else {
                 attributes.put("message", req.session().attribute("message"));
                 req.session().attribute("message", null);
-
             }
 
 
             Controller setorders = new Controller();
-
 
             ArrayList orders = setorders.GetOrderHistory(setorders.getUserData(currentUser).get(6));
 
@@ -1129,7 +1119,7 @@ public class View {
                 AddFavourite.addFavourite(variable.substring(10,11), AddFavourite.getUserData(currentUser).get(6));
                 res.redirect("/Favourite");
             }
-            
+
 
             Controller checkUser = new Controller();
             ArrayList<String> UserData = checkUser.getUserData(currentUser);

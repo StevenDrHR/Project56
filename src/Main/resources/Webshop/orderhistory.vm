@@ -69,11 +69,6 @@
                 <br>
             </div>
 
-            <form class="list-group" method="POST" action="/Profile">
-                <button href="#" id="wishlistbuttonvisibilitypu" name="makewishlistpublic" type="submit" class="list-group-item">Make wishlist public</button>
-                <br>
-            </form>
-
             <form class="form" id="logoutvisibility" method="POST" action="/Home">
                 <p class="tab0">Welcome : ${CurrentUser}</p>
                 <button type="submit" id="logout_button" name="iets" align="center">Logout</button>
@@ -135,52 +130,54 @@
 <script src="js/bootstrap.min.js"></script>
 
 <script>
-    function OrderHistoryContent(){
-        document.getElementById('main').innerHTML =
-                '<h1 align="center">Order History</h1><br> <p align="center">This is the order history of : ${CurrentUser}</p>';
-    }
-</script>
-
-<script>
     var dirtystring = "${orders}";
     var cleanstring = dirtystring.substr(1, dirtystring.length-2)
     var orders = cleanstring.split(", ");
 
-
     var count = 1;
     var count2= 1;
 
-    table = document.getElementById("alltables");
-    row = table.insertRow(0);
-    row.setAttribute("name", "info");
-    cell1 = row.insertCell(0);
-    cell2 = row.insertCell(1);
-    cell1.innerHTML = "<b>orderid</b>" + orders;
-    cell2.innerHTML = "<b>products</b>";
+    if(orders.length > 2){
 
-    for( var i = 0; i < orders.length; i += 0) {
-        for(var j = 0; j < orders.length / 3; j++ ){
+        document.getElementById('main').innerHTML =
+                '<h1 align="center">Order History</h1><br> <p align="center">This is the order history of : ${CurrentUser}</p>';
 
-            favouritebutton = document.createElement("button");
-            favouritebutton.setAttribute("name", "Favourite "+ orders[i + 2])
-            favouritebutton.setAttribute("type", "submit")
-            favouritebutton.innerHTML = "Add to Favourite";
+        table = document.getElementById("alltables");
+        row = table.insertRow(0);
+        row.setAttribute("name", "info");
+        cell1 = row.insertCell(0);
+        cell2 = row.insertCell(1);
+        cell1.innerHTML = "<b>orderid</b>" + orders;
+        cell2.innerHTML = "<b>products</b>";
 
-            row = table.insertRow(count);
-            row.setAttribute("name", "info");
-            cell1 = row.insertCell(0);
-            cell2 = row.insertCell(1);
-            cell3 = row.insertCell(2);
-            cell1.innerHTML = orders[i];
-            cell2.innerHTML = orders[i + 1] + " "+ orders[i+2];
-            cell3.appendChild(favouritebutton);
+        for( var i = 0; i < orders.length; i += 0) {
+            for(var j = 0; j < orders.length / 3; j++ ){
+
+                favouritebutton = document.createElement("button");
+                favouritebutton.setAttribute("name", "Favourite "+ orders[i + 2])
+                favouritebutton.setAttribute("type", "submit")
+                favouritebutton.innerHTML = "Add to Favourite";
+
+                row = table.insertRow(count);
+                row.setAttribute("name", "info");
+                cell1 = row.insertCell(0);
+                cell2 = row.insertCell(1);
+                cell3 = row.insertCell(2);
+                cell1.innerHTML = "Order ID: " + orders[i];
+                cell2.innerHTML = "Product ID: " + orders[i + 1] + " Amount: "+ orders[i+2];
+                cell3.appendChild(favouritebutton);
 
 
-            i  = i + 3;
+                i  = i + 3;
 
-            count = count + 1;
+                count = count + 1;
+            }
+            count2 = count2 + 2
         }
-        count2 = count2 + 2
+    }
+    else {
+        document.getElementById('main').innerHTML =
+                '<h1 align="center">THERE IS NOTHING TO SHOW BIATCH</h1>';
     }
 
 </script>
@@ -217,7 +214,6 @@
                 //adding the row
                 row = table.insertRow(i + 1);
                 row.setAttribute("name", "" + usrnm[i]);
-                //            window.alert(mdl[i]);
 
                 //making the amount of values in a row
                 cell1 = row.insertCell(0);
@@ -236,21 +232,6 @@
     if ('${wishlist}' == "public"){
         var a = document.querySelector("#wishlistbuttonvisibilitypu");
         a.style.display = "none";
-    }
-</script>
-
-<script>
-    function FavouritesContent(){
-        document.getElementById('main').innerHTML =
-                '<h1 align="center">Favourites</h1><br> <p align="center">This is the favourites of : ${CurrentUser}</p>';
-    }
-</script>
-
-<script>
-    function Spoiler(){
-        if(document.getElementById('spoiler').style.display=='none')
-        {document.getElementById('spoiler').style.display='initial'}
-        else{document.getElementById('spoiler').style.display='none'};
     }
 </script>
 

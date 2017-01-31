@@ -174,7 +174,6 @@
             //adding the row
             row = table.insertRow(i + 1);
             row.setAttribute("name", "" + mdl[i]);
-            //            window.alert(mdl[i]);
 
             //making the amount of values in a row
             cell1 = row.insertCell(0);
