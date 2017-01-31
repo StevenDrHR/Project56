@@ -15,6 +15,13 @@ public class TestJUnit {
         //Assert.assertTrue(testController.RegisterUser(RegisterUsers).equals("Done") );
         //Assert.assertTrue(testController.RegisterUser(RegisterUsers).equals("Username already exists") );;
         String okay = "Done";
-        Assert.assertTrue(okay.equals("Done"));
+        try{
+            Assert.assertTrue(okay.equals("Done"));
+            System.out.println("Is okay done? - passed");
+        }catch(AssertionError e){
+            System.out.println("Is okay done? - failed");
+            throw e;
+        }
+
     }
 }

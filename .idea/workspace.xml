@@ -79,8 +79,8 @@
       <file leaf-file-name="TestJUnit.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main/java/TestJUnit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+            <state relative-caret-position="408">
+              <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -688,13 +688,6 @@
       <workItem from="1485786376374" duration="57000" />
       <workItem from="1485790785363" duration="103000" />
     </task>
-    <task id="LOCAL-00001" summary="added">
-      <created>1477561640598</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1477561640598</updated>
-    </task>
     <task id="LOCAL-00002" summary="made a structer">
       <created>1477563134571</created>
       <option name="number" value="00002" />
@@ -1031,7 +1024,14 @@
       <option name="project" value="LOCAL" />
       <updated>1485859803153</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="TestCase">
+      <created>1485859898692</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1485859898692</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1396,8 +1396,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/java/TestJUnit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+        <state relative-caret-position="408">
+          <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
