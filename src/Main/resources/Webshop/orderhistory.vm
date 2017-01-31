@@ -147,7 +147,7 @@
         row.setAttribute("name", "info");
         cell1 = row.insertCell(0);
         cell2 = row.insertCell(1);
-        cell1.innerHTML = "<b>orderid</b>" + orders;
+        cell1.innerHTML = "<b>orderid</b>";
         cell2.innerHTML = "<b>products</b>";
 
         for( var i = 0; i < orders.length; i += 0) {

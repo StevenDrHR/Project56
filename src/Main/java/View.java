@@ -234,7 +234,9 @@ public class View {
             String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
             attributes.put("userlevel", currentUserLevel);
 
-
+            if(currentUserLevel.equals("not registered")){
+                res.redirect("/Home");
+            }
 
             Controller checkUser = new Controller();
             ArrayList<String> UserData = checkUser.getUserData(currentUser);
@@ -383,7 +385,7 @@ public class View {
             String currentUserLevel = getUsers.checkUserLevel(currentUser);
             attributes.put("userlevel", currentUserLevel);
             if(currentUserLevel.equals("not registered")||currentUserLevel.equals("user")){
-                res.redirect("/Home");
+                    res.redirect("/Home");
             }
             return modelAndView(attributes, "Webshop/graphs.vm");
         },new VelocityTemplateEngine());
@@ -792,6 +794,10 @@ public class View {
             ArrayList<Integer> checkamountitems = checkUserLevel.checkOwnWishlist(currentUser);
             attributes.put("amountitems", checkamountitems);
 
+            if(currentUserLevel.equals("not registered")){
+                res.redirect("/Home");
+            }
+
             if(req.session().attribute("message") == null ){
                 attributes.put("message", "null");
             }
@@ -903,8 +909,15 @@ public class View {
             Controller checkUserLevel = new Controller();
             String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
             attributes.put("userlevel", currentUserLevel);
+
+            if(currentUserLevel.equals("not registered")){
+                res.redirect("/Home");
+            }
+
             String Selecteduserwl = req.session().attribute("Selecteduserwl");
             System.out.println(req.session().attribute("Selecteduserwl") + " jemoeder");
+
+            attributes.put("clickeduserwl", Selecteduserwl);
 
             Controller checkUser = new Controller();
             ArrayList<String> UserData = checkUser.getUserData(currentUser);
@@ -960,6 +973,10 @@ public class View {
             attributes.put("allwishliststats", AllUserStats);
             ArrayList<Integer> OwnUserStats = checkwishliststatus.checkWishlistStatusOwn(currentUser);
             attributes.put("ownwishliststats", OwnUserStats);
+
+            if(currentUserLevel.equals("not registered")){
+                res.redirect("/Home");
+            }
 
 
             if(req.session().attribute("message") == null ){
@@ -1079,6 +1096,10 @@ public class View {
             String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
             attributes.put("userlevel", currentUserLevel);
 
+            if(currentUserLevel.equals("not registered")){
+                res.redirect("/Home");
+            }
+
             if(req.session().attribute("message") == null ){
                 attributes.put("message", "null");
             }
@@ -1140,6 +1161,10 @@ public class View {
             Controller checkUserLevel = new Controller();
             String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
             attributes.put("userlevel", currentUserLevel);
+
+            if(currentUserLevel.equals("not registered")){
+                res.redirect("/Home");
+            }
 
             Controller getFavourites = new Controller();
             ArrayList<String> favourites = getFavourites.getFavourites(getFavourites.getUserData(currentUser).get(6));

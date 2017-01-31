@@ -285,21 +285,6 @@
 </script>
 
 <script>
-    function FavouritesContent(){
-        document.getElementById('main').innerHTML =
-                '<h1 align="center">Favourites</h1><br> <p align="center">This is the favourites of : ${CurrentUser}</p>';
-    }
-</script>
-
-<script>
-    function Spoiler(){
-        if(document.getElementById('spoiler').style.display=='none')
-        {document.getElementById('spoiler').style.display='initial'}
-        else{document.getElementById('spoiler').style.display='none'};
-    }
-</script>
-
-<script>
     if("${userlevel}" == "admin"){
         var a = document.querySelector("#adminvisibility");
         a.style.display = "initial";
