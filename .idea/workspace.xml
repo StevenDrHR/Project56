@@ -82,8 +82,8 @@
       <file leaf-file-name="TestJUnit.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main/java/TestJUnit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="26" column="63" selection-start-line="26" selection-start-column="63" selection-end-line="26" selection-end-column="63" />
+            <state relative-caret-position="462">
+              <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -791,14 +791,7 @@
       <workItem from="1485953401234" duration="1431000" />
       <workItem from="1485955728334" duration="624000" />
       <workItem from="1485956599894" duration="3701000" />
-      <workItem from="1485961271386" duration="328000" />
-    </task>
-    <task id="LOCAL-00008" summary="Can now send data to the database&#10;Note: doesnt get a response from the the database yet">
-      <created>1477925340424</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1477925340424</updated>
+      <workItem from="1485961271386" duration="943000" />
     </task>
     <task id="LOCAL-00009" summary="Can now send data to the database&#10;Note: doesnt get a response from the the database yet">
       <created>1477926851311</created>
@@ -1136,11 +1129,18 @@
       <option name="project" value="LOCAL" />
       <updated>1485961490827</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Test zonder kakkie nummer 2">
+      <created>1485961608173</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1485961608173</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120682000" />
+    <option name="totallyTimeSpent" value="121297000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
@@ -1192,7 +1192,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="made a structer" />
     <MESSAGE value="set the database coneection" />
     <MESSAGE value="Can now send data to the database&#10;Note: doesnt get a response from the the database yet" />
     <MESSAGE value="lol" />
@@ -1217,7 +1216,8 @@
     <MESSAGE value="Test kakkie" />
     <MESSAGE value="Test zonder kakkie" />
     <MESSAGE value="Test met kakkie nummer 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test met kakkie nummer 2" />
+    <MESSAGE value="Test zonder kakkie nummer 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test zonder kakkie nummer 2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1485,8 +1485,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/java/TestJUnit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="26" column="63" selection-start-line="26" selection-start-column="63" selection-end-line="26" selection-end-column="63" />
+        <state relative-caret-position="462">
+          <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
           <folding />
         </state>
       </provider>
