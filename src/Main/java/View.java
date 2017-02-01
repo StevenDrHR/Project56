@@ -385,7 +385,7 @@ public class View {
             String currentUserLevel = getUsers.checkUserLevel(currentUser);
             attributes.put("userlevel", currentUserLevel);
             if(currentUserLevel.equals("not registered")||currentUserLevel.equals("user")){
-                    res.redirect("/Home");
+                res.redirect("/Home");
             }
             return modelAndView(attributes, "Webshop/graphs.vm");
         },new VelocityTemplateEngine());
@@ -1133,7 +1133,7 @@ public class View {
             if(variable.contains("Favourite")){
                 Controller AddFavourite = new Controller();
                 System.out.println(variable.substring(10, 11) +" "+ AddFavourite.getUserData(currentUser).get(6) + " Shamlalalalalalalalalalalalalalal");
-                AddFavourite.addFavourite(variable.substring(10,11), AddFavourite.getUserData(currentUser).get(6));
+                AddFavourite.addFavourite(variable.substring(10, variable.length()), AddFavourite.getUserData(currentUser).get(6));
                 res.redirect("/Favourite");
             }
 

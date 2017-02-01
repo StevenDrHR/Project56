@@ -13,8 +13,9 @@ public class Controller{
     static Connection connection;
 
     public void connection() throws SQLException{
-        connection = DriverManager.getConnection("jdbc:postgresql://83.86.251.189:5432/postgres2", "postgres", "postgres");
-        //connection = DriverManager.getConnection("jdbc:postgresql://145.24.222.73:5432/postgres", "postgres", "shamala");
+
+//        connection = DriverManager.getConnection("jdbc:postgresql://83.86.251.189:5432/postgres2", "postgres", "postgres");
+        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "0906986");
     }
 
     public String checkUserStatus(String UserName) throws SQLException {
@@ -26,7 +27,7 @@ public class Controller{
         }
         return "Available";
     }
-        // basically the same logic everywhere
+    // basically the same logic everywhere
     public String checkUserLevel(String UserName) throws SQLException{
         connection();
         String Querry = "Select username from users where username ='"+UserName+"' and userlevel = 1";
@@ -84,20 +85,26 @@ public class Controller{
         return "Done";
     }
 
-    public String LoginUser( Deque<Modal> list) throws SQLException {
-        connection();
-        String Querry = "Select userid from users where username='"+ list.getFirst().getUsername()+"' and user_password='"+ list.getFirst().getpassword()+"'";
-        ResultSet rs = connection.prepareStatement(Querry).executeQuery();
-        if(rs.next()){
-            return list.getFirst().getUsername();
-        }
-        Querry = "Select userid from users where username='"+ list.getFirst().getUsername()+"'";
-        rs = connection.prepareStatement(Querry).executeQuery();
-        if(rs.next()){
-            return "Wrong Password";
-        }
-        else{return "Wrong Username";
 
+    public String LoginUser( Deque<Modal> list) throws SQLException {
+        try{
+            connection();
+            String Querry = "Select userid from users where username='"+ list.getFirst().getUsername()+"' and user_password='"+ list.getFirst().getpassword()+"'";
+            ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+            if(rs.next()){
+                return list.getFirst().getUsername();
+            }
+            Querry = "Select userid from users where username='"+ list.getFirst().getUsername()+"'";
+            rs = connection.prepareStatement(Querry).executeQuery();
+            if(rs.next()){
+                return "Wrong Password";
+            }
+            else{return "Wrong Username";
+
+            }
+        }
+        catch (SQLException e){
+            return "failed";
         }
     }
     public List<String> GetUsers() throws SQLException {
@@ -432,23 +439,38 @@ public class Controller{
     }
 
     public String DeleteUser(String username) throws SQLException {
-        connection();
-        String Querry = "Delete from users where username ='"+username+"';";
-        connection.prepareStatement(Querry).executeUpdate();
-        return "Done";
+        try{
+            connection();
+            String Querry = "Delete from users where username ='"+username+"';";
+            connection.prepareStatement(Querry).executeUpdate();
+            return "Done";
+        }
+        catch (SQLException e){
+            return "failed";
+        }
     }
 
     public String ResetPassword(String username) throws SQLException{
-        connection();
-        String Querry = "Update users set user_password = '12345' where username ='"+username+"';";
-        connection.prepareStatement(Querry).executeUpdate();
-        return "Done";
+        try{
+            connection();
+            String Querry = "Update users set user_password = '12345' where username ='"+username+"';";
+            connection.prepareStatement(Querry).executeUpdate();
+            return "Done";
+        }
+        catch (SQLException e){
+            return "failed";
+        }
     }
     public String BlockUser(String username) throws SQLException{
-        connection();
-        String Querry = "Update users set userstatus = 'Blocked' where username ='"+username+"';";
-        connection.prepareStatement(Querry).executeUpdate();
-        return "Done";
+        try{
+            connection();
+            String Querry = "Update users set userstatus = 'Blocked' where username ='"+username+"';";
+            connection.prepareStatement(Querry).executeUpdate();
+            return "Done";
+        }
+        catch (SQLException e){
+            return "failed";
+        }
     }
     public String UnblockUser(String username) throws SQLException{
         connection();
@@ -458,17 +480,27 @@ public class Controller{
     }
 
     public String AddProduct(Deque<Modal> list) throws SQLException{
-        connection();
-        String Querry = "INSERT INTO products (modal,brand,car_type,build_year,price,deliverytime,description) VALUES ('" + list.getFirst().getModal() + "','"+list.getFirst().getBrand() +"','"+ list.getFirst().getType() +"','"+ list.getFirst().getYear()+"',"+ list.getFirst().getPrice() +",'"+list.getFirst().getDeliverytime()+"','"+list.getFirst().getDescription()+"');";
-        connection.prepareStatement(Querry).executeUpdate();
-        return "Done";
+        try{
+            connection();
+            String Querry = "INSERT INTO products (modal,brand,car_type,build_year,price,deliverytime,description) VALUES ('" + list.getFirst().getModal() + "','"+list.getFirst().getBrand() +"','"+ list.getFirst().getType() +"','"+ list.getFirst().getYear()+"',"+ list.getFirst().getPrice() +",'"+list.getFirst().getDeliverytime()+"','"+list.getFirst().getDescription()+"');";
+            connection.prepareStatement(Querry).executeUpdate();
+            return "Done";
+        }
+        catch (SQLException e){
+            return "failed";
+        }
     }
 
     public String addFavourite(String productid, String userid) throws SQLException{
-        connection();
-        String Querry = "INSERT INTO favourites (productid,userid) VALUES ("+productid+", "+userid+");";
-        connection.prepareStatement(Querry).executeUpdate();
-        return "Done";
+        try{
+            connection();
+            String Querry = "INSERT INTO favourites (productid,userid) VALUES ("+productid+", "+userid+");";
+            connection.prepareStatement(Querry).executeUpdate();
+            return "Done";
+        }
+        catch (SQLException e){
+            return "failed";
+        }
     }
 
     public ArrayList<String> getUserData(String username) throws SQLException {
@@ -553,10 +585,15 @@ public class Controller{
         return "Done";
     }
     public String setWishlistToPrivate(String username) throws SQLException{
-        connection();
-        String Querry = "UPDATE users SET wishlist = 'private' WHERE username = '"+username+"';";
-        connection.prepareStatement(Querry).executeUpdate();
-        return "Done";
+        try{
+            connection();
+            String Querry = "UPDATE users SET wishlist = 'private' WHERE username = '"+username+"';";
+            connection.prepareStatement(Querry).executeUpdate();
+            return "Done";
+        }
+        catch (SQLException e){
+            return "failed";
+        }
     }
 
     public String SetOrderHistory(String userid,String[] products, String[] amounts) throws SQLException{
