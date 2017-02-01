@@ -25,7 +25,6 @@ public class TestJUnit {
         } catch (AssertionError e) {
             System.out.println("User added - failed");
             System.out.println("User already exists - failed");
-            System.out.println("Kakkie");
             throw e;
         }
 
