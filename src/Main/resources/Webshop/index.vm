@@ -303,10 +303,10 @@
 </script>
 
 <script>
-    //if("${message}" != "null")
-    //{
-    //    window.alert("${message}")
-    //}
+    if("${message}" != "null")
+    {
+       window.alert("${message}")
+    }
 </script>
 
 </body>

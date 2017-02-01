@@ -18,7 +18,13 @@ public class View {
             if (req.session().attribute("User") == null)
             {req.session().attribute("User", " ");}
 
-            attributes.put("message", "null");
+            if(req.session().attribute("message") == null ){
+                attributes.put("message", "null");
+            }
+            else {
+                attributes.put("message", req.session().attribute("message"));
+                req.session().attribute("message", null);
+            }
 
             String currentUser = req.session().attribute("User");
             attributes.put("CurrentUser", currentUser);
@@ -34,6 +40,14 @@ public class View {
 
         post("/Home", (req,res)-> {
             Map<String, Object> attributes = new HashMap<String, Object>();
+
+            if(req.session().attribute("message") == null ){
+                attributes.put("message", "null");
+            }
+            else {
+                attributes.put("message", req.session().attribute("message"));
+                req.session().attribute("message", null);
+            }
 
 
             String LoginUsername = req.queryParams("LoginUsername");
@@ -122,7 +136,8 @@ public class View {
                 registerUser.RegisterModal(RegUsername, RegPassword, RegEmail, RegFName, RegLName, RegAge, RegStreet, RegStreetNumber, RegCountry, RegPostalCode);
                 registerUsers.addFirst(registerUser);
                 String SaveUser = new Controller().RegisterUser(registerUsers);
-                attributes.put("message", SaveUser);
+                request.session().attribute("message", SaveUser);
+                response.redirect("/Home");
             }
             return modelAndView(attributes, "Webshop/register.vm");
         },new VelocityTemplateEngine());
@@ -651,17 +666,23 @@ public class View {
 
             }
 
-            else if (variabel.equals("LoginUsername")){     // if the button is "LoginUsername"
-                System.out.println(variabel + " Shamala2");
+            if (variabel.equals("LoginUsername")){
                 Modal loginUser = new Modal();
                 loginUser.LoginModal(LoginUsername,LoginPassword);
                 loginUsers.addFirst(loginUser);
                 String LoginUser = new Controller().LoginUser(loginUsers);
                 String checkUserStatus = new Controller().checkUserStatus(LoginUser);
-                if (checkUserStatus.equals("Blocked")) {        // checks the validity of a user
-                    attributes.put("message", "Blocked");}
+                if (checkUserStatus.equals("Blocked")) {
+                    attributes.put("message", "Blocked");
+                }
                 else {
-                    req.session().attribute("User",LoginUser);}
+                    req.session().attribute("User",LoginUser);
+                    res.redirect("/Shop");
+                }
+            }
+            else if(variabel.equals("iets")) {
+                req.session().attribute("User", "");
+                res.redirect("/Shop");
             }
             return modelAndView(attributes, "Webshop/Shop.vm");
         },new VelocityTemplateEngine());
