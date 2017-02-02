@@ -240,7 +240,7 @@ public class ShopScreenView {
                 Controller.SetToWishList settoWishlist = new Controller.SetToWishList();
                 settoWishlist.setToWishlist(userid.get(6), variabel.substring(13));
                 System.out.println(variabel + " Shamala4");
-                res.redirect("/Wishlist");
+                res.redirect("/Ownwishlist");
                 System.out.println(variabel + " Shamala");
             }
 

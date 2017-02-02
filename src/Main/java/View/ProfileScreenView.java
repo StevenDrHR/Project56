@@ -20,14 +20,14 @@ public class ProfileScreenView {
             Map<String, Object> attributes = new HashMap<String, Object>();
             if (req.session().attribute("User") == null)
             {req.session().attribute("User", " ");}
-
+            //Checking User is admin or user
             String currentUser = req.session().attribute("User");
             attributes.put("CurrentUser", currentUser);
             Controller.CheckUserLevel checkUserLevel = new Controller.CheckUserLevel();
             String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
             attributes.put("userlevel", currentUserLevel);
 
-            if(currentUserLevel.equals("not registered")){
+            if(currentUserLevel.equals("not registered")){//redirect if not registerd
                 res.redirect("/Home");
             }
 
@@ -42,6 +42,7 @@ public class ProfileScreenView {
             attributes.put("userid", UserData.get(6));
             attributes.put("wishlist", UserData.get(7));
 
+            //getting all public wishlists
             Controller.GetPublicusers getAllUsers = new Controller.GetPublicusers();
             List getallusers = getAllUsers.getPublicusers(currentUser);
             for (int i = 0; i < getallusers.size(); i ++) {
@@ -52,7 +53,7 @@ public class ProfileScreenView {
                     attributes.put("usernames", getallusers.get(i) + ", " + attributes.get("usernames"));
                 }
             }
-
+            //getting all wishlist data of a wishlist
             Controller.GetWishlistInfo getWishlistData = new Controller.GetWishlistInfo();
             List getwishlistdata = getWishlistData.getWishlistinfo(currentUser);
             for (int i = 0; i < getwishlistdata.size(); i += 4){
@@ -72,6 +73,7 @@ public class ProfileScreenView {
         post("/Profile", (req,res)-> {
             Map<String, Object> attributes = new HashMap<String, Object>();
 
+            //Checking User is admin or user
             String currentUser = req.session().attribute("User");
             attributes.put("CurrentUser", currentUser);
             Controller.CheckUserLevel checkUserLevel = new Controller.CheckUserLevel();
@@ -95,13 +97,13 @@ public class ProfileScreenView {
 
             System.out.println(button + " Shamala");
 
-            if (button.equals("makewishlistpublic")) {
+            if (button.equals("makewishlistpublic")) {//make wishlist public
                 System.out.println(button + " Shamala2");
                 Controller.SetWishlistPublic setWishlisPublic = new Controller.SetWishlistPublic();
                 setWishlisPublic.setWishlistToPublic(currentUser);
                 res.redirect("/Profile");
             }
-            else if (button.equals("makewishlistprivate")){
+            else if (button.equals("makewishlistprivate")){// make wishlist private
                 System.out.println(button +" Shamala3");
                 Controller.SetWishlistPrivate setWishlisPrivate = new Controller.SetWishlistPrivate();
                 setWishlisPrivate.setWishlistToPrivate(currentUser);

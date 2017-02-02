@@ -16,9 +16,9 @@ import java.util.Deque;
 public class LoginUsers {
     Connection connection1 = new Connection();
     public String LoginUser( Deque<LoginModals> list) throws SQLException {
-        java.sql.Connection connection = connection1.connection();
+        java.sql.Connection connection = connection1.connection(); //Getting the connection to the database
         try{
-            String Querry = "Select userid from users where username='"+ list.getFirst().getUsername()+"' and user_password='"+ list.getFirst().getpassword()+"'";
+            String Querry = "Select userid from users where username='"+ list.getFirst().getUsername()+"' and user_password='"+ list.getFirst().getpassword()+"'";//cheking the users login cridentials
             ResultSet rs = connection.prepareStatement(Querry).executeQuery();
             if(rs.next()){
                 return list.getFirst().getUsername();

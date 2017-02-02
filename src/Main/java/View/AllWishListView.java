@@ -22,11 +22,13 @@ public class AllWishListView {
             if (req.session().attribute("User") == null)
             {req.session().attribute("User", " ");}
 
+            //Checking User is admin or user
             String currentUser = req.session().attribute("User");
             attributes.put("CurrentUser", currentUser);
             Controller.CheckUserLevel checkUserLevel = new Controller.CheckUserLevel();
             String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
             attributes.put("userlevel", currentUserLevel);
+            //Checking the wishlist status
             Controller.CheckWishListStatus checkwishliststatus = new Controller.CheckWishListStatus();
             ArrayList<Integer> AllUserStats = checkwishliststatus.checkWishlistStatus();
             attributes.put("allwishliststats", AllUserStats);
@@ -34,7 +36,7 @@ public class AllWishListView {
             ArrayList<Integer> OwnUserStats = checkownwishliststatus.checkWishlistStatusOwn(currentUser);
             attributes.put("ownwishliststats", OwnUserStats);
 
-            if(currentUserLevel.equals("not registered")){
+            if(currentUserLevel.equals("not registered")){//Redirect if the user is not registered
                 res.redirect("/Home");
             }
 
@@ -58,6 +60,7 @@ public class AllWishListView {
             attributes.put("userid", UserData.get(6));
             attributes.put("wishlist", UserData.get(7));
 
+            // Get all the public wishlists
             Controller.GetPublicusers getAllUsers = new Controller.GetPublicusers();
             List getallusers = getAllUsers.getPublicusers(currentUser);
             for (int i = 0; i < getallusers.size(); i ++) {
@@ -69,6 +72,7 @@ public class AllWishListView {
                 }
             }
 
+            //get all the wishlist info
             Controller.GetWishlistInfo getWishlistData = new Controller.GetWishlistInfo();
             List getwishlistdata = getWishlistData.getWishlistinfo(currentUser);
             for (int i = 0; i < getwishlistdata.size(); i += 4){
@@ -88,6 +92,7 @@ public class AllWishListView {
         post("/Allwishlist", (req,res)-> {
             Map<String, Object> attributes = new HashMap<String, Object>();
 
+            //Checking User is admin or user
             String currentUser = req.session().attribute("User");
             attributes.put("CurrentUser", currentUser);
             Controller.CheckUserLevel checkUserLevel = new Controller.CheckUserLevel();
@@ -113,19 +118,20 @@ public class AllWishListView {
 
             String buttonuser = req.queryParams().iterator().next();
 
+            //getting all wish list data
             Controller.GetWishlistInfo getWishlistData = new GetWishlistInfo();
 
             System.out.println(buttonuser + " Shamala");
             Controller.CheckWishListStatus checkWishlistStatus = new Controller.CheckWishListStatus();
-            if (buttonuser.equals("makewishlistpublic")) {
+            if (buttonuser.equals("makewishlistpublic")) { //making the user wishlist public
                 System.out.println(buttonuser + " Shamala2");
                 Controller.SetWishlistPublic setWishListToPublic = new Controller.SetWishlistPublic();
                 setWishListToPublic.setWishlistToPublic(currentUser);
             }
-            if (buttonuser.equals("makewishlistprivate")){
+            if (buttonuser.equals("makewishlistprivate")){ //making the users wishlist private
                 System.out.println(buttonuser +" Shamala3");
             }
-            if (buttonuser.equals(buttonuser)){
+            if (buttonuser.equals(buttonuser)){//opens the other users wishlist
                 System.out.println(buttonuser.substring(8) + " shamala4");
                 getWishlistData.getWishlistinfo(buttonuser.substring(8));
                 req.session().attribute("Selecteduserwl", buttonuser.substring(8));

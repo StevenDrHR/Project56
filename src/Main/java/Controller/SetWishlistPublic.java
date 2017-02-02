@@ -8,8 +8,8 @@ import java.sql.SQLException;
 public class SetWishlistPublic {
     Connection connection1 = new Connection();
     public String setWishlistToPublic(String username) throws SQLException {
-        java.sql.Connection connection = connection1.connection();
-        String Querry = "UPDATE users SET wishlist = 'public' WHERE username = '"+username+"';";
+        java.sql.Connection connection = connection1.connection(); //Getting the connection to the database
+        String Querry = "UPDATE users SET wishlist = 'public' WHERE username = '"+username+"';"; // Setting a wishlist of a user public
         connection.prepareStatement(Querry).executeUpdate();
         return "Done";
     }

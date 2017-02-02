@@ -12,8 +12,8 @@ public class GetUsers {
     Connection connection1 = new Connection();
     public List<String> GetUsers() throws SQLException {
         ArrayList<String> list = new ArrayList<String>();
-        java.sql.Connection connection = connection1.connection();
-        String Querry = "Select username from users where userlevel = 0";
+        java.sql.Connection connection = connection1.connection(); //Getting the connection to the database
+        String Querry = "Select username from users where userlevel = 0"; //Getting all the users
         ResultSet rs = connection.prepareStatement(Querry).executeQuery();
         while(rs.next()){
             list.add(rs.getString("username"));

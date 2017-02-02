@@ -21,18 +21,19 @@ public class OtherWishListView {
             if (req.session().attribute("User") == null)
             {req.session().attribute("User", " ");}
 
+            //Checking User is admin or user
             String currentUser = req.session().attribute("User");
             attributes.put("CurrentUser", currentUser);
             Controller.CheckUserLevel checkUserLevel = new Controller.CheckUserLevel();
             String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
             attributes.put("userlevel", currentUserLevel);
 
-            if(currentUserLevel.equals("not registered")){
+            if(currentUserLevel.equals("not registered")){//redirect if not user
                 res.redirect("/Home");
             }
 
             String Selecteduserwl = req.session().attribute("Selecteduserwl");
-            System.out.println(req.session().attribute("Selecteduserwl") + " jemoeder");
+
 
             attributes.put("clickeduserwl", Selecteduserwl);
 
@@ -47,6 +48,7 @@ public class OtherWishListView {
             attributes.put("userid", UserData.get(6));
             attributes.put("wishlist", UserData.get(7));
 
+            //getting the wishlist of the selected wishlist
             Controller.GetWishlistInfo getWishlistData = new Controller.GetWishlistInfo();
             List getwishlistdata = getWishlistData.getWishlistinfo(Selecteduserwl);
             for (int i = 0; i < getwishlistdata.size(); i += 4){
@@ -64,6 +66,7 @@ public class OtherWishListView {
         post("/Otherwishlist", (req,res)-> {
             Map<String, Object> attributes = new HashMap<String, Object>();
 
+            //Checking User is admin or user
             String currentUser = req.session().attribute("User");
             attributes.put("CurrentUser", currentUser);
             Controller.CheckUserLevel checkUserLevel = new Controller.CheckUserLevel();

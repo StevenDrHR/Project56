@@ -21,12 +21,13 @@ public class AddproductScreenView {
             Controller.GetUsers getUsers = new Controller.GetUsers();
             List list = getUsers.GetUsers();
             attributes.put("users",list);
+            //Checking User is admin or user
             String currentUser = req.session().attribute("User");
             attributes.put("CurrentUser", currentUser);
             Controller.CheckUserLevel UserLevel = new Controller.CheckUserLevel();
             String currentUserLevel = UserLevel.checkUserLevel(currentUser);
             attributes.put("userlevel", currentUserLevel);
-            if(currentUserLevel.equals("not registered")||currentUserLevel.equals("user")){
+            if(currentUserLevel.equals("not registered")||currentUserLevel.equals("user")){ //Redirecting if not admin
                 res.redirect("/Home");
             }
             return modelAndView(attributes, "Webshop/addproduct.vm");
@@ -37,13 +38,14 @@ public class AddproductScreenView {
             Controller.GetUsers getUsers = new Controller.GetUsers();
             List list = getUsers.GetUsers();
             attributes.put("users",list);
+            //Checking User is admin or user
             String currentUser = request.session().attribute("User");
             attributes.put("CurrentUser", currentUser);
             Controller.CheckUserLevel UserLevel = new Controller.CheckUserLevel();
             String currentUserLevel = UserLevel.checkUserLevel(currentUser);
             attributes.put("userlevel", currentUserLevel);
 
-            if(currentUserLevel.equals("not registered")||currentUserLevel.equals("user")){
+            if(currentUserLevel.equals("not registered")||currentUserLevel.equals("user")){ //Redirecting if not admin
                 response.redirect("/Home");
             }
             String button = request.queryParams().iterator().next();
@@ -60,7 +62,7 @@ public class AddproductScreenView {
 
 
 
-            if(button.equals("Brand") ){
+            if(button.equals("Brand") ){// if add to product is pressed store the values and the send them to the database
                 Model.AddProductModels addProduct = new Model.AddProductModels();
                 addProduct.AddProductModal(modal, brand, type, year, price, deliveryTime, description);
                 addProducts.addFirst(addProduct);
@@ -68,7 +70,7 @@ public class AddproductScreenView {
                 attributes.put("message", AddProduct);
 
             }
-            else if(button.equals("return_button") ){
+            else if(button.equals("return_button") ){// return button is pressed then go to the admin page
                 response.redirect("/Adminpage");
             }
             return modelAndView(attributes, "Webshop/addproduct.vm");

@@ -8,13 +8,13 @@ public class LoginModals {
     private String password;
 
     public void LoginModal(String username, String password) {
-        this.username = username;
-        this.password = password;
+        this.username = username; //Setting the username value
+        this.password = password;//Setting the password value
     }
     public String getUsername() {
         return username;
-    }
+    }//Getting the username value
     public String getpassword() {
         return password;
-    }
+    }//Getting the password value
 }

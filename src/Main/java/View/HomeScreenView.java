@@ -37,6 +37,7 @@ public class HomeScreenView {
                 req.session().attribute("message", null);
             }
 
+            //Checking User is admin or user
             String currentUser = req.session().attribute("User");
             attributes.put("CurrentUser", currentUser);
             System.out.println(currentUser + " currentuservalue");
@@ -64,13 +65,14 @@ public class HomeScreenView {
             String LoginUsername = req.queryParams("LoginUsername");
             String LoginPassword = req.queryParams("LoginPassword");
             String variabel = req.queryParams().iterator().next();
-            if (variabel.equals("LoginUsername")){
+
+            if (variabel.equals("LoginUsername")){//if login button is pressed then check the cirdentials
                 Model.LoginModals loginUser = new Model.LoginModals();
                 loginUser.LoginModal(LoginUsername,LoginPassword);
                 loginUsers.addFirst(loginUser);
                 String LoginUser = new LoginUsers().LoginUser(loginUsers);
                 String checkUserStatus = new CheckUserStatus().checkUserStatus(LoginUser);
-                if (checkUserStatus.equals("Blocked")) {
+                if (checkUserStatus.equals("Blocked")) { // check if the user is blocked
                     attributes.put("message", "Blocked");
                 }
                 else {
@@ -83,6 +85,7 @@ public class HomeScreenView {
                 //attributes.put("message", "Login Succesful");
             }
 
+            //Checking User is admin or user
             String currentUser = req.session().attribute("User");
             attributes.put("CurrentUser", currentUser);
             Controller.CheckUserLevel checkUserLevel = new Controller.CheckUserLevel();

@@ -8,8 +8,8 @@ import java.sql.SQLException;
 public class SetToWishList {
     Connection connection1 = new Connection();
     public String setToWishlist(String userid, String productid) throws SQLException {
-        java.sql.Connection connection = connection1.connection();
-        String Querry = "insert INTO wishlist (userid, productid) VALUES ("+userid+" , "+productid+");";
+        java.sql.Connection connection = connection1.connection(); //Getting the connection to the database
+        String Querry = "insert INTO wishlist (userid, productid) VALUES ("+userid+" , "+productid+");";// Storing a item to the wishlist
         try {
             connection.prepareStatement(Querry).executeUpdate();
         } catch (SQLException e) {

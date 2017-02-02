@@ -9,8 +9,8 @@ public class DeleteUser {
     Connection connection1 = new Connection();
     public String DeleteUser(String username) throws SQLException {
         try{
-            java.sql.Connection connection = connection1.connection();
-            String Querry = "Delete from users where username ='"+username+"';";
+            java.sql.Connection connection = connection1.connection(); //Getting the connection to the database
+            String Querry = "Delete from users where username ='"+username+"';"; // Deleting an User from the database
             connection.prepareStatement(Querry).executeUpdate();
             return "Done";
         }

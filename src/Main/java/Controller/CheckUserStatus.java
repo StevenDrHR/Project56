@@ -12,8 +12,8 @@ public class CheckUserStatus {
 
 
     public String checkUserStatus(String UserName) throws SQLException {
-        java.sql.Connection connection = connection1.connection();
-        String Querry = "Select username from users where username ='" + UserName + "' and userstatus = 'Blocked'";     // query statement with flexible variable
+        java.sql.Connection connection = connection1.connection(); //Getting the connection to the database
+        String Querry = "Select username from users where username ='" + UserName + "' and userstatus = 'Blocked'";     // checking if the user is blocked
         ResultSet rs = connection.prepareStatement(Querry).executeQuery();      // execute query
         if (rs.next()) {        // checks if there is a result, go in the if
             return "Blocked";

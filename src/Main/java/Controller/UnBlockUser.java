@@ -8,8 +8,8 @@ import java.sql.SQLException;
 public class UnBlockUser {
     Connection connection1 = new Connection();
     public String UnblockUser(String username) throws SQLException {
-        java.sql.Connection connection = connection1.connection();
-        String Querry = "Update users set userstatus = 'Available' where username ='"+username+"';";
+        java.sql.Connection connection = connection1.connection(); //Getting the connection to the database
+        String Querry = "Update users set userstatus = 'Available' where username ='"+username+"';"; // Unblocks an user
         connection.prepareStatement(Querry).executeUpdate();
         return "Done";
     }

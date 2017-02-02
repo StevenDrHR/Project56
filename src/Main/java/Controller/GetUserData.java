@@ -10,8 +10,8 @@ import java.util.ArrayList;
 public class GetUserData {
     Connection connection1 = new Connection();
     public ArrayList<String> getUserData(String username) throws SQLException {
-        java.sql.Connection connection = connection1.connection();
-        String Querry = "Select * from users where username ='"+username+"';";
+        java.sql.Connection connection = connection1.connection(); //Getting the connection to the database
+        String Querry = "Select * from users where username ='"+username+"';"; // Getting all the data of an user
         ResultSet rs = connection.prepareStatement(Querry).executeQuery();
         ArrayList<String> result = new ArrayList<>();
         if (rs.next()) {

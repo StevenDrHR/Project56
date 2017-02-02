@@ -12,8 +12,8 @@ public class GetType {
     Connection connection1 = new Connection();
     public List<String> GetType(String Category) throws SQLException {
         ArrayList<String> list = new ArrayList<String>();
-        java.sql.Connection connection = connection1.connection();
-        if(Category.equals("")) {
+        java.sql.Connection connection = connection1.connection(); //Getting the connection to the database
+        if(Category.equals("")) {// checking how to order the products and perfroming the right querry
             String Querry = "Select car_type from products";
             ResultSet rs = connection.prepareStatement(Querry).executeQuery();
             while (rs.next()) {

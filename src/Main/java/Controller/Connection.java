@@ -11,8 +11,7 @@ public class Connection {
 
     public java.sql.Connection connection() throws SQLException {
         try {
-            connection = DriverManager.getConnection("jdbc:postgresql://83.86.251.189:5432/postgres2", "postgres", "postgres");
-//        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "0906986");
+            connection = DriverManager.getConnection("jdbc:postgresql://83.86.251.189:5432/postgres2", "postgres", "postgres"); // making the connection to the database
         } catch (SQLException e) {
             System.out.println("Failed");
         }

@@ -20,7 +20,7 @@ public class ShoppingcartScreenView {
             if (req.session().attribute("User") == null) {
                 req.session().attribute("User", " ");
             }
-
+            //Checking User is admin or user
             Controller.GetUsers getUsers = new Controller.GetUsers();
             List list = getUsers.GetUsers();
             attributes.put("users", list);
@@ -36,7 +36,7 @@ public class ShoppingcartScreenView {
             else {
                 attributes.put("shopcheck", req.session().attribute("productid"));
             }
-            if(req.session().attribute("productid") != null){
+            if(req.session().attribute("productid") != null){// getting all the added products
 
                 String currentPid = req.session().attribute("productid");
                 String[] pid = currentPid.split(", ");
@@ -82,11 +82,11 @@ public class ShoppingcartScreenView {
 
             String variabel = req.queryParams().iterator().next();
             System.out.println(variabel + " Shamala");
-            if (variabel.equals("resetcart")) {
+            if (variabel.equals("resetcart")) {//emptys the cart
                 req.session().attribute("productid", null);
                 req.session().attribute("amount", null);
             }
-            if (variabel.equals("orderbutton")) {
+            if (variabel.equals("orderbutton")) {//makes an order of the items in the cart
                 System.out.println("ordermsg");
                 req.session().attribute("message", "Succesfully Ordered");
                 String currentUser = req.session().attribute("User");
@@ -105,7 +105,7 @@ public class ShoppingcartScreenView {
                 res.redirect("/Orderhistory");
             }
 
-            if(req.session().attribute("productid") == null){
+            if(req.session().attribute("productid") == null){// checks if the cart is empty
                 attributes.put("shopcheck", "none");
             }
             else {
@@ -117,6 +117,7 @@ public class ShoppingcartScreenView {
             List list = getUsers.GetUsers();
             attributes.put("users", list);
             String currentUser = req.session().attribute("User");
+            //Checking User is admin or user
             attributes.put("CurrentUser", currentUser);
             Controller.CheckUserLevel userLevel = new Controller.CheckUserLevel();
             String currentUserLevel = userLevel.checkUserLevel(currentUser);

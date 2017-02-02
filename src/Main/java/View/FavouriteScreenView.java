@@ -19,17 +19,18 @@ public class FavouriteScreenView {
             Map<String, Object> attributes = new HashMap<String, Object>();
             if (req.session().attribute("User") == null)
             {req.session().attribute("User", " ");}
-
+            //Checking User is admin or user
             String currentUser = req.session().attribute("User");
             attributes.put("CurrentUser", currentUser);
             Controller.CheckUserLevel checkUserLevel = new Controller.CheckUserLevel();
             String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
             attributes.put("userlevel", currentUserLevel);
 
-            if(currentUserLevel.equals("not registered")){
+            if(currentUserLevel.equals("not registered")){//if not registered redirect to home
                 res.redirect("/Home");
             }
 
+            //Getting all the favorite data
             Controller.GetFavourites getFavourites = new Controller.GetFavourites();
             Controller.GetUserData getUserInfo = new Controller.GetUserData();
             ArrayList<String> favourites = getFavourites.getFavourites(getUserInfo.getUserData(currentUser).get(6));
@@ -43,15 +44,13 @@ public class FavouriteScreenView {
         post("/Favourite", (req,res)-> {
             Map<String, Object> attributes = new HashMap<String, Object>();
 
+            //Checking User is admin or user
             String currentUser = req.session().attribute("User");
             attributes.put("CurrentUser", currentUser);
             Controller.CheckUserLevel checkUserLevel = new Controller.CheckUserLevel();
             String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
             attributes.put("userlevel", currentUserLevel);
             String deleteUser = req.queryParams().iterator().next();
-            String checkFunction = deleteUser.substring(0, 6);
-            System.out.println(checkFunction + "dikkop");
-            System.out.println(deleteUser + " dikkop2");
 
 
             req.session().attribute("message");

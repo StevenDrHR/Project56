@@ -29,6 +29,7 @@ public class RegisterScreenView {
             attributes.put("message","null");
             String currentUser = req.session().attribute("User");
             attributes.put("CurrentUser", currentUser);
+            //Checking User is admin or user
             Controller.CheckUserLevel checkUserLevel = new Controller.CheckUserLevel();
             String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
             attributes.put("userlevel", currentUserLevel);
@@ -53,7 +54,7 @@ public class RegisterScreenView {
             String LoginUsername = request.queryParams("LoginUsername");
             String LoginPassword = request.queryParams("LoginPassword");
             String button = request.queryParams().iterator().next();
-            if(button.equals("LoginUsername")) {
+            if(button.equals("LoginUsername")) {//if pressed checking user credentials
                 Model.LoginModals loginUser = new Model.LoginModals();
                 loginUser.LoginModal(LoginUsername, LoginPassword);
                 loginUsers.addFirst(loginUser);
@@ -73,7 +74,7 @@ public class RegisterScreenView {
                 return modelAndView(attributes, "Webshop/index.vm");
             }
 
-            if(button.equals("RegEmail")) {
+            if(button.equals("RegEmail")) {//Register the user
                 Model.RegisterModals registerUser = new Model.RegisterModals();
                 registerUser.RegisterModal(RegUsername, RegPassword, RegEmail, RegFName, RegLName, RegAge, RegStreet, RegStreetNumber, RegCountry, RegPostalCode);
                 registerUsers.addFirst(registerUser);

@@ -12,8 +12,8 @@ public class GetCarType {
     Connection connection1 = new Connection();
     public List<String> getCarType() throws SQLException {
         ArrayList<String> list = new ArrayList<String>();
-        java.sql.Connection connection = connection1.connection();
-        String Querry = "Select car_type, Count(car_type) as totalcartype from products group by car_type";
+        java.sql.Connection connection = connection1.connection(); //Getting the connection to the database
+        String Querry = "Select car_type, Count(car_type) as totalcartype from products group by car_type"; //Getting the amount of cars ordered by the car type
         ResultSet rs = connection.prepareStatement(Querry).executeQuery();
         while(rs.next()){
             list.add(rs.getString("car_type"));
