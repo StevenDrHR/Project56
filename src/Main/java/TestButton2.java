@@ -11,11 +11,11 @@ public class TestButton2 {
     public void Testbutton2() throws SQLException{
         String currentUser = "User";
         try {
-            Assert.assertTrue(currentUser.equals("Admin"));
-            System.out.println("goeie man");
+            Assert.assertTrue(currentUser.equals("User"));
+            System.out.println("True");
         }
         catch (AssertionError e){
-            System.out.println("onsuccesvol");
+            System.out.println("False");
             throw e;
         }
     }

@@ -1,4 +1,5 @@
 import junit.framework.Assert;
+import org.apache.commons.collections.functors.FalsePredicate;
 import org.junit.Test;
 
 import java.sql.SQLException;
@@ -11,11 +12,11 @@ public class TestButton {
     public void Testbutton() throws SQLException{
         String currentUser = "User";
         try {
-            Assert.assertTrue(currentUser.equals("Admin"));
-            System.out.println("kaolo goeie man");
+            Assert.assertFalse(currentUser.equals("Admin"));
+            System.out.println("True");
     }
         catch (AssertionError e){
-            System.out.println("kaolo onsuccesvol");
+            System.out.println("False");
             throw e;
         }
     }
