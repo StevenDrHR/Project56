@@ -22,6 +22,7 @@ public class ShopScreenView {
             if (req.session().attribute("User") == null)        // cookie to know the status of the user (registered/nonregistered/admin)
             {req.session().attribute("User", " ");}
 
+
             Controller.GetUsers getUsers = new Controller.GetUsers();
             List nonregusers = getUsers.GetUsers();        // GetUsers() gets all the users out of the db that are non registered
             attributes.put("users", nonregusers);       // the nonregusers are then put in the attributes, where after it is used as a reference in the shop.vm file
