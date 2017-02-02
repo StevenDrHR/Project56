@@ -114,7 +114,7 @@ public class View {
                 Controller checkUserLevel = new Controller();
                 String currentUserLevel = checkUserLevel.checkUserLevel(currentUser);
                 attributes.put("userlevel", currentUserLevel);
-                return modelAndView(attributes,"Webshop/index.vm");
+                return modelAndView(attributes, "Webshop/index.vm");
             }
 
             if(button.equals("RegEmail")) {
