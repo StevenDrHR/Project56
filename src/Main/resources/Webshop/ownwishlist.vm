@@ -198,7 +198,7 @@
         }
         else {
             document.getElementById('main').innerHTML =
-                    '<h1 align="center">THERE IS NOTHING TO SHOW BIATCH</h1>';
+                    '<h1 align="center">This List Is Empty</h1>';
             //window.alert(mdl.length)
         }
     }
