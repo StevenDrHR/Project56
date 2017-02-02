@@ -17,7 +17,16 @@
                 </configuration>
             </plugin>
         </plugins>
-    </build>
+    <directory>java</directory>
+    <outputDirectory>target/classes</outputDirectory>
+    <sourceDirectory>src/main/java</sourceDirectory>
+    <testSourceDirectory>src/Main/java</testSourceDirectory>
+    <testResources>
+        <testResource>
+            <directory>src/Main/java</directory>
+        </testResource>
+    </testResources>
+</build>
 
 
     <!-- library dependencies -->
