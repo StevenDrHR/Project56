@@ -17,7 +17,16 @@
                 </configuration>
             </plugin>
         </plugins>
-    </build>
+    <directory>java</directory>
+    <outputDirectory>target/classes</outputDirectory>
+    <sourceDirectory>src/main/java</sourceDirectory>
+    <testSourceDirectory>src/Main/java</testSourceDirectory>
+    <testResources>
+        <testResource>
+            <directory>src/Main/java</directory>
+        </testResource>
+    </testResources>
+</build>
 
 
     <!-- library dependencies -->
@@ -46,6 +55,11 @@
             <groupId>com.sparkjava</groupId>
             <artifactId>spark-template-velocity</artifactId>
             <version>2.3</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.8.1</version>
         </dependency>
 
     </dependencies>
