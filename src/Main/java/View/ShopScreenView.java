@@ -103,6 +103,7 @@ public class ShopScreenView {
                 List getImages = getImage.GetImage("brand");
                 attributes.put("image", getImages);
             }
+
             else if (variabel.equals("OrderedTypes")) {
                 Controller.GetModels getModels = new Controller.GetModels();
                 List models = getModels.GetModels("type");
@@ -123,12 +124,12 @@ public class ShopScreenView {
                 Controller.GetProductId getProductId = new Controller.GetProductId();
                 List productid = getProductId.GetProductId("type");
                 attributes.put("productid", productid);
-                System.out.println(productid + " typepid");
 
                 Controller.GetImage getImage = new Controller.GetImage();
                 List getImages = getImage.GetImage("type");
                 attributes.put("image", getImages);
             }
+
             else if (variabel.equals("OrderedYears")) {
                 Controller.GetModels getModels = new Controller.GetModels();
                 List models = getModels.GetModels("year");
@@ -174,10 +175,9 @@ public class ShopScreenView {
                 Controller.GetProductId getProductId = new Controller.GetProductId();
                 List productid = getProductId.GetProductId("pricelth");
                 attributes.put("productid", productid);
-                System.out.println(productid + " pricelthpid");
 
                 Controller.GetImage getImage = new Controller.GetImage();
-                List getImages = getImage.GetImage("pricelthpid");
+                List getImages = getImage.GetImage("pricelth");
                 attributes.put("image", getImages);
             }
             else if (variabel.equals("OrderedPriceHtL")) {
@@ -200,10 +200,9 @@ public class ShopScreenView {
                 Controller.GetProductId getProductId = new Controller.GetProductId();
                 List productid = getProductId.GetProductId("pricehtl");
                 attributes.put("productid", productid);
-                System.out.println(productid + " pricehtlpid");
 
                 Controller.GetImage getImage = new Controller.GetImage();
-                List getImages = getImage.GetImage("pricetlpid");
+                List getImages = getImage.GetImage("pricehtl");
                 attributes.put("image", getImages);
             }
             else{
@@ -226,7 +225,6 @@ public class ShopScreenView {
                 Controller.GetProductId getProductId= new Controller.GetProductId();
                 List productid = getProductId.GetProductId("");
                 attributes.put("productid", productid);
-                System.out.println(productid + " nothing");
 
                 Controller.GetImage getImage = new Controller.GetImage();
                 List getImages = getImage.GetImage("");
