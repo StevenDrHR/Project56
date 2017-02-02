@@ -1,558 +1,290 @@
-2017-02-02 13:52:11,977 - Log4JLogChute initialized using file 'velocity.log'
-2017-02-02 13:52:11,978 - Initializing Velocity, Calling init()...
-2017-02-02 13:52:11,978 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2017-02-02 13:52:11,978 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
-2017-02-02 13:52:11,978 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2017-02-02 13:52:11,978 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2017-02-02 13:52:11,979 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2017-02-02 13:52:11,979 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2017-02-02 13:52:11,979 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:52:11,979 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2017-02-02 13:52:11,980 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2017-02-02 13:52:11,980 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2017-02-02 13:52:11,980 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2017-02-02 13:52:11,980 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2017-02-02 13:52:11,980 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2017-02-02 13:52:11,980 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2017-02-02 13:52:11,980 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2017-02-02 13:52:11,980 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2017-02-02 13:52:11,980 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2017-02-02 13:52:11,981 - Created '20' parsers.
-2017-02-02 13:52:11,981 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2017-02-02 13:52:11,982 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
-2017-02-02 13:52:11,982 - Velocimacro : Default library not found.
-2017-02-02 13:52:11,982 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2017-02-02 13:52:11,982 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2017-02-02 13:52:11,982 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2017-02-02 13:52:11,982 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2017-02-02 13:52:11,989 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:52:11,991 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 13:52:16,905 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:52:16,906 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 13:52:19,494 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:52:19,494 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 13:52:21,410 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:52:21,411 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 13:52:47,481 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:52:47,481 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 13:52:48,289 - Log4JLogChute initialized using file 'velocity.log'
-2017-02-02 13:52:48,289 - Initializing Velocity, Calling init()...
-2017-02-02 13:52:48,289 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2017-02-02 13:52:48,289 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
-2017-02-02 13:52:48,289 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2017-02-02 13:52:48,289 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2017-02-02 13:52:48,289 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2017-02-02 13:52:48,289 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2017-02-02 13:52:48,290 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:52:48,290 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2017-02-02 13:52:48,291 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2017-02-02 13:52:48,292 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2017-02-02 13:52:48,292 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2017-02-02 13:52:48,292 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2017-02-02 13:52:48,292 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2017-02-02 13:52:48,292 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2017-02-02 13:52:48,292 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2017-02-02 13:52:48,293 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2017-02-02 13:52:48,293 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2017-02-02 13:52:48,294 - Created '20' parsers.
-2017-02-02 13:52:48,295 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2017-02-02 13:52:48,295 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
-2017-02-02 13:52:48,295 - Velocimacro : Default library not found.
-2017-02-02 13:52:48,295 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2017-02-02 13:52:48,295 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2017-02-02 13:52:48,295 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2017-02-02 13:52:48,295 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2017-02-02 13:52:48,326 - ResourceManager : found Webshop/Ownwishlist.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:52:54,609 - ResourceManager : found Webshop/shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:52:59,760 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:52:59,760 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 13:53:00,449 - ResourceManager : found Webshop/Ownwishlist.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:53:07,247 - ResourceManager : found Webshop/shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:53:10,592 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:53:10,592 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 13:53:11,362 - ResourceManager : found Webshop/Ownwishlist.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:53:19,293 - ResourceManager : found Webshop/shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:53:23,246 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:53:23,247 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 13:53:24,037 - ResourceManager : found Webshop/Ownwishlist.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:53:36,516 - Log4JLogChute initialized using file 'velocity.log'
-2017-02-02 13:53:36,516 - Initializing Velocity, Calling init()...
-2017-02-02 13:53:36,516 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2017-02-02 13:53:36,516 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
-2017-02-02 13:53:36,517 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2017-02-02 13:53:36,517 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2017-02-02 13:53:36,517 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2017-02-02 13:53:36,517 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2017-02-02 13:53:36,517 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:53:36,517 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2017-02-02 13:53:36,517 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2017-02-02 13:53:36,517 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2017-02-02 13:53:36,518 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2017-02-02 13:53:36,518 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2017-02-02 13:53:36,518 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2017-02-02 13:53:36,518 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2017-02-02 13:53:36,518 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2017-02-02 13:53:36,518 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2017-02-02 13:53:36,518 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2017-02-02 13:53:36,519 - Created '20' parsers.
-2017-02-02 13:53:36,519 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2017-02-02 13:53:36,520 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
-2017-02-02 13:53:36,520 - Velocimacro : Default library not found.
-2017-02-02 13:53:36,520 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2017-02-02 13:53:36,520 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2017-02-02 13:53:36,520 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2017-02-02 13:53:36,520 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2017-02-02 13:53:36,525 - ResourceManager : found Webshop/Index.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:53:36,526 - Null reference [template 'Webshop/Index.vm', line 306, column 11] : ${message} cannot be resolved.
-2017-02-02 13:53:36,526 - Null reference [template 'Webshop/Index.vm', line 308, column 25] : ${message} cannot be resolved.
-2017-02-02 13:56:43,851 - ResourceManager : found Webshop/shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:56:48,114 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:56:48,114 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 13:57:00,057 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:57:00,057 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 13:57:03,936 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:57:03,937 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 13:57:06,037 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:57:06,037 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 13:57:06,188 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:57:06,188 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 13:57:09,484 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:57:09,484 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 13:57:21,542 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:57:21,542 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-tializing Velocity, Calling init()...
-2017-02-02 13:53:36,516 - Initializing Velocity, Calling init()...
-2017-02-02 13:53:36,516 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2017-02-02 13:53:36,516 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2017-02-02 13:53:36,516 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2017-02-02 13:53:36,516 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
-2017-02-02 13:53:36,516 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
-2017-02-02 13:53:36,516 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
-2017-02-02 13:53:36,517 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2017-02-02 13:53:36,517 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2017-02-02 13:53:36,517 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2017-02-02 13:53:36,517 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2017-02-02 13:53:36,517 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2017-02-02 13:53:36,517 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2017-02-02 13:53:36,517 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2017-02-02 13:53:36,517 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2017-02-02 13:53:36,517 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2017-02-02 13:53:36,517 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2017-02-02 13:53:36,517 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2017-02-02 13:53:36,517 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2017-02-02 13:53:36,517 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:53:36,517 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:53:36,517 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:53:36,517 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2017-02-02 13:53:36,517 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2017-02-02 13:53:36,517 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2017-02-02 13:53:36,517 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2017-02-02 13:53:36,517 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2017-02-02 13:53:36,517 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2017-02-02 13:53:36,517 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2017-02-02 13:53:36,517 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2017-02-02 13:53:36,517 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2017-02-02 13:53:36,518 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2017-02-02 13:53:36,518 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2017-02-02 13:53:36,518 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2017-02-02 13:53:36,518 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2017-02-02 13:53:36,518 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2017-02-02 13:53:36,518 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2017-02-02 13:53:36,518 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2017-02-02 13:53:36,518 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2017-02-02 13:53:36,518 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2017-02-02 13:53:36,518 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2017-02-02 13:53:36,518 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2017-02-02 13:53:36,518 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2017-02-02 13:53:36,518 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2017-02-02 13:53:36,518 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2017-02-02 13:53:36,518 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2017-02-02 13:53:36,518 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2017-02-02 13:53:36,518 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2017-02-02 13:53:36,518 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2017-02-02 13:53:36,518 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2017-02-02 13:53:36,518 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2017-02-02 13:53:36,518 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2017-02-02 13:53:36,519 - Created '20' parsers.
-2017-02-02 13:53:36,519 - Created '20' parsers.
-2017-02-02 13:53:36,519 - Created '20' parsers.
-2017-02-02 13:53:36,519 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2017-02-02 13:53:36,519 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2017-02-02 13:53:36,519 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2017-02-02 13:53:36,520 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
-2017-02-02 13:53:36,520 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
-2017-02-02 13:53:36,520 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
-2017-02-02 13:53:36,520 - Velocimacro : Default library not found.
-2017-02-02 13:53:36,520 - Velocimacro : Default library not found.
-2017-02-02 13:53:36,520 - Velocimacro : Default library not found.
-2017-02-02 13:53:36,520 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2017-02-02 13:53:36,520 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2017-02-02 13:53:36,520 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2017-02-02 13:53:36,520 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2017-02-02 13:53:36,520 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2017-02-02 13:53:36,520 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2017-02-02 13:53:36,520 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2017-02-02 13:53:36,520 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2017-02-02 13:53:36,520 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2017-02-02 13:53:36,520 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2017-02-02 13:53:36,520 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2017-02-02 13:53:36,520 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2017-02-02 13:53:36,525 - ResourceManager : found Webshop/Index.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:53:36,525 - ResourceManager : found Webshop/Index.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:53:36,525 - ResourceManager : found Webshop/Index.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:53:36,526 - Null reference [template 'Webshop/Index.vm', line 306, column 11] : ${message} cannot be resolved.
-2017-02-02 13:53:36,526 - Null reference [template 'Webshop/Index.vm', line 306, column 11] : ${message} cannot be resolved.
-2017-02-02 13:53:36,526 - Null reference [template 'Webshop/Index.vm', line 306, column 11] : ${message} cannot be resolved.
-2017-02-02 13:53:36,526 - Null reference [template 'Webshop/Index.vm', line 308, column 25] : ${message} cannot be resolved.
-2017-02-02 13:53:36,526 - Null reference [template 'Webshop/Index.vm', line 308, column 25] : ${message} cannot be resolved.
-2017-02-02 13:53:36,526 - Null reference [template 'Webshop/Index.vm', line 308, column 25] : ${message} cannot be resolved.
-2017-02-02 13:56:43,851 - ResourceManager : found Webshop/shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:56:43,851 - ResourceManager : found Webshop/shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:56:43,851 - ResourceManager : found Webshop/shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:56:48,114 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:56:48,114 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:56:48,114 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:56:48,114 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 13:56:48,114 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 13:56:48,114 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 13:57:00,057 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:57:00,057 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:57:00,057 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:57:00,057 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 13:57:00,057 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 13:57:00,057 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 13:57:03,936 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:57:03,936 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:57:03,936 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:57:03,937 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 13:57:03,937 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 13:57:03,937 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 13:57:06,037 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:57:06,037 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:57:06,037 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:57:06,037 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 13:57:06,037 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 13:57:06,037 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 13:57:06,188 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:57:06,188 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:57:06,188 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:57:06,188 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 13:57:06,188 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 13:57:06,188 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 13:57:09,484 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:57:09,484 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:57:09,484 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:57:09,484 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 13:57:09,484 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 13:57:09,484 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 13:57:21,542 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:57:21,542 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:57:21,542 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 13:57:21,542 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 13:57:21,542 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 13:57:21,542 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:15,202 - Log4JLogChute initialized using file 'velocity.log'
-2017-02-02 14:01:15,202 - Initializing Velocity, Calling init()...
-2017-02-02 14:01:15,202 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2017-02-02 14:01:15,202 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
-2017-02-02 14:01:15,202 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2017-02-02 14:01:15,202 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2017-02-02 14:01:15,202 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2017-02-02 14:01:15,202 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2017-02-02 14:01:15,207 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:15,219 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2017-02-02 14:01:15,221 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2017-02-02 14:01:15,222 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2017-02-02 14:01:15,222 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2017-02-02 14:01:15,223 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2017-02-02 14:01:15,224 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2017-02-02 14:01:15,225 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2017-02-02 14:01:15,227 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2017-02-02 14:01:15,229 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2017-02-02 14:01:15,230 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2017-02-02 14:01:15,264 - Created '20' parsers.
-2017-02-02 14:01:15,270 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2017-02-02 14:01:15,270 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
-2017-02-02 14:01:15,270 - Velocimacro : Default library not found.
-2017-02-02 14:01:15,270 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2017-02-02 14:01:15,270 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2017-02-02 14:01:15,270 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2017-02-02 14:01:15,270 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2017-02-02 14:01:15,295 - ResourceManager : found Webshop/shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:19,960 - Log4JLogChute initialized using file 'velocity.log'
-2017-02-02 14:01:19,960 - Log4JLogChute initialized using file 'velocity.log'
-2017-02-02 14:01:19,960 - Initializing Velocity, Calling init()...
-2017-02-02 14:01:19,960 - Initializing Velocity, Calling init()...
-2017-02-02 14:01:19,960 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2017-02-02 14:01:19,960 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2017-02-02 14:01:19,960 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
-2017-02-02 14:01:19,960 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
-2017-02-02 14:01:19,960 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2017-02-02 14:01:19,960 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2017-02-02 14:01:19,960 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2017-02-02 14:01:19,960 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2017-02-02 14:01:19,960 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2017-02-02 14:01:19,960 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2017-02-02 14:01:19,960 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2017-02-02 14:01:19,960 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2017-02-02 14:01:19,960 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:19,960 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:19,960 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2017-02-02 14:01:19,960 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2017-02-02 14:01:19,961 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2017-02-02 14:01:19,961 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2017-02-02 14:01:19,961 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2017-02-02 14:01:19,961 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2017-02-02 14:01:19,961 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2017-02-02 14:01:19,961 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2017-02-02 14:01:19,961 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2017-02-02 14:01:19,961 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2017-02-02 14:01:19,961 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2017-02-02 14:01:19,961 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2017-02-02 14:01:19,961 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2017-02-02 14:01:19,961 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2017-02-02 14:01:19,961 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2017-02-02 14:01:19,961 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2017-02-02 14:01:19,961 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2017-02-02 14:01:19,961 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2017-02-02 14:01:19,961 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2017-02-02 14:01:19,961 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2017-02-02 14:01:19,962 - Created '20' parsers.
-2017-02-02 14:01:19,962 - Created '20' parsers.
-2017-02-02 14:01:19,962 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2017-02-02 14:01:19,962 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2017-02-02 14:01:19,963 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
-2017-02-02 14:01:19,963 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
-2017-02-02 14:01:19,963 - Velocimacro : Default library not found.
-2017-02-02 14:01:19,963 - Velocimacro : Default library not found.
-2017-02-02 14:01:19,963 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2017-02-02 14:01:19,963 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2017-02-02 14:01:19,963 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2017-02-02 14:01:19,963 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2017-02-02 14:01:19,963 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2017-02-02 14:01:19,963 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2017-02-02 14:01:19,963 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2017-02-02 14:01:19,963 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2017-02-02 14:01:19,970 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:19,970 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:19,972 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:19,972 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:21,046 - ResourceManager : found Webshop/shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:21,046 - ResourceManager : found Webshop/shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:21,448 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:21,448 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:21,449 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:21,449 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:22,466 - ResourceManager : found Webshop/shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:22,466 - ResourceManager : found Webshop/shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:30,645 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:30,645 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:30,646 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:30,646 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:32,170 - ResourceManager : found Webshop/shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:32,170 - ResourceManager : found Webshop/shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:35,813 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:35,813 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:35,813 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:35,813 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:37,967 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:37,967 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:37,968 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:37,968 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:38,532 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:38,532 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:38,532 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:38,532 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:38,985 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:38,985 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:38,985 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:38,985 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:39,097 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:39,097 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:39,097 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:39,097 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:39,259 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:39,259 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:39,259 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:39,259 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:43,994 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:43,994 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:43,995 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:43,995 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:45,858 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:45,858 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:45,858 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:45,858 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:45,860 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:45,860 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:45,860 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:45,860 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:48,049 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:48,049 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:48,049 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:48,049 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:48,396 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:48,396 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:48,396 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:48,396 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:49,722 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:49,722 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:49,723 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:49,723 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:49,822 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:49,822 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:49,823 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:49,823 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:49,874 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:49,874 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:49,875 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:49,875 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:49,975 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:49,975 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:49,976 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:49,976 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:50,305 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:50,305 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:50,305 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:50,305 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:50,355 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:50,355 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:50,357 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:50,357 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:53,683 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:53,683 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:53,684 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:53,684 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:54,139 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:54,139 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:54,139 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:54,139 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:54,492 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:54,492 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:54,492 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:54,492 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:54,657 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:54,657 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:54,657 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:54,657 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:56,754 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:56,754 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:56,754 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:56,754 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:56,915 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:56,915 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:01:56,916 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:01:56,916 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:02:00,790 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:02:00,790 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:02:00,790 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:02:00,790 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:02:01,037 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:02:01,037 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:02:01,038 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:02:01,038 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:02:01,049 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:02:01,049 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:02:01,049 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:02:01,049 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:02:01,051 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:02:01,051 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:02:01,051 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:02:01,051 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:02:02,039 - ResourceManager : found Webshop/shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:02:02,039 - ResourceManager : found Webshop/shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:03:58,101 - Log4JLogChute initialized using file 'velocity.log'
-2017-02-02 14:03:58,101 - Initializing Velocity, Calling init()...
-2017-02-02 14:03:58,102 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2017-02-02 14:03:58,102 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
-2017-02-02 14:03:58,102 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2017-02-02 14:03:58,102 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2017-02-02 14:03:58,102 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2017-02-02 14:03:58,102 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2017-02-02 14:03:58,110 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:03:58,134 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2017-02-02 14:03:58,136 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2017-02-02 14:03:58,138 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2017-02-02 14:03:58,139 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2017-02-02 14:03:58,142 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2017-02-02 14:03:58,143 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2017-02-02 14:03:58,145 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2017-02-02 14:03:58,147 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2017-02-02 14:03:58,149 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2017-02-02 14:03:58,151 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2017-02-02 14:03:58,218 - Created '20' parsers.
-2017-02-02 14:03:58,232 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2017-02-02 14:03:58,232 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
-2017-02-02 14:03:58,232 - Velocimacro : Default library not found.
-2017-02-02 14:03:58,232 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2017-02-02 14:03:58,232 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2017-02-02 14:03:58,232 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2017-02-02 14:03:58,233 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2017-02-02 14:03:58,273 - ResourceManager : found Webshop/shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:03:58,945 - ResourceManager : found Webshop/shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:04:06,199 - Log4JLogChute initialized using file 'velocity.log'
-2017-02-02 14:04:06,199 - Log4JLogChute initialized using file 'velocity.log'
-2017-02-02 14:04:06,200 - Initializing Velocity, Calling init()...
-2017-02-02 14:04:06,200 - Initializing Velocity, Calling init()...
-2017-02-02 14:04:06,200 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2017-02-02 14:04:06,200 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2017-02-02 14:04:06,200 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
-2017-02-02 14:04:06,200 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
-2017-02-02 14:04:06,200 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2017-02-02 14:04:06,200 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2017-02-02 14:04:06,200 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2017-02-02 14:04:06,200 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2017-02-02 14:04:06,200 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2017-02-02 14:04:06,200 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2017-02-02 14:04:06,200 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2017-02-02 14:04:06,200 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2017-02-02 14:04:06,200 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:04:06,200 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:04:06,200 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2017-02-02 14:04:06,200 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2017-02-02 14:04:06,201 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2017-02-02 14:04:06,201 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2017-02-02 14:04:06,201 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2017-02-02 14:04:06,201 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2017-02-02 14:04:06,201 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2017-02-02 14:04:06,201 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2017-02-02 14:04:06,201 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2017-02-02 14:04:06,201 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2017-02-02 14:04:06,201 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2017-02-02 14:04:06,201 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2017-02-02 14:04:06,201 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2017-02-02 14:04:06,201 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2017-02-02 14:04:06,201 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2017-02-02 14:04:06,201 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2017-02-02 14:04:06,201 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2017-02-02 14:04:06,201 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2017-02-02 14:04:06,201 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2017-02-02 14:04:06,201 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2017-02-02 14:04:06,202 - Created '20' parsers.
-2017-02-02 14:04:06,202 - Created '20' parsers.
-2017-02-02 14:04:06,202 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2017-02-02 14:04:06,202 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2017-02-02 14:04:06,203 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
-2017-02-02 14:04:06,203 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
-2017-02-02 14:04:06,203 - Velocimacro : Default library not found.
-2017-02-02 14:04:06,203 - Velocimacro : Default library not found.
-2017-02-02 14:04:06,203 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2017-02-02 14:04:06,203 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2017-02-02 14:04:06,203 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2017-02-02 14:04:06,203 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2017-02-02 14:04:06,203 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2017-02-02 14:04:06,203 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2017-02-02 14:04:06,203 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2017-02-02 14:04:06,203 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2017-02-02 14:04:06,209 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:04:06,209 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:04:06,211 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:04:06,211 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:04:07,108 - ResourceManager : found Webshop/shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:04:07,108 - ResourceManager : found Webshop/shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:04:12,387 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:04:12,387 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:04:12,389 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:04:12,389 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
-2017-02-02 14:04:13,624 - ResourceManager : found Webshop/shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2017-02-02 14:04:13,624 - ResourceManager : found Webshop/shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2017-02-02 14:50:18,193 - Initializing Velocity, Calling init()...
+2017-02-02 14:50:18,193 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2017-02-02 14:50:18,193 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2017-02-02 14:50:18,193 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2017-02-02 14:50:18,193 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2017-02-02 14:50:18,193 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2017-02-02 14:50:18,193 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2017-02-02 14:50:18,200 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2017-02-02 14:50:18,216 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2017-02-02 14:50:18,219 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2017-02-02 14:50:18,221 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2017-02-02 14:50:18,224 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2017-02-02 14:50:18,225 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2017-02-02 14:50:18,226 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2017-02-02 14:50:18,229 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2017-02-02 14:50:18,231 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2017-02-02 14:50:18,234 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2017-02-02 14:50:18,238 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2017-02-02 14:50:18,280 - Created '20' parsers.
+2017-02-02 14:50:18,287 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2017-02-02 14:50:18,288 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2017-02-02 14:50:18,288 - Velocimacro : Default library not found.
+2017-02-02 14:50:18,288 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2017-02-02 14:50:18,288 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2017-02-02 14:50:18,288 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2017-02-02 14:50:18,288 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2017-02-02 14:50:18,315 - ResourceManager : found Webshop/shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2017-02-02 14:50:18,319 - Null reference [template 'Webshop/shop.vm', line 136, column 24] : ${image} cannot be resolved.
+2017-02-02 14:50:48,721 - ResourceManager : found Webshop/shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2017-02-02 14:50:48,722 - Null reference [template 'Webshop/shop.vm', line 136, column 24] : ${image} cannot be resolved.
+2017-02-02 14:51:08,986 - Log4JLogChute initialized using file 'velocity.log'
+2017-02-02 14:51:08,986 - Initializing Velocity, Calling init()...
+2017-02-02 14:51:08,987 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2017-02-02 14:51:08,987 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2017-02-02 14:51:08,987 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2017-02-02 14:51:08,987 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2017-02-02 14:51:08,987 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2017-02-02 14:51:08,987 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2017-02-02 14:51:08,990 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2017-02-02 14:51:09,001 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2017-02-02 14:51:09,002 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2017-02-02 14:51:09,003 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2017-02-02 14:51:09,003 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2017-02-02 14:51:09,004 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2017-02-02 14:51:09,004 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2017-02-02 14:51:09,006 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2017-02-02 14:51:09,007 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2017-02-02 14:51:09,008 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2017-02-02 14:51:09,009 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2017-02-02 14:51:09,035 - Created '20' parsers.
+2017-02-02 14:51:09,040 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2017-02-02 14:51:09,040 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2017-02-02 14:51:09,040 - Velocimacro : Default library not found.
+2017-02-02 14:51:09,040 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2017-02-02 14:51:09,040 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2017-02-02 14:51:09,040 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2017-02-02 14:51:09,040 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2017-02-02 14:51:09,059 - ResourceManager : found Webshop/shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2017-02-02 14:51:09,061 - Null reference [template 'Webshop/shop.vm', line 136, column 24] : ${image} cannot be resolved.
+2017-02-02 14:52:12,903 - Log4JLogChute initialized using file 'velocity.log'
+2017-02-02 14:52:12,904 - Initializing Velocity, Calling init()...
+2017-02-02 14:52:12,904 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2017-02-02 14:52:12,904 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2017-02-02 14:52:12,904 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2017-02-02 14:52:12,904 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2017-02-02 14:52:12,904 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2017-02-02 14:52:12,904 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2017-02-02 14:52:12,909 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2017-02-02 14:52:12,918 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2017-02-02 14:52:12,921 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2017-02-02 14:52:12,922 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2017-02-02 14:52:12,923 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2017-02-02 14:52:12,924 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2017-02-02 14:52:12,925 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2017-02-02 14:52:12,927 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2017-02-02 14:52:12,929 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2017-02-02 14:52:12,931 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2017-02-02 14:52:12,932 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2017-02-02 14:52:12,965 - Created '20' parsers.
+2017-02-02 14:52:12,970 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2017-02-02 14:52:12,970 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2017-02-02 14:52:12,970 - Velocimacro : Default library not found.
+2017-02-02 14:52:12,970 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2017-02-02 14:52:12,970 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2017-02-02 14:52:12,970 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2017-02-02 14:52:12,970 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2017-02-02 14:52:12,993 - ResourceManager : found Webshop/shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2017-02-02 14:52:12,995 - Null reference [template 'Webshop/shop.vm', line 136, column 24] : ${image} cannot be resolved.
+2017-02-02 14:53:07,280 - Log4JLogChute initialized using file 'velocity.log'
+2017-02-02 14:53:07,280 - Initializing Velocity, Calling init()...
+2017-02-02 14:53:07,281 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2017-02-02 14:53:07,281 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2017-02-02 14:53:07,281 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2017-02-02 14:53:07,281 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2017-02-02 14:53:07,281 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2017-02-02 14:53:07,281 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2017-02-02 14:53:07,286 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2017-02-02 14:53:07,298 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2017-02-02 14:53:07,299 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2017-02-02 14:53:07,301 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2017-02-02 14:53:07,301 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2017-02-02 14:53:07,302 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2017-02-02 14:53:07,303 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2017-02-02 14:53:07,304 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2017-02-02 14:53:07,306 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2017-02-02 14:53:07,307 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2017-02-02 14:53:07,308 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2017-02-02 14:53:07,341 - Created '20' parsers.
+2017-02-02 14:53:07,347 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2017-02-02 14:53:07,347 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2017-02-02 14:53:07,347 - Velocimacro : Default library not found.
+2017-02-02 14:53:07,347 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2017-02-02 14:53:07,347 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2017-02-02 14:53:07,347 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2017-02-02 14:53:07,347 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2017-02-02 14:53:07,369 - ResourceManager : found Webshop/shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2017-02-02 14:53:07,371 - Null reference [template 'Webshop/shop.vm', line 136, column 24] : ${image} cannot be resolved.
+2017-02-02 14:53:08,172 - ResourceManager : found Webshop/shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2017-02-02 14:53:08,172 - Null reference [template 'Webshop/shop.vm', line 136, column 24] : ${image} cannot be resolved.
+2017-02-02 14:53:15,893 - ResourceManager : found Webshop/shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2017-02-02 14:53:15,893 - Null reference [template 'Webshop/shop.vm', line 136, column 24] : ${image} cannot be resolved.
+2017-02-02 14:55:48,076 - Log4JLogChute initialized using file 'velocity.log'
+2017-02-02 14:55:48,076 - Initializing Velocity, Calling init()...
+2017-02-02 14:55:48,076 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2017-02-02 14:55:48,076 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2017-02-02 14:55:48,076 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2017-02-02 14:55:48,076 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2017-02-02 14:55:48,076 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2017-02-02 14:55:48,076 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2017-02-02 14:55:48,079 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2017-02-02 14:55:48,088 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2017-02-02 14:55:48,090 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2017-02-02 14:55:48,090 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2017-02-02 14:55:48,091 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2017-02-02 14:55:48,092 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2017-02-02 14:55:48,093 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2017-02-02 14:55:48,094 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2017-02-02 14:55:48,095 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2017-02-02 14:55:48,096 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2017-02-02 14:55:48,097 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2017-02-02 14:55:48,122 - Created '20' parsers.
+2017-02-02 14:55:48,126 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2017-02-02 14:55:48,127 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2017-02-02 14:55:48,127 - Velocimacro : Default library not found.
+2017-02-02 14:55:48,127 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2017-02-02 14:55:48,127 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2017-02-02 14:55:48,127 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2017-02-02 14:55:48,127 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2017-02-02 14:55:48,146 - ResourceManager : found Webshop/shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2017-02-02 14:55:48,147 - Null reference [template 'Webshop/shop.vm', line 136, column 24] : ${image} cannot be resolved.
+2017-02-02 14:56:50,244 - Log4JLogChute initialized using file 'velocity.log'
+2017-02-02 14:56:50,245 - Initializing Velocity, Calling init()...
+2017-02-02 14:56:50,245 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2017-02-02 14:56:50,245 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2017-02-02 14:56:50,245 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2017-02-02 14:56:50,245 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2017-02-02 14:56:50,245 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2017-02-02 14:56:50,245 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2017-02-02 14:56:50,250 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2017-02-02 14:56:50,262 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2017-02-02 14:56:50,263 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2017-02-02 14:56:50,264 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2017-02-02 14:56:50,265 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2017-02-02 14:56:50,266 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2017-02-02 14:56:50,266 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2017-02-02 14:56:50,267 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2017-02-02 14:56:50,268 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2017-02-02 14:56:50,269 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2017-02-02 14:56:50,270 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2017-02-02 14:56:50,297 - Created '20' parsers.
+2017-02-02 14:56:50,302 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2017-02-02 14:56:50,302 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2017-02-02 14:56:50,302 - Velocimacro : Default library not found.
+2017-02-02 14:56:50,302 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2017-02-02 14:56:50,302 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2017-02-02 14:56:50,302 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2017-02-02 14:56:50,302 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2017-02-02 14:56:50,324 - ResourceManager : found Webshop/shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2017-02-02 14:57:00,842 - Log4JLogChute initialized using file 'velocity.log'
+2017-02-02 14:57:00,842 - Log4JLogChute initialized using file 'velocity.log'
+2017-02-02 14:57:00,843 - Initializing Velocity, Calling init()...
+2017-02-02 14:57:00,843 - Initializing Velocity, Calling init()...
+2017-02-02 14:57:00,843 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2017-02-02 14:57:00,843 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2017-02-02 14:57:00,843 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2017-02-02 14:57:00,843 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2017-02-02 14:57:00,843 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2017-02-02 14:57:00,843 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2017-02-02 14:57:00,843 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2017-02-02 14:57:00,843 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2017-02-02 14:57:00,843 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2017-02-02 14:57:00,843 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2017-02-02 14:57:00,843 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2017-02-02 14:57:00,843 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2017-02-02 14:57:00,843 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2017-02-02 14:57:00,843 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2017-02-02 14:57:00,843 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2017-02-02 14:57:00,843 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2017-02-02 14:57:00,844 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2017-02-02 14:57:00,844 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2017-02-02 14:57:00,844 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2017-02-02 14:57:00,844 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2017-02-02 14:57:00,844 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2017-02-02 14:57:00,844 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2017-02-02 14:57:00,844 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2017-02-02 14:57:00,844 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2017-02-02 14:57:00,844 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2017-02-02 14:57:00,844 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2017-02-02 14:57:00,844 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2017-02-02 14:57:00,844 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2017-02-02 14:57:00,844 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2017-02-02 14:57:00,844 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2017-02-02 14:57:00,844 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2017-02-02 14:57:00,844 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2017-02-02 14:57:00,844 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2017-02-02 14:57:00,844 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2017-02-02 14:57:00,845 - Created '20' parsers.
+2017-02-02 14:57:00,845 - Created '20' parsers.
+2017-02-02 14:57:00,845 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2017-02-02 14:57:00,845 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2017-02-02 14:57:00,845 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2017-02-02 14:57:00,845 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2017-02-02 14:57:00,845 - Velocimacro : Default library not found.
+2017-02-02 14:57:00,845 - Velocimacro : Default library not found.
+2017-02-02 14:57:00,845 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2017-02-02 14:57:00,845 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2017-02-02 14:57:00,845 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2017-02-02 14:57:00,845 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2017-02-02 14:57:00,845 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2017-02-02 14:57:00,845 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2017-02-02 14:57:00,845 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2017-02-02 14:57:00,845 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2017-02-02 14:57:00,850 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2017-02-02 14:57:00,850 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2017-02-02 14:57:00,852 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
+2017-02-02 14:57:00,852 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
+2017-02-02 14:57:02,222 - ResourceManager : found Webshop/shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2017-02-02 14:57:02,222 - ResourceManager : found Webshop/shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2017-02-02 14:57:03,145 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2017-02-02 14:57:03,145 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2017-02-02 14:57:03,146 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
+2017-02-02 14:57:03,146 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
+2017-02-02 14:57:04,312 - ResourceManager : found Webshop/shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2017-02-02 14:57:04,312 - ResourceManager : found Webshop/shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2017-02-02 14:57:10,567 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2017-02-02 14:57:10,567 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2017-02-02 14:57:10,567 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
+2017-02-02 14:57:10,567 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
+2017-02-02 14:57:14,502 - ResourceManager : found Webshop/shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2017-02-02 14:57:14,502 - ResourceManager : found Webshop/shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2017-02-02 14:57:18,412 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2017-02-02 14:57:18,412 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2017-02-02 14:57:18,412 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
+2017-02-02 14:57:18,412 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
+2017-02-02 14:57:19,404 - ResourceManager : found Webshop/shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2017-02-02 14:57:19,404 - ResourceManager : found Webshop/shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2017-02-02 14:57:21,497 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2017-02-02 14:57:21,497 - ResourceManager : found Webshop/Shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2017-02-02 14:57:21,497 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
+2017-02-02 14:57:21,497 - Null reference [template 'Webshop/Shop.vm', line 136, column 24] : ${image} cannot be resolved.
+2017-02-02 14:57:24,077 - ResourceManager : found Webshop/shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2017-02-02 14:57:24,077 - ResourceManager : found Webshop/shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2017-02-02 14:59:03,055 - Log4JLogChute initialized using file 'velocity.log'
+2017-02-02 14:59:03,056 - Initializing Velocity, Calling init()...
+2017-02-02 14:59:03,056 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2017-02-02 14:59:03,056 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2017-02-02 14:59:03,056 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2017-02-02 14:59:03,056 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2017-02-02 14:59:03,056 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2017-02-02 14:59:03,056 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2017-02-02 14:59:03,060 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2017-02-02 14:59:03,070 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2017-02-02 14:59:03,071 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2017-02-02 14:59:03,072 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2017-02-02 14:59:03,073 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2017-02-02 14:59:03,074 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2017-02-02 14:59:03,074 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2017-02-02 14:59:03,075 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2017-02-02 14:59:03,077 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2017-02-02 14:59:03,079 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2017-02-02 14:59:03,080 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2017-02-02 14:59:03,105 - Created '20' parsers.
+2017-02-02 14:59:03,111 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2017-02-02 14:59:03,111 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2017-02-02 14:59:03,111 - Velocimacro : Default library not found.
+2017-02-02 14:59:03,111 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2017-02-02 14:59:03,111 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2017-02-02 14:59:03,111 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2017-02-02 14:59:03,111 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2017-02-02 14:59:03,129 - ResourceManager : found Webshop/shop.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader

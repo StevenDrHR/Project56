@@ -14,8 +14,8 @@ public class Controller{
 
     public void connection() throws SQLException {
         try {
-            connection = DriverManager.getConnection("jdbc:postgresql://83.86.251.189:5432/postgres2", "postgres", "postgres");
-//        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "0906986");
+//            connection = DriverManager.getConnection("jdbc:postgresql://83.86.251.189:5432/postgres2", "postgres", "postgres");
+        connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "0906986");
         }
         catch(SQLException e){
             System.out.println("Failed");
@@ -363,6 +363,54 @@ public class Controller{
             ResultSet rs = connection.prepareStatement(Querry).executeQuery();
             while (rs.next()) {
                 list.add(rs.getString("price"));
+            }
+        }
+        return list;
+    }
+
+    public List<String> GetImage(String Category) throws SQLException {
+        ArrayList<String> list = new ArrayList<String>();
+        connection();
+        if(Category.equals("")) {
+            String Querry = "Select image from products";
+            ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+            while (rs.next()) {
+                list.add(rs.getString("image"));
+            }
+        }
+        else if(Category.equals("brand")){
+            String Querry = "Select image from products order by brand ASC";
+            ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+            while (rs.next()) {
+                list.add(rs.getString("image"));
+            }
+        }
+        else if(Category.equals("type")){
+            String Querry = "Select image from products order by car_type ASC";
+            ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+            while (rs.next()) {
+                list.add(rs.getString("image"));
+            }
+        }
+        else if(Category.equals("year")){
+            String Querry = "Select image from products order by build_year ASC";
+            ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+            while (rs.next()) {
+                list.add(rs.getString("image"));
+            }
+        }
+        else if(Category.equals("pricelth")){
+            String Querry = "Select image from products order by price ASC";
+            ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+            while (rs.next()) {
+                list.add(rs.getString("image"));
+            }
+        }
+        else if(Category.equals("pricehtl")){
+            String Querry = "Select image from products order by price DESC";
+            ResultSet rs = connection.prepareStatement(Querry).executeQuery();
+            while (rs.next()) {
+                list.add(rs.getString("image"));
             }
         }
         return list;

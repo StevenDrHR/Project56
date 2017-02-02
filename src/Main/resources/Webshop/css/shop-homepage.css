@@ -183,17 +183,22 @@ footer {
     background-color: lightgray;
 }
 
-form3
+.form3 button
 {
-    padding:20px 0px;
-    position:relative;
+    background-color:white;
+    outline:0;
+    border: 0;
+    padding: 10px 15px;
+    color: black;
+    border-radius:3px;
+    width: 150px;
+    cursor: pointer;
+    font-size: 18px;
 }
 
-form3 input
+.form3 button:hover
 {
-    position:relative;
-    left:590px;
-    top: 10px;
+    background-color:lightgray;
 }
 
 form3 button

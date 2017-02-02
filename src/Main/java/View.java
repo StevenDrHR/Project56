@@ -472,6 +472,9 @@ public class View {
             List price = getShopData.GetPrice("");
             attributes.put("price", price);
 
+            List image = getShopData.GetImage("");
+            attributes.put("image", image);
+
             Controller getPid = new Controller();
             List productid = getPid.GetProductId("");
             attributes.put("productid", productid);

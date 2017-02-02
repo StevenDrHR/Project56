@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28c3abc2-7d43-4a2f-8c8e-8846f60266aa" name="Default" comment="images in shop">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Main/java/TestJUnit2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/java/Controller.java" afterPath="$PROJECT_DIR$/src/Main/java/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/velocity.log" afterPath="$PROJECT_DIR$/velocity.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/resources/Webshop/shop.vm" afterPath="$PROJECT_DIR$/src/Main/resources/Webshop/shop.vm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/resources/Webshop/css/shop-homepage.css" afterPath="$PROJECT_DIR$/src/Main/resources/Webshop/css/shop-homepage.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/java/Modal.java" afterPath="$PROJECT_DIR$/src/Main/java/Modal.java" />
+    <list default="true" id="28c3abc2-7d43-4a2f-8c8e-8846f60266aa" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Main/java/TestJUnit2.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my-app.iml" afterPath="$PROJECT_DIR$/my-app.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/java/Controller.java" afterPath="$PROJECT_DIR$/src/Main/java/Controller.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/java/View.java" afterPath="$PROJECT_DIR$/src/Main/java/View.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/resources/Webshop/css/shop-homepage.css" afterPath="$PROJECT_DIR$/src/Main/resources/Webshop/css/shop-homepage.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/velocity.log" afterPath="$PROJECT_DIR$/velocity.log" />
     </list>
     <list id="e3ab461a-6351-49f5-82b7-fb4599d094d7" name="Rejected commit: Default" comment="Add data to adresses and users" />
     <ignored path="project56.iws" />
@@ -36,9 +36,84 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/java/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="317" column="0" selection-start-line="317" selection-start-column="0" selection-end-line="317" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="-4.586207">
+              <caret line="322" column="30" selection-start-line="322" selection-start-column="30" selection-end-line="322" selection-end-column="30" />
+              <folding>
+                <marker date="1486043730639" expanded="true" signature="885:973" placeholder="Select usern... users" />
+                <marker date="1486043730639" expanded="true" signature="1431:1506" placeholder="Select usern... users" />
+                <marker date="1486043730639" expanded="true" signature="1664:1739" placeholder="Select usern... users" />
+                <marker date="1486043730639" expanded="true" signature="2055:2133" placeholder="Select usern... users" />
+                <marker date="1486043730639" expanded="true" signature="2310:2379" placeholder="Select email... users" />
+                <marker date="1486043730639" expanded="true" signature="2556:2905" placeholder="INSERT INTO users... " />
+                <marker date="1486043730639" expanded="true" signature="3149:3219" placeholder="Select useri... users" />
+                <marker date="1486043730639" expanded="true" signature="3382:3631" placeholder="INSERT INTO adress... " />
+                <marker date="1486043730639" expanded="true" signature="3771:3814" placeholder="Delete From " />
+                <marker date="1486043730639" expanded="true" signature="4185:4316" placeholder="Select useri... users" />
+                <marker date="1486043730639" expanded="true" signature="4515:4591" placeholder="Select useri... users" />
+                <marker date="1486043730639" expanded="true" signature="5051:5097" placeholder="Select usern... users" />
+                <marker date="1486043730639" expanded="true" signature="5450:5496" placeholder="Select usern... users" />
+                <marker date="1486043730639" expanded="true" signature="5850:5930" placeholder="Select car_t... products" />
+                <marker date="1486043730639" expanded="true" signature="6356:6478" placeholder="Select p.bra... products" />
+                <marker date="1486043730639" expanded="true" signature="6977:7133" placeholder="Select p.mod... products" />
+                <marker date="1486043730639" expanded="true" signature="7631:7657" placeholder="Select modal... products" />
+                <marker date="1486043730639" expanded="true" signature="7917:7962" placeholder="Select modal... products" />
+                <marker date="1486043730639" expanded="true" signature="8220:8268" placeholder="Select modal... products" />
+                <marker date="1486043730639" expanded="true" signature="8526:8576" placeholder="Select modal... products" />
+                <marker date="1486043730639" expanded="true" signature="8838:8883" placeholder="Select modal... products" />
+                <marker date="1486043730639" expanded="true" signature="9145:9191" placeholder="Select modal... products" />
+                <marker date="1486043730639" expanded="true" signature="9622:9648" placeholder="Select brand... products" />
+                <marker date="1486043730639" expanded="true" signature="9908:9953" placeholder="Select brand... products" />
+                <marker date="1486043730639" expanded="true" signature="10211:10259" placeholder="Select brand... products" />
+                <marker date="1486043730639" expanded="true" signature="10517:10567" placeholder="Select brand... products" />
+                <marker date="1486043730639" expanded="true" signature="10829:10874" placeholder="Select brand... products" />
+                <marker date="1486043730639" expanded="true" signature="11136:11182" placeholder="Select brand... products" />
+                <marker date="1486043730639" expanded="true" signature="11611:11640" placeholder="Select car_t... products" />
+                <marker date="1486043730639" expanded="true" signature="11903:11951" placeholder="Select car_t... products" />
+                <marker date="1486043730639" expanded="true" signature="12212:12263" placeholder="Select car_t... products" />
+                <marker date="1486043730639" expanded="true" signature="12524:12577" placeholder="Select car_t... products" />
+                <marker date="1486043730639" expanded="true" signature="12842:12890" placeholder="Select car_t... products" />
+                <marker date="1486043730639" expanded="true" signature="13155:13204" placeholder="Select car_t... products" />
+                <marker date="1486043730639" expanded="true" signature="13637:13663" placeholder="Select price... products" />
+                <marker date="1486043730639" expanded="true" signature="13922:13967" placeholder="Select price... products" />
+                <marker date="1486043730639" expanded="true" signature="14225:14273" placeholder="Select price... products" />
+                <marker date="1486043730639" expanded="true" signature="14531:14581" placeholder="Select price... products" />
+                <marker date="1486043730639" expanded="true" signature="14843:14888" placeholder="Select price... products" />
+                <marker date="1486043730639" expanded="true" signature="15150:15196" placeholder="Select price... products" />
+                <marker date="1486043730639" expanded="true" signature="15626:15652" placeholder="Select price... products" />
+                <marker date="1486043730639" expanded="true" signature="15911:15956" placeholder="Select price... products" />
+                <marker date="1486043730639" expanded="true" signature="16214:16262" placeholder="Select price... products" />
+                <marker date="1486043730639" expanded="true" signature="16520:16570" placeholder="Select price... products" />
+                <marker date="1486043730639" expanded="true" signature="16832:16877" placeholder="Select price... products" />
+                <marker date="1486043730639" expanded="true" signature="17139:17185" placeholder="Select price... products" />
+                <marker date="1486043730639" expanded="true" signature="17619:17649" placeholder="Select produ... products" />
+                <marker date="1486043730639" expanded="true" signature="17912:17961" placeholder="Select produ... products" />
+                <marker date="1486043730639" expanded="true" signature="18223:18275" placeholder="Select produ... products" />
+                <marker date="1486043730639" expanded="true" signature="18537:18591" placeholder="Select produ... products" />
+                <marker date="1486043730639" expanded="true" signature="18857:18906" placeholder="Select produ... products" />
+                <marker date="1486043730639" expanded="true" signature="19172:19222" placeholder="Select produ... products" />
+                <marker date="1486043730639" expanded="true" signature="19613:19654" placeholder="Select * fro... products" />
+                <marker date="1486043730639" expanded="true" signature="20153:20185" placeholder="Select descr... products" />
+                <marker date="1486043730639" expanded="true" signature="20517:20565" placeholder="Delete from " />
+                <marker date="1486043730639" expanded="true" signature="20887:20958" placeholder="Update users... " />
+                <marker date="1486043730639" expanded="true" signature="21275:21345" placeholder="Update users... " />
+                <marker date="1486043730639" expanded="true" signature="21643:21715" placeholder="Update users... " />
+                <marker date="1486043730639" expanded="true" signature="21947:22291" placeholder="INSERT INTO products... " />
+                <marker date="1486043730639" expanded="true" signature="22628:22704" placeholder="INSERT INTO favourites... " />
+                <marker date="1486043730639" expanded="true" signature="23015:23065" placeholder="Select * fro... users" />
+                <marker date="1486043730639" expanded="true" signature="23783:23906" placeholder="Select op.or... orders_products" />
+                <marker date="1486043730639" expanded="true" signature="24382:24458" placeholder="insert INTO wishlist... " />
+                <marker date="1486043730639" expanded="true" signature="24854:25023" placeholder="Select p.mod... products" />
+                <marker date="1486043730639" expanded="true" signature="25536:25622" placeholder="select usern... users" />
+                <marker date="1486043730639" expanded="true" signature="25750:25882" placeholder="select u.use... users" />
+                <marker date="1486043730639" expanded="true" signature="26223:26291" placeholder="UPDATE users... " />
+                <marker date="1486043730639" expanded="true" signature="26530:26599" placeholder="UPDATE users... " />
+                <marker date="1486043730639" expanded="true" signature="27019:27065" placeholder="INSERT INTO orders... " />
+                <marker date="1486043730639" expanded="true" signature="27148:27224" placeholder="Select order... orders" />
+                <marker date="1486043730639" expanded="true" signature="27521:27637" placeholder="INSERT INTO orders_products... " />
+                <marker date="1486043730639" expanded="true" signature="27919:27987" placeholder="Select count... users" />
+                <marker date="1486043730639" expanded="true" signature="28361:28460" placeholder="Select count... users" />
+                <marker date="1486043730639" expanded="true" signature="28828:28983" placeholder="Select count... products" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -56,8 +131,8 @@
       <file leaf-file-name="View.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/java/View.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="648" column="13" selection-start-line="648" selection-start-column="13" selection-end-line="648" selection-end-column="13" />
+            <state vertical-scroll-proportion="-6.793103">
+              <caret line="474" column="36" selection-start-line="474" selection-start-column="36" selection-end-line="474" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -75,21 +150,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shop.vm" pinned="false" current-in-tab="true">
+      <file leaf-file-name="shop.vm" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/shop.vm">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.3458781">
-              <caret line="82" column="14" selection-start-line="82" selection-start-column="13" selection-end-line="82" selection-end-column="14" />
+            <state vertical-scroll-proportion="-54.26923">
+              <caret line="152" column="40" selection-start-line="152" selection-start-column="40" selection-end-line="152" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shop-homepage.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/css/shop-homepage.css">
+      <file leaf-file-name="TestJUnit.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main/java/TestJUnit.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="200" column="12" selection-start-line="200" selection-start-column="12" selection-end-line="200" selection-end-column="12" />
+              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="shop-homepage.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/css/shop-homepage.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6956522">
+              <caret line="200" column="31" selection-start-line="200" selection-start-column="31" selection-end-line="200" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -108,7 +193,7 @@
       <file leaf-file-name="ownwishlist.vm" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/ownwishlist.vm">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-0.65384614">
               <caret line="64" column="37" selection-start-line="64" selection-start-column="29" selection-end-line="64" selection-end-column="37" />
               <folding>
                 <marker date="1485955723686" expanded="true" signature="710:725" placeholder="..." />
@@ -120,7 +205,7 @@
       <file leaf-file-name="index.vm" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/index.vm">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-2.6153846">
               <caret line="95" column="61" selection-start-line="95" selection-start-column="61" selection-end-line="95" selection-end-column="126" />
               <folding />
             </state>
@@ -229,10 +314,10 @@
         <option value="$PROJECT_DIR$/src/Main/java/TestJUnit2.java" />
         <option value="$PROJECT_DIR$/src/Main/java/TestRunner.java" />
         <option value="$PROJECT_DIR$/src/Main/resources/Webshop/index.vm" />
-        <option value="$PROJECT_DIR$/src/Main/java/Controller.java" />
-        <option value="$PROJECT_DIR$/src/Main/resources/Webshop/css/shop-homepage.css" />
-        <option value="$PROJECT_DIR$/src/Main/java/View.java" />
         <option value="$PROJECT_DIR$/src/Main/resources/Webshop/shop.vm" />
+        <option value="$PROJECT_DIR$/src/Main/java/Controller.java" />
+        <option value="$PROJECT_DIR$/src/Main/java/View.java" />
+        <option value="$PROJECT_DIR$/src/Main/resources/Webshop/css/shop-homepage.css" />
       </list>
     </option>
   </component>
@@ -389,7 +474,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Project56 v0.3" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
@@ -996,19 +1081,7 @@
       <workItem from="1485953401234" duration="1431000" />
       <workItem from="1485955728334" duration="5496000" />
       <workItem from="1486034307555" duration="6455000" />
-      <workItem from="1486041116950" duration="4000" />
-    </task>
-    <task id="LOCAL-00006" summary="Can now send data to the database&#10;Note: doesnt get a response from the the database yet">
-      <created>1477608078441</created>
-      <option name="number" value="00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1477608078441</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Can now send data to the database&#10;Note: doesnt get a response from the the database yet">
-      <created>1477608225993</created>
-      <option name="number" value="00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1477608225993</updated>
+      <workItem from="1486041116950" duration="2428000" />
     </task>
     <task id="LOCAL-00008" summary="Can now send data to the database&#10;Note: doesnt get a response from the the database yet">
       <created>1477925340424</created>
@@ -1292,22 +1365,36 @@
       <option name="project" value="LOCAL" />
       <updated>1485956381323</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="images in shop">
+      <created>1486041139810</created>
+      <option name="number" value="00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1486041139810</updated>
+    </task>
+    <task id="LOCAL-00056" summary="images in shop">
+      <created>1486041236439</created>
+      <option name="number" value="00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1486041236439</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127984000" />
+    <option name="totallyTimeSpent" value="130408000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.01309329" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24363233" sideWeight="0.52682406" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12908497" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10474632" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27168575" sideWeight="0.47317597" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13725491" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2549168" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1316,6 +1403,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1323,12 +1411,9 @@
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.01309329" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27168575" sideWeight="0.47317597" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18331504" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1386,14 +1471,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/index.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="95" column="61" selection-start-line="95" selection-start-column="61" selection-end-line="95" selection-end-column="126" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/sparkjava/spark-core/2.5/spark-core-2.5.jar!/spark/Spark.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1580,34 +1657,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/java/TestJUnit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="30" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/java/TestRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="54" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/resources/html5-schema/html5/block.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.13333334">
           <caret line="227" column="16" selection-start-line="227" selection-start-column="16" selection-end-line="227" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/index.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="95" column="61" selection-start-line="95" selection-start-column="61" selection-end-line="95" selection-end-column="126" />
           <folding />
         </state>
       </provider>
@@ -1630,25 +1683,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/java/Controller.java">
+    <entry file="file://$PROJECT_DIR$/src/Main/java/TestJUnit.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="317" column="0" selection-start-line="317" selection-start-column="0" selection-end-line="317" selection-end-column="0" />
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/css/shop-homepage.css">
+    <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/index.vm">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="200" column="12" selection-start-line="200" selection-start-column="12" selection-end-line="200" selection-end-column="12" />
+        <state vertical-scroll-proportion="-2.6153846">
+          <caret line="95" column="61" selection-start-line="95" selection-start-column="61" selection-end-line="95" selection-end-column="126" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/ownwishlist.vm">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="-0.65384614">
           <caret line="64" column="37" selection-start-line="64" selection-start-column="29" selection-end-line="64" selection-end-column="37" />
           <folding>
             <marker date="1485955723686" expanded="true" signature="710:725" placeholder="..." />
@@ -1656,18 +1709,117 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/java/View.java">
+    <entry file="file://$PROJECT_DIR$/src/Main/java/TestRunner.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="648" column="13" selection-start-line="648" selection-start-column="13" selection-end-line="648" selection-end-column="13" />
+          <caret line="6" column="54" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/java/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.586207">
+          <caret line="322" column="30" selection-start-line="322" selection-start-column="30" selection-end-line="322" selection-end-column="30" />
+          <folding>
+            <marker date="1486043730639" expanded="true" signature="885:973" placeholder="Select usern... users" />
+            <marker date="1486043730639" expanded="true" signature="1431:1506" placeholder="Select usern... users" />
+            <marker date="1486043730639" expanded="true" signature="1664:1739" placeholder="Select usern... users" />
+            <marker date="1486043730639" expanded="true" signature="2055:2133" placeholder="Select usern... users" />
+            <marker date="1486043730639" expanded="true" signature="2310:2379" placeholder="Select email... users" />
+            <marker date="1486043730639" expanded="true" signature="2556:2905" placeholder="INSERT INTO users... " />
+            <marker date="1486043730639" expanded="true" signature="3149:3219" placeholder="Select useri... users" />
+            <marker date="1486043730639" expanded="true" signature="3382:3631" placeholder="INSERT INTO adress... " />
+            <marker date="1486043730639" expanded="true" signature="3771:3814" placeholder="Delete From " />
+            <marker date="1486043730639" expanded="true" signature="4185:4316" placeholder="Select useri... users" />
+            <marker date="1486043730639" expanded="true" signature="4515:4591" placeholder="Select useri... users" />
+            <marker date="1486043730639" expanded="true" signature="5051:5097" placeholder="Select usern... users" />
+            <marker date="1486043730639" expanded="true" signature="5450:5496" placeholder="Select usern... users" />
+            <marker date="1486043730639" expanded="true" signature="5850:5930" placeholder="Select car_t... products" />
+            <marker date="1486043730639" expanded="true" signature="6356:6478" placeholder="Select p.bra... products" />
+            <marker date="1486043730639" expanded="true" signature="6977:7133" placeholder="Select p.mod... products" />
+            <marker date="1486043730639" expanded="true" signature="7631:7657" placeholder="Select modal... products" />
+            <marker date="1486043730639" expanded="true" signature="7917:7962" placeholder="Select modal... products" />
+            <marker date="1486043730639" expanded="true" signature="8220:8268" placeholder="Select modal... products" />
+            <marker date="1486043730639" expanded="true" signature="8526:8576" placeholder="Select modal... products" />
+            <marker date="1486043730639" expanded="true" signature="8838:8883" placeholder="Select modal... products" />
+            <marker date="1486043730639" expanded="true" signature="9145:9191" placeholder="Select modal... products" />
+            <marker date="1486043730639" expanded="true" signature="9622:9648" placeholder="Select brand... products" />
+            <marker date="1486043730639" expanded="true" signature="9908:9953" placeholder="Select brand... products" />
+            <marker date="1486043730639" expanded="true" signature="10211:10259" placeholder="Select brand... products" />
+            <marker date="1486043730639" expanded="true" signature="10517:10567" placeholder="Select brand... products" />
+            <marker date="1486043730639" expanded="true" signature="10829:10874" placeholder="Select brand... products" />
+            <marker date="1486043730639" expanded="true" signature="11136:11182" placeholder="Select brand... products" />
+            <marker date="1486043730639" expanded="true" signature="11611:11640" placeholder="Select car_t... products" />
+            <marker date="1486043730639" expanded="true" signature="11903:11951" placeholder="Select car_t... products" />
+            <marker date="1486043730639" expanded="true" signature="12212:12263" placeholder="Select car_t... products" />
+            <marker date="1486043730639" expanded="true" signature="12524:12577" placeholder="Select car_t... products" />
+            <marker date="1486043730639" expanded="true" signature="12842:12890" placeholder="Select car_t... products" />
+            <marker date="1486043730639" expanded="true" signature="13155:13204" placeholder="Select car_t... products" />
+            <marker date="1486043730639" expanded="true" signature="13637:13663" placeholder="Select price... products" />
+            <marker date="1486043730639" expanded="true" signature="13922:13967" placeholder="Select price... products" />
+            <marker date="1486043730639" expanded="true" signature="14225:14273" placeholder="Select price... products" />
+            <marker date="1486043730639" expanded="true" signature="14531:14581" placeholder="Select price... products" />
+            <marker date="1486043730639" expanded="true" signature="14843:14888" placeholder="Select price... products" />
+            <marker date="1486043730639" expanded="true" signature="15150:15196" placeholder="Select price... products" />
+            <marker date="1486043730639" expanded="true" signature="15626:15652" placeholder="Select price... products" />
+            <marker date="1486043730639" expanded="true" signature="15911:15956" placeholder="Select price... products" />
+            <marker date="1486043730639" expanded="true" signature="16214:16262" placeholder="Select price... products" />
+            <marker date="1486043730639" expanded="true" signature="16520:16570" placeholder="Select price... products" />
+            <marker date="1486043730639" expanded="true" signature="16832:16877" placeholder="Select price... products" />
+            <marker date="1486043730639" expanded="true" signature="17139:17185" placeholder="Select price... products" />
+            <marker date="1486043730639" expanded="true" signature="17619:17649" placeholder="Select produ... products" />
+            <marker date="1486043730639" expanded="true" signature="17912:17961" placeholder="Select produ... products" />
+            <marker date="1486043730639" expanded="true" signature="18223:18275" placeholder="Select produ... products" />
+            <marker date="1486043730639" expanded="true" signature="18537:18591" placeholder="Select produ... products" />
+            <marker date="1486043730639" expanded="true" signature="18857:18906" placeholder="Select produ... products" />
+            <marker date="1486043730639" expanded="true" signature="19172:19222" placeholder="Select produ... products" />
+            <marker date="1486043730639" expanded="true" signature="19613:19654" placeholder="Select * fro... products" />
+            <marker date="1486043730639" expanded="true" signature="20153:20185" placeholder="Select descr... products" />
+            <marker date="1486043730639" expanded="true" signature="20517:20565" placeholder="Delete from " />
+            <marker date="1486043730639" expanded="true" signature="20887:20958" placeholder="Update users... " />
+            <marker date="1486043730639" expanded="true" signature="21275:21345" placeholder="Update users... " />
+            <marker date="1486043730639" expanded="true" signature="21643:21715" placeholder="Update users... " />
+            <marker date="1486043730639" expanded="true" signature="21947:22291" placeholder="INSERT INTO products... " />
+            <marker date="1486043730639" expanded="true" signature="22628:22704" placeholder="INSERT INTO favourites... " />
+            <marker date="1486043730639" expanded="true" signature="23015:23065" placeholder="Select * fro... users" />
+            <marker date="1486043730639" expanded="true" signature="23783:23906" placeholder="Select op.or... orders_products" />
+            <marker date="1486043730639" expanded="true" signature="24382:24458" placeholder="insert INTO wishlist... " />
+            <marker date="1486043730639" expanded="true" signature="24854:25023" placeholder="Select p.mod... products" />
+            <marker date="1486043730639" expanded="true" signature="25536:25622" placeholder="select usern... users" />
+            <marker date="1486043730639" expanded="true" signature="25750:25882" placeholder="select u.use... users" />
+            <marker date="1486043730639" expanded="true" signature="26223:26291" placeholder="UPDATE users... " />
+            <marker date="1486043730639" expanded="true" signature="26530:26599" placeholder="UPDATE users... " />
+            <marker date="1486043730639" expanded="true" signature="27019:27065" placeholder="INSERT INTO orders... " />
+            <marker date="1486043730639" expanded="true" signature="27148:27224" placeholder="Select order... orders" />
+            <marker date="1486043730639" expanded="true" signature="27521:27637" placeholder="INSERT INTO orders_products... " />
+            <marker date="1486043730639" expanded="true" signature="27919:27987" placeholder="Select count... users" />
+            <marker date="1486043730639" expanded="true" signature="28361:28460" placeholder="Select count... users" />
+            <marker date="1486043730639" expanded="true" signature="28828:28983" placeholder="Select count... products" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/java/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.793103">
+          <caret line="474" column="36" selection-start-line="474" selection-start-column="36" selection-end-line="474" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/shop.vm">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.3458781">
-          <caret line="82" column="14" selection-start-line="82" selection-start-column="13" selection-end-line="82" selection-end-column="14" />
+        <state vertical-scroll-proportion="-54.26923">
+          <caret line="152" column="40" selection-start-line="152" selection-start-column="40" selection-end-line="152" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/css/shop-homepage.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6956522">
+          <caret line="200" column="31" selection-start-line="200" selection-start-column="31" selection-end-line="200" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -1701,6 +1853,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
+          <last-edited>html5shiv</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1729,7 +1882,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
