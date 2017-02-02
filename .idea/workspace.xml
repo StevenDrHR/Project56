@@ -3,11 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="28c3abc2-7d43-4a2f-8c8e-8846f60266aa" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/java/Controller/AddFavourite.java" afterPath="$PROJECT_DIR$/src/Main/java/Controller/AddFavourite.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/java/Controller/AddProduct.java" afterPath="$PROJECT_DIR$/src/Main/java/Controller/AddProduct.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/java/Controller/BlockUser.java" afterPath="$PROJECT_DIR$/src/Main/java/Controller/BlockUser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/java/Controller/CheckOwnWishList.java" afterPath="$PROJECT_DIR$/src/Main/java/Controller/CheckOwnWishList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/java/Controller/Connection.java" afterPath="$PROJECT_DIR$/src/Main/java/Controller/Connection.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/resources/Webshop/allwishlist.vm" afterPath="$PROJECT_DIR$/src/Main/resources/Webshop/allwishlist.vm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/resources/Webshop/favourite.vm" afterPath="$PROJECT_DIR$/src/Main/resources/Webshop/favourite.vm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/resources/Webshop/orderhistory.vm" afterPath="$PROJECT_DIR$/src/Main/resources/Webshop/orderhistory.vm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/resources/Webshop/ownwishlist.vm" afterPath="$PROJECT_DIR$/src/Main/resources/Webshop/ownwishlist.vm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/velocity.log" afterPath="$PROJECT_DIR$/velocity.log" />
     </list>
     <list id="e3ab461a-6351-49f5-82b7-fb4599d094d7" name="Rejected commit: Default" comment="Add data to adresses and users" />
     <ignored path="project56.iws" />
@@ -30,82 +30,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="176">
               <caret line="10" column="53" lean-forward="false" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="shop.vm" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/shop.vm">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1540">
-              <caret line="67" column="43" lean-forward="false" selection-start-line="67" selection-start-column="43" selection-end-line="67" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Connection.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Main/java/Controller/Connection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddFavourite.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main/java/Controller/AddFavourite.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" column="71" lean-forward="false" selection-start-line="11" selection-start-column="71" selection-end-line="11" selection-end-column="122" />
-              <folding>
-                <marker date="1486075718116" expanded="true" signature="466:542" ph="INSERT INTO favourites... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddProduct.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main/java/Controller/AddProduct.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="14" column="80" lean-forward="false" selection-start-line="14" selection-start-column="80" selection-end-line="14" selection-end-column="80" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1486075718107" expanded="true" signature="490:834" ph="INSERT INTO products... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CheckOwnWishList.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main/java/Controller/CheckOwnWishList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="19" column="38" lean-forward="false" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1486075718098" expanded="true" signature="580:735" ph="Select count... products" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BlockUser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main/java/Controller/BlockUser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="12" column="143" lean-forward="false" selection-start-line="12" selection-start-column="143" selection-end-line="12" selection-end-column="143" />
-              <folding>
-                <marker date="1486075718090" expanded="true" signature="457:527" ph="Update users... " />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -165,10 +95,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Main/java/Controller/GetUsers.java" />
-        <option value="$PROJECT_DIR$/src/Main/java/Controller/DeleteUser.java" />
-        <option value="$PROJECT_DIR$/src/Main/java/View/AdminScreenView.java" />
-        <option value="$PROJECT_DIR$/src/Main/java/Controller/UnBlockUser.java" />
         <option value="$PROJECT_DIR$/src/Main/java/View/ModifyScreenView.java" />
         <option value="$PROJECT_DIR$/src/Main/java/Controller/GetUserData.java" />
         <option value="$PROJECT_DIR$/src/Main/java/Controller/GetPublicusers.java" />
@@ -216,6 +142,10 @@
         <option value="$PROJECT_DIR$/src/Main/java/Controller/AddProduct.java" />
         <option value="$PROJECT_DIR$/src/Main/java/Controller/CheckOwnWishList.java" />
         <option value="$PROJECT_DIR$/src/Main/java/Controller/Connection.java" />
+        <option value="$PROJECT_DIR$/src/Main/resources/Webshop/allwishlist.vm" />
+        <option value="$PROJECT_DIR$/src/Main/resources/Webshop/favourite.vm" />
+        <option value="$PROJECT_DIR$/src/Main/resources/Webshop/orderhistory.vm" />
+        <option value="$PROJECT_DIR$/src/Main/resources/Webshop/ownwishlist.vm" />
       </list>
     </option>
   </component>
@@ -1031,14 +961,7 @@
       <workItem from="1485955728334" duration="5496000" />
       <workItem from="1486034307555" duration="6455000" />
       <workItem from="1486041116950" duration="4000" />
-      <workItem from="1486069433378" duration="5865000" />
-    </task>
-    <task id="LOCAL-00007" summary="Can now send data to the database&#10;Note: doesnt get a response from the the database yet">
-      <created>1477608225993</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1477608225993</updated>
+      <workItem from="1486069433378" duration="6358000" />
     </task>
     <task id="LOCAL-00008" summary="Can now send data to the database&#10;Note: doesnt get a response from the the database yet">
       <created>1477925340424</created>
@@ -1376,11 +1299,18 @@
       <option name="project" value="LOCAL" />
       <updated>1486074745134</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="comments">
+      <created>1486075897437</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1486075897438</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133849000" />
+    <option name="totallyTimeSpent" value="134342000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -1432,7 +1362,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added" />
     <MESSAGE value="made a structer" />
     <MESSAGE value="set the database coneection" />
     <MESSAGE value="Can now send data to the database&#10;Note: doesnt get a response from the the database yet" />
@@ -1457,7 +1386,8 @@
     <MESSAGE value="Testerino" />
     <MESSAGE value="small bug fixes and more cleaning" />
     <MESSAGE value="images in shop" />
-    <option name="LAST_COMMIT_MESSAGE" value="images in shop" />
+    <MESSAGE value="comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="comments" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1470,48 +1400,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Main/java/Controller/GetType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="66" lean-forward="false" selection-start-line="14" selection-start-column="66" selection-end-line="14" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/java/Controller/GetPublicusers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/java/Controller/SetWishlistPublic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="66" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/java/Controller/SetWishlistPrivate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="12" lean-forward="false" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/java/Controller/SetToWishList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="66" lean-forward="false" selection-start-line="10" selection-start-column="66" selection-end-line="10" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/java/Controller/GetWishlistInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="77" lean-forward="false" selection-start-line="12" selection-start-column="77" selection-end-line="12" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/java/Controller/GetUsers.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1569,13 +1457,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="66" lean-forward="false" selection-start-line="12" selection-start-column="66" selection-end-line="12" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/java/View/ShoppingcartScreenView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="129" column="0" lean-forward="false" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1725,22 +1606,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="10" column="53" lean-forward="false" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/shop.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1540">
-          <caret line="67" column="43" lean-forward="false" selection-start-line="67" selection-start-column="43" selection-end-line="67" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/java/View/RegisterScreenView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-132">
@@ -1879,6 +1744,92 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
           <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/java/View/ShoppingcartScreenView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2032">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/shoppingcart.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3168">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1486069407107" expanded="true" signature="710:725" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/allwishlist.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="186" column="69" lean-forward="true" selection-start-line="186" selection-start-column="0" selection-end-line="187" selection-end-column="0" />
+          <folding>
+            <marker date="1486076304686" expanded="true" signature="710:725" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/favourite.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="182" column="0" lean-forward="false" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
+          <folding>
+            <marker date="1486076304695" expanded="true" signature="710:725" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/orderhistory.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="180" column="0" lean-forward="false" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
+          <folding>
+            <marker date="1486076304704" expanded="true" signature="710:725" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/otherwishlist.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1972">
+          <caret line="214" column="7" lean-forward="true" selection-start-line="214" selection-start-column="7" selection-end-line="214" selection-end-column="7" />
+          <folding>
+            <marker date="1486069407104" expanded="true" signature="710:725" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/ownwishlist.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="201" column="0" lean-forward="false" selection-start-line="201" selection-start-column="0" selection-end-line="201" selection-end-column="0" />
+          <folding>
+            <marker date="1486076304675" expanded="true" signature="710:725" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/resources/Webshop/shop.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1540">
+          <caret line="67" column="43" lean-forward="false" selection-start-line="67" selection-start-column="43" selection-end-line="67" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="10" column="53" lean-forward="false" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
           <folding />
         </state>
       </provider>
