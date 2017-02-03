@@ -13,7 +13,6 @@ public class TestButton2 {
         try {
             Assert.assertTrue(currentUser.equals("User"));
             System.out.println("True");
-
         }
         catch (AssertionError e){
             System.out.println("False");

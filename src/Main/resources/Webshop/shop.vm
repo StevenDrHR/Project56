@@ -159,7 +159,7 @@
             var header = document.createElement("header");
             var h4 = document.createElement("h4");
             h4.setAttribute("class" ,"pull-right");
-            h4.textContent = prc[i];
+            h4.textContent = "$" + prc[i];
             header.appendChild(h4);
             var h41 = document.createElement("h4");
             h41.textContent = brnd[i] + " " + mdl[i];
