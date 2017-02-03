@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="28c3abc2-7d43-4a2f-8c8e-8846f60266aa" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/java/TestAddProduct.java" afterPath="$PROJECT_DIR$/src/Main/java/TestAddProduct.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/java/TestJUnit.java" afterPath="$PROJECT_DIR$/src/Main/java/TestJUnit.java" />
     </list>
     <list id="e3ab461a-6351-49f5-82b7-fb4599d094d7" name="Rejected commit: Default" comment="Add data to adresses and users" />
@@ -37,21 +38,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestAddProduct.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TestAddProduct.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main/java/TestAddProduct.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="132">
-              <caret line="12" column="6" lean-forward="false" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+              <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestJUnit.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TestJUnit.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/java/TestJUnit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="20" column="24" lean-forward="false" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+            <state relative-caret-position="66">
+              <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -180,9 +181,9 @@
         <option value="$PROJECT_DIR$/src/Main/java/Model/LoginModals.java" />
         <option value="$PROJECT_DIR$/src/Main/java/TestButton2.java" />
         <option value="$PROJECT_DIR$/src/Main/resources/Webshop/shop.vm" />
-        <option value="$PROJECT_DIR$/src/Main/java/TestAddProduct.java" />
         <option value="$PROJECT_DIR$/src/Main/java/TestRunner.java" />
         <option value="$PROJECT_DIR$/src/Main/java/TestJUnit.java" />
+        <option value="$PROJECT_DIR$/src/Main/java/TestAddProduct.java" />
       </list>
     </option>
   </component>
@@ -665,14 +666,7 @@
       <workItem from="1486041116950" duration="4000" />
       <workItem from="1486069433378" duration="4693000" />
       <workItem from="1486080485912" duration="193000" />
-      <workItem from="1486117787692" duration="5085000" />
-    </task>
-    <task id="LOCAL-00011" summary="Add data to adresses and users">
-      <created>1478012833937</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1478012833937</updated>
+      <workItem from="1486117787692" duration="5165000" />
     </task>
     <task id="LOCAL-00012" summary="Add data to adresses and users">
       <created>1478096238924</created>
@@ -1010,11 +1004,18 @@
       <option name="project" value="LOCAL" />
       <updated>1486126418631</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="test">
+      <created>1486126504800</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1486126504800</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137955000" />
+    <option name="totallyTimeSpent" value="138035000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -1495,14 +1496,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/java/TestAddProduct.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="12" column="6" lean-forward="false" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/java/TestButton.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -1513,8 +1506,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/java/TestJUnit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="20" column="24" lean-forward="false" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+        <state relative-caret-position="66">
+          <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/java/TestAddProduct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
           <folding />
         </state>
       </provider>

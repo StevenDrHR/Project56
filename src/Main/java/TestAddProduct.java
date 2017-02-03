@@ -10,7 +10,7 @@ import java.util.Deque;
  * Created by Gebruiker on 2-2-2017.
  */
 public class TestAddProduct {
-    //@Test
+    @Test
     public void Testaddproduct() throws SQLException {
         ArrayList<String> wishlistitems = new ArrayList<String>();
         Controller.SetToWishList newWishlist = new Controller.SetToWishList();
