@@ -6,7 +6,7 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 public class TestJUnit {
-    //@Test
+    @Test
 
     public void testAdd() throws SQLException {
         Deque<Model.RegisterModals> RegisterUsers = new ArrayDeque<>();
