@@ -15,7 +15,7 @@ public class TestJUnit {
         RegisterUsers.addFirst(registerUser);
         Controller.RegisterUser testController = new Controller.RegisterUser();
         try {
-            Assert.assertTrue(testController.RegisterUser(RegisterUsers).equals("Done"));
+            Assert.assertFalse(testController.RegisterUser(RegisterUsers).equals("Done"));
             System.out.println("User added - passed");
 
             Assert.assertTrue(testController.RegisterUser(RegisterUsers).equals("Username already exists"));
