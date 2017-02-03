@@ -3,7 +3,7 @@ import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
 
-public class TestRunner extends TestCase {
+public class TestRunner {
     public static void main(String[] args) {
         //Result result = JUnitCore.runClasses(TestJUnit.class, TestButton.class, TestButton2.class); //Enter Unit Test
         Result result = JUnitCore.runClasses(TestButton2.class);
